@@ -8,6 +8,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - from-pipeline-to-paradigm.qmd
     - summary.qmd
     - references.qmd
 
