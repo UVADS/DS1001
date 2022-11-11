@@ -1,0 +1,7 @@
+---
+title: "course-index"
+format: html
+---
+
+* [DS 2006](https://uvads.github.io/DS-2006/)
+* [DS 3005 Mathematics for Data Science](https://uvads.github.io/DS-3005/)

@@ -1,5 +1,6 @@
 project:
-  type: book
+  type: website
+  output-dir: docs
 
 book:
   title: "ddsbook"
@@ -10,6 +11,7 @@ book:
     - intro.qmd
     - from-pipeline-to-paradigm.qmd
     - summary.qmd
+    - course-index.qmd
     - references.qmd
 
 bibliography: references.bib
