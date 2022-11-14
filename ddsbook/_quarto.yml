@@ -19,6 +19,9 @@ format:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    
+execute:
+  freeze: auto
 
 
 
