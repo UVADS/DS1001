@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "course-index.html",
+    "href": "course-index.html",
+    "title": "course-index",
+    "section": "",
+    "text": "DS 2006\nDS 3005 Mathematics for Data Science"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever."
+  }
+]
