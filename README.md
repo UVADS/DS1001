@@ -56,14 +56,14 @@ The course will move rather quickly and can be demanding at times. However, if w
 
 | Week 	| Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:	|:---:	|:---:	|:---:	|
-| Week 1 	| 	|  	| 	| 	|
-| Week 2 	|  	|   |   | 	|
-| Week 3 	|	  | 	|	  |  	|
-| Week 4 	|	  |	  |   | 	|
-| Week 5  |   |   |   |   | 
-| Week 6	| 	|   |   |   |
-| Week 7  |   | 	|   |  	|
-| Week 8  |   |  	| 	| 	|
+| Week 1  | Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
+| Week 2  | Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
+| Week 3  |	Design + Internal  | Speaker + Reinforcement	|	Set Game  |  	|
+| Week 4  |	Design + External  |	MC + Reinforcement |  Case Study  | 	|
+| Week 5  | Ethics SDS |  Humand versus Machine Bias |       |    | 
+| Week 6	 | Ethics + Internal	  | Jess + Reinforcement |   |   |
+| Week 7  | Ethics + External   | 	|   |  	|
+| Week 8  |                     |  	| 	 | 	|
 | Week 9  |  	|  	|	  | 	|
 | Week 10 |  	|  	|	  | 	|
 | Week 11 |  	| 	|   |   |
