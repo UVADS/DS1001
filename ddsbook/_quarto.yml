@@ -1,16 +1,15 @@
 project:
-  type: website
-  output-dir: docs
+  type: book
 
 book:
-  title: "ddsbook"
+  title: "Defining Data Science"
   author: "Brian Wright"
   date: "11/7/2022"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
-    - course-index.qmd
+    - design.qmd
+    - BSDS-Course-Info.qmd
     - references.qmd
 
 bibliography: references.bib

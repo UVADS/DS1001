@@ -1,5 +1,5 @@
 ---
-title: "course-index"
+title: "BSDS-Course-Info"
 format: html
 ---
 
