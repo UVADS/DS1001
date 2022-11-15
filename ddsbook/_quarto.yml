@@ -20,8 +20,23 @@ book:
         - value-lab.qmd
         - value-external.qmd
         - value-case-study.qmd
+    - part: "Systems"
+      chapters: 
+        - systems-sds.qmd
+        - systems-lab.qmd
+        - systems-external.qmd
+        - systems-case-study.qmd
+    - part: "Analytics"
+      chapters: 
+        - analytics-sds.qmd
+        - analytics-lab.qmd
+        - analytics-external.qmd
+        - analytics-case-study.qmd
     - BSDS-Course-Info.qmd
     - references.qmd
+  favicon: /images/domains.png
+  twitter-card: true
+  site-url: http://definingdatascience.com/ 
 
 bibliography: references.bib
 
@@ -33,3 +48,9 @@ format:
     
 execute:
   freeze: auto
+
+margin-footer: | 
+  The GitHub repo for this book is here: <https://github.com/UVADS/DS1001>
+
+margin-header: |
+  ![](/images/domains.png)
