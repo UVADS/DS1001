@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>pipeline-sources</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="pipeline-sources_files/libs/clipboard/clipboard.min.js"></script>
+<script src="pipeline-sources_files/libs/quarto-html/quarto.js"></script>
+<script src="pipeline-sources_files/libs/quarto-html/popper.min.js"></script>
+<script src="pipeline-sources_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="pipeline-sources_files/libs/quarto-html/anchor.min.js"></script>
+<link href="pipeline-sources_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="pipeline-sources_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="pipeline-sources_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="pipeline-sources_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="pipeline-sources_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">pipeline-sources</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="appendix-primary-sources" class="level1">
+<h1>Appendix: Primary Sources</h1>
+<section id="about-the-sources" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-sources">About the sources</h2>
+<p>The materials on which the conclusions of this essay are drawn come from a variety of sources, from technical journals to blogs to internal documents. They also come from a range of viewpoints, from data analysis and statistics to data mining and data science <em>per se</em>. For the purposes of the essay, we select a more or less representative subset across these axes of variation.</p>
+<p>For each source, we list the phases cited by the authors as fundamental to data processing, broadly conceived. These are aggregated in the table that follows, aligning the specific steps with the general categories used to produce a composite pipeline. Identifiers for each source are indicated by a short string in brackets that precedes the citation and is used in the first column of the table.</p>
+<p>It should be noted that in most cases these phases are explicitly described as a process and often as a pipeline. When they are not, the implication is strong. In some cases, the process is likened to a cycle, emphasizing the connection between the endpoints of the pipeline, which is also emphasized by the 4+1 model.</p>
+<p>The twelve documents listed below begin with Tukey’s seminal essay on data analysis and end with examples of explainers of data science that have become quite frequent in recent years. Included also are the class definitions of the CRISP-DM and KDD processes which are the most developed pipeline models.</p>
+</section>
+<section id="source-list" class="level2">
+<h2 class="anchored" data-anchor-id="source-list">Source List</h2>
+<p><code>[Tukey]</code><br>
+Source: Tukey, John W. 1962. “The Future of Data Analysis.” <em>The Annals of Mathematical Statistics</em> 33 (1): 1–67. <a href="https://www.jstor.org/stable/2237638#metadata_info_tab_contents">URL→</a><br>
+Field: Data Analysis</p>
+<ol type="1">
+<li>Gather<br>
+</li>
+<li>Analyze<br>
+</li>
+<li>Interpret</li>
+</ol>
+<p><code>[KDD]</code><br>
+Source: Fayyad, Usama M, Gregory Piatetsky-Shapiro, Padhraic Smyth, et al.&nbsp;1996. “Knowledge Discovery and Data Mining: Towards a Unifying Framework.” In <em>KDD</em>, 96:82–88. <a href="https://www.aaai.org/Papers/KDD/1996/KDD96-014.pdf?utm_campaign=ml4devs-newsletter&amp;utm_medium=email&amp;utm_source=Revue%20newsletter">URL→</a><br>
+Field: Data Mining</p>
+<ol type="1">
+<li>Frame<br>
+</li>
+<li>Collect<br>
+</li>
+<li>Explore<br>
+</li>
+<li>Process<br>
+</li>
+<li>Analyze<br>
+</li>
+<li>Communicate</li>
+</ol>
+<p><code>[Hayashi]</code><br>
+Hayashi, Chikio. 1998. “What Is Data Science? Fundamental Concepts and a Heuristic Example.” In <em>Data Science, Classification, and Related Methods</em>, edited by Chikio Hayashi, Keiji Yajima, Hans-Hermann Bock, Noboru Ohsumi, Yutaka Tanaka, and Yasumasa Baba, 40–51. <em>Studies in Classification, Data Analysis, and Knowledge Organization</em>. Springer Japan. <a href="https://link.springer.com/chapter/10.1007/978-4-431-65950-1_3">URL→</a><br>
+Field: Statistics</p>
+<ol type="1">
+<li>Design<br>
+</li>
+<li>Collect<br>
+</li>
+<li>Analyze</li>
+</ol>
+<p><code>[CRISPDM]</code><br>
+Wirth, Rüdiger, and Jochen Hipp. 1999. “CRISP-DM: Towards a Standard Process Model for Data Mining.” <a href="http://www.cs.unibo.it/~danilo.montesi/CBD/Beatriz/10.1.1.198.5133.pdf">URL→</a><br>
+Field: Data Mining</p>
+<ol type="1">
+<li>Business</li>
+<li>Collect</li>
+<li>Explore</li>
+<li>Preparation</li>
+<li>Modeling</li>
+<li>Evaluation</li>
+<li>Deployment</li>
+</ol>
+<p><code>[OSEMI]</code><br>
+Mason, Hilary, and Christopher Wiggins. 2010. “A Taxonomy of Data Science.” <em>Dataists</em> (blog). September 25, 2010. <a href="https://sites.google.com/a/isim.net.in/datascience_isim/taxonomy">URL→</a><br>
+Field: Data Science <!--
+http://www.dataists.com/2010/09/a-taxonomy-of-data-science/
+--> 1. Obtain 2. Scrub 3. Explore 4. Model 5. Interpret</p>
+<p><code>[Ojeda+]</code><br>
+Ojeda, Tony, Sean Patrick Murphy, Benjamin Bengfort, and Abhijit Dasgupta. 2014. <em>Practical Data Science Cookbook</em>. Birmingham: Packt Publishing. <a href="https://www.packtpub.com/product/practical-data-science-cookbook-second-edition/9781787129627">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Acquire<br>
+</li>
+<li>Wrangle<br>
+</li>
+<li>Explore<br>
+</li>
+<li>Analyze and model<br>
+</li>
+<li>Communicate<br>
+</li>
+<li>Operationalize</li>
+</ol>
+<p><code>[Caffo+]</code><br>
+Caffo, Brian, Roger D. Peng, and Jeffrey Leek. 2015. <em>Executive Data Science</em>. Leanpub. <a href="https://leanpub.com/eds">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Question<br>
+</li>
+<li>Get<br>
+</li>
+<li>Explore<br>
+</li>
+<li>Model<br>
+</li>
+<li>Interpret<br>
+</li>
+<li>Communicate</li>
+</ol>
+<p><code>[Donaho]</code><br>
+Donoho, David. 2017. “50 Years of Data Science.” <em>Journal of Computational and Graphical Statistics</em> 26 (4): 745–66. <a href="https://doi.org/10.1080/10618600.2017.1384734">URL→</a><br>
+Field: Statistics</p>
+<ol type="1">
+<li>Gather</li>
+<li>Prepare</li>
+<li>Explore</li>
+<li>Represent and transform</li>
+<li>Compute<br>
+</li>
+<li>Model<br>
+</li>
+<li>Present<br>
+</li>
+<li>Meta</li>
+</ol>
+<p><code>[Géron]</code><br>
+Géron, Aurélien. 2017. <em>Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</em>. First edition. O’Reilly Media. <a href="https://www.investincotedor.fr/sites/default/files/webform/pdf-hands-on-machine-learning-with-scikit-learn-and-tensorflow-conce-aurlien-gron-pdf-download-free-book-21c7262.pdf">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Big picture<br>
+</li>
+<li>Get<br>
+</li>
+<li>Clean<br>
+</li>
+<li>Discover</li>
+<li>Prepare Model</li>
+<li>Fine tune<br>
+</li>
+<li>Launch</li>
+</ol>
+<p><code>[Das]</code><br>
+Das, Sangeet Moy. 2019. “Data Science Life Cycle 101 for Dummies like Me.” <em>Medium</em>. September 20, 2019. <a href="https://towardsdatascience.com/data-science-life-cycle-101-for-dummies-like-me-e66b47ad8d8f">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Understand</li>
+<li>Mine</li>
+<li>Clean</li>
+<li>Explore</li>
+<li>Features</li>
+<li>Model</li>
+<li>Visualize</li>
+</ol>
+<p><code>[Dataman]</code><br>
+Dataman, Dr.&nbsp;2020. “Data Science Modeling Process &amp; Six Consultative Roles.” <em>Medium</em>. February 12, 2020. <a href="https://towardsdatascience.com/data-science-modeling-process-fa6e8e45bf02">URL→</a><br>
+Field: Data Science</p>
+<ol type="1">
+<li>Business</li>
+<li>Data requirements<br>
+</li>
+<li>Collection</li>
+<li>EDA</li>
+<li>Modeling</li>
+<li>Evaluation</li>
+<li>Deployment</li>
+<li>Monitoring</li>
+</ol>
+<p><code>[Porter]</code><br>
+Porter, Michael. 2020. “A Framework for Data Science.” Unpublished.<br>
+Field: Statistics <!--
+file:///private/var/folders/14/rnyfspnx2q131jp_752t9fc80000gn/T/com.microsoft.Outlook/Outlook%20Temp/data-science%5B44%5D.html#categories_of_data_science
+--></p>
+<ol type="1">
+<li>Collect<br>
+</li>
+<li>Store and represent<br>
+</li>
+<li>Manipulation<br>
+</li>
+<li>Computing<br>
+</li>
+<li>Analytics<br>
+</li>
+<li>Communicate<br>
+</li>
+<li>Practice</li>
+<li>Disciplinary</li>
+</ol>
+</section>
+<section id="summary-table" class="level2">
+<h2 class="anchored" data-anchor-id="summary-table">Summary Table</h2>
+
+<table class="dataframe table table-sm table-striped" id="pipelines">
+<thead>
+<tr>
+<th>
+&nbsp;
+</th>
+<th>
+Understand
+</th>
+<th>
+Plan
+</th>
+<th>
+Collect
+</th>
+<th>
+Store
+</th>
+<th>
+Clean
+</th>
+<th>
+Explore
+</th>
+<th>
+Prepare
+</th>
+<th>
+Model
+</th>
+<th>
+Interpret
+</th>
+<th>
+Communicate
+</th>
+<th>
+Deploy
+</th>
+<th>
+Reflect
+</th>
+</tr>
+</thead>
+<tbody>
+<!-- Tukey -->
+<tr>
+<th>
+Tukey
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Gather
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Interpret
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- KDD -->
+<tr>
+<th>
+KDD
+</th>
+<td>
+Frame
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+Explore
+</td>
+<td>
+Process
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Communicate
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Hayashi -->
+<tr>
+<th>
+Hayashi
+</th>
+<td>
+Design
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- CRISPDM -->
+<tr>
+<th>
+CRISPDM
+</th>
+<td>
+Business
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Explore
+</td>
+<td>
+Preparation
+</td>
+<td>
+Modeling
+</td>
+<td>
+Evaluation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Deployment
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- OSEMI -->
+<tr>
+<th>
+OSEMI
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Obtain
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Scrub
+</td>
+<td>
+Explore
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Model
+</td>
+<td>
+Interpret
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Ojeda+ -->
+<tr>
+<th>
+Ojeda+
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Acquire
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Wrangle
+</td>
+<td>
+Explore
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Analyze and model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Communicate
+</td>
+<td>
+Operationalize
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Caffo+ -->
+<tr>
+<th>
+Caffo+
+</th>
+<td>
+Question
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Get
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Explore
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Model
+</td>
+<td>
+Interpret
+</td>
+<td>
+Communicate
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Donaho -->
+<tr>
+<th>
+Donaho
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Gather
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Prepare
+</td>
+<td>
+Explore
+</td>
+<td>
+Represent and transform; Compute
+</td>
+<td>
+Model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Present
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Meta
+</td>
+</tr>
+<!-- Géron -->
+<tr>
+<th>
+Géron
+</th>
+<td>
+Big picture
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Get
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Clean
+</td>
+<td>
+Discover
+</td>
+<td>
+Prepare
+</td>
+<td>
+Model; Fine tune
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Launch
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Das -->
+<tr>
+<th>
+Das
+</th>
+<td>
+Understand
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Mine
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Clean
+</td>
+<td>
+Explore
+</td>
+<td>
+Features
+</td>
+<td>
+Model
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Visualize
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Dataman -->
+<tr>
+<th>
+Dataman
+</th>
+<td>
+Business
+</td>
+<td>
+Data requirements
+</td>
+<td>
+Collection
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+EDA
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Modeling
+</td>
+<td>
+Evaluation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Deployment; Monitoring
+</td>
+<td>
+&nbsp;
+</td>
+</tr>
+<!-- Porter -->
+<tr>
+<th>
+Porter
+</th>
+<td>
+&nbsp;
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Collect
+</td>
+<td>
+Store and represent
+</td>
+<td>
+Manipulation
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Computing
+</td>
+<td>
+Analytics
+</td>
+<td>
+&nbsp;
+</td>
+<td>
+Communicate
+</td>
+<td>
+Practice
+</td>
+<td>
+Disciplinary
+</td>
+</tr>
+</tbody>
+
+</table>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -3,12 +3,23 @@ project:
 
 book:
   title: "Defining Data Science"
-  author: "Brian Wright"
+  author: "Brian Wright and Peter Alonzi"
   date: "11/7/2022"
   chapters:
     - index.qmd
     - intro.qmd
-    - design.qmd
+    - part: design.qmd
+      chapters: 
+        - design-sds.qmd
+        - design-lab.qmd
+        - design-external.qmd
+        - design-case-study.qmd
+    - part: value.qmd
+      chapters: 
+        - value-sds.qmd
+        - value-lab.qmd
+        - value-external.qmd
+        - value-case-study.qmd
     - BSDS-Course-Info.qmd
     - references.qmd
 
@@ -22,6 +33,3 @@ format:
     
 execute:
   freeze: auto
-
-
-

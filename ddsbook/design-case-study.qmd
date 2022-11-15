@@ -1,0 +1,3 @@
+# Design Case Study
+
+Overview of the Design case study for the current semester for the Foundations of Data Science course. 
