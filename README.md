@@ -56,22 +56,23 @@ The course will move rather quickly and can be demanding at times. However, if w
 
 | Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | |Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
-| Week 2  | |Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
-| Week 3  |	|Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
-| Week 4  |	|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study  | 	|
-| Week 5  | |Ethics SDS |  Humand versus Machine Bias |       |    | 
-| Week 6	 | |Ethics + Internal	  | Jess + Reinforcement |   |   |
-| Week 7  | |Ethics + External   | 	|   |  	|
-| Week 8  | |                    |  	| 	 | 	|
-| Week 9  | | 	|  	|	  | 	|
-| Week 10 | | 	|  	|	  | 	|
-| Week 11 | | 	| 	|   |   |
-| Week 12 |	|  |   |	  | 	|
-| Week 13 | |  |  	|   |   |
-| Week 14 | |  |   |   |   |
-| Week 15 | | 	| 	|   |   |
-| Week 16 | | 	|  	|  	|  	|
+| Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
+| Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
+| Week 3  |	1/31,2/22,3|Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
+| Week 4  |	2/7,9,10|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study  | 	|
+| Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |       |    | 
+| Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement |   |   |
+| Week 7  | 2/28,2,3|Ethics + External   | 	|   |  	|
+| Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
+| Week 9  | 3/14,16,17| 	|  	|	  | 	|
+| Week 10 | 3/21,23,24| 	|  	|	  | 	|
+| Week 11 | 3/28,30,31| 	| 	|   |   |
+| Week 12 |	4/4,6,7|  |   |	  | 	|
+| Week 13 | 4/11,13,14|  |  	|   |   |
+| Week 14 | 4/18,20,21|  |   |   |   |
+| Week 15 | 4/25,27,28| 	| 	|   |   |
+| Week 16 | 5/2 (Tue only)| 	|  	|  	|  	|
+| Examinations | 5/4-5/12 | | | | |
 
 ## A few Policies that will Govern the Class
 
