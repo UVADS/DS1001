@@ -54,24 +54,24 @@ The course will move rather quickly and can be demanding at times. However, if w
 
 ***NOTE: depending on student interest, the syllabus can be adjusted to accommodate additional topics
 
-| Week 	| Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
-|:---:	|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
-| Week 2  | Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
-| Week 3  |	Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
-| Week 4  |	Design + External  |	Ms. O'Brien + Reinforcement |  Case Study  | 	|
-| Week 5  | Ethics SDS |  Humand versus Machine Bias |       |    | 
-| Week 6	 | Ethics + Internal	  | Jess + Reinforcement |   |   |
-| Week 7  | Ethics + External   | 	|   |  	|
-| Week 8  |                     |  	| 	 | 	|
-| Week 9  |  	|  	|	  | 	|
-| Week 10 |  	|  	|	  | 	|
-| Week 11 |  	| 	|   |   |
-| Week 12 |	  |   |	  | 	|
-| Week 13 |   |  	|   |   |
-| Week 14 |   |   |   |   |
-| Week 15 | 	| 	|   |   |
-| Week 16 | 	|  	|  	|  	|
+| Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
+|:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
+| Week 1  | |Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
+| Week 2  | |Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
+| Week 3  |	|Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
+| Week 4  |	|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study  | 	|
+| Week 5  | |Ethics SDS |  Humand versus Machine Bias |       |    | 
+| Week 6	 | |Ethics + Internal	  | Jess + Reinforcement |   |   |
+| Week 7  | |Ethics + External   | 	|   |  	|
+| Week 8  | |                    |  	| 	 | 	|
+| Week 9  | | 	|  	|	  | 	|
+| Week 10 | | 	|  	|	  | 	|
+| Week 11 | | 	| 	|   |   |
+| Week 12 |	|  |   |	  | 	|
+| Week 13 | |  |  	|   |   |
+| Week 14 | |  |   |   |   |
+| Week 15 | | 	| 	|   |   |
+| Week 16 | | 	|  	|  	|  	|
 
 ## A few Policies that will Govern the Class
 
