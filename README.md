@@ -58,8 +58,8 @@ The course will move rather quickly and can be demanding at times. However, if w
 |:---:	|:---:	|:---:	|:---:	|:---:	|
 | Week 1  | Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
 | Week 2  | Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data  | 	|
-| Week 3  |	Design + Internal  | Speaker + Reinforcement	|	Set Game  |  	|
-| Week 4  |	Design + External  |	MC + Reinforcement |  Case Study  | 	|
+| Week 3  |	Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
+| Week 4  |	Design + External  |	Ms. O'Brien + Reinforcement |  Case Study  | 	|
 | Week 5  | Ethics SDS |  Humand versus Machine Bias |       |    | 
 | Week 6	 | Ethics + Internal	  | Jess + Reinforcement |   |   |
 | Week 7  | Ethics + External   | 	|   |  	|
