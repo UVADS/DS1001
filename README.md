@@ -70,8 +70,8 @@ The course will move rather quickly and can be demanding at times. However, if w
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
-| Week 15 | 4/25,27,28| Exploratory	| 	|   |   |
-| Week 16 | 5/2 (Tue only)| Exploratory	|  	|  	|  	|
+| Week 15 | 4/25,27,28| Practice	| 	|   |   |
+| Week 16 | 5/2 (Tue only)| Practice	|  	|  	|  	|
 | Examinations | 5/4-5/12 | | | | |
 
 ## A few Policies that will Govern the Class
