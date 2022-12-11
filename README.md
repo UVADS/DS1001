@@ -58,20 +58,20 @@ The course will move rather quickly and can be demanding at times. However, if w
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
 | Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
 | Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize  | 	|
-| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Set Game  |  	|
+| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  	|
 | Week 4  |	2/7,9,10|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
-| Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |       |    | 
-| Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement |   |   |
-| Week 7  | 2/28,3/2,3|Ethics + External   | 	|   |  	|
+| Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |  Personal Data Collect Lab     |    | 
+| Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement | Game Lab: Guess Who?  |   |
+| Week 7  | 2/28,3/2,3|Ethics + External   | 	|   |  Case Study	|
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
-| Week 9  | 3/14,16,17| 	|  	|	  | 	|
-| Week 10 | 3/21,23,24| 	|  	|	  | 	|
-| Week 11 | 3/28,30,31| 	| 	|   |   |
-| Week 12 |	4/4,6,7|  |   |	  | 	|
-| Week 13 | 4/11,13,14|  |  	|   |   |
-| Week 14 | 4/18,20,21|  |   |   |   |
-| Week 15 | 4/25,27,28| 	| 	|   |   |
-| Week 16 | 5/2 (Tue only)| 	|  	|  	|  	|
+| Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
+| Week 10 | 3/21,23,24| Systems + Internal	|  	|	Game Lab: Mouse Trap  | 	|
+| Week 11 | 3/28,30,31| Systems + External	| 	| Case Study  |   |
+| Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
+| Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
+| Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
+| Week 15 | 4/25,27,28| Exploratory	| 	|   |   |
+| Week 16 | 5/2 (Tue only)| Exploratory	|  	|  	|  	|
 | Examinations | 5/4-5/12 | | | | |
 
 ## A few Policies that will Govern the Class
