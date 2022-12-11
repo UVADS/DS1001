@@ -62,7 +62,7 @@ The course will move rather quickly and can be demanding at times. However, if w
 | Week 4  |	2/7,9,10|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
 | Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |  Personal Data Collect Lab     |    | 
 | Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement | Game Lab: Guess Who?  |   |
-| Week 7  | 2/28,3/2,3|Ethics + External   | 	|   |  Case Study	|
+| Week 7  | 2/28,3/2,3|Ethics + External   | 	|     Case Study	| |
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
 | Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
 | Week 10 | 3/21,23,24| Systems + Internal	|  	|	Game Lab: Mouse Trap  | 	|
