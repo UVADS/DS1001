@@ -66,13 +66,17 @@ The course will move rather quickly and can be demanding at times. However, if w
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
 | Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
 | Week 10 | 3/21,23,24| Systems + Internal	|  	|	Game Lab: Mouse Trap  | 	|
-| Week 11 | 3/28,30,31| Systems + External	| 	| Case Study  |   |
+| Week 11 | 3/28,30,31| Miriam Friedel | 	| Case Study  |   |
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
 | Week 15 | 4/25,27,28| Practice	| 	|   |   |
 | Week 16 | 5/2 (Tue only)| Practice	|  	|  	|  	|
 | Examinations | 5/4-5/12 | | | | |
+
+## Guest Speakers
+
+* Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
 
 ## A few Policies that will Govern the Class
 
