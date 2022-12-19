@@ -59,7 +59,7 @@ The course will move rather quickly and can be demanding at times. However, if w
 | Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
 | Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize  | 	|
 | Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  	|
-| Week 4  |	2/7,9,10|Design + External  |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
+| Week 4  |	2/7,9,10| Design + External  |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
 | Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |  Personal Data Collect Lab     |    | 
 | Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement | Game Lab: Guess Who?  |   |
 | Week 7  | 2/28,3/2,3|Ethics + External   | 	|     Case Study	| |
@@ -76,6 +76,8 @@ The course will move rather quickly and can be demanding at times. However, if w
 
 ## Guest Speakers
 
+* MC Forelle: Assistant Professor of Engineering and Society
+* Carrie O'Brien: User Interface Designer at Capital One with a Passion for Messaging, Web, and Human-Centered Design
 * Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
 
 ## A few Policies that will Govern the Class
