@@ -24,10 +24,10 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 
 |Assignment Type|C|B|A|
 |--|--|--|--|
-|Labs|12|12|12|
-|Read & Review| -- | 10|10|
-|Case Study Extension|--|1|2|
-|Look ahead|--|1|2|
+|Labs (12)|12|12|12|
+|Read & Review (12)| -- | 10|10|
+|Case Study Extension (4)|--|1|2|
+|Look ahead (4)|--|1|2|
 |Final Essay Parts|1|2|3|
 
 ## Flexibility Provisions
