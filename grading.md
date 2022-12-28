@@ -23,7 +23,7 @@ The 5 assignment categories:
 The following table summarizes the assignmenmts required to "meet spec" to earn certain letter grades.
 
 |Code|Assignment Type|#|C|B|A|
-|--|--|--|--|--|
+|--|--|--|--|--|--|
 |LA|Labs|12|12|12|12|
 |RR|"Read" & Review|12| -- | 10|10|
 |CS|Case Study Extension|4|--|1|2|
