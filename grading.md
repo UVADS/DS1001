@@ -28,7 +28,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |RR|"Read" & Review|14|--|12|12|
 |CS|Case Study Extension|4|--|1|2|
 |LA|Look Ahead|4|--|1|2|
-|FE|Final Essay Parts|3 parts|1 part|2 parts|3 parts|
+|FE|Final Essay Parts|3|1|2|3|
 
 ## Flexibility Provisions
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete.
