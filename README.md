@@ -65,8 +65,8 @@ The course will move rather quickly and can be demanding at times. However, if w
 | Week 7  | 2/28,3/2,3|Ethics + External   | 	|     Case Study	| |
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
 | Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
-| Week 10 | 3/21,23,24| Systems + Internal	|  	|	Game Lab: Mouse Trap  | 	|
-| Week 11 | 3/28,30,31| Miriam Friedel | 	| Case Study  |   |
+| Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | 	|
+| Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  |   |
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
@@ -79,6 +79,7 @@ The course will move rather quickly and can be demanding at times. However, if w
 * MC Forelle: Assistant Professor of Engineering and Society
 * Carrie O'Brien: User Interface Designer at Capital One with a Passion for Messaging, Web, and Human-Centered Design
 * Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
+* Neal Magee: Director, Solutions & DevOps
 
 ## A few Policies that will Govern the Class
 
