@@ -24,11 +24,11 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 
 |Code|Assignment Type|#|C|B|A|
 |--|--|--|--|--|--|
-|LA|Labs|13|12|12|12|
-|RR|"Read" & Review|14|--|12|12|
-|CS|Case Study Extension|4|--|1|2|
-|LA|Look Ahead|4|--|1|2|
-|FE|Final Essay Parts|3|1|2|3|
+|LABS|Labs|13|12|12|12|
+|READ|"Read" & Review|14|--|12|12|
+|CASE|Case Study Extension|4|--|1|2|
+|LOOK|Look Ahead|4|--|1|2|
+|ESSY|Final Essay Parts|3|1|2|3|
 
 ## Flexibility Provisions
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete.
