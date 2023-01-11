@@ -80,6 +80,11 @@ The course will move rather quickly and can be demanding at times. However, if w
 * Carrie O'Brien: User Interface Designer at Capital One with a Passion for Messaging, Web, and Human-Centered Design
 * Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
 * Neal Magee: Director, Solutions & DevOps
+* Steven Baek, Associate Professor School of Data Science
+* Sheng Li, Associate Professor School of Data Science
+* Renee Cummings, Data Activist in Residence, School of Data Science 
+* Rafael Alvardo, Associate Professor, School of Data Science 
+* Jess Reia, Assistant Professor, School of Data Science
 
 ## A few Policies that will Govern the Class
 
