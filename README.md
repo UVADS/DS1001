@@ -89,9 +89,9 @@ There are several technological tools used in this class:
 | Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
 | Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize  | 	|
-| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  	|
-| Week 4  |	2/7,9,10| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
+| Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize  | [How we can find ourselves in data | Giorgia Lupi](https://www.youtube.com/watch?v=sFIDCtRX_-o&feature=youtu.be)	|
+| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
+| Week 4  |	2/7,9,10| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
 | Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |  Personal Data Collect Lab     |    | 
 | Week 6	 | 2/21,23,24|Ethics + Internal	  | Professor Reia + Reinforcement | Game Lab: Guess Who?  |   |
 | Week 7  | 2/28,3/2,3|Ethics + External   | 	|     Case Study	| |
