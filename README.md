@@ -34,7 +34,7 @@ This is a survey course about the emerging field of Data Science. The School of 
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
-* Prime Learning Objective: Define Data Science and explain it to friends and family
+* Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
 
 In each of the areas we will specifically focus on:
 * Design
@@ -57,16 +57,17 @@ In each of the areas we will specifically focus on:
   * LO: 
   * LO: 
 
-
-...... Specific learning objectives are below:
-
-    Be able to describe the field of Data Science and its emerging sub-fields
-   
-
 The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
 
-
 ## How You’ll Know You Are Learning (Assessments)
+Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
+
+The 5 assignment categories:
+1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definintion of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
+2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include watching short videos. A short review of the key points is then submitted as the assignment deliverable.
+3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
+4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorperate material from course typically taken by 2nd and 3rd year students.
+5. Final Essay - This assignment is the students opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
 
 ## Tech Stack (Course Delivery Tools)
 
