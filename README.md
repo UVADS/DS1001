@@ -76,8 +76,7 @@ There are several technological tools used in this class:
 
 * email: Official communication from UVA is sent via the class email
 * canvas: The offical Learning Management System for this course is canvas, all assignments are managed through canvas **including lab assignments**.
-
-**[Discord Invite Click]()** 
+* discord: The official-unoffical course chat channel **[Discord Invite Click]()** 
 
 ## Materials That Will Aid in Your Learning (Try to use free materials): 
 
