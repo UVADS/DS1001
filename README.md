@@ -1,14 +1,16 @@
 # DS 1001: Foundations of Data Science 
 
-Your Mathematics for Data Science Tour Guides:
+Your Foundations of Data Science Instructors:
 
-    * Professor Brian Wright and Peter Alonzi
-    * Emails: 
+    * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
     * TA: 
     * Peer Mentors: 
-    * Class Location: 
+    * Class Location: Clark 107
+      * Lab: Mech Eng 214 or Minor 130
 
 Professor Office Hours:
+  * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, or by appointment
+  * Wright: 
 
 TA Office Hours 
 
@@ -16,9 +18,9 @@ Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 
+Year, Term and Time: 2023, Spring, 15:30-16:45 Tu & Th
 
-Class Title: Mathematics for Data Science
+Class Title: Foundations of Data Science
 
 Level: Undergraduate
 
@@ -27,7 +29,7 @@ Credit Type: Grade (A-F)
 <br>
 
 ## A Little Bit About the Course
- 
+This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science (link)[https://ontoligent.github.io/four-plus-one-model/]. 
 
 ## What you’ll learn along the way
 
