@@ -29,9 +29,34 @@ Credit Type: Grade (A-F)
 <br>
 
 ## A Little Bit About the Course
-This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science (link)[https://ontoligent.github.io/four-plus-one-model/]. 
+This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science [https://ontoligent.github.io/four-plus-one-model/](link). 
 
 ## What you’ll learn along the way
+We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
+
+* Prime Learning Objective: Define Data Science and explain it to friends and family
+
+In each of the areas we will specifically focus on:
+* Design
+  * Theme: Storytelling -- what to leave in and what to leave out
+  * LO: Observe the world around you and record your observations in a systematic way (aka create a data set)
+  * LO: Reflect on your data set and transform it into a medium for efficient communication to other humans
+
+* Value
+  * Theme: 
+  * LO: 
+  * LO: 
+
+* Systems
+  * Theme:
+  * LO: 
+  * LO:
+
+* Analytics
+  * Theme: Analyzing -- Garbage in, Garbage out
+  * LO: 
+  * LO: 
+
 
 ...... Specific learning objectives are below:
 
