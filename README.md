@@ -24,7 +24,9 @@ Class Title: Foundations of Data Science
 
 Level: Undergraduate
 
-Credit Type: Grade (A-F) 
+Credit Type: Grade (A-F)
+
+N.B.: There is an associated lab class that must be enrolled simultaneously. Sections include DS 1001 (102,104,105,106)
 
 <br>
 
@@ -70,6 +72,10 @@ The 5 assignment categories:
 5. Final Essay - This assignment is the students opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
 
 ## Tech Stack (Course Delivery Tools)
+There are several technological tools used in this class:
+
+* email: Official communication from UVA is sent via the class email
+* canvas: The offical Learning Management System for this course is canvas, all assignments are managed through canvas **including lab assignments**.
 
 **[Discord Invite Click]()** 
 
@@ -80,16 +86,14 @@ The 5 assignment categories:
 
 ## Schedule of Topics 
 
-***NOTE: depending on student interest, the syllabus can be adjusted to accommodate additional topics
-
 | Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | 	      |
+| Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
 | Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize  | 	|
 | Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  	|
-| Week 4  |	2/7,9,10| Carrie O'Brien  |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
+| Week 4  |	2/7,9,10| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | 	|
 | Week 5  | 2/14,16,17|Ethics SDS |  Humand versus Machine Bias |  Personal Data Collect Lab     |    | 
-| Week 6	 | 2/21,23,24|Ethics + Internal	  | Jess + Reinforcement | Game Lab: Guess Who?  |   |
+| Week 6	 | 2/21,23,24|Ethics + Internal	  | Professor Reia + Reinforcement | Game Lab: Guess Who?  |   |
 | Week 7  | 2/28,3/2,3|Ethics + External   | 	|     Case Study	| |
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
 | Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
@@ -98,7 +102,7 @@ The 5 assignment categories:
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
-| Week 15 | 4/25,27,28| Practice	| 	|   |   |
+| Week 15 | 4/25,27,28| Practice	| 	| Make Up  |   |
 | Week 16 | 5/2 (Tue only)| Practice	|  	|  	|  	|
 | Examinations | 5/4-5/12 | | | | |
 
