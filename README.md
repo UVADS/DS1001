@@ -10,7 +10,7 @@ Your Foundations of Data Science Instructors:
 
 Professor Office Hours:
   * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, or by appointment
-  * Wright: 
+  * Wright: 2-4 on Fridays on Discord or Elson 165
 
 TA Office Hours 
 
@@ -37,6 +37,7 @@ This is a survey course about the emerging field of Data Science. The School of 
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
 * Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
+* Secondary Objective: Identify how you see yourself in the field
 
 In each of the areas we will specifically focus on:
 * Design
@@ -76,7 +77,7 @@ There are several technological tools used in this class:
 
 * email: Official communication from UVA is sent via the class email
 * canvas: The offical Learning Management System for this course is canvas, all assignments are managed through canvas **including lab assignments**.
-* discord: The official-unoffical course chat channel **[Discord Invite Click]()** 
+* discord: The official-unoffical course chat channel **[Discord Invite Click](https://discord.gg/PGaPcMHp)** 
 
 ## Materials That Will Aid in Your Learning (Try to use free materials): 
 
