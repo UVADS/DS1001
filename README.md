@@ -46,9 +46,9 @@ In each of the areas we will specifically focus on:
   * LO: Reflect on your data set and transform it into a medium for efficient communication to other humans
 
 * Value
-  * Theme: 
-  * LO: 
-  * LO: 
+  * Theme: With great power comes great responsibility
+  * LO: Be able to reflect on and articulate the benefits and concerns of data driven decisions
+  * LO: Describe scenerios that allow for human centered data science
 
 * Systems
   * Theme: Scaling -- What scale is necessary?
@@ -57,8 +57,8 @@ In each of the areas we will specifically focus on:
 
 * Analytics
   * Theme: Analyzing -- Garbage in, Garbage out
-  * LO: 
-  * LO: 
+  * LO: Describe the current state of Machine Learning 
+  * LO: Articulate a typical algorithym life cycle 
 
 The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
 
