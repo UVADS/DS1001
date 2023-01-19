@@ -41,7 +41,7 @@ We will spend the majority of the semester focusing on the major aspecs of Data 
 
 In each of the areas we will specifically focus on:
 * Design
-  * Theme: Storytelling -- what to leave in and what to leave out
+  * Theme: Storytelling -- What do I leave in and what do I leave out?
   * LO: Observe the world around you and record your observations in a systematic way (aka create a data set)
   * LO: Reflect on your data set and transform it into a medium for efficient communication to other humans
 
@@ -51,7 +51,7 @@ In each of the areas we will specifically focus on:
   * LO: 
 
 * Systems
-  * Theme: 
+  * Theme: Scaling -- What scale is necessary?
   * LO: Identify the hardware and software components of a computer and describe their function
   * LO: Describe the different scales of computer operation
 
