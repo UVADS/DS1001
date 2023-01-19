@@ -57,7 +57,7 @@ In each of the areas we will specifically focus on:
 
 * Analytics
   * Theme: Analyzing -- Garbage in, Garbage out
-  * LO: Describe the current state of Machine Learning 
+  * LO: Describe the ecosystem of data models 
   * LO: Articulate a typical algorithym life cycle 
 
 The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
