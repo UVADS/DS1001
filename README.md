@@ -79,10 +79,13 @@ There are several technological tools used in this class:
 * canvas: The offical Learning Management System for this course is canvas, all assignments are managed through canvas **including lab assignments**.
 * discord: The official-unoffical course chat channel **[Discord Invite Click](https://discord.gg/PGaPcMHp)** 
 
-## Materials That Will Aid in Your Learning (Try to use free materials): 
+## Materials That Will Aid in Your Learning: 
 
 * A. [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
-* B. 
+* B. Observe, Collect, Draw! by Lupi and Posavec(https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
+* C. [R for Data Science](https://r4ds.had.co.nz/)
+* D. [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython-ebook/dp/B075X4LT6K)
+* E. [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
 
 ## Schedule of Topics 
 
@@ -109,14 +112,14 @@ There are several technological tools used in this class:
 ## Guest Speakers
 
 * MC Forelle: Assistant Professor of Engineering and Society
-* Carrie O'Brien: User Interface Designer at Capital One with a Passion for Messaging, Web, and Human-Centered Design
+* Carrie O'Brien: User Interface Designer at Capital One: Messaging, Web, and Human-Centered Design
+* Jess Reia: Assistant Professor, School of Data Science
+* Renee Cummings: Data Activist in Residence, School of Data Science 
+* Neal Magee: Director, Solutions & DevOps, UVA Research Computing
 * Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
-* Neal Magee: Director, Solutions & DevOps
-* Steven Baek, Associate Professor School of Data Science
-* Sheng Li, Associate Professor School of Data Science
-* Renee Cummings, Data Activist in Residence, School of Data Science 
-* Rafael Alvardo, Associate Professor, School of Data Science 
-* Jess Reia, Assistant Professor, School of Data Science
+* Rafael Alvardo: Associate Professor, School of Data Science 
+* Steven Baek: Associate Professor School of Data Science
+* Sheng Li: Associate Professor School of Data Science
 
 ## A few Policies that will Govern the Class
 
