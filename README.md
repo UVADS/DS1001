@@ -3,8 +3,6 @@
 Your Foundations of Data Science Instructors:
 
     * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
-    * TA: 
-    * Peer Mentors: 
     * Class Location: Clark 107
       * Lab: Mech Eng 214 or Minor 130
 
@@ -12,9 +10,8 @@ Professor Office Hours:
   * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, or by appointment
   * Wright: 2-4 on Fridays on Discord or Elson 165
 
-TA Office Hours 
 
-Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
+Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
