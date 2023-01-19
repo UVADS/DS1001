@@ -51,9 +51,9 @@ In each of the areas we will specifically focus on:
   * LO: 
 
 * Systems
-  * Theme:
-  * LO: 
-  * LO:
+  * Theme: 
+  * LO: Identify the hardware and software components of a computer and describe their function
+  * LO: Describe the different scales of computer operation
 
 * Analytics
   * Theme: Analyzing -- Garbage in, Garbage out
