@@ -7,7 +7,7 @@ Your Foundations of Data Science Instructors:
       * Lab: Mech Eng 214 or Minor 130
 
 Professor Office Hours:
-  * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, or by appointment
+  * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, Elson 185A, or by appointment
   * Wright: 2-4 on Fridays on Discord or Elson 165
 
 
