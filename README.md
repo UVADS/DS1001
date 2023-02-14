@@ -96,7 +96,7 @@ There are several technological tools used in this class:
 | Week 6	 | 2/21,23,24|Ethics + Internal	  | Overview of Value II + Professor Reia | Ethical Frameworks  |   |
 | Week 7  | 2/28,3/2,3|Ethics + External   | Patrick Hall + Value Reinforcement	|   Case Study	| |
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
-| Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | 	|
+| Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
 | Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | 	|
 | Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  |   |
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
