@@ -42,6 +42,13 @@
     "text": "Overview of the Design case study for the current semester for the Foundations of Data Science course."
   },
   {
+    "objectID": "value-lab.html",
+    "href": "value-lab.html",
+    "title": "7  Labs Rubric - Guess Who",
+    "section": "",
+    "text": "Individual Assignment\nGeneral Descripition: This lab is design for you to reflect on the process used for winning the game Guess Who. Students should work in teams to play the game and take notes on the processes that work best for quickly guessing the opponents card. This will likely include the creation of a tree based decision diagram, a example will be provided in class.\nPreparatory Assignments - None\nWhy am I doing this? In order to allow you to reflect on how data is used to generated decision/predictive algorithms and what issues could arise as a result. Work to incorporate the materials you’ve been exposed to up to this point as you work through the lab.\nWhat am I going to do? You are working through a interactive process with your group to find the optimal list of yes/no questions for any given card. Play the game as many times as necessary to construct a list of the top five questions using a tree based diagram.\nAnswer these questions:\n\nIn this situation what is the dataset and what is the algorithm?\nHow did your approach to identifying cards change throughout the lab period?\nAre there cards that are easier to identify, why?\nThis is just a game, but given the materials you’ve been exposed to what concerns do you have about this process and algorithmic decision making?\n\nTips for success:\n\nDon’t worry about winning\nWork as a team with your group\nTry to document the process used right at the start of the lab, don’t wait till after you have played to start taking notes\n\nHow will I know I have succeeded\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nText answers to questions\n\n\n\nText\n\nGoal: The questions are designed to be answer during or right after the lab period.\nUse a few sentences to answer each question in Canvas\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
+  },
+  {
     "objectID": "value-case-study.html",
     "href": "value-case-study.html",
     "title": "9  Value Case Study",
@@ -61,12 +68,5 @@
     "title": "18  BSDS-Course-Info",
     "section": "",
     "text": "DS 2006\nDS 3005 Mathematics for Data Science"
-  },
-  {
-    "objectID": "value-lab.html",
-    "href": "value-lab.html",
-    "title": "7  Labs Rubric - Guess Who",
-    "section": "",
-    "text": "Individual Assignment\nGeneral Descripition: This lab is design for you to reflect on the process used for winning the game Guess Who. Students should work in teams to play the game and take notes on the processes that work best for quickly guessing the opponents card. This will likely include the creation of a tree based decision diagram, a example will be provided in class.\nPreparatory Assignments - None\nWhy am I doing this? In order to allow you to reflect on how data is used to generated decision/predictive algorithms and what issues could arise as a result. Work to incorporate the materials you’ve been exposed to up to this point as you work through the lab.\nWhat am I going to do? You are working through a interactive process with your group to find the optimal list of yes/no questions for any given card. Play the game as many times as necessary to construct a list of the top five questions using a tree based diagram.\nAnswer these questions:\n\nIn this situation what is the dataset and what is the algorithm?\nHow did you approach identifying cards change throughout the lab period?\nAre there cards that are easier to identify, why?\nThis is just a game, but given the materials you’ve been exposed to what concerns do you have about this process and algorithmic decision making?\n\nTips for success:\n\nDon’t worry about winning\nWork as a team with your group\nTry to document the process used right at the start of the lab, don’t wait till after you have played to start taking notes\n\nHow will I know I have succeeded\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nText answers to questions\n\n\n\nText\n\nGoal: The questions are designed to be answer during or right after the lab period.\nUse a few sentences to answer each question in Canvas\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
   }
 ]
