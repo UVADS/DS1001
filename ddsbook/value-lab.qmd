@@ -15,7 +15,7 @@ Preparatory Assignments - None
 **Answer these questions:**
 
 1.  In this situation what is the dataset and what is the algorithm?
-2.  How did you approach identifying cards change throughout the lab period?
+2.  How did your approach to identifying cards change throughout the lab period?
 3.  Are there cards that are easier to identify, why?
 4.  This is just a game, but given the materials you've been exposed to what concerns do you have about this process and algorithmic decision making?
 
@@ -27,14 +27,14 @@ Tips for success:
 
 How will I know I have succeeded
 
-+-----------------------------------+------------------------------------------------------------------------------------------+
-| Specs Category                    | Specs Details                                                                            |
-+:=================================:+:=========================================================================================+
-| Formatting                        | -   Submit Via Canvas                                                                    |
-|                                   | -   Text answers to questions                                                            |
-+-----------------------------------+------------------------------------------------------------------------------------------+
-| Text                              | -   Goal: The questions are designed to be answer during or right after the lab period.  |
-|                                   | -   Use a few sentences to answer each question in Canvas                                |
-+-----------------------------------+------------------------------------------------------------------------------------------+
++-------------------+-----------------------------------------------------------------------------------------+
+| Specs Category    | Specs Details                                                                           |
++:=================:+:========================================================================================+
+| Formatting        | -   Submit Via Canvas                                                                   |
+|                   | -   Text answers to questions                                                           |
++-------------------+-----------------------------------------------------------------------------------------+
+| Text              | -   Goal: The questions are designed to be answer during or right after the lab period. |
+|                   | -   Use a few sentences to answer each question in Canvas                               |
++-------------------+-----------------------------------------------------------------------------------------+
 
 Acknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020).
