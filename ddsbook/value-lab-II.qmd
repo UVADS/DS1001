@@ -26,14 +26,13 @@ Tips for success:
 
 How will I know I have succeeded:
 
-+----------------+-----------------------------------------------------------------------------------------+
-| Specs Category | Specs Details                                                                           |
-+:==============:+:========================================================================================:+
-| Formatting     | -   Submit Via Canvas                                                                   |
-|                | -   Type answers to questions                                                           |
-+----------------+-----------------------------------------------------------------------------------------+
-| Text           | -   Goal: The questions are designed to be answer during or right after the lab period. |
-|                | -   Bullett points are fine for the first three questions, paragraph from for the fourth.   |
-+----------------+-----------------------------------------------------------------------------------------+
-
++-------------------+-----------------------------------------------------------------------------------------+
+| Specs Category    | Specs Details                                                                           |
++:=================:+:========================================================================================+
+| Formatting        | -   Submit Via Canvas                                                                   |
+|                   | -   Text answers to questions                                                           |
++-------------------+-----------------------------------------------------------------------------------------+
+| Text              | -   Goal: The questions are designed to be answer during or right after the lab period. |
+|                   | -   Bullett points are fine for the first three questions, paragraph from for the fourth|
++-------------------+-----------------------------------------------------------------------------------------+
 Acknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020).
