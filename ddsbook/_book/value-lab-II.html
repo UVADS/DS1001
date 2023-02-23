@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Defining Data Science - Design</title>
+<title>Defining Data Science - 8&nbsp; Labs Rubric - AI Fairness 360</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./design-sds.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./value-external.html" rel="next">
+<link href="./value-lab.html" rel="prev">
 <link href=".//images/domains.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -63,8 +63,8 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="Defining Data Science - Design">
-<meta name="twitter:description" content="This section will provide a overview of the the Design space through three different lenses.">
+<meta name="twitter:title" content="Defining Data Science - 8&nbsp; Labs Rubric - AI Fairness 360">
+<meta name="twitter:description" content="DS 1001 - Spring 2023 - Professors Wright and Alonzi Due: End of lab period (or later that day) Submission format: Word doc or PDF summarizing your findings">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Design</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Labs Rubric - AI Fairness 360</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./design.html" class="sidebar-item-text sidebar-link active">Design</a>
+            <a href="./design.html" class="sidebar-item-text sidebar-link">Design</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./value-lab-II.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Labs Rubric - AI Fairness 360</span></a>
+  <a href="./value-lab-II.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Labs Rubric - AI Fairness 360</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -258,7 +258,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Design</h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Labs Rubric - AI Fairness 360</span></h1>
 </div>
 
 
@@ -272,8 +272,54 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>This section will provide a overview of the the Design space through three different lenses. The School of Data Science’s perspective on the curriculum and skills that compose this area, the view from industry to included recorded lectures from experts that have participated in the Foundations of Data Science Course at UVA and through the point of view of researchers that are working and contributing to this area of the field.</p>
-<p>It is important to note that all these areas are evolving and have overlapping content area, but Design in particular can be difficult to neatly fold into well-defined set of easily quantifiable skills.</p>
+<p>DS 1001 - Spring 2023 - Professors Wright and Alonzi Due: End of lab period (or later that day) Submission format: Word doc or PDF summarizing your findings</p>
+<p>Individual Assignment</p>
+<p><strong>General Descripition:</strong> This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website <a href="https://aif360.mybluemix.net/">AI Fairness 360</a>. You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.</p>
+<p>Preparatory Assignments - None</p>
+<p><strong>Why am I doing this?</strong> In order to give you exposure to and practice with the various methods being developed and deployed in the ML fairness space. After completing the lab you’ll have a better sense of how these tools are used, when they are used and how the work.</p>
+<p><strong>What am I going to do?</strong> The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below.</p>
+<p><strong>Answer these questions:</strong></p>
+<ol type="1">
+<li>For each protected class variable which evaluation methods showed bias to be present?</li>
+<li>Note how each method preform at removing bias.</li>
+<li>Was the accuracy of the model effected when using the various approaches, if so how?</li>
+<li>Given the above what are some patterns you noticed, which methods seem to work the best, where in the data process are these methods located (pre/in/post).</li>
+</ol>
+<p>Tips for success:</p>
+<ul>
+<li>Take careful notes as you go through each method</li>
+<li>Have fun</li>
+</ul>
+<p>How will I know I have succeeded:</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Specs Category</th>
+<th style="text-align: left;">Specs Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Formatting</td>
+<td style="text-align: left;"><ul>
+<li>Submit Via Canvas</li>
+<li>Text answers to questions</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Text</td>
+<td style="text-align: left;"><ul>
+<li>Goal: The questions are designed to be answer during or right after the lab period.</li>
+<li>Bullett points are fine for the first three questions, paragraph from for the fourth</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+<p>Acknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer &amp; Palmer (2020).</p>
 
 
 
@@ -378,13 +424,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Defining Data Science - 4 + 1 Overview</span></span>
+      <a href="./value-lab.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Labs Rubric - Guess Who</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./design-sds.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Design SDS</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./value-external.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Value External to the School</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -49,23 +49,30 @@
     "text": "Individual Assignment\nGeneral Descripition: This lab is design for you to reflect on the process used for winning the game Guess Who. Students should work in teams to play the game and take notes on the processes that work best for quickly guessing the opponents card. This will likely include the creation of a tree based decision diagram, a example will be provided in class.\nPreparatory Assignments - None\nWhy am I doing this? In order to allow you to reflect on how data is used to generated decision/predictive algorithms and what issues could arise as a result. Work to incorporate the materials you’ve been exposed to up to this point as you work through the lab.\nWhat am I going to do? You are working through a interactive process with your group to find the optimal list of yes/no questions for any given card. Play the game as many times as necessary to construct a list of the top five questions using a tree based diagram.\nAnswer these questions:\n\nIn this situation what is the dataset and what is the algorithm?\nHow did your approach to identifying cards change throughout the lab period?\nAre there cards that are easier to identify, why?\nThis is just a game, but given the materials you’ve been exposed to what concerns do you have about this process and algorithmic decision making?\n\nTips for success:\n\nDon’t worry about winning\nWork as a team with your group\nTry to document the process used right at the start of the lab, don’t wait till after you have played to start taking notes\n\nHow will I know I have succeeded\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nText answers to questions\n\n\n\nText\n\nGoal: The questions are designed to be answer during or right after the lab period.\nUse a few sentences to answer each question in Canvas\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
   },
   {
+    "objectID": "value-lab-II.html",
+    "href": "value-lab-II.html",
+    "title": "8  Labs Rubric - AI Fairness 360",
+    "section": "",
+    "text": "Individual Assignment\nGeneral Descripition: This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website AI Fairness 360. You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.\nPreparatory Assignments - None\nWhy am I doing this? In order to give you exposure to and practice with the various methods being developed and deployed in the ML fairness space. After completing the lab you’ll have a better sense of how these tools are used, when they are used and how the work.\nWhat am I going to do? The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below.\nAnswer these questions:\n\nFor each protected class variable which evaluation methods showed bias to be present?\nNote how each method preform at removing bias.\nWas the accuracy of the model effected when using the various approaches, if so how?\nGiven the above what are some patterns you noticed, which methods seem to work the best, where in the data process are these methods located (pre/in/post).\n\nTips for success:\n\nTake careful notes as you go through each method\nHave fun\n\nHow will I know I have succeeded:\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nText answers to questions\n\n\n\nText\n\nGoal: The questions are designed to be answer during or right after the lab period.\nBullett points are fine for the first three questions, paragraph from for the fourth\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
+  },
+  {
     "objectID": "value-case-study.html",
     "href": "value-case-study.html",
-    "title": "9  Value Case Study",
+    "title": "10  Value Case Study",
     "section": "",
     "text": "of this Value domain"
   },
   {
     "objectID": "analytics-sds.html",
     "href": "analytics-sds.html",
-    "title": "14  Analytics UVA DS",
+    "title": "15  Analytics UVA DS",
     "section": "",
-    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr=np.arange(0,2,.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta,r)\nax.set_rticks([.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 14.1: A line plot on a polar axis"
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr=np.arange(0,2,.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta,r)\nax.set_rticks([.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 15.1: A line plot on a polar axis"
   },
   {
     "objectID": "BSDS-Course-Info.html",
     "href": "BSDS-Course-Info.html",
-    "title": "18  BSDS-Course-Info",
+    "title": "19  BSDS-Course-Info",
     "section": "",
     "text": "DS 2006\nDS 3005 Mathematics for Data Science"
   }
