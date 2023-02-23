@@ -24,7 +24,7 @@ Tips for success:
 -   Take careful notes as you go through each method
 -   Have fun
 
-How will I know I have succeeded
+How will I know I have succeeded:
 
 +----------------+-----------------------------------------------------------------------------------------+
 | Specs Category | Specs Details                                                                           |
