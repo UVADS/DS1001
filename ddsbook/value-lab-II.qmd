@@ -4,18 +4,18 @@ DS 1001 - Spring 2023 - Professors Wright and Alonzi Due: End of lab period (or 
 
 Individual Assignment
 
-**General Descripition:** This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website [AI Fairness 360](https://aif360.mybluemix.net/). You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets. 
+**General Descripition:** This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website [AI Fairness 360](https://aif360.mybluemix.net/). You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.
 
 Preparatory Assignments - None
 
-**Why am I doing this?** In order to give you exposure to and practice with the various methods being developed and deployed in the ML fairness space. After completing the lab you'll have a better sense of how these tools are used, when they are used and how the work.  
+**Why am I doing this?** In order to give you exposure to and practice with the various methods being developed and deployed in the ML fairness space. After completing the lab you'll have a better sense of how these tools are used, when they are used and how the work.
 
-**What am I going to do?** The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below. 
+**What am I going to do?** The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below.
 
 **Answer these questions:**
 
 1.  For each protected class variable which evaluation methods showed bias to be present?
-2.  Note how each method preform at removing bias. 
+2.  Note how each method preform at removing bias.
 3.  Was the accuracy of the model effected when using the various approaches, if so how?
 4.  Given the above what are some patterns you noticed, which methods seem to work the best, where in the data process are these methods located (pre/in/post).
 
@@ -26,13 +26,14 @@ Tips for success:
 
 How will I know I have succeeded:
 
-+-------------------+-----------------------------------------------------------------------------------------+
-| Specs Category    | Specs Details                                                                           |
-+:=================:+:========================================================================================+
-| Formatting        | -   Submit Via Canvas                                                                   |
-|                   | -   Text answers to questions                                                           |
-+-------------------+-----------------------------------------------------------------------------------------+
-| Text              | -   Goal: The questions are designed to be answer during or right after the lab period. |
-|                   | -   Bullett points are fine for the first three questions, paragraph from for the fourth|
-+-------------------+-----------------------------------------------------------------------------------------+
++----------------+------------------------------------------------------------------------------------------+
+| Specs Category | Specs Details                                                                            |
++:==============:+:=========================================================================================+
+| Formatting     | -   Submit Via Canvas                                                                    |
+|                | -   Text answers to questions                                                            |
++----------------+------------------------------------------------------------------------------------------+
+| Text           | -   Goal: The questions are designed to be answer during or right after the lab period.  |
+|                | -   Bullett points are fine for the first three questions, paragraph from for the fourth |
++----------------+------------------------------------------------------------------------------------------+
+
 Acknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020).
