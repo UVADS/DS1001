@@ -19,6 +19,7 @@ book:
         - value-sds.qmd
         - value-lab.qmd
         - value-lab-II.qmd
+        - value_lab-III.qmd
         - value-external.qmd
         - value-case-study.qmd
     - part: "Systems"
