@@ -56,23 +56,30 @@
     "text": "Individual Assignment\nGeneral Descripition: This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website AI Fairness 360. You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.\nPreparatory Assignments - None\nWhy am I doing this? In order to give you exposure to and practice with the various methods being developed and deployed in the ML fairness space. After completing the lab you’ll have a better sense of how these tools are used, when they are used and how the work.\nWhat am I going to do? The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below.\nAnswer these questions:\n\nFor each protected class variable which evaluation methods showed bias to be present?\nNote how each method preform at removing bias.\nWas the accuracy of the model effected when using the various approaches, if so how?\nGiven the above what are some patterns you noticed, which methods seem to work the best, where in the data process are these methods located (pre/in/post).\n\nTips for success:\n\nTake careful notes as you go through each method\nHave fun\n\nHow will I know I have succeeded:\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nText answers to questions\n\n\n\nText\n\nGoal: The questions are designed to be answer during or right after the lab period.\nBullett points are fine for the first three questions, paragraph from for the fourth\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
   },
   {
+    "objectID": "value-lab-III.html",
+    "href": "value-lab-III.html",
+    "title": "9  Labs Rubric - Explainable AI Interview",
+    "section": "",
+    "text": "Individual Assignment\nGeneral Descripition: This lab is designed for you to verbalize the concept of Explainable AI to someone that is unfamiliar with the concepts and track their responses.\nPreparatory Assignments - None\nWhy am I doing this? This will allow you to work on communicating the concepts thus understanding them better and judging whether trust is increased with the knowledge that explainable approach to AI models are present.\nWhat am I going to do? Interview three people that have somewhat limit knowledge of Machine Learning and AI. Ask the first two questions then provide a brief overview of Explainable AI and then ask the remaining three questions. After all three interviews are complete provide a brief summary of what patterns you notice (a paragraph or two is fine)\nAnswer these questions:\n\nDo you believe that AI has a large influence over society currently?\nOn a scale from 1 to 10, with 10 being total trust and 1 being no trust: Do you believe that AI models can be trusted and used in a way that promotes positive outcomes for individuals and society?\nGive a brief overview of the Data Ethic concepts with a emphasis on Explainable AI models.\nGiven what you just heard does that in anyway change your answer to question 2, such that, if explainable AI models were more commonly used would you be more likely to believe that they can promote positive outcomes for individuals and society? (scale of 1 to 10 for you belief the AI models can promote positive outcomes)\nAre you interested in learning more about Explainable AI as a concept?\n\nTips for success:\n\nKeep you over of data Ethics and Explainable AI at a high level and use the slides provided in class as needed.\nFeel free to improvise and ask additional questions if you’d like or change the questions slightly.\n\nHow will I know I have succeeded:\n\n\n\n\n\n\n\nSpecs Category\nSpecs Details\n\n\n\n\nFormatting\n\nSubmit Via Canvas\nSummary of your three interviews in one document\nA reflection on any patterns you noticed in the answers\n\n\n\nText\n\nGoal: The interview is designed to be fairly quick, 10 minutes or so for each. All together the assignment should take approximately one hour.\n\n\n\n\nAcknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020)."
+  },
+  {
     "objectID": "value-case-study.html",
     "href": "value-case-study.html",
-    "title": "10  Value Case Study",
+    "title": "11  Value Case Study",
     "section": "",
     "text": "of this Value domain"
   },
   {
     "objectID": "analytics-sds.html",
     "href": "analytics-sds.html",
-    "title": "15  Analytics UVA DS",
+    "title": "16  Analytics UVA DS",
     "section": "",
-    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr=np.arange(0,2,.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta,r)\nax.set_rticks([.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 15.1: A line plot on a polar axis"
+    "text": "Code\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr=np.arange(0,2,.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta,r)\nax.set_rticks([.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\nFigure 16.1: A line plot on a polar axis"
   },
   {
     "objectID": "BSDS-Course-Info.html",
     "href": "BSDS-Course-Info.html",
-    "title": "19  BSDS-Course-Info",
+    "title": "20  BSDS-Course-Info",
     "section": "",
     "text": "DS 2006\nDS 3005 Mathematics for Data Science"
   }

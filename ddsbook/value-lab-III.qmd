@@ -22,7 +22,7 @@ Preparatory Assignments - None
 
 Tips for success:
 
--   Keep you over of data Ethics and Explainable AI at a high level and use the slides provided in class as needed.
+-   Keep your over of data Ethics and Explainable AI at a high level and use the slides provided in class as needed.
 -   Feel free to improvise and ask additional questions if you'd like or change the questions slightly.
 
 How will I know I have succeeded:
