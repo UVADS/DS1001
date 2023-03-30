@@ -33,6 +33,8 @@ This is a survey course about the emerging field of Data Science. The School of 
 ### Quotes From Former Students
 > Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
 
+> Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
+
 
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
