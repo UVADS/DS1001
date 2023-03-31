@@ -35,6 +35,8 @@ This is a survey course about the emerging field of Data Science. The School of 
 
 > Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
 
+> Humanizing data reminds me that data serves other people and that even numbers themselves represent other people and the world that we live in.
+
 
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
