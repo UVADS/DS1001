@@ -39,6 +39,8 @@ This is a survey course about the emerging field of Data Science. The School of 
 
 > This lab was extremely fun and interactive using the notebook to experience leveraging a GPU.
 
+> I think was a good way to introduce the class on how to code and get our foot in the door. As this is a data science intro class, it was nice to be able to have an opportunity to learn a little bit about coding and makes me excited to try more in the future.
+
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
