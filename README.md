@@ -33,6 +33,13 @@ This is a survey course about the emerging field of Data Science. The School of 
 ### Quotes From Former Students
 > Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
 
+> Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
+
+> Humanizing data reminds me that data serves other people and that even numbers themselves represent other people and the world that we live in.
+
+> This lab was extremely fun and interactive using the notebook to experience leveraging a GPU.
+
+> I think was a good way to introduce the class on how to code and get our foot in the door. As this is a data science intro class, it was nice to be able to have an opportunity to learn a little bit about coding and makes me excited to try more in the future.
 
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
@@ -101,8 +108,8 @@ There are several technological tools used in this class:
 | Week 7  | 2/28,3/2,3|Ethics + External   | Patrick Hall + Value Reinforcement	|   Case Study	| |
 | Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
 | Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
-| Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | 	|
-| Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  |   |
+| Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
+| Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
 | Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
