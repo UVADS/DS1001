@@ -4,7 +4,7 @@ format: html
 ---
 
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UVADS/DS1001/blob/master/ddsbook/ex_boost_machine_example.ipynb) 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/UVADS/DS1001/blob/master/ddsbook/analytics-lab-II.qmd) 
 
 
 
@@ -16,6 +16,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import statsmodels.api as sm
 
+
 ```
 
 ## What we are going to do is add guassian noise itertatively to a dataset and then pass the new noisy dataset to a pretrained machine linear model and track the ability of the model to learn the target as noise increases. 
@@ -26,14 +27,18 @@ import statsmodels.api as sm
 
 
 ```{python}
-# This is the dataset we will be using: classic eruption times for old faithful. Take a look at the documentation here: https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/faithful
+# This is the dataset we will be using: classic eruption times for old faithful. 
+# Take a look at the documentation 
+# here: https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/faithful
 
 
-## This is our data source
+# This is our data source
 url="https://gist.githubusercontent.com/curran/4b59d1046d9e66f2787780ad51a1cd87/raw/9ec906b78a98cf300947a37b56cfe70d01183200/data.tsv"
 
 
-## Reading in the data, and use the "tab" as a separator so the data will be loaded in correctly.  pd stands for pandas and "pd.read_csv" is the function we are using to read in the data from the url.
+# Reading in the data, and use the "tab" as a separator so the data will be loaded 
+# in correctly.  pd stands for pandas and "pd.read_csv" is the function we are 
+# using to read in the data from the url.
 old_faith = pd.read_csv(url, sep='\t')
 
 ```
@@ -58,14 +63,15 @@ lm = sm.OLS(old_faith['waiting'],old_faith['eruptions']).fit()
 
 lm.summary()
 
-#Using the R2 measure, how well does the model predict (scale of 0 to 1, where 1 is perfect, again needed for your submission)
+#Using the R2 measure, how well does the model predict (scale of 0 to 1,
+#  where 1 is perfect, again needed for your submission)
 ```
 
 
 ## Now what we are going to do is add "noise" to the dataset and then rerun the model and see what happens.
 ```{python}
 # mu= mean and sigma =standard deviation
-mu, sigma = 0, 1.5 
+mu, sigma = 0, .5 
 # creating a noise with the same dimension as the dataset (2,2) 
 noise = np.random.normal(mu, sigma, [272,2]) 
 print(noise[0:5])
@@ -76,10 +82,13 @@ print(noise[0:5])
 
 ## Really a small change, let's see what happens to the model quality
 ```{python}
+# Here we are adding the noise to the dataset
 old_faith_1=old_faith + noise
 
+#Create a new model
 lm_1 = sm.OLS(old_faith_1['waiting'],old_faith_1['eruptions']).fit()
 
+#Checking the R2 number
 lm_1.summary()
 
 ```
@@ -92,18 +101,19 @@ plt.ylabel("Waiting Time")
 
 plt.show()
 
-
-
 ```
 
-## Task 1: Slowly change the standard deviation (increases of .25) and see what happens with the R2 number, note the pace of change of the model.  
+### Task 1: Slowly change the standard deviation (increases of .25) and see what happens with the R2 number, note the pace of change of the model.  
 
-## Task 2: Adjust the mean but leave the standard dev low, note how this effects the model.  
+### Task 2: Adjust the mean but leave the standard dev low, note how this effects the model.  
 
-Questions for submission: 
+## Questions for submission: 
+
 1. What patterns do you see in the data?
 
-1. Explain the concept behind noise versus signal as it relates to example today on the old faithful dataset.  
+2. How well did the first model fit the data? 
 
-2. Define the term guassian noise and explain the observations you noted as it relates to 
+3. Explain the concept behind noise versus signal as it relates to example today on the old faithful dataset.  
+
+4. Define the term guassian noise and explain the observations you noted as it relates to 
 

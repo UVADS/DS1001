@@ -127,7 +127,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="https://colab.research.google.com/github/UVADS/DS1001/blob/master/ddsbook/ex_boost_machine_example.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<p><a href="https://colab.research.google.com/github/UVADS/DS1001/blob/master/ddsbook/analytics-lab-II.qmd"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
 <p></p><figcaption class="figure-caption">Open In Colab</figcaption><p></p>
 </figure>
 </div>
@@ -145,15 +145,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><p>Answer the questions below as they relate to model output and the articles.</p></li>
 </ol>
 <div class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the dataset we will be using: classic eruption times for old faithful. Take a look at the documentation here: https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/faithful</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">## This is our data source</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>url<span class="op">=</span><span class="st">"https://gist.githubusercontent.com/curran/4b59d1046d9e66f2787780ad51a1cd87/raw/9ec906b78a98cf300947a37b56cfe70d01183200/data.tsv"</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co">## Reading in the data, and use the "tab" as a separator so the data will be loaded in correctly.  pd stands for pandas and "pd.read_csv" is the function we are using to read in the data from the url.</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>old_faith <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This is the dataset we will be using: classic eruption times for old faithful. </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Take a look at the documentation </span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># here: https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/faithful</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># This is our data source</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>url<span class="op">=</span><span class="st">"https://gist.githubusercontent.com/curran/4b59d1046d9e66f2787780ad51a1cd87/raw/9ec906b78a98cf300947a37b56cfe70d01183200/data.tsv"</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Reading in the data, and use the "tab" as a separator so the data will be loaded </span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># in correctly.  pd stands for pandas and "pd.read_csv" is the function we are </span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># using to read in the data from the url.</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>old_faith <span class="op">=</span> pd.read_csv(url, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="lets-take-a-quick-look-at-a-plot-to-get-an-idea-of-the-distribution-of-the-data." class="level2">
@@ -165,7 +169,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
 <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the patterns that you see? </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Note the patterns that you see, (you'll need this for your submission) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="analytics-lab-II_files/figure-html/cell-4-output-1.png" width="586" height="422"></p>
 </div>
@@ -178,7 +182,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>lm.summary()</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Using the R2 measure, how well does the model predict (scale of 0 to 1, where 1 is perfect)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Using the R2 measure, how well does the model predict (scale of 0 to 1,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#  where 1 is perfect, again needed for your submission)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 
 <table class="simpletable">
@@ -196,7 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <th>Date:</th>             <td>Wed, 12 Apr 2023</td> <th>  Prob (F-statistic):</th>          <td>9.97e-214</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>22:26:08</td>     <th>  Log-Likelihood:    </th>          <td> -1060.7</td> 
+  <th>Time:</th>                 <td>22:43:58</td>     <th>  Log-Likelihood:    </th>          <td> -1060.7</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   272</td>      <th>  AIC:               </th>          <td>   2123.</td> 
@@ -240,16 +245,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="now-what-we-are-going-to-do-is-add-noise-to-the-dataset-and-then-rerun-the-model-and-see-what-happens.">Now what we are going to do is add “noise” to the dataset and then rerun the model and see what happens.</h2>
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mu= mean and sigma =standard deviation</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mu, sigma <span class="op">=</span> <span class="dv">0</span>, <span class="fl">1.5</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mu, sigma <span class="op">=</span> <span class="dv">0</span>, <span class="fl">.5</span> </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># creating a noise with the same dimension as the dataset (2,2) </span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>noise <span class="op">=</span> np.random.normal(mu, sigma, [<span class="dv">272</span>,<span class="dv">2</span>]) </span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(noise[<span class="dv">0</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[-1.58402905  1.23013109]
- [-0.74089826 -0.86104114]
- [ 0.6850748   3.14807344]
- [ 0.87415294  0.28048042]
- [-1.48285727  1.34634408]]</code></pre>
+<pre><code>[[ 0.50881014 -0.12189941]
+ [ 0.21564    -0.7896611 ]
+ [-0.48547227 -0.03413278]
+ [ 0.27433236  0.14118803]
+ [ 0.52767543 -0.11133328]]</code></pre>
 </div>
 </div>
 </section>
@@ -266,25 +271,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
 <tbody><tr>
-  <th>Dep. Variable:</th>         <td>waiting</td>     <th>  R-squared (uncentered):</th>      <td>   0.834</td> 
+  <th>Dep. Variable:</th>         <td>waiting</td>     <th>  R-squared (uncentered):</th>      <td>   0.956</td> 
 </tr>
 <tr>
-  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.833</td> 
+  <th>Model:</th>                   <td>OLS</td>       <th>  Adj. R-squared (uncentered):</th> <td>   0.956</td> 
 </tr>
 <tr>
-  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   1361.</td> 
+  <th>Method:</th>             <td>Least Squares</td>  <th>  F-statistic:       </th>          <td>   5882.</td> 
 </tr>
 <tr>
-  <th>Date:</th>             <td>Wed, 12 Apr 2023</td> <th>  Prob (F-statistic):</th>          <td>1.18e-107</td>
+  <th>Date:</th>             <td>Wed, 12 Apr 2023</td> <th>  Prob (F-statistic):</th>          <td>8.70e-186</td>
 </tr>
 <tr>
-  <th>Time:</th>                 <td>22:26:08</td>     <th>  Log-Likelihood:    </th>          <td> -1305.7</td> 
+  <th>Time:</th>                 <td>22:43:58</td>     <th>  Log-Likelihood:    </th>          <td> -1125.3</td> 
 </tr>
 <tr>
-  <th>No. Observations:</th>      <td>   272</td>      <th>  AIC:               </th>          <td>   2613.</td> 
+  <th>No. Observations:</th>      <td>   272</td>      <th>  AIC:               </th>          <td>   2253.</td> 
 </tr>
 <tr>
-  <th>Df Residuals:</th>          <td>   271</td>      <th>  BIC:               </th>          <td>   2617.</td> 
+  <th>Df Residuals:</th>          <td>   271</td>      <th>  BIC:               </th>          <td>   2256.</td> 
 </tr>
 <tr>
   <th>Df Model:</th>              <td>     1</td>      <th>                     </th>              <td> </td>    
@@ -298,21 +303,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <td></td>         <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P&gt;|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
 </tr>
 <tr>
-  <th>eruptions</th> <td>   16.8468</td> <td>    0.457</td> <td>   36.891</td> <td> 0.000</td> <td>   15.948</td> <td>   17.746</td>
+  <th>eruptions</th> <td>   18.9218</td> <td>    0.247</td> <td>   76.695</td> <td> 0.000</td> <td>   18.436</td> <td>   19.408</td>
 </tr>
 </tbody></table>
 <table class="simpletable">
 <tbody><tr>
-  <th>Omnibus:</th>       <td> 1.608</td> <th>  Durbin-Watson:     </th> <td>   1.664</td>
+  <th>Omnibus:</th>       <td> 1.505</td> <th>  Durbin-Watson:     </th> <td>   2.235</td>
 </tr>
 <tr>
-  <th>Prob(Omnibus):</th> <td> 0.448</td> <th>  Jarque-Bera (JB):  </th> <td>   1.361</td>
+  <th>Prob(Omnibus):</th> <td> 0.471</td> <th>  Jarque-Bera (JB):  </th> <td>   1.433</td>
 </tr>
 <tr>
-  <th>Skew:</th>          <td>-0.063</td> <th>  Prob(JB):          </th> <td>   0.506</td>
+  <th>Skew:</th>          <td> 0.077</td> <th>  Prob(JB):          </th> <td>   0.488</td>
 </tr>
 <tr>
-  <th>Kurtosis:</th>      <td> 3.323</td> <th>  Cond. No.          </th> <td>    1.00</td>
+  <th>Kurtosis:</th>      <td> 2.680</td> <th>  Cond. No.          </th> <td>    1.00</td>
 </tr>
 </tbody></table><br><br>Notes:<br>[1] R² is computed without centering (uncentered) since the model does not contain a constant.<br>[2] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </div>
@@ -327,19 +332,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="analytics-lab-II_files/figure-html/cell-8-output-1.png" width="595" height="422"></p>
+<p><img src="analytics-lab-II_files/figure-html/cell-8-output-1.png" width="586" height="422"></p>
 </div>
 </div>
+<section id="task-1-slowly-change-the-standard-deviation-increases-of-.25-and-see-what-happens-with-the-r2-number-note-the-pace-of-change-of-the-model." class="level3">
+<h3 class="anchored" data-anchor-id="task-1-slowly-change-the-standard-deviation-increases-of-.25-and-see-what-happens-with-the-r2-number-note-the-pace-of-change-of-the-model.">Task 1: Slowly change the standard deviation (increases of .25) and see what happens with the R2 number, note the pace of change of the model.</h3>
 </section>
-<section id="task-1-slowly-change-the-standard-deviation-increases-of-.25-and-see-what-happens-with-the-r2-number-note-the-pace-of-change-of-the-model." class="level2">
-<h2 class="anchored" data-anchor-id="task-1-slowly-change-the-standard-deviation-increases-of-.25-and-see-what-happens-with-the-r2-number-note-the-pace-of-change-of-the-model.">Task 1: Slowly change the standard deviation (increases of .25) and see what happens with the R2 number, note the pace of change of the model.</h2>
+<section id="task-2-adjust-the-mean-but-leave-the-standard-dev-low-note-how-this-effects-the-model." class="level3">
+<h3 class="anchored" data-anchor-id="task-2-adjust-the-mean-but-leave-the-standard-dev-low-note-how-this-effects-the-model.">Task 2: Adjust the mean but leave the standard dev low, note how this effects the model.</h3>
 </section>
-<section id="task-2-adjust-the-mean-but-leave-the-standard-dev-low-note-how-this-effects-the-model." class="level2">
-<h2 class="anchored" data-anchor-id="task-2-adjust-the-mean-but-leave-the-standard-dev-low-note-how-this-effects-the-model.">Task 2: Adjust the mean but leave the standard dev low, note how this effects the model.</h2>
 </section>
-<section id="explain-the-concept-behind-noise-versus-signal-as-it-relates-to-example-today-on-the-old-faithful-dataset." class="level2">
-<h2 class="anchored" data-anchor-id="explain-the-concept-behind-noise-versus-signal-as-it-relates-to-example-today-on-the-old-faithful-dataset.">Explain the concept behind noise versus signal as it relates to example today on the old faithful dataset.</h2>
-<p>Define the term guassian noise and explain the observations you noted as it relates to</p>
+<section id="questions-for-submission" class="level2">
+<h2 class="anchored" data-anchor-id="questions-for-submission">Questions for submission:</h2>
+<ol type="1">
+<li><p>What patterns do you see in the data?</p></li>
+<li><p>Explain the concept behind noise versus signal as it relates to example today on the old faithful dataset.</p></li>
+<li><p>Define the term guassian noise and explain the observations you noted as it relates to</p></li>
+</ol>
 </section>
 
 </main>
