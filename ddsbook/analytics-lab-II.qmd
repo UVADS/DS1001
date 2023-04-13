@@ -115,5 +115,5 @@ plt.show()
 
 3. Explain the concept behind noise versus signal as it relates to example today on the old faithful dataset.  
 
-4. Define the term guassian noise and explain the observations you noted as it relates to 
+4. Define the term gaussian noise and explain the observations you noted as it relates to 
 
