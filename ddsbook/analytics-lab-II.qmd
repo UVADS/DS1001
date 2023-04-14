@@ -76,8 +76,6 @@ mu, sigma = 0, .5
 noise = np.random.normal(mu, sigma, [272,2]) 
 print(noise[0:5])
 
-
-
 ```
 
 ## Really a small change, let's see what happens to the model quality
