@@ -23,7 +23,7 @@ Level: Undergraduate
 
 Credit Type: Grade (A-F)
 
-N.B.: There is an associated lab class that must be enrolled simultaneously. Sections include DS 1001 (102,104,105,106)
+N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday Mornings).
 
 <br>
 
