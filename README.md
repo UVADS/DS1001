@@ -35,6 +35,8 @@ This is a survey course about the emerging field of Data Science. The School of 
 ### Quotes From Former Students
 > Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
 
+>  I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
+
 > Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
 
 > Humanizing data reminds me that data serves other people and that even numbers themselves represent other people and the world that we live in.
