@@ -34,6 +34,9 @@ book:
         - analytics-lab.qmd
         - analytics-external.qmd
         - analytics-case-study.qmd
+    - part: "Appendix"
+      chapters: 
+        - appendix-sources.qmd
     - BSDS-Course-Info.qmd
     - references.qmd
   favicon: /images/domains.png
