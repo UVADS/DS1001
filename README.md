@@ -51,7 +51,7 @@ This is a survey course about the emerging field of Data Science. The School of 
 > You're not going to get it right the first time. That's ok! You have to learn from your mistakes in order to grow and find the best solution possible for the problem you are working on in the moment. 
 
 ## What you’ll learn along the way
-We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
+We will spend the majority of the semester focusing on the major aspects of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
 * Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
 * Secondary Objective: Identify how you see yourself in the field
