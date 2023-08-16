@@ -32,7 +32,7 @@ N.B.: There is an associated lab class that must be enrolled simultaneously (1 h
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
 
-### Quotes From Former Students
+### What Former Students Have Said
 
 > I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
 
