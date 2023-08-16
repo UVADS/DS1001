@@ -7,7 +7,7 @@ Your Foundations of Data Science Instructors:
       * Lab: Thornton Hall D222 or Ridley Hall 179
 
 Professor Office Hours:
-  * Alonzi: TBD
+  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guranteed)
   * Wright: 3-4 on Mondays in Elson 165
 
 
