@@ -3,19 +3,19 @@
 Your Foundations of Data Science Instructors:
 
     * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
-    * Class Location: Clark 107
-      * Lab: Mech Eng 214 or Minor 130
+    * Class Location: Nau Hall 101
+      * Lab: Thornton Hall D222 or Ridley Hall 179
 
 Professor Office Hours:
-  * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, Elson 185A, or by appointment
-  * Wright: 2-4 on Fridays on Discord or Elson 165
+  * Alonzi: TBD
+  * Wright: 3-4 on Mondays in Elson 165
 
 
 Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 2023, Spring, 15:30-16:45 Tu & Th
+Year, Term and Time: 2023, Fall, 9:30-10:45 Tu & Th
 
 Class Title: Foundations of Data Science
 
@@ -108,23 +108,22 @@ There are several technological tools used in this class:
 
 | Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | [How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)	|
-| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
-| Week 4  |	2/7,9,10| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
-| Week 5  | 2/14,16,17|Ethics SDS |  Renee Cummings + Overview of Value I |  Game Lab: Guess Who?     | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
-| Week 6	 | 2/21,23,24|Ethics + Internal	  | Overview of Value II + Professor Reia | Ethical Frameworks  |   |
-| Week 7  | 2/28,3/2,3|Ethics + External   | Patrick Hall + Value Reinforcement	|   Case Study	| |
-| Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
-| Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
-| Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
-| Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
-| Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
-| Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
-| Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
-| Week 15 | 4/25,27,28| Practice	| 	| Make Up  |   |
-| Week 16 | 5/2 (Tue only)| Practice	|  	|  	|  	|
-| Examinations | 5/4-5/12 | | | | |
+| Week 1  | 8/22,24 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
+| Week 2  | 8/29,31,9/1|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | [How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)	|
+| Week 3  |	9/5,7,8|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
+| Week 4  |	9/12,14,15| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
+| Week 5  | 9/19,21,22|Ethics SDS |  Renee Cummings + Overview of Value I |  Game Lab: Guess Who?     | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
+| Week 6	 | 9/26,28,29|Ethics + Internal	  | Overview of Value II + Professor Reia | Ethical Frameworks  |   |
+| Week 7  | 10/5,6|Ethics + External   | Patrick Hall + Value Reinforcement	|   Case Study	| |
+| Week 8  | 10/10,12,13| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
+| Week 9 | 10/17,19,20| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
+| Week 10 | 10/24,26,27| Systems + External | Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
+| Week 11 |	10/31,11/2,3|  Analytics  |	  | Personal Data Collect Lab |	|
+| Week 12 | 11/9,10| Analytics + Internal |  	| Game Lab: Mastermind  |   |
+| Week 13 | 11/14,16,17| Analytics + Internal |   | Case Study  |   |
+| Week 14 | 11/21 | Practice	| 	| Make Up  |   |
+| Week 15 | 11/28,30,12/1 | Practice	|  	|  	|  	|
+| Examinations | TBD | | | | |
 
 ## Guest Speakers
 
