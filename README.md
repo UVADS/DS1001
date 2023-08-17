@@ -110,15 +110,15 @@ There are several technological tools used in this class:
 | Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
 | Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | [How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)	|
-| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
-| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
-| Week 5  | 9/19,21,22| Value |  Guest: Professor Cummings ~  Overview of Value I |  LABS-4: Guess Who? (Game Lab)    | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
+| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
+| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
+| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
+| Week 5  | 9/19,21,22| Value |  Guest: Professor Cummings ~  Overview of Value I |  LABS-4: Guess Who? (Game Lab)    |  | 
 | Week 6	 | 9/26,28,29|Value	  | Guest: Professor Reia ~ Overview of Value II  | LABS-5: AI Fairness 360   |   |
 | Week 7  | 10/5,6 (no Tue)|Value   | Guest: Mr. Hall ~ Value Reinforcement	|   LABS-6: Explainable AI Interview	| |
-| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
-| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
-| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
+| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
+| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
+| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
 | Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Mastermind (Game Lab) |	|
 | Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: Garbage In, Garbage Out |   |
 | Week 13 | 11/14,16,17| Analytics |   | LABS-12: Using kNN  |   |
@@ -127,7 +127,13 @@ There are several technological tools used in this class:
 | Week 16 | 12/5 | Last Day of Class | | | |
 | Examinations | None | | | | |
 
-
+[How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)
+ [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)
+ [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
+ [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)  
+  [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	
+  [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	
+  [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu) 
 
 ### Additional Dates
 * 12/5 - Last day to submit assignments and gurantee comments
