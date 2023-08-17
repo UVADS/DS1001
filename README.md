@@ -112,13 +112,13 @@ There are several technological tools used in this class:
 | Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
 | Week 2  | 8/29,31,9/1|Design  | Data Collection   | Lupi Personal Data Collect and Visualize [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | [How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)	|
 | Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	Game Lab: Set  |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
-| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien |  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
-| Week 5  | 9/19,21,22| Value |  Renee Cummings + Overview of Value I |  Game Lab: Guess Who?     | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
-| Week 6	 | 9/26,28,29|Value	  | Overview of Value II + Professor Reia | Ethical Frameworks  |   |
-| Week 7  | 10/5,6 (no Tue)|Value   | Patrick Hall + Value Reinforcement	|   Case Study	| |
-| Week 8  | 10/10,12,13| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
-| Week 9 | 10/17,19,20| Systems 	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
-| Week 10 | 10/24,26,27| Systems| Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
+| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
+| Week 5  | 9/19,21,22| Value |  Guest: Professor Cummings ~  Overview of Value I |  Game Lab: Guess Who?     | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
+| Week 6	 | 9/26,28,29|Value	  | Guest: Professor Reia ~ Overview of Value II  | Ethical Frameworks  |   |
+| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Mr. Hall ~ Value Reinforcement	|   Case Study	| |
+| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
+| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
+| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
 | Week 11 |	10/31,11/2,3|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 12 | 11/9,10 (no Tue)| Analytics  |  	| Game Lab: Mastermind  |   |
 | Week 13 | 11/14,16,17| Analytics |   | Case Study  |   |
