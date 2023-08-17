@@ -121,9 +121,13 @@ There are several technological tools used in this class:
 | Week 11 |	10/31,11/2,3|  Analytics  |	  | Personal Data Collect Lab |	|
 | Week 12 | 11/9,10 (no Tue)| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 13 | 11/14,16,17| Analytics + Internal |   | Case Study  |   |
-| Week 14 | 11/21 | Practice	| 	| Make Up  |   |
-| Week 15 | 11/28,30,12/1 | Practice	|  	|  	|  	|
-| Examinations | TBD | | | | |
+| Week 14 | 11/21 | Practice	| Gobble	| Gobble |   |
+| Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up	|  	|
+| Week 16 | 12/5 | Last Day of Class | | | |
+| Examinations | None | | | | |
+
+12/5 - Last day to submit assignments and gurantee comments
+12/12 - Last day to submit revised assignments
 
 ## Guest Speakers
 
