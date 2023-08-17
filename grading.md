@@ -30,6 +30,9 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |LOOK|Look Ahead|4|--|1|2|
 |ESSY|Final Essay Parts|3|1|2|3|
 
+* There are 12 labs and all grade bundles require completion of all 12 labs. There is a make up lab day on 12/1 and any student may make up a lab that day for any reason, no excuse is necessary.
+* There are 12 reading assignments and the B and A bundles require completion of all of them. This is a weekly assignment however there are more than 12 weeks in the term. The initial due date is a guideline for optimal learning alignment, these assignments can be turned in later with no excuse need. A word of caution: letting these pile up can lead to a substantial amount of work on a short time window.
+
 ## Flexibility Provisions
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete.
 2. Non-labs: For each of the non-lab assignments there are 2 more assignments given than are required for the A bundle. No assignment is essential.
