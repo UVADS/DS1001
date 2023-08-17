@@ -107,7 +107,7 @@ There are several technological tools used in this class:
 ## Schedule of Topics 
 
 
-| Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
+| Week 	| Date|Theme 	| Topics 	| Lab 	| "Reading" 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
 | Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
 | Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
@@ -127,17 +127,13 @@ There are several technological tools used in this class:
 | Week 16 | 12/5 | Last Day of Class | | | |
 | Examinations | None | | | | |
 
-[How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)
- [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)
- [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
- [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)  
-  [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	
-  [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	
-  [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu) 
 
 ### Additional Dates
 * 12/5 - Last day to submit assignments and gurantee comments
 * 12/12 - Last day to submit revised assignments
+
+## A note about the "readings"
+Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all in bounds. However the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via canvas.
 
 ## Guest Speakers
 
