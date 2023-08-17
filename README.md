@@ -119,7 +119,7 @@ There are several technological tools used in this class:
 | Week 9 | 10/17,19,20| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
 | Week 10 | 10/24,26,27| Systems + External | Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
 | Week 11 |	10/31,11/2,3|  Analytics  |	  | Personal Data Collect Lab |	|
-| Week 12 | 11/9,10| Analytics + Internal |  	| Game Lab: Mastermind  |   |
+| Week 12 | 11/9,10 (no Tue)| Analytics + Internal |  	| Game Lab: Mastermind  |   |
 | Week 13 | 11/14,16,17| Analytics + Internal |   | Case Study  |   |
 | Week 14 | 11/21 | Practice	| 	| Make Up  |   |
 | Week 15 | 11/28,30,12/1 | Practice	|  	|  	|  	|
