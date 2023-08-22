@@ -1,0 +1,37 @@
+---
+title: "Data Science Dream Job"
+format: html
+---
+
+# Data Science Dream Job 
+
+## Goal is to gain a better understanding of the Data Science job market, what it takes to get there and the scope of oppurtunities.
+
+## To dos: 
+
+Find a data science "dream job". Assume for a moment that you are destined to be a Data Scientist!
+
+March bravely onto the world wide web and find your data scientist dream job. 
+
+Requirements: must-have "data scientist" in the title
+
+Not a requirement - to be a real job, want to create your own...please do, we would all love to hear about it.
+
+Answer these questions: 110 minutes alone
+
+     - What do I love about this job (salary, company, mission, area of focus, location...etc.)?
+
+     - Which components of the Data Science framework are represented (if you can tell)?
+
+     - What do I need to know to do this job (coding, databases, how to build a self-actualizing and empathetic robot..etc)? 
+
+     - How much of what is required do I already know? (0%....100%)?
+
+Get into groups of 4 or 5 and compare results
+
+    - What are the commonalities?
+    - What are the differences?
+    - Select two Jobs to present to the class. 
+
+
+## Discuss Data Science Dream Job as a class: all together: 10 - 15 Minutes
