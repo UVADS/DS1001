@@ -3,19 +3,19 @@
 Your Foundations of Data Science Instructors:
 
     * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
-    * Class Location: Clark 107
-      * Lab: Mech Eng 214 or Minor 130
+    * Class Location: Nau Hall 101
+      * Lab: Thornton Hall D222 or Ridley Hall 179
 
 Professor Office Hours:
-  * Alonzi: 10-11,1330-1430 on Tuesdays and Thursdays, Elson 185A, or by appointment
-  * Wright: 2-4 on Fridays on Discord or Elson 165
+  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guranteed)
+  * Wright: 3-4 on Mondays in Elson 165
 
 
 Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 2023, Spring, 15:30-16:45 Tu & Th
+Year, Term and Time: 2023, Fall, 9:30-10:45 Tu & Th
 
 Class Title: Foundations of Data Science
 
@@ -32,7 +32,10 @@ N.B.: There is an associated lab class that must be enrolled simultaneously (1 h
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
 
-### Quotes From Former Students
+### What Former Students Have Said
+
+> I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
+
 > Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
 
 > Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
@@ -45,8 +48,10 @@ This is a survey course about the emerging field of Data Science. The School of 
 
 > I went into this case study simply hoping to learn a bit more about maps and how they are created. However, throughout this process, I have discovered much about how certain decisions about data are made at each step.
 
+> You're not going to get it right the first time. That's ok! You have to learn from your mistakes in order to grow and find the best solution possible for the problem you are working on in the moment. 
+
 ## What you’ll learn along the way
-We will spend the majority of the semester focusing on the major aspecs of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
+We will spend the majority of the semester focusing on the major aspects of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
 * Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
 * Secondary Objective: Identify how you see yourself in the field
@@ -101,25 +106,34 @@ There are several technological tools used in this class:
 
 ## Schedule of Topics 
 
-| Week 	| Date|Theme 	| Topics 	| Lab 	| Reading/Repo (Prior to Class) 	|
+
+| Week 	| Date|Theme 	| Topics 	| Lab 	| "Reading" 	|
 |:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | 1/19 (Thr only)|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 1/24,26,27|Course Narrative +  Design SDS  | There and back again.. + Constant Vigilance   | Lupi Personal Data Collect and Visualize [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | [How we can find ourselves in data , Giorgia Lupi](https://youtu.be/sFIDCtRX_-o)	|
-| Week 3  |	1/31,2/2,3|Design + Internal  | Professor Forelle + Reinforcement	|	Game Lab: Set  |  [Gapminder Video #1 - Health, Money & Sex in Sweden](https://www.youtube.com/watch?v=18MZmVDv7uo)	|
-| Week 4  |	2/7,9,10| Design + External |	Ms. O'Brien + Reinforcement |  Case Study (map projections?)  | [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)	|
-| Week 5  | 2/14,16,17|Ethics SDS |  Renee Cummings + Overview of Value I |  Game Lab: Guess Who?     | [Chapt1: Ethics and Data Science](https://learning.oreilly.com/library/view/ethics-and-data/9781492043898/ch01.html)   | 
-| Week 6	 | 2/21,23,24|Ethics + Internal	  | Overview of Value II + Professor Reia | Ethical Frameworks  |   |
-| Week 7  | 2/28,3/2,3|Ethics + External   | Patrick Hall + Value Reinforcement	|   Case Study	| |
-| Week 8  | Spring Break (3/4-12)|                    |  	| 	 | 	|
-| Week 9  | 3/14,16,17| Systems	|  	| Personal Data Collect lab	  | [Hardware videos, pick 4](https://youtube.com/playlist?list=PLc0No4e8MMEPztUFVdtazgWi7L7pWakfO)	|
-| Week 10 | 3/21,23,24| Systems + Internal	| Guest: Neal Magee 	|	Game Lab: Mouse Trap  | [Powers of Ten](https://youtu.be/0fKBhvDjuy0)	|
-| Week 11 | 3/28,30,31| Systems + External | Guest: Miriam Friedel 	| Case Study  | [Is it Time to Rename the GPU?](https://www.computer.org/publications/tech-news/chasing-pixels/is-it-time-to-rename-the-gpu)  |
-| Week 12 |	4/4,6,7|  Analytics  |	  | Personal Data Collect Lab |	|
-| Week 13 | 4/11,13,14| Analytics + Internal |  	| Game Lab: Mastermind  |   |
-| Week 14 | 4/18,20,21| Analytics + Internal |   | Case Study  |   |
-| Week 15 | 4/25,27,28| Practice	| 	| Make Up  |   |
-| Week 16 | 5/2 (Tue only)| Practice	|  	|  	|  	|
-| Examinations | 5/4-5/12 | | | | |
+| Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
+| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
+| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
+| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
+| Week 5  | 9/19,21,22| Value |  Guest: Professor Cummings ~  Overview of Value I |  LABS-4: Guess Who? (Game Lab)    |  | 
+| Week 6	 | 9/26,28,29|Value	  | Guest: Professor Reia ~ Overview of Value II  | LABS-5: AI Fairness 360   |   |
+| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Mr. Hall ~ Value Reinforcement	|   LABS-6: Explainable AI Interview	| |
+| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
+| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
+| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
+| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Mastermind (Game Lab) |	|
+| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: Garbage In, Garbage Out |   |
+| Week 13 | 11/14,16,17| Analytics |   | LABS-12: Using kNN  |   |
+| Week 14 | 11/21 | Practice	| Gobble	| Gobble |   |
+| Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up Lab in Elson 180	|  	|
+| Week 16 | 12/5 | Last Day of Class | | | |
+| Examinations | None | | | | |
+
+
+### Additional Dates
+* 12/5 - Last day to submit assignments and gurantee comments
+* 12/12 - Last day to submit revised assignments
+
+## A note about the "readings"
+Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all in bounds. However the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via canvas.
 
 ## Guest Speakers
 
