@@ -17,7 +17,7 @@ Requirements: must-have "data scientist" in the title
 
 Not a requirement - to be a real job, want to create your own...please do, we would all love to hear about it.
 
-Answer these questions: 110 minutes alone
+Answer these questions: 15 minutes alone
 
      - What do I love about this job (salary, company, mission, area of focus, location...etc.)?
 
@@ -27,11 +27,11 @@ Answer these questions: 110 minutes alone
 
      - How much of what is required do I already know? (0%....100%)?
 
-Get into groups of 4 or 5 and compare results
+Get into groups of 4 or 5 and compare results - 10 Minutes 
 
     - What are the commonalities?
     - What are the differences?
-    - Select two Jobs to present to the class. 
+    - Select twoish to share and summarize the above questions. 
 
 
 ## Discuss Data Science Dream Job as a class: all together: 10 - 15 Minutes
