@@ -115,7 +115,7 @@ There are several technological tools used in this class:
 | Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
 | Week 5  | 9/19,21,22| Value |  Guest: Overview of Value I + Guest TBD|  LABS-4: Guess Who? (Game Lab)    |  | 
 | Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   |
-| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: Explainable AI Interview| |
+| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| |
 | Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
 | Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
 | Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
