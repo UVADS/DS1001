@@ -113,7 +113,7 @@ There are several technological tools used in this class:
 | Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
 | Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
 | Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
-| Week 5  | 9/19,21,22| Value |  Guest: Overview of Value I + Guest TBD|  LABS-4: Guess Who? (Game Lab)    |  | 
+| Week 5  | 9/19,21,22| Value |   Overview of Ethics and Data Science + Intro to Algo Bias|  LABS-4: Guess Who? (Game Lab)    |  | 
 | Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   |
 | Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| |
 | Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
