@@ -18,6 +18,7 @@ Preparatory Assignments - None
 2.  How did your approach to identifying cards change throughout the lab period?
 3.  Are there cards that are easier to identify, why?
 4.  This is just a game, but given the materials you've been exposed to what concerns do you have about this process and algorithmic decision making?
+5.  Which of the areas of "Value" presented in class could help to solve the issues you identified in question 4? (What Tool)
 
 Tips for success:
 
