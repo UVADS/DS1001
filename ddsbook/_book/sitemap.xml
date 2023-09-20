@@ -1,103 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://definingdatascience.com/index.html</loc>
+    <lastmod>2023-09-20T19:41:29.800Z</lastmod>
+  </url>
+  <url>
     <loc>http://definingdatascience.com/intro.html</loc>
-    <lastmod>2023-08-03T19:32:21.149Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.802Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/design.html</loc>
-    <lastmod>2023-08-03T19:32:21.150Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.804Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/design-sds.html</loc>
-    <lastmod>2023-08-03T19:32:21.151Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.806Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/design-lab.html</loc>
-    <lastmod>2023-08-03T19:32:21.152Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.808Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/design-external.html</loc>
-    <lastmod>2023-08-03T19:32:21.153Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.810Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/design-case-study.html</loc>
-    <lastmod>2023-08-03T19:32:21.154Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.812Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value.html</loc>
-    <lastmod>2023-08-03T19:32:21.155Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.814Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-sds.html</loc>
-    <lastmod>2023-08-03T19:32:21.156Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.816Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-lab.html</loc>
-    <lastmod>2023-08-03T19:32:21.158Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.819Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-lab-II.html</loc>
-    <lastmod>2023-08-03T19:32:21.159Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.821Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-lab-III.html</loc>
-    <lastmod>2023-08-03T19:32:21.160Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.823Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-external.html</loc>
-    <lastmod>2023-08-03T19:32:21.161Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.825Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/value-case-study.html</loc>
-    <lastmod>2023-08-03T19:32:21.163Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.828Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/systems-sds.html</loc>
-    <lastmod>2023-08-03T19:32:21.164Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.830Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/systems-lab.html</loc>
-    <lastmod>2023-08-03T19:32:21.164Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.832Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/systems-external.html</loc>
-    <lastmod>2023-08-03T19:32:21.165Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.835Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/systems-case-study.html</loc>
-    <lastmod>2023-08-03T19:32:21.166Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.837Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/analytics-sds.html</loc>
-    <lastmod>2023-08-03T19:32:21.167Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.840Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/analytics-lab.html</loc>
-    <lastmod>2023-08-03T19:32:21.168Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.842Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/analytics-external.html</loc>
-    <lastmod>2023-08-03T19:32:21.169Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.844Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/analytics-case-study.html</loc>
-    <lastmod>2023-08-03T19:32:21.169Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.846Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/appendix-sources.html</loc>
-    <lastmod>2023-08-03T19:32:21.172Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.852Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/BSDS-Course-Info.html</loc>
-    <lastmod>2023-08-03T19:32:21.174Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.855Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/references.html</loc>
-    <lastmod>2023-08-03T19:32:21.175Z</lastmod>
+    <lastmod>2023-09-20T19:41:29.857Z</lastmod>
   </url>
   <url>
     <loc>http://definingdatascience.com/Defining-Data-Science.pdf</loc>
-    <lastmod>2023-08-03T19:32:19.447Z</lastmod>
+    <lastmod>2023-09-20T19:41:28.585Z</lastmod>
   </url>
 </urlset>
