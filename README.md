@@ -7,7 +7,7 @@ Your Foundations of Data Science Instructors:
       * Lab: Thornton Hall D222 or Ridley Hall 179
 
 Professor Office Hours:
-  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guranteed)
+  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guaranteed)
   * Wright: 3-4 on Mondays in Elson 165
 
 
@@ -30,13 +30,13 @@ N.B.: There is an associated lab class that must be enrolled simultaneously (1 h
 ![](images/ds-1001-collage.png)
 
 ## A Little Bit About the Course
-This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effect in today's data driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
+This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
 
 ### What Former Students Have Said
 
 > I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
 
-> Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
+> Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my Mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
 
 > Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
 
@@ -60,12 +60,12 @@ In each of the areas we will specifically focus on:
 * Design
   * Theme: Storytelling -- What do I leave in and what do I leave out?
   * LO: Observe the world around you and record your observations in a systematic way (aka create a data set)
-  * LO: Reflect on your data set and transform it into a medium for efficient communication to other humans
+  * LO: Reflect on your data set and transform it into a medium for efficient communication with other humans
 
 * Value
   * Theme: With great power comes great responsibility
-  * LO: Be able to reflect on and articulate the benefits and concerns of data driven decisions
-  * LO: Describe scenerios that allow for human centered data science
+  * LO: Be able to reflect on and articulate the benefits and concerns of data-driven decisions
+  * LO: Describe scenarios that allow for human-centered data science
 
 * Systems
   * Theme: Scaling -- What scale is necessary?
@@ -75,7 +75,7 @@ In each of the areas we will specifically focus on:
 * Analytics
   * Theme: Analyzing -- Garbage in, Garbage out
   * LO: Describe the ecosystem of data models 
-  * LO: Articulate a typical algorithym life cycle 
+  * LO: Articulate a typical algorithm life cycle 
 
 The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
 
@@ -83,17 +83,17 @@ The course will move rather quickly and can be demanding at times. However, if w
 Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
 
 The 5 assignment categories:
-1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definintion of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
+1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
 2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include watching short videos. A short review of the key points is then submitted as the assignment deliverable.
 3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
-4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorperate material from course typically taken by 2nd and 3rd year students.
-5. Final Essay - This assignment is the students opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
+4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
+5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
 
-* email: Official communication from UVA is sent via the class email
-* canvas: The offical Learning Management System for this course is canvas, all assignments are managed through canvas **including lab assignments**.
+* Email: Official communication from UVA is sent via the class email
+* Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas **including lab assignments**.
 * discord: The official-unoffical course chat channel **[Discord Invite Click](https://discord.gg/PGaPcMHp)** 
 
 ## Materials That Will Aid in Your Learning: 
@@ -113,9 +113,9 @@ There are several technological tools used in this class:
 | Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
 | Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
 | Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
-| Week 5  | 9/19,21,22| Value |  Guest: Professor Cummings ~  Overview of Value I |  LABS-4: Guess Who? (Game Lab)    |  | 
-| Week 6	 | 9/26,28,29|Value	  | Guest: Professor Reia ~ Overview of Value II  | LABS-5: AI Fairness 360   |   |
-| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Mr. Hall ~ Value Reinforcement	|   LABS-6: Explainable AI Interview	| |
+| Week 5  | 9/19,21,22| Value |   Overview of Ethics and Data Science + Intro to Algo Bias|  LABS-4: Guess Who? (Game Lab)    |  | 
+| Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   |
+| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| |
 | Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
 | Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
 | Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
@@ -129,11 +129,11 @@ There are several technological tools used in this class:
 
 
 ### Additional Dates
-* 12/5 - Last day to submit assignments and gurantee comments
+* 12/5 - Last day to submit assignments and guarantee comments
 * 12/12 - Last day to submit revised assignments
 
 ## A note about the "readings"
-Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all in bounds. However the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via canvas.
+Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all within bounds. However, the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via Canvas.
 
 ## Guest Speakers
 
