@@ -4,7 +4,7 @@ DS 1001 - Spring 2023 - Professors Wright and Alonzi Due: End of lab period (or 
 
 Individual Assignment
 
-**General Descripition:** This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website [AI Fairness 360](https://aif360.mybluemix.net/). You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.
+**General Descripition:** This lab is designed for you to get exposure to AI fairness approaches in a no code environment on the website [AI Fairness 360](https://aif360.res.ibm.com/). You will be able to work through the various fairness methods at different stages of the pipeline and reflect on which methods seem to work the best on the given datasets.
 
 Preparatory Assignments - None
 
@@ -12,12 +12,16 @@ Preparatory Assignments - None
 
 **What am I going to do?** The AI Fairness 360 website has a demo module that includes three datasets. Work through the demo on all three datasets, trying all the methods provided, and answer the questions below.
 
-**Answer these questions:**
+**Answer these questions/Do the Following:**
 
-1.  For each protected class variable which evaluation methods showed bias to be present?
-2.  Note how each method preform at removing bias.
-3.  Was the accuracy of the model effected when using the various approaches, if so how?
-4.  Given the above what are some patterns you noticed, which methods seem to work the best, where in the data process are these methods located (pre/in/post).
+1. You will be using this demo to track changes in protected classes in the Compas (ProPublica recidivism) dataset. The first step is to document how bias is present in each of the protected classes in the datasets. There are two protected classes included in the dataset. AI Fairness 360 uses 5 metrics to determine whether bias is present on a pre-trained machine learning algorithm. In your own words, define each of these metrics as they relate to reporting bias. The site provides a brief explanation of each, but you may want to look at outside sources for more information. 
+
+2. Next make note, in table format, of which bias metrics indicate bias for each protected class. Then, observe and record the effect of the Reweighting, Optimized Pre-Processing, and Reject Option Based Classification mitigation methods on all 5 of the bias metrics and overall accuracy for each protected class.   
+    Note – Adversarial Debiasing does not seem to run, so we are skipping that method 
+
+3. Given your observations, which mitigation method AND which bias metric(s) would you use to best eliminate/detect bias for both protected classes if you were the data scientist working with this dataset? Be explicit in what factor(s) influenced your decision.  
+
+4. Similar to the exercise presented by Dr. Mona Sloan on Tuesday, write a brief summary of recommendations you would give to decision makers that don’t have technical knowledge as it relates to creating policy around choosing what mitigation method and bias metric(s) should be used when working with sensitive data. (200-word min) 
 
 Tips for success:
 
@@ -30,10 +34,10 @@ How will I know I have succeeded:
 | Specs Category | Specs Details                                                                            |
 +:==============:+:=========================================================================================+
 | Formatting     | -   Submit Via Canvas                                                                    |
-|                | -   Text answers to questions                                                            |
+|                | -   Upload a Document (word or pdf) that addresses the requirements |
 +----------------+------------------------------------------------------------------------------------------+
 | Text           | -   Goal: The questions are designed to be answer during or right after the lab period.  |
-|                | -   Bullett points are fine for the first three questions, paragraph from for the fourth |
+|                | -   Bulletts are fine for questions 1 and 3. Table for 2 and paragraph for 4.    |
 +----------------+------------------------------------------------------------------------------------------+
 
 Acknowledgements: Special thanks for Jess Taggart from UVA CTE for coaching us. This structure is pulled directory from Steifer & Palmer (2020).
