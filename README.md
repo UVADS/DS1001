@@ -119,9 +119,9 @@ There are several technological tools used in this class:
 | Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
 | Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
 | Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
-| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Mastermind (Game Lab) |	|
-| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: Garbage In, Garbage Out |   |
-| Week 13 | 11/14,16,17| Analytics |   | LABS-12: Using kNN  |   |
+| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Using kNN |	|
+| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: TBD |   |
+| Week 13 | 11/14,16,17| Analytics | Guest Michael Freenor, WillowTree  | LABS-12: TBD   |   |
 | Week 14 | 11/21 | Practice	| Gobble	| Gobble |   |
 | Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up Lab in Elson 180	|  	|
 | Week 16 | 12/5 | Last Day of Class | | | |
