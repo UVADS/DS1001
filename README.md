@@ -113,25 +113,25 @@ There are several technological tools used in this class:
 ## Schedule of Topics 
 
 
-| Week 	| Date|Theme 	| Topics 	| Lab 	| "Reading" 	|
-|:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
-| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
-| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
-| Week 5  | 9/19,21,22| Value |   Overview of Ethics and Data Science + Intro to Algo Bias|  LABS-4: Guess Who? (Game Lab)    |  | 
-| Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   |
-| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| |
-| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
-| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
-| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
-| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Using kNN |	|
-| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: TBD |   |
-| Week 13 | 11/14,16,17| Analytics | Guest Michael Freenor, WillowTree  | LABS-12: TBD   |   |
-| Week 14 | 11/21 | Practice	| Gobble	| Gobble |   |
-| Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up Lab in Elson 180	|  	|
-| Week 16 | 12/5 | Last Day of Class | | | |
-| Examinations | None | | | | |
+| Week 	| Date|Theme 	| Topics 	| Lab 	|
+|:---:	|:---:|:---:	|:---:	|:---:	|
+| Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    |
+| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 
+| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	
+| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	
+| Week 5  | 9/19,21,22| Value |   Overview of Ethics and Data Science + Intro to Algo Bias|  LABS-4: Guess Who? (Game Lab)    |  
+| Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   
+| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| 
+| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  |
+| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | 
+| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  
+| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Using kNN |	
+| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: TBD |   
+| Week 13 | 11/14,16,17| Analytics | Guest Michael Freenor, WillowTree  | LABS-12: TBD   |   
+| Week 14 | 11/21 | Practice	| Gobble	| Gobble |   
+| Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up Lab in Elson 180	|  	
+| Week 16 | 12/5 | Last Day of Class | | | 
+| Examinations | None | | | | 
 
 
 ### Additional Dates
