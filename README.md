@@ -15,7 +15,7 @@ Professor Office Hours:
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 2023, Fall, 9:30-10:45 Tu & Th
+Year, Term and Time: 2024, Spring, 14:00-15:15 Tu & Th
 
 Class Title: Foundations of Data Science
 
@@ -27,10 +27,10 @@ N.B.: There is an associated lab class that must be enrolled simultaneously (1 h
 
 <br>
 
-![](images/ds-1001-collage.png)
+<!--- ![](images/ds-1001-collage.png) --->
 
 ## A Little Bit About the Course
-This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
+This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://arxiv.org/abs/2311.07631)).
 
 ### What Former Students Have Said
 
@@ -79,8 +79,8 @@ In each of the areas we will specifically focus on:
 
 The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
 
-## How You’ll Know You Are Learning (Assessments)
-Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
+## How You’ll Know You Are Learning (Assignments)
+Every graded assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment. They are graded using the specifications grading system. The details are [here](https://github.com/UVADS/DS1001/blob/main/grading.md), this is based on **Specifications Grading** By Linda Nilson. We will spend time in class to help you understand this system, especially if it is new for you.
 
 The 5 assignment categories:
 1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
@@ -88,6 +88,9 @@ The 5 assignment categories:
 3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
 4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
 5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
+
+Bonus experimental category (not part of overall course grade):
+This semester we are developing an additional assignment type and are looking for your help. Periodically we will present quiz style questions. Our goal is for them to serve as a good check so that you have another tool to assess how your learning is going. These will not be part of the overall grade.
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
