@@ -89,15 +89,18 @@ The 5 assignment categories:
 4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
 5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
 
+
 Bonus experimental category (not part of overall course grade):
+
 This semester we are developing an additional assignment type and are looking for your help. Periodically we will present quiz style questions. Our goal is for them to serve as a good check so that you have another tool to assess how your learning is going. These will not be part of the overall grade.
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
 
-* Email: Official communication from UVA is sent via the class email
+* Email: Official communication from UVA is sent via UVA email
 * Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas **including lab assignments**.
-* discord: The official-unoffical course chat channel **[Discord Invite Click](https://discord.gg/PGaPcMHp)** 
+* Personal Computer: We will be doing coding in this class, your laptop does not need any special hardware or software for our work.
+
 
 ## Materials That Will Aid in Your Learning: 
 
@@ -132,23 +135,17 @@ There are several technological tools used in this class:
 
 
 ### Additional Dates
-* 12/5 - Last day to submit assignments and guarantee comments
-* 12/12 - Last day to submit revised assignments
+* 4/30 - Last day to submit assignments and guarantee comments (same as last day of classes)
+* 5/7 - Last day to submit revised assignments
 
 ## A note about the "readings"
 Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all within bounds. However, the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via Canvas.
 
 ## Guest Speakers
 
-* MC Forelle: Assistant Professor of Engineering and Society
 * Carrie O'Brien: User Interface Designer at Capital One: Messaging, Web, and Human-Centered Design
-* Jess Reia: Assistant Professor, School of Data Science
-* Renee Cummings: Data Activist in Residence, School of Data Science 
 * Neal Magee: Director, Solutions & DevOps, UVA Research Computing
 * Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
-* Rafael Alvardo: Associate Professor, School of Data Science 
-* Steven Baek: Associate Professor School of Data Science
-* Sheng Li: Associate Professor School of Data Science
 
 ## A few Policies that will Govern the Class
 
