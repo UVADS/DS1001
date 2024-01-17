@@ -11,7 +11,7 @@ Professor Office Hours:
   * Wright: ????? on Mondays in Elson 165
 
 
-[//]: Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
+<!--- Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com) --->
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
