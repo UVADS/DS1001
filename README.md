@@ -4,14 +4,14 @@ Your Foundations of Data Science Instructors:
 
     * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
     * Class Location: Nau Hall 101
-      * Lab: Thornton Hall D222 or Ridley Hall 179
+      * Lab: McLeod Hall 1003 or Monroe Hall 134
 
 Professor Office Hours:
-  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guaranteed)
-  * Wright: 3-4 on Mondays in Elson 165
+  * Alonzi: 09:00-11:00 on Wednesdays in Elson 185A
+  * Wright: ????? on Mondays in Elson 165
 
 
-Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
+[//]: Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
