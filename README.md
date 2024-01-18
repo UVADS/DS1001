@@ -125,7 +125,7 @@ There are several technological tools used in this class:
 | Week 8  | Spring | Recess  || No class or assignments due |   |
 | Week 9  | 3/12|3/14 | Systems | Hardware and Software	| |
 | Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	LOOK & CASE open |
-| Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	|  |
+| Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	| ESSY open |
 | Week 12 |	4/2 |4/4  | Analytics |	  | |
 | Week 13 | 4/9 |4/11 | Analytics |   | LOOK & CASE open |
 | Week 14 | 4/16|4/18 | Analytics |   | |
