@@ -129,16 +129,15 @@ There are several technological tools used in this class:
 | Week 12 |	4/2 |4/4  | Analytics |	  | |
 | Week 13 | 4/9 |4/11 | Analytics |   | LOOK & CASE open |
 | Week 14 | 4/16|4/18 | Analytics |   | |
-| Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop (ESSY)	| |
+| Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop (ESSY)	| 4/26 is makeup lab day |
 | Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE & ESSY |
 | Examinations | None | | | |
 
 
-
 ### Additional Dates
 * 1/26 - This is the first lab day and also the first READ assignment is due.
-* 4/30 - Last day to submit assignments and guarantee comments (same as last day of classes)
-* 5/7 - Last day to submit revised assignments
+* 4/26 - Lab makeup day
+* 5/7 - Revise and Resubmission due date for assignments graded after 4/30
 
 ## A note about the "readings"
 Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all within bounds. However, the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via Canvas.
