@@ -113,25 +113,25 @@ There are several technological tools used in this class:
 ## Schedule of Topics 
 
 
-|  	      | Tue | Thr | Theme | Topic | 
-|:-------:|:---:|:---:|:-----:|:-----:|   
-| Week 1  | --  | 1/18| Intro |What is Data Science?| 	 
-| Week 2  | 1/23|1/25 | Design| Data vs. Interpretation  | 
-| Week 3  |	1/30|2/1  | Design| Data Collection vs. Data Communication	|	
-| Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study|   	
-| Week 5  | 2/13| 2/15| Value | Overview of Ethics and Data Science + Intro to Algo Bias|  
-| Week 6	| 2/20|2/22 | Value	| Guest Lecture | 
-| Week 7  | 2/27|2/29 | Value | Guest Lecture | 
-| Week 8  | Spring | Recess  || No class or assignments due |   
-| Week 9  | 3/12|3/14 | Systems | Hardware and Software	| 
-| Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	
-| Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	|  
-| Week 12 |	4/2 |4/4  | Analytics |	  | 
-| Week 13 | 4/9 |4/11 | Analytics |  	| 
-| Week 14 | 4/16|4/18 | Analytics |   |
-| Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop	| 
-| Week 16 | 4/30| --  | Practice	| | 
-| Examinations | None | | |
+|  	      | Tue | Thr | Theme | Topic | Notes |
+|:-------:|:---:|:---:|:-----:|:-----:|:-----:|   
+| Week 1  | --  | 1/18| Intro |What is Data Science?| 	 |
+| Week 2  | 1/23|1/25 | Design| Data vs. Interpretation  | |
+| Week 3  |	1/30|2/1  | Design| Data Collection vs. Data Communication	|	LOOK & CASE open |
+| Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study|  | 	
+| Week 5  | 2/13| 2/15| Value | Overview of Ethics and Data Science + Intro to Algo Bias|  |
+| Week 6	 | 2/20|2/22 | Value	| Guest Lecture | LOOK & CASE open |
+| Week 7  | 2/27|2/29 | Value | Guest Lecture | |
+| Week 8  | Spring | Recess  || No class or assignments due |   |
+| Week 9  | 3/12|3/14 | Systems | Hardware and Software	| |
+| Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	LOOK & CASE open |
+| Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	|  |
+| Week 12 |	4/2 |4/4  | Analytics |	  | |
+| Week 13 | 4/9 |4/11 | Analytics |   | LOOK & CASE open |
+| Week 14 | 4/16|4/18 | Analytics |   | |
+| Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop	| |
+| Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE |
+| Examinations | None | | | |
 
 
 
