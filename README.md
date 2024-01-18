@@ -130,7 +130,7 @@ There are several technological tools used in this class:
 | Week 13 | 4/9 |4/11 | Analytics |   | LOOK & CASE open |
 | Week 14 | 4/16|4/18 | Analytics |   | |
 | Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop (ESSY)	| |
-| Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE |
+| Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE & ESSY |
 | Examinations | None | | | |
 
 
