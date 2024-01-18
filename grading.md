@@ -28,7 +28,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |READ|"Read" & Review|12| 1 hour | --|12|12|
 |CASE|Case Study Extension|4| 6 hours | --|1|2|
 |LOOK|Look Ahead|4| 6 hours | --|1|2|
-|ESSY|Final Essay Parts|3| 6 hours| 1|2|3|
+|ESSY|Final Essay Parts|3| 4 hours/part| 1|2|3|
 
 * There are 12 labs and all grade bundles require completion of all 12 labs. There is a make up lab day on 12/1 and any student may make up a lab that day for any reason, no excuse is necessary.
 * There are 12 reading assignments and the B and A bundles require completion of all of them. This is a weekly assignment however there are more than 12 weeks in the term. The initial due date is a guideline for optimal learning alignment, these assignments can be turned in later with no excuse need. A word of caution: letting these pile up can lead to a substantial amount of work on a short time window.
