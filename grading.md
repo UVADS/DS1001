@@ -35,7 +35,5 @@ Weekly Assignments
 * READ - There are 12 reading assignments and the B and A bundles require completion of all of them. The READ assignments are posted to Canvas a week before the due date and take less than one hour to complete. Late submissions are not accepted. Extenuating circumstances can be excused after discussion with a professor. 
 
 ## Flexibility Provisions
-1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete.
-2. Non-labs: For each of the non-lab assignments there are 2 more assignments given than are required for the A bundle. No assignment is essential.
-3. Resubmission: After visiting office hours to discuss an assignment that "did not meet spec yet" resubmission may be allowed.
-4. Final Essay: The intention is for the students to bring ideas to the professors for help developing and that comments will be given on the essay if submitted more than one week prior to the due date.
+1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
+2. Resubmission: After grading assignments marked "does not meet spec, yet" can be revised and resubmitted for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted.
