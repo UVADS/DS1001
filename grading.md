@@ -24,7 +24,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 
 |Code|Assignment Type|#|Avg. Time|C|B|A|
 |--|--|--|--|--|--|--|
-|LABS|Labs| In class | 12*|12|12|12|
+|LABS|Labs| 12* | In class |12|12|12|
 |READ|"Read" & Review|12| 1 hour | --|12|12|
 |CASE|Case Study Extension|4| 6 hours | --|1|2|
 |LOOK|Look Ahead|4| 6 hours | --|1|2|
