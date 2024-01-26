@@ -8,7 +8,7 @@ Your Foundations of Data Science Instructors:
 
 Professor Office Hours:
   * Alonzi: 09:00-11:00 on Wednesdays in Elson 185A
-  * Wright: ????? on Mondays in Elson 165
+  * Wright: 1:30-3:30 on Mondays in Elson 165
 
 
 <!--- Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com) --->
