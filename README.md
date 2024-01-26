@@ -121,7 +121,7 @@ There are several technological tools used in this class:
 | Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study|  | 	
 | Week 5  | 2/13| 2/15| Value | Overview of Ethics and Data Science + Intro to Algo Bias|  |
 | Week 6	 | 2/20|2/22 | Value	| Guest Lecture | LOOK & CASE open |
-| Week 7  | 2/27|2/29 | Value | Guest Lecture | |
+| Week 7  | 2/27|2/29 | Value | Professor Mar Hicks | Assistant Professor Aaron Martin |
 | Week 8  | Spring | Recess  || No class or assignments due |   |
 | Week 9  | 3/12|3/14 | Systems | Hardware and Software	| |
 | Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	LOOK & CASE open |
