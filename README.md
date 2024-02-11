@@ -116,9 +116,9 @@ There are several technological tools used in this class:
 |  	      | Tue | Thr | Theme | Topic | Notes |
 |:-------:|:---:|:---:|:-----:|:-----:|:-----:|   
 | Week 1  | --  | 1/18| Intro |What is Data Science?| 	 |
-| Week 2  | 1/23|1/25 | Design| Data vs. Interpretation  | |
-| Week 3  |	1/30|2/1  | Design| Data Collection vs. Data Communication	|	LOOK & CASE open |
-| Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study|  | 	
+| Week 2  | 1/23|1/25 | Design| Data vs. Interpretation (How to make a data set) | |
+| Week 3  |	1/30|2/1  | Design| Data Collection vs. Data Communication	(How to evaluate the quality of a data set) |	LOOK & CASE open |
+| Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study (How to communicate a data set)|  | 	
 | Week 5  | 2/13| 2/15| Value | Overview of Ethics and Data Science + Intro to Algo Bias|  |
 | Week 6	 | 2/20|2/22 | Value	| Guest Lecture | LOOK & CASE open |
 | Week 7  | 2/27|2/29 | Value | Professor Mar Hicks | Assistant Professor Aaron Martin |
