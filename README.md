@@ -128,7 +128,7 @@ There are several technological tools used in this class:
 | Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	LOOK & CASE open |
 | Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	| ESSY open |
 | Week 12 |	4/2 |4/4  | Analytics |	  | |
-| Week 13 | 4/9 |4/11 | Analytics |   | LOOK & CASE open |
+| Week 13 | 4/9 |4/11 | Analytics | Tom Hartvigsen - LLMs  | LOOK & CASE open |
 | Week 14 | 4/16|4/18 | Analytics |   | |
 | Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop (ESSY)	| 4/26 is makeup lab day |
 | Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE & ESSY |
