@@ -7,7 +7,7 @@ Your Foundations of Data Science Instructors:
       * Lab: McLeod Hall 1003 or Monroe Hall 134
 
 Professor Office Hours:
-  * Alonzi: 09:00-11:00 on Wednesdays in Elson 185A
+  * Alonzi: 14:00-15:30 on Tuesdays in Data Science 344
   * Wright: 1:30-3:30 on Mondays in Elson 165
 
 
@@ -15,7 +15,7 @@ Professor Office Hours:
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 2024, Spring, 14:00-15:15 Tu & Th
+Year, Term and Time: 2024, Fall, 14:00-15:15 Mo & We
 
 Class Title: Foundations of Data Science
 
