@@ -114,26 +114,23 @@ There are several technological tools used in this class:
 ## Schedule of Topics 
 
 
-|  	      | Tue | Thr | Theme | Topic | Notes |
-|:-------:|:---:|:---:|:-----:|:-----:|:-----:|   
-| Week 1  | --  | 1/18| Intro |What is Data Science?| 	 |
-| Week 2  | 1/23|1/25 | Design| Data vs. Interpretation (How to make a data set) | |
-| Week 3  |	1/30|2/1  | Design| Data Collection vs. Data Communication	(How to evaluate the quality of a data set) |	LOOK & CASE open |
-| Week 4  |	2/6 | 2/8 | Design|	Guest: Ms. O'Brien from Capital One and Google Case Study (How to communicate a data set)|  | 	
-| Week 5  | 2/13| 2/15| Value | Overview of Ethics and Data Science + Intro to Algo Bias|  |
-| Week 6	 | 2/20|2/22 | Value	| Guest Lecture | LOOK & CASE open |
-| Week 7  | 2/27|2/29 | Value | Professor Mar Hicks | Assistant Professor Aaron Martin |
-| Week 8  | Spring | Recess  || No class or assignments due |   |
-| Week 9  | 3/12|3/14 | Systems | Hardware and Software	| |
-| Week 10 | 3/19|3/21 | Systems | Guest Lecture: Professor Magee on Cloud Computing	|	LOOK & CASE open |
-| Week 11 | 3/26|3/28 | Systems | Guest: Dr. Friedel from Capital One and Nvidia Case Study	| ESSY open |
-| Week 12 |	4/2 |4/4  | Analytics |	Guest Lecture: Tom and Jeffrey: Probability  | |
-| Week 13 | 4/9 |4/11 | Analytics | Guest Lecture: Tom Hartvigsen - LLMs  | LOOK & CASE open |
-| Week 14 | 4/16|4/18 | Analytics | Guest Lecture: Professor Guadagni: Neural Network from Scratch  | |
-| Week 15 | 4/23|4/25 | Practice	| Final Assignment Workshop (ESSY)	| 4/26 is makeup lab day |
-| Week 16 | 4/30| --  | Practice	| | 4/30 due date for all LOOK & CASE & ESSY |
-| Examinations | None | | | |
-
+| Week  |   Section    |              Dates               |          Lecture          |             Lab              |
+|:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
+|   1   |    Intro     | M X<br>  W 8/28<br>  F 8/30              |                           |              X               |
+|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |                           |         LABS-1: LUPI         |
+|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            |   9/11 GL - MC Forelle    |         LABS-2: SET          |
+|   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien  |     LABS-3: Projection!      |
+|   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           |                           |     LABS-4: Guess Who!?      |
+|   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           |                           |         LABS-5: GIGO         |
+|   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          |                           |      LABS-6: Case Study      |
+|   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  |                           | LABS-7: Hardware & Software  |
+|   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        |                           |      LABS-8: Battleship      |
+|  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         |                           |         LABS-9: GPU          |
+|  11   |   Analytics  | M 11/4<br>  W 11/6<br>  F 11/8           |                           |     LABS-10: Probability     |
+|  12   |   Analytics  | M 11/11<br>  W 11/13 <br> F 11/15        |                           |         LABS-11: kNN         |
+|  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        |                           |   LABS-12: Decision Trees    |
+|  14   |     Outro    | M 11/25<br>  W X (thanks)<br>  F X       |                           |              X               |
+|  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           |                           |        Lab Makeup Day        |
 
 ### Additional Dates
 * 1/26 - This is the first lab day and also the first READ assignment is due.
