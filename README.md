@@ -108,7 +108,7 @@ There are several technological tools used in this class:
 * A. [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
 * B. [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
 * C. [R for Data Science](https://r4ds.had.co.nz/)
-* D. [Python for Data Analysis]([https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython-ebook/dp/B075X4LT6K](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1))
+* D. [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
 * E. [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
 
 ## Schedule of Topics 
