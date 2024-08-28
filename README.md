@@ -133,8 +133,8 @@ There are several technological tools used in this class:
 |  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           |                           |        Lab Makeup Day        |
 
 ### Additional Dates
-* 1/26 - This is the first lab day and also the first READ assignment is due.
-* 4/26 - Lab makeup day
+* 9/6 - This is the first lab day and also the first READ assignment is due.
+* 12/6 - Lab makeup day
 * 5/7 - Revise and Resubmission due date for assignments graded after 4/30
 
 ## A note about the "readings"
