@@ -149,6 +149,8 @@ Every week there will be a "reading assignment". It will focus on one piece of m
 
 Grading Policies: This course uses the specifications grading system as explained in **Specifications Grading** By Linda Nilson. For details [see this page](grading.md).
 
+Attendance: Every student is responsible for the material covered in class. Lab assignment can only be completed in class on Friday's (there is often special equipment and the need for a partner). There is a lab makeup period provided at the end of the term 12/6. Attendence during lecture is expected and the material is integrated with the lab assignments that week. In the event of a missed class we strongly advise reviewing the material before the next lab period (a friends notes, office hours, etc.).
+
 University of Virginia Honor System: All work should be pledged in the spirit of the Honor System at the University of Virginia. The instructor will indicate which assignments and activities are to be done individually and which permit collaboration. The following pledge should be written out at the end of all quizzes, examinations, individual assignments, and papers:  “I pledge that I have neither given nor received help on this examination (quiz, assignment, etc.)”.  The pledge must be signed by the student. For more information, visit www.virginia.edu/honor.
 
 
