@@ -32,7 +32,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 
 Weekly Assignments
 * LABS - There are 12 labs and all grade bundles require completion of all 12 labs. They are designed to be completed in class. There is a make up lab day and any student may make up a lab that day for any reason, no excuse is necessary.
-* READ - There are 12 reading assignments and the B and A bundles require completion of all of them. The READ assignments are posted to Canvas a week before the due date and take less than one hour to complete. Late submissions are not accepted. Extenuating circumstances can be excused after discussion with a professor. 
+* READ - There are 12 reading assignments and the B and A bundles require completion of all of them. The READ assignments are posted to Canvas a week before the due date and take less than one hour to complete. Late submissions are not accepted. Extenuating circumstances can be excused after discussion with Professor Alonzi during office hours. 
 
 ## Flexibility Provisions
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
