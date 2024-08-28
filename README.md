@@ -135,8 +135,7 @@ There are several technological tools used in this class:
 ### Additional Dates
 * 9/6 - This is the first lab day and also the first READ assignment is due.
 * 12/6 - Lab makeup day
-* 5/7 - Revise and Resubmission due date for assignments graded after 4/30
-
+* 12/6 - Final due date for all assignments (If a revision is necessary submission details will be with grading comments)
 ## A note about the "readings"
 Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all within bounds. However, the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via Canvas.
 
