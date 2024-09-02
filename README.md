@@ -60,7 +60,7 @@ In each of the areas we will specifically focus on:
 * Design
   * Theme: Storytelling -- What do I leave in and what do I leave out?
   * LO: Observe the world around you and record your observations in a systematic way (aka how to create a data set)
-  * LO: Principles of Established Data Sets (aka how to evaluate a data set)
+  * LO: Demonstrate the principles of establishing a dataset (Evaluate the quality of a dataset)
   * LO: Reflect on a data set and transform it for efficient communication to humans (aka how to communicate a data set)
 
 * Value
