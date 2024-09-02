@@ -61,7 +61,7 @@ In each of the areas we will specifically focus on:
   * Theme: Storytelling -- What do I leave in and what do I leave out?
   * LO: Observe the world around you and record your observations in a systematic way (aka how to create a data set)
   * LO: Principles of Established Data Sets (aka how to evaluate a data set)
-  * LO: Reflect on your data set and transform it into a medium for efficient communication with other humans (aka how to communicate a data set)
+  * LO: Reflect on a data set and transform it for efficient communication to humans (aka how to communicate a data set)
 
 * Value
   * Theme: With great power comes great responsibility
