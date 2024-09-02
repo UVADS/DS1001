@@ -117,7 +117,7 @@ There are several technological tools used in this class:
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
 |   1   |    Intro     | M X<br>  W 8/28<br>  F 8/30              |                           |              X               |
-|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |  What is Data?<br> Collecting Datasets <br>                         |         LABS-1: LUPI         |
+|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |  What is Data?<br> Collecting Datasets <br>   <br>                      |         LABS-1: LUPI         |
 |   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            |   9/11 GL - MC Forelle    |         LABS-2: SET          |
 |   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien  |     LABS-3: Projection!      |
 |   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           |                           |     LABS-4: Guess Who!?      |
