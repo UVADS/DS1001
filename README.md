@@ -117,9 +117,9 @@ There are several technological tools used in this class:
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
 |   1   |    Intro     | M X<br>  W 8/28<br>  F 8/30              |                           |              X               |
-|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |  What is Data?<br> Collecting Datasets <br>  Lab <br>                      |         LABS-1: LUPI         |
-|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            |  Data Communication<br> 9/11 GL - MC Forelle <br> Lab <br>   |         LABS-2: SET          |
-|   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien  |     LABS-3: Projection!      |
+|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |  What is Data?<br> Collecting Datasets <br>  Lab <br>         |         LABS-1: LUPI         |
+|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            |  Data Communication<br> 9/11 GL - MC Forelle <br> Lab <br>    |         LABS-2: SET          |
+|   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien <br> Google Case Study <br> lab <br> |     LABS-3: Projection!      |
 |   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           |                           |     LABS-4: Guess Who!?      |
 |   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           |                           |         LABS-5: GIGO         |
 |   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          |                           |      LABS-6: Case Study      |
