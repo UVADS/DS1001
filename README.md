@@ -122,7 +122,7 @@ There are several technological tools used in this class:
 |   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien <br> Google Case Study <br> Lab <br> |     LABS-3: Projection!      |
 |   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           |   Being a Data Science Investigator |     LABS-4: Guess Who!?      |
 |   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           |  Data Science Best Practices <br> 10/2 Dr. Aaron Martin  |         LABS-5: GIGO         |
-|   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          | Explainable AI  <br> 10/9 Dr. Chirag Agarwal <br> |      LABS-6: Case Study      |
+|   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          | Explainable AI  <br> 10/9 Dr. Chirag Agarwal <br> |      LABS-6: Value Case Study      |
 |   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  |                           | LABS-7: Hardware & Software  |
 |   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        |                           |      LABS-8: Battleship      |
 |  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         |                           |         LABS-9: GPU          |
