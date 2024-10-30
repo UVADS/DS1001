@@ -126,9 +126,9 @@ There are several technological tools used in this class:
 |   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  |                           | LABS-7: Hardware & Software  |
 |   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        |                           |      LABS-8: Battleship      |
 |  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         |                           |         LABS-9: GPU          |
-|  11   |   Analytics  | M 11/4<br>  W 11/6<br>  F 11/8           |                           |     LABS-10: Probability     |
+|  11   |   Analytics  | M 11/4<br>  W 11/6<br>  F 11/8           | What is Machine Learning Anyway? |     LABS-10: Probability     |
 |  12   |   Analytics  | M 11/11<br>  W 11/13 <br> F 11/15        |                           |         LABS-11: kNN         |
-|  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        |                           |   LABS-12: Decision Trees    |
+|  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        | Dean de la Pena    <br>                  |   LABS-12: Decision Trees    |
 |  14   |     Outro    | M 11/25<br>  W X (thanks)<br>  F X       |                           |              X               |
 |  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           |                           |        Lab Makeup Day        |
 
