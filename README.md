@@ -117,15 +117,15 @@ There are several technological tools used in this class:
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
 |   1   |    Intro     | M X<br>  W 8/28<br>  F 8/30              |                           |              X               |
-|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              |  What is Data?<br> Collecting Datasets <br>  Lab <br>         |         LABS-1: LUPI         |
-|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            |  Data Communication<br> 9/11 GL - MC Forelle <br> Lab <br>    |         LABS-2: SET          |
+|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              | What is Data?<br> Collecting Datasets <br>  Lab <br>         |         LABS-1: LUPI         |
+|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            | Data Communication<br> 9/11 GL - MC Forelle <br> Lab <br>    |         LABS-2: SET          |
 |   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien <br> Google Case Study <br> Lab <br> |     LABS-3: Projection!      |
-|   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           |   Being a Data Science Investigator |     LABS-4: Guess Who!?      |
-|   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           |  Data Science Best Practices <br> 10/2 Dr. Aaron Martin  |         LABS-5: Value Case Study     |
+|   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           | Being a Data Science Investigator |     LABS-4: Guess Who!?      |
+|   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           | Data Science Best Practices <br> 10/2 Dr. Aaron Martin  |         LABS-5: Value Case Study     |
 |   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          | Explainable AI  <br> 10/9 Dr. Chirag Agarwal <br> |      LABS-6: GIGO    |
-|   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  |                           | LABS-7: Hardware & Software  |
-|   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        |                           |      LABS-8: Battleship      |
-|  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         |                           |         LABS-9: GPU          |
+|   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  | Reading Day <br> Hardware <br> lab | LABS-7: Hardware & Software  |
+|   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        | Software <br> GPUs & Case Study <br> lab |      LABS-8: Battleship      |
+|  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         | Guest <br> Guest <br> lab <br>|         LABS-9: GPU          |
 |  11   |   Analytics  | M 11/4<br>  W 11/6<br>  F 11/8           | What is Machine Learning Anyway? |     LABS-10: Probability     |
 |  12   |   Analytics  | M 11/11<br>  W 11/13 <br> F 11/15        |                           |         LABS-11: kNN         |
 |  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        | Dean de la Pena    <br>                  |   LABS-12: Decision Trees    |
