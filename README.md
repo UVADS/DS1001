@@ -130,7 +130,7 @@ There are several technological tools used in this class:
 |  12   |   Analytics  | M 11/11<br>  W 11/13 <br> F 11/15        |                           |         LABS-11: kNN         |
 |  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        | Dean de la Pena    <br>                  |   LABS-12: Decision Trees    |
 |  14   |     Outro    | M 11/25<br>  W X (thanks)<br>  F X       |                           |              X               |
-|  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           |                           |        Lab Makeup Day        |
+|  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           | 12/2 GL - Natalie Kupperman <br> Course Review    |        Lab Makeup Day        |
 
 ### Additional Dates
 * 9/6 - This is the first lab day and also the first READ assignment is due.
