@@ -60,7 +60,7 @@ Every graded assignment in this class falls into one of 5 categories outlined be
 
 The 5 assignment categories:
 1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
-2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include watching short videos. A short review of the key points is then submitted as the assignment deliverable.
+2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
 3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
 4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
 5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
