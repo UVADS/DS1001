@@ -23,13 +23,10 @@ N.B. There is an associated lab class that must be enrolled simultaneously (1 ho
 
 <br>
 
-
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. Our goal is to teach you how to Think Like a Data Scientist (TLaDS). In this class we will go beyond the Data Science analytics. We will dig into the human and ethical aspects necessary for sucess in today's data-driven world. Our guide will be the Virginia Model of Data Science described in this article ([link](https://arxiv.org/abs/2311.07631)). On a weekly basis we will explore ideas in lecture and in lab as well as with supplementary readings. Larger projects take the place of traditional mid-terms and allow you to dive deep into the particular areas of Data Science that most appeal to you. The final work in the class focuses on the future. You will discuss how you see Data Science today, where you think it is going, and what role you could imagine playing in the years to come.
 
-
 ## What you’ll learn along the way
-
 * Prime Learning Objective: You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally defining problems the way a data scientist would.
 * Secondary Objective: Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
 
@@ -94,10 +91,6 @@ Weekly Assignments
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
 2. Resubmission: After grading assignments marked "does not meet spec, yet" can be revised and resubmitted for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. A second revision is granted rarely and only after an office hour conversation. 
 
-
-
-
-
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
 
@@ -105,9 +98,7 @@ There are several technological tools used in this class:
 * Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas (including lab assignments).
 * Personal Computer: We will be coding in this class, your laptop does not need any special hardware or software for our work.
 
-
 ## Course Bibliography
-
 Think Like a Data Scientist
 * Chance, Logic, and Intuition by Tijms
 * [The 4+1 Model of Data Science](https://arxiv.org/abs/2311.07631) by Alvarado
