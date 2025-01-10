@@ -9,16 +9,6 @@ This course does not have exams or the concept of "points". Instead there are bu
 
 The goal is to make the assignments as transparent as possible and not withold information from the students. For example in a traditional exam the students are told a list of subjects that may be on the test. The uncertainty causes anxiety and wastes an immense ammount of time. Instead of giving exams this class provides clear instruction on tasks to perform which yield the same result (mastery of learning objectives) without the anxiety and timewasting of studying for the unknown.
 
-## Assignment Types (duplicated in top level syllabus)
-Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
-
-The 5 assignment categories:
-1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definintion of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
-2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include watching short videos. A short review of the key points is then submitted as the assignment deliverable.
-3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
-4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorperate material from course typically taken by 2nd and 3rd year students.
-5. Final Essay - This assignment is the students opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
-
 ## Bundles
 The following table summarizes the assignmenmts required to "meet spec" to earn certain letter grades.
 
