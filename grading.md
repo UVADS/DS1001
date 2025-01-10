@@ -15,9 +15,9 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |Code|Assignment Type|#|Avg. Time|C|B|A|
 |--|--|--|--|--|--|--|
 |LABS|Labs| 12* | In class |12|12|12|
-|READ|"Read" & Review|12| 1 hour | 10|11|12|
-|CASE|Case Study Extension|4| 6 hours | --|1|2|
-|LOOK|Look Ahead|4| 6 hours | --|1|2|
+|READ|"Read" & Review|12| 2 hours | 10|11|12|
+|CASE|Case Study Extension|4| 8 hours | --|1|2|
+|LOOK|Look Ahead|4| 8 hours | --|1|2|
 |ESSY|Final Essay Parts|3| 4 hours/part| 1|2|3|
 
 Weekly Assignments
