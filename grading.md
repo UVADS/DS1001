@@ -7,7 +7,7 @@ This course does not have exams or the concept of "points". Instead there are bu
 2. The task (What am I going to do?)
 3. The criteria (A detailed description of the necessary components of a "meets spec" submission)
 
-The goal is to make the assignments as transparent as possible and not withold information from the students. For example in a traditional exam the students are told a list of subjects that may be on the test. The uncertainty causes anxiety and wastes an emmense ammount of time. Instead of giving exams this class provides clear instruction on tasks to perform which yield the same result (mastery of learning objectives) without the anxiety and timewasting of studying for the unknown.
+The goal is to make the assignments as transparent as possible and not withold information from the students. For example in a traditional exam the students are told a list of subjects that may be on the test. The uncertainty causes anxiety and wastes an immense ammount of time. Instead of giving exams this class provides clear instruction on tasks to perform which yield the same result (mastery of learning objectives) without the anxiety and timewasting of studying for the unknown.
 
 ## Assignment Types (duplicated in top level syllabus)
 Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
