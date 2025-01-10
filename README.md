@@ -113,6 +113,7 @@ Think Like a Data Scientist
 * [The 4+1 Model of Data Science](https://arxiv.org/abs/2311.07631) by Alvarado
 * [https://arxiv.org/abs/2311.03292](Data Science from 1963 to 2012)
 * The Mathematical Theory of Communication by Shannon and Weaver
+* Academic Bibliography: (https://github.com/UVADS/DS1001/blob/main/Datalogy.bib)
 
 Design
 * The Design of Everyday Things by Norman
