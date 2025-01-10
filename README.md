@@ -1,24 +1,23 @@
 # DS 1001: Think Like a Data Scientist (TLaDS)
 
-Instructor:
+Coordinates:
+
+    * Lecture: Nau Hall 101, 14:00-15:15 Tu & Tr
+    * Lab: Data Science 206 or 306 @ 10:00, 11:00, or 12:00
+      
+Instructor Information:
 
     * Professor Peter Alonzi (lpa2a)
-    * Class Location: Nau Hall 101
-      * Lab: Data Science 206 or 306
-      
-Office Hours:
+    * Office Hours: 14:00-16:00 on Wednesdays in Data Science 344 (Modified times after 4/30)
+    * Cursor Club: 16:00-17:00 location TBD in Data Science based on attendance
 
-    * 14:00-16:00 on Wednesdays in Data Science 344
-    * Cursor Club 16:00-17:00 location TBD in Data Science based on attendance
+Miscellaneous:
 
-Details:
-
-    * Subject Area and Catalog Number: Data Science, DS 1001
-    * Year, Term and Time: 2025, Spring, 14:00-15:15 Tu & Tr
     * SIS Title: Foundation of Data Science
+    * Subject Area and Catalog Number: Data Science, DS 1001
+    * Year and Term: 2025 Spring
     * Course Title: Think Like a Data Scientist (TLaDS)
-    * Level: Undergraduate
-    * Credit Type: Grade (A-F)
+    * Level and Credit Type: Undergraduate, Grade (A-F)
 
 N.B. There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
 
