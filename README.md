@@ -1,29 +1,29 @@
 # DS 1001: Foundations of Data Science 
+## Think Like a Data Scientist (TLaDS)
 
-Your Foundations of Data Science Instructors:
+Instructor:
 
-    * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
+    * Professor Peter Alonzi (lpa2a)
     * Class Location: Nau Hall 101
       * Lab: Data Science 206 or 306
       
-Professor Office Hours:
-  * Alonzi: 14:00-16:00 on Tuesdays in Data Science 344
-  * Wright: 14:00-16:00 on Tuesdays in Data Science 434
+Office Hours:
 
-
-<!--- Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com) --->
+    * 14:00-16:00 on Wednesdays in Data Science 344
+    * Cursor Club 16:00-17:00 location TBD in Data Science based on attendance
 
 Subject Area and Catalog Number: Data Science, DS 1001
 
-Year, Term and Time: 2024, Fall, 14:00-15:15 Mo & We
+Year, Term and Time: 2025, Spring, 14:00-15:15 Tu & Tr
 
-Class Title: Foundations of Data Science
+Class Title: Foundation of Data Science
+Subtitle: Think Like a Data Scientist (TLaDS)
 
 Level: Undergraduate
 
 Credit Type: Grade (A-F)
 
-N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday Mornings).
+N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
 
 <br>
 
@@ -32,23 +32,6 @@ N.B.: There is an associated lab class that must be enrolled simultaneously (1 h
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://arxiv.org/abs/2311.07631)).
 
-### What Former Students Have Said
-
-> I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
-
-> Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my Mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
-
-> Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
-
-> Humanizing data reminds me that data serves other people and that even numbers themselves represent other people and the world that we live in.
-
-> This lab was extremely fun and interactive using the notebook to experience leveraging a GPU.
-
-> I think was a good way to introduce the class on how to code and get our foot in the door. As this is a data science intro class, it was nice to be able to have an opportunity to learn a little bit about coding and makes me excited to try more in the future.
-
-> I went into this case study simply hoping to learn a bit more about maps and how they are created. However, throughout this process, I have discovered much about how certain decisions about data are made at each step.
-
-> You're not going to get it right the first time. That's ok! You have to learn from your mistakes in order to grow and find the best solution possible for the problem you are working on in the moment. 
 
 ## What you’ll learn along the way
 We will spend the majority of the semester focusing on the major aspects of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
