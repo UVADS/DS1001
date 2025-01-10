@@ -2,7 +2,7 @@
 This course uses the grading policy known as specifications grading. It has been demonstrated to provide much greater equity in the classroom and as a result improves achivement of learning objectives. However this system may be new to you. It does take some time to understand and we are ready to help you with any questions you may have. Please take advantage of office hours. For additional reading on this policy please start [here](https://teaching.virginia.edu/collections/specifications-grading).
 
 ## Approach
-This course does not have exams or the concept of "points". Instead there are bundles of assignments, that when completed earn letter grades. Every individual assignment is marked as "meets spec" or "does not meet spec yet". In order to understand what "meets spec" every assignment is accompianed by a single-level rubric that outlines three things:
+This course does not have exams or the concept of "points". Instead there are bundles of assignments, that when completed earn letter grades. Every individual assignment is marked as "meets spec" or "does not meet spec yet". In order to understand what "meets spec", every assignment is accompianed by a single-level rubric that outlines three things:
 1. The purpose (Why am I doing this?)
 2. The task (What am I going to do?)
 3. The criteria (A detailed description of the necessary components of a "meets spec" submission)
