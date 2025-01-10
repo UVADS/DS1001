@@ -106,13 +106,31 @@ There are several technological tools used in this class:
 * Personal Computer: We will be coding in this class, your laptop does not need any special hardware or software for our work.
 
 
-## Materials That Will Aid in Your Learning: 
+## Course Bibliography
 
-* A. [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
-* B. [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
-* C. [R for Data Science](https://r4ds.had.co.nz/)
-* D. [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
-* E. [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
+Think Like a Data Scientist
+* Chance, Logic, and Intuition by Tijms
+* [The 4+1 Model of Data Science](https://arxiv.org/abs/2311.07631) by Alvarado
+* [https://arxiv.org/abs/2311.03292](Data Science from 1963 to 2012)
+* The Mathematical Theory of Communication by Shannon and Weaver
+
+Design
+* The Design of Everyday Things by Norman
+* [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
+* [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
+
+Value
+* << should >>
+* [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
+
+Systems
+* [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by Reis and Housley
+
+Analytics
+* [R for Data Science](https://r4ds.had.co.nz/)
+* [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
+* Probability: Basic Probabiilty by Tijms
+* << ml >>
 
 ## Schedule of Topics 
 
