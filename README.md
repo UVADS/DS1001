@@ -171,8 +171,7 @@ Analytics
   
 ## A few policies that govern the class
 Attendance: 
-* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the read/lab assignments that week. On Tuesdays READ assignments will be reviewed. On Thursdays we will preview the lab on Friday and make the connection between lecture and lab (In the event of a missed class we strongly advise reviewing the material before the next lab period (a friends notes, office hours, etc.).
-)
+* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the read/lab assignments that week. On Tuesdays READ assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab (In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).)
 
 * Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
 
