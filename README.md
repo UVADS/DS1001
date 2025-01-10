@@ -102,8 +102,8 @@ Weekly Assignments
 There are several technological tools used in this class:
 
 * Email: Official communication from UVA is sent via UVA email
-* Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas **including lab assignments**.
-* Personal Computer: We will be doing coding in this class, your laptop does not need any special hardware or software for our work.
+* Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas (including lab assignments).
+* Personal Computer: We will be coding in this class, your laptop does not need any special hardware or software for our work.
 
 
 ## Materials That Will Aid in Your Learning: 
