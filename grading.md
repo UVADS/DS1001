@@ -26,6 +26,4 @@ Weekly Assignments
 
 ## Flexibility Provisions
 1. Labs: There is a make up lab week at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
-2. Resubmission: After grading assignments marked "does not meet spec, yet" can be revised and resubmitted for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted.
-
-
+2. Resubmission: After grading assignments marked "does not meet spec, yet" can be revised and resubmitted for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. A second revision is granted rarely and only after an office hour conversation. 
