@@ -25,20 +25,19 @@ N.B. There is an associated lab class that must be enrolled simultaneously (1 ho
 
 
 ## A Little Bit About the Course
-This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://arxiv.org/abs/2311.07631)).
+This is a survey course about the emerging field of Data Science. Our goal is to teach you how to Think Like a Data Scientist (TLaDS). In this class we will go beyond the Data Science analytics. We will dig into the human and ethical aspects necessary for sucess in today's data-driven world. Our guide will be the Virginia Model of Data Science described in this article ([link](https://arxiv.org/abs/2311.07631)). On a weekly basis we will explore ideas in lecture and in lab as well as with supplementary readings. Larger projects take the place of traditional mid-terms and allow you to dive deep into the particular areas of Data Science that most appeal to you. The final work in the class focuses on the future. You will discuss how you see Data Science today, where you think it is going, and what role you could imagine playing in the years to come.
 
 
 ## What you’ll learn along the way
-We will spend the majority of the semester focusing on the major aspects of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
 
-* Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
-* Secondary Objective: Identify how you see yourself in the field
+* Prime Learning Objective: You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally defining problems the way a data scientist would.
+* Secondary Objective: Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
 
 In each of the areas we will specifically focus on:
 * Design
-  * Theme: Storytelling -- What do I leave in and what do I leave out?
-  * LO: Observe the world around you and record your observations in a systematic way (aka how to create a data set)
-  * LO: Demonstrate the principles of establishing a dataset (Evaluate the quality of a dataset)
+  * Theme: Problem Solving and Storytelling -- What's the goal? What do I leave in and what do I leave out?
+  * LO: Observe the world around you and record your observations in a systematic way to solve a problem (aka how to create a data set)
+  * LO: Demonstrate the principles of establishing a dataset (aka how to evaluate the quality of a dataset)
   * LO: Reflect on a data set and transform it for efficient communication to humans (aka how to communicate a data set)
 
 * Value
@@ -55,8 +54,6 @@ In each of the areas we will specifically focus on:
   * Theme: Analyzing -- Garbage in, Garbage out
   * LO: Describe the ecosystem of data models 
   * LO: Articulate a typical algorithm life cycle 
-
-The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
 
 ## How You’ll Know You Are Learning (Assignments)
 Every graded assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment. They are graded using the specifications grading system. The details are [here](https://github.com/UVADS/DS1001/blob/main/grading.md), this is based on **Specifications Grading** By Linda Nilson. We will spend time in class to help you understand this system, especially if it is new for you.
