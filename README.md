@@ -62,13 +62,11 @@ The 5 assignment categories:
 1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
 2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
 3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
-4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
-5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
+4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. They incorporate material from courses typically taken by 2nd and 3rd year students.
+5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". The higher grade bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
 
 
-Bonus experimental category (not part of overall course grade):
 
-This semester we are developing an additional assignment type and are looking for your help. Periodically we will present quiz style questions. Our goal is for them to serve as a good check so that you have another tool to assess how your learning is going. These will not be part of the overall grade.
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
