@@ -1,5 +1,4 @@
-# DS 1001: Foundations of Data Science 
-## Think Like a Data Scientist (TLaDS)
+# DS 1001: Think Like a Data Scientist (TLaDS)
 
 Instructor:
 
@@ -12,22 +11,19 @@ Office Hours:
     * 14:00-16:00 on Wednesdays in Data Science 344
     * Cursor Club 16:00-17:00 location TBD in Data Science based on attendance
 
-Subject Area and Catalog Number: Data Science, DS 1001
+Details:
 
-Year, Term and Time: 2025, Spring, 14:00-15:15 Tu & Tr
-
-Class Title: Foundation of Data Science
-Subtitle: Think Like a Data Scientist (TLaDS)
-
-Level: Undergraduate
-
-Credit Type: Grade (A-F)
+    * Subject Area and Catalog Number: Data Science, DS 1001
+    * Year, Term and Time: 2025, Spring, 14:00-15:15 Tu & Tr
+    * SIS Title: Foundation of Data Science
+    * Course Title: Think Like a Data Scientist (TLaDS)
+    * Level: Undergraduate
+    * Credit Type: Grade (A-F)
 
 N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
 
 <br>
 
-<!--- ![](images/ds-1001-collage.png) --->
 
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://arxiv.org/abs/2311.07631)).
