@@ -20,7 +20,7 @@ Details:
     * Level: Undergraduate
     * Credit Type: Grade (A-F)
 
-N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
+N.B. There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
 
 <br>
 
