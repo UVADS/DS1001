@@ -21,8 +21,6 @@ Miscellaneous:
 
 N.B. There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
 
-<br>
-
 ## A Little Bit About the Course
 This is a survey course about the emerging field of Data Science. Our goal is to teach you how to Think Like a Data Scientist (TLaDS). In this class we will go beyond the Data Science analytics. We will dig into the human and ethical aspects necessary for sucess in today's data-driven world. Our guide will be the Virginia Model of Data Science described in this article ([link](https://arxiv.org/abs/2311.07631)). On a weekly basis we will explore ideas in lecture and in lab as well as with supplementary readings. Larger projects take the place of traditional mid-terms and allow you to dive deep into the particular areas of Data Science that most appeal to you. The final work in the class focuses on the future. You will discuss how you see Data Science today, where you think it is going, and what role you could imagine playing in the years to come.
 
