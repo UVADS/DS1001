@@ -155,9 +155,9 @@ Analytics
 |  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           | 12/2 GL - Natalie Kupperman <br> Course Review    |        Lab Makeup Day        |
 
 ### Additional Dates
-* 9/6 - This is the first lab day and also the first READ assignment is due.
-* 12/6 - Lab makeup day
-* 12/6 - Final due date for all assignments (If a revision is necessary submission details will be with grading comments)
+* 1/24 - This is the first lab day and also the first READ assignment is due.
+* 4/25 - Lab makeup day
+* 4/29 - Final due date for all assignments (If a revision is necessary submission details will be provided with grading comments)
 
 
 ## Guest Speakers
@@ -166,7 +166,9 @@ Analytics
 * Value -
 * Systems -
 * Analytics -
-* Job Week - 
+* Job Week -
+
+  
 ## A few Policies that will Govern the Class
 
 Grading Policies: This course uses the specifications grading system as explained in **Specifications Grading** By Linda Nilson. For details [see this page](grading.md).
