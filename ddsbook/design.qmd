@@ -1,6 +1,0 @@
-
-# Design {.unnumbered}
-
-This section will provide a overview of the the Design space through three different lenses. The School of Data Science's perspective on the curriculum and skills that compose this area, the view from industry to included recorded lectures from experts that have participated in the Foundations of Data Science Course at UVA and through the point of view of researchers that are working and contributing to this area of the field. 
-
-It is important to note that all these areas are evolving and have overlapping content area, but Design in particular can be difficult to neatly fold into well-defined set of easily quantifiable skills.  
