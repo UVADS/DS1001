@@ -103,21 +103,22 @@ There are several technological tools used in this class:
 
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
-|   1   |    Intro     | M X<br>  W 8/28<br>  F 8/30              |                           |              X               |
-|   2   |    Design    | M 9/2<br>  W 9/4<br>  F 9/6              | What is Data?<br> Collecting Datasets <br>  Lab <br>         |         LABS-1: LUPI         |
-|   3   |    Design    | M 9/9<br>  W 9/11 <br> F 9/13            | Data Communication<br> 9/11 GL - MC Forelle <br> Lab <br>    |         LABS-2: SET          |
-|   4   |    Design    | M 9/16<br>  W 9/18<br>  F 9/20           | 9/16 GL – Carrie O’Brien <br> Google Case Study <br> Lab <br> |     LABS-3: Projection!      |
-|   5   |    Value     | M 9/23<br>  W 9/25<br>  F 9/27           | Being a Data Science Investigator |     LABS-4: Guess Who!?      |
-|   6   |     Value    | M 9/30<br>  W 10/2<br>  F 10/4           | Data Science Best Practices <br> 10/2 Dr. Aaron Martin  |         LABS-5: Value Case Study     |
-|   7   |     Value    | M 10/7<br>  W 10/9<br>  F 10/11          | Explainable AI  <br> 10/9 Dr. Chirag Agarwal <br> |      LABS-6: GIGO    |
-|   8   |   Systems    | M X (reading)<br>  W 10/16<br>  F 10/18  | Reading Day <br> Hardware <br> lab | LABS-7: Hardware & Software  |
-|   9   |    Systems   | M 10/21<br>  W 10/23 <br> F 10/25        | Software <br> GPUs & Case Study <br> lab |      LABS-8: Battleship      |
-|  10   |    Systems   | M 10/28<br>  W 10/30<br>  F 11/1         | Guest <br> Guest <br> lab <br>|         LABS-9: GPU          |
-|  11   |   Analytics  | M 11/4<br>  W 11/6<br>  F 11/8           | What is Machine Learning Anyway? |     LABS-10: Probability     |
-|  12   |   Analytics  | M 11/11<br>  W 11/13 <br> F 11/15        |                           |         LABS-11: kNN         |
-|  13   |   Analytics  | M 11/18<br>  W 11/20 <br> F 11/22        | Dean de la Pena    <br>                  |   LABS-12: Decision Trees    |
-|  14   |     Outro    | M 11/25<br>  W X (thanks)<br>  F X       |                           |              X               |
-|  15   |     Outro    | M 12/2<br>  W 12/4<br>  F 12/6           | 12/2 GL - Natalie Kupperman <br> Course Review    |        Lab Makeup Day        |
+|   1   |    Intro     | T 1/14 <br> R 1/16 <br> F 1/17   |                           |              X               |
+|   2   |    Design    | T 1/21 <br> R 1/23 <br> F 1/24   |                           |         LABS-1: LUPI         |
+|   3   |    Design    | T 1/28 <br> R 1/30 <br> F 1/31   |                           |         LABS-2: SET          |
+|   4   |    Design    | T 2/4 <br> R 2/6 <br> F 2/7      |                           |     LABS-3: Projection!      |
+|   5   |    Value     | T 2/11 <br> R 2/13 <br> F 2/14   |                           |     LABS-4: Guess Who!?      |
+|   6   |     Value    | T 2/18 <br> R 2/20 <br> F 2/21   |                           |   LABS-5: Value Case Study   |
+|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   |                           |         LABS-6: GIGO         |
+|   8   |   Systems    | T 3/4 <br> R 3/6 <br> F 3/7      |                           | LABS-7: Hardware & Software  |
+|   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
+|  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   |                           |   LABS-8: Battleship         |
+|  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   |                           |    LABS-9: GPU               |
+|  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |                           |   LABS-10:        |
+|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |                           |         LABS-11:          |
+|  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |                           |   LABS-12:    |
+|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |                           |        Lab Makeup Day        |
+|  16   |     Outro    | T 4/29 <br> R X <br> F X         |                           |        X                     |
 
 ### Additional Dates
 * 1/24 - This is the first lab day and also the first READ assignment is due.
