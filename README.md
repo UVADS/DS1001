@@ -157,7 +157,7 @@ Systems
 Analytics
 * [R for Data Science](https://r4ds.had.co.nz/)
 * [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
-* Probability: Basic Probabiilty by Tijms
+* Probability: Basic Probabilty by Tijms
 * << ml >>
 
   
