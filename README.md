@@ -114,10 +114,10 @@ There are several technological tools used in this class:
 |   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
 |  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
 |  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9                          |    LABS-9: GPU               |
-|  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |                           |   LABS-10:        |
-|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |                           |         LABS-11:          |
-|  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |                           |   LABS-12:    |
-|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |                           |        Lab Makeup Day        |
+|  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |  <br> <br> LABS-10                         |   LABS-10:        |
+|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  <br> <br> LABS-11                         |         LABS-11:          |
+|  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |  <br> Case Study <br> LABS-12                         |   LABS-12:    |
+|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Career/Life/Essay Week <br> <br> LABS Makeup Day                         |        Lab Makeup Day        |
 |  16   |     Outro    | T 4/29 <br> R X <br> F X         |                           |        X                     |
 
 ### Additional Dates
