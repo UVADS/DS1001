@@ -129,8 +129,8 @@ There are several technological tools used in this class:
 ## Guest Speakers
 
 * Design - Carrie O'Brien: User Interface Designer at Capital One: Messaging, Web, and Human-Centered Design (Jan 30)
-* Value -
-* Systems -
+* Value - [Professor MC Forelle](https://engineering.virginia.edu/faculty/mc-forelle) - 
+* Systems - [Professor Neal Magee](https://datascience.virginia.edu/people/neal-magee)
 * Analytics -
 * Job Week -
 
