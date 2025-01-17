@@ -112,7 +112,7 @@ There are several technological tools used in this class:
 |   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   | Professor Wright <br> Case Study (Professor Wright) <br> LABS-6                          |         LABS-6: GIGO         |
 |   8   |   Systems    | T 3/4 <br> R 3/6 <br> F 3/7      | Hardware <br> Software <br> LABS-7                          | LABS-7: Hardware & Software  |
 |   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
-|  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   |                           |   LABS-8: Battleship         |
+|  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Algorithms <br> Data Structures <br> LABS-8                          |   LABS-8: Battleship         |
 |  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9                          |    LABS-9: GPU               |
 |  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |                           |   LABS-10:        |
 |  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |                           |         LABS-11:          |
