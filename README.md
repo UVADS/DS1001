@@ -103,22 +103,22 @@ There are several technological tools used in this class:
 
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
-|   1   |    Intro     | T 1/14 <br> R 1/16 <br> F 1/17   | Think Like a Data Scientist <br> What is Data? <br> NO LABS <br>                          |              X               |
-|   2   |    Design    | T 1/21 <br> R 1/23 <br> F 1/24   | The Data Science Pipeline <br> Data Collection <br> LABS-1 <br>                          |         LABS-1: LUPI         |
+|   1   |    Intro     | T 1/14 <br> R 1/16 <br> F 1/17   | Think Like a Data Scientist <br> What is Data? <br> NO LABS <br>   |              X               |
+|   2   |    Design    | T 1/21 <br> R 1/23 <br> F 1/24   | The Data Science Pipeline <br> Data Collection <br> LABS-1 <br>   |         LABS-1: LUPI         |
 |   3   |    Design    | T 1/28 <br> R 1/30 <br> F 1/31   | Storytelling <br> **Guest Lecture** <br> LABS-2                          |         LABS-2: SET          |
-|   4   |    Design    | T 2/4 <br> R 2/6 <br> F 2/7      | Data Communication <br> Google Maps Case Study <br> LABS-3                          |     LABS-3: Projection!      |
+|   4   |    Design    | T 2/4 <br> R 2/6 <br> F 2/7      | Data Communication <br> Google Maps Case Study <br> LABS-3       |     LABS-3: Projection!      |
 |   5   |    Value     | T 2/11 <br> R 2/13 <br> F 2/14   | Professor Wright <br> Professor Wright <br> LABS-4                          |     LABS-4: Guess Who!?      |
 |   6   |     Value    | T 2/18 <br> R 2/20 <br> F 2/21   | **Guest Lecture** <br> Professor Wright <br> LABS-5                          |   LABS-5: Value Case Study   |
-|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   | Professor Wright <br> Case Study (Professor Wright) <br> LABS-6                          |         LABS-6: GIGO         |
+|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   | Professor Wright <br> Case Study (Professor Wright) <br> LABS-6    |         LABS-6: GIGO         |
 |   8   |   Systems    | T 3/4 <br> R 3/6 <br> F 3/7      | Hardware <br> Software <br> LABS-7                          | LABS-7: Hardware & Software  |
 |   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
 |  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
-|  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9                          |    LABS-9: GPU               |
+|  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9      |    LABS-9: GPU               |
 |  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |  <br> <br> LABS-10                         |   LABS-10:        |
 |  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  <br> <br> LABS-11                         |         LABS-11:          |
 |  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |  <br> Case Study <br> LABS-12                         |   LABS-12:    |
-|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Career/Life/Essay Week <br> <br> LABS Makeup Day                         |        Lab Makeup Day        |
-|  16   |     Outro    | T 4/29 <br> R X <br> F X         |                           |        X                     |
+|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Career/Life/Essay Week <br> Career/Life/Essay Week <br> LABS Makeup Day  |        Lab Makeup Day        |
+|  16   |     Outro    | T 4/29 <br> R X <br> F X         |  Final Lecture & All assignments Due <br> <br>                         |        X                     |
 
 ### Additional Dates
 * 1/24 - This is the first lab day and also the first READ assignment is due.
