@@ -108,8 +108,8 @@ There are several technological tools used in this class:
 |   3   |    Design    | T 1/28 <br> R 1/30 <br> F 1/31   | Communicating with Data <br> **Guest Lecture** <br> LABS-2  |         LABS-2: SET          |
 |   4   |    Design    | T 2/4 <br> R 2/6 <br> F 2/7      | Data Communication <br> Google Maps Case Study <br> LABS-3       |     LABS-3: Projection!      |
 |   5   |    Value     | T 2/11 <br> R 2/13 <br> F 2/14   | Professor Wright <br> Professor Wright <br> LABS-4                          |     LABS-4: Guess Who!?      |
-|   6   |     Value    | T 2/18 <br> R 2/20 <br> F 2/21   | **Guest Lecture** <br> Professor Wright <br> LABS-5                          |   LABS-5: Value Case Study   |
-|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   | Professor Wright <br> Case Study (Professor Wright) <br> LABS-6    |         LABS-6: GIGO         |
+|   6   |     Value    | T 2/18 <br> R 2/20 <br> F 2/21   | **Guest Lecture** <br> **Guest Lecture** <br> LABS-5                          |   LABS-5: Value Case Study   |
+|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   |  Case Study (Professor Wright) <br> **Guest Lecture** <br> LABS-6    |         LABS-6: GIGO         |
 |   8   |   Systems    | T 3/4 <br> R 3/6 <br> F 3/7      | Hardware <br> Software <br> LABS-7                          | LABS-7: Hardware & Software  |
 |   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
 |  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
