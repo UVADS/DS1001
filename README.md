@@ -118,7 +118,7 @@ There are several technological tools used in this class:
 |  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  Code Examples <br> Decision Tree <br> LABS-11                         | LABS-11: Decision Tree         |
 |  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |  **Guest Lecture** <br> k-NN/Case Study <br> LABS-12                         |   LABS-12: k-NN   |
 |  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Code Examples <br> Office Hours <br> LABS Makeup Day  |        Lab Makeup Day        |
-|  16   |     Outro    | T 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br> <br>                         |        X                     |
+|  16   |     Outro    | T 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br>  <br>                         |        X                     |
 
 ### Additional Dates
 * 1/24 - This is the first lab day and also the first READ assignment is due.
