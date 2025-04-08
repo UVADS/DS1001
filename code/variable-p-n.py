@@ -5,6 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider
+from scipy.stats import entropy
 
 # set the initial number of coin flips
 flips = 10
@@ -28,10 +29,19 @@ hist, bins, patches = ax.hist(result, bins=flips+1, range=(-0.5, flips+0.5),
                              edgecolor='#232D4B', # UVA Navy for bin edges
                              linewidth=2.25)      # Width of the edge lines
 
+# calculate entropy
+hist_normalized = hist / np.sum(hist)  # normalize to get probabilities
+entropy_value = entropy(hist_normalized + 1e-10)  # add small constant to avoid log(0)
+
 # set labels and title with bold and larger font
 ax.set_xlabel("Number of Heads", fontsize=14, fontweight='bold')
 ax.set_ylabel("Frequency", fontsize=14, fontweight='bold')
 ax.set_title(f"{trials} trials of {flips} unfair coin flips", fontsize=16, fontweight='bold')
+
+# add entropy text to the figure
+entropy_text = ax.text(0.02, 0.95, f"Entropy: {entropy_value:.4f} bits", 
+                      transform=ax.transAxes, fontsize=14, fontweight='bold',
+                      bbox=dict(facecolor='white', alpha=0.8, edgecolor='#232D4B', pad=10))
 
 # add tick marks on all sides
 ax.tick_params(top=True, right=True)
@@ -91,15 +101,24 @@ def update(val):
     ax.clear()
     
     # plot the new histogram
-    ax.hist(new_result, bins=n+1, range=(-0.5, n+0.5), 
+    hist, bins, patches = ax.hist(new_result, bins=n+1, range=(-0.5, n+0.5), 
             color='#E57200',     # UVA Orange for bin fill
             edgecolor='#232D4B', # UVA Navy for bin edges
             linewidth=2.25)      # Width of the edge lines
+    
+    # calculate entropy
+    hist_normalized = hist / np.sum(hist)  # normalize to get probabilities
+    entropy_value = entropy(hist_normalized + 1e-10, base=2)  # add small constant to avoid log(0)
     
     # update labels and title with bold and larger font
     ax.set_xlabel("Number of Heads", fontsize=14, fontweight='bold')
     ax.set_ylabel("Frequency", fontsize=14, fontweight='bold')
     ax.set_title(f"{t} trials of {n} coin flips (p={p:.2f})", fontsize=16, fontweight='bold')
+    
+    # add entropy text to the figure
+    entropy_text = ax.text(0.02, 0.95, f"Entropy: {entropy_value:.4f} bits", 
+                          transform=ax.transAxes, fontsize=14, fontweight='bold',
+                          bbox=dict(facecolor='white', alpha=0.8, edgecolor='#232D4B', pad=10))
     
     # add tick marks on all sides
     ax.tick_params(top=True, right=True)
