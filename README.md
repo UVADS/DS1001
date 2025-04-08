@@ -115,7 +115,7 @@ There are several technological tools used in this class:
 |  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
 |  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9      |    LABS-9: GPU               |
 |  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |  Pattern Recognition <br> Probability <br> LABS-10                         |   LABS-10: Mastermind       |
-|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  Code Examples <br> Decision Tree <br> LABS-11                         | LABS-11: Decision Tree         |
+|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  Code Examples [link](https://github.com/UVADS/DS1001/blob/3ed077ef6c2576ea1cfa018cb9afde88d5b9f9e5/code/2025-04-08-probability-examples.ipynb) <br> Decision Tree <br> LABS-11                         | LABS-11: Decision Tree         |
 |  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |  **Guest Lecture** <br> k-NN/Case Study <br> LABS-12                         |   LABS-12: k-NN   |
 |  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Code Examples <br> Office Hours <br> LABS Makeup Day  |        Lab Makeup Day        |
 |  16   |     Outro    | T 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br>  <br>                         |        X                     |
