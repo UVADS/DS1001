@@ -1,164 +1,190 @@
-# DS 1001: Foundations of Data Science 
+# DS 1001: Think Like a Data Scientist (TLaDS)
 
-Your Foundations of Data Science Instructors:
+Logistics:
 
-    * Professors Brian Wright (bw2zd) and Peter Alonzi (lpa2a)
-    * Class Location: Nau Hall 101
-      * Lab: Thornton Hall D222 or Ridley Hall 179
+    * Lecture: Nau Hall 101, 2-3:15 pm Mon & Wed
+    * Lab: Data Science 206 or 306 @ 12, 1, 2, or 3 pm
+      
+Instructor Information:
 
-Professor Office Hours:
-  * Alonzi: 11-12 on Wednesdays in Elson 185A (often Tue/Thur as well but not guaranteed)
-  * Wright: 3-4 on Mondays in Elson 165
+    * Professor Brian Wright (brianwright@virginia.edu)
+    * Office Hours: **ADD FOR FALL 25**
 
+Miscellaneous:
 
-Additional Course Materials: [www.definingdatascience.com](www.definingdatascience.com)
+    * SIS Title: Foundation of Data Science
+    * Subject Area and Catalog Number: Data Science, DS 1001
+    * Year and Term: 2025 Spring
+    * Course Title: Think Like a Data Scientist (TLaDS)
+    * Level and Credit Type: Undergraduate, Grade (A-F)
 
-Subject Area and Catalog Number: Data Science, DS 1001
-
-Year, Term and Time: 2023, Fall, 9:30-10:45 Tu & Th
-
-Class Title: Foundations of Data Science
-
-Level: Undergraduate
-
-Credit Type: Grade (A-F)
-
-N.B.: There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday Mornings).
-
-<br>
-
-![](images/ds-1001-collage.png)
+N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 12, 1, 2, or 3 pm).
 
 ## A Little Bit About the Course
-This is a survey course about the emerging field of Data Science. The School of Data Science at UVA has pioneered a new approach to Data Science that goes beyond the analytical computational aspect of Data Science and also encompasses the human element necessary to achieve real and ethical effects in today's data-driven world. This course will focus on the fundamental concepts of each aspect of Data Science as expressed in the Virginia Model of Data Science ([link](https://ontoligent.github.io/four-plus-one-model/)).
-
-### What Former Students Have Said
-
-> I took this class to get my feet wet, learn more about what data science really was, learn how it was applied in the real world, and see if I would actually like it. I am happy to say that it has taught me a lot and I am extremely excited to continue studying data science in the future.
-
-> Prior to this lab, I really had no idea about how hardware worked or what the name of anything was. However, I learned so much about the hardware of my Mac and iPhone, and I feel like it gave me a better appreciation for how my devices are constructed ot maximize efficiency.
-
-> Once I accepted that the time was as good as spent, I felt surprisingly relieved and a lot more relaxed. Instead of living in the future my mind was occupied completely by the present.
-
-> Humanizing data reminds me that data serves other people and that even numbers themselves represent other people and the world that we live in.
-
-> This lab was extremely fun and interactive using the notebook to experience leveraging a GPU.
-
-> I think was a good way to introduce the class on how to code and get our foot in the door. As this is a data science intro class, it was nice to be able to have an opportunity to learn a little bit about coding and makes me excited to try more in the future.
-
-> I went into this case study simply hoping to learn a bit more about maps and how they are created. However, throughout this process, I have discovered much about how certain decisions about data are made at each step.
-
-> You're not going to get it right the first time. That's ok! You have to learn from your mistakes in order to grow and find the best solution possible for the problem you are working on in the moment. 
+This is a survey course about the emerging field of Data Science. Our goal is to teach you how to Think Like a Data Scientist (TLaDS). In this class we will go beyond the Data Science analytics. We will dig into the human and ethical aspects necessary for sucess in today's data-driven world. Our guide will be the Virginia Model of Data Science described in this article ([link](https://arxiv.org/abs/2311.07631)). On a weekly basis we will explore ideas in lecture and in lab as well as with supplementary readings. Larger projects take the place of traditional mid-terms and allow you to dive deep into the particular areas of Data Science that most appeal to you. The final work in the class focuses on the future. You will discuss how you see Data Science today, where you think it is going, and what role you could imagine playing in the years to come.
 
 ## What you’ll learn along the way
-We will spend the majority of the semester focusing on the major aspects of Data Science: Design, Value, Systems, and Analytics. We will finish the semester with time for putting these concepts into practice and understanding the Data Science pipeline. Each of these components has learning objectives detailed below but the highest level objective is that you will be able to:
-
-* Prime Learning Objective: Define Data Science and explain it to friends and family // Be able to describe the field of Data Science and its emerging sub-fields
-* Secondary Objective: Identify how you see yourself in the field
+* Prime Learning Objective: You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally approaching a problem as a data scientist in your final project.
+* Secondary Objective: Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
 
 In each of the areas we will specifically focus on:
-* Design
-  * Theme: Storytelling -- What do I leave in and what do I leave out?
-  * LO: Observe the world around you and record your observations in a systematic way (aka create a data set)
-  * LO: Reflect on your data set and transform it into a medium for efficient communication with other humans
-
-* Value
-  * Theme: With great power comes great responsibility
-  * LO: Be able to reflect on and articulate the benefits and concerns of data-driven decisions
-  * LO: Describe scenarios that allow for human-centered data science
-
 * Systems
   * Theme: Scaling -- What scale is necessary?
   * LO: Identify the hardware and software components of a computer and describe their function
   * LO: Describe the different scales of computer operation
+
+* Design
+  * Theme: Problem Solving and Storytelling -- What's the goal? What do I leave in and what do I leave out?
+  * LO: Observe the world around you and record your observations in a systematic way to solve a problem (aka how to create a data set)
+  * LO: Demonstrate the principles of establishing a dataset (aka how to evaluate the quality of a dataset)
+  * LO: Reflect on a data set and transform it for efficient communication to humans (aka how to communicate a data set)
 
 * Analytics
   * Theme: Analyzing -- Garbage in, Garbage out
   * LO: Describe the ecosystem of data models 
   * LO: Articulate a typical algorithm life cycle 
 
-The course will move rather quickly and can be demanding at times. However, if we all work together to support each other you’ll be amazed how much you learn at the end of the semester!
+  * Value
+  * Theme: With great power comes great responsibility
+  * LO: Be able to reflect on and articulate the benefits and concerns of data-driven decisions
+  * LO: Describe scenarios that allow for human-centered data science
 
-## How You’ll Know You Are Learning (Assessments)
-Every assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment.
 
-The 5 assignment categories:
+## How You’ll Know You Are Learning (Assignments)
+Every graded assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment. They are graded using the specifications grading system based on **Specifications Grading** By Linda Nilson. We will spend time in class to help you understand this system, especially if it is new for you.
+
+This course uses the grading policy known as specifications grading. It has been demonstrated to provide much greater equity in the classroom and as a result improves achivement of learning objectives. However this system may be new to you. It does take some time to understand and we are ready to help you with any questions you may have. Please take advantage of office hours. You can read more about the [specifications grading policy here](https://teaching.virginia.edu/collections/specifications-grading).
+
+### Approach
+This course does not have exams or the concept of "points". Instead there are bundles of assignments, that when completed earn letter grades. Every individual assignment is marked as "meets spec" or "does not meet spec yet". In order to understand what "meets spec", every assignment is accompianed by a single-level rubric that outlines three things:
+1. The purpose (Why am I doing this?)
+2. The task (What am I going to do?)
+3. The criteria (A detailed description of the necessary components of a "meets spec" submission)
+
+The goal is to make the assignments as transparent as possible and not withold information from the students. For example in a traditional exam the students are told a list of subjects that may be on the test. The uncertainty causes anxiety and wastes an immense ammount of time. Instead of giving exams this class provides clear instruction on tasks to perform which yield the same result (mastery of learning objectives) without the anxiety and timewasting of studying for the unknown.
+
+### Bundles
+The following table summarizes the assignmenmts required to "meet spec" to earn certain letter grades.
+
+|Code|Assignment Type|#|Avg. Time|C|B|A|
+|--|--|--|--|--|--|--|
+|LABS|Labs| 12* | In class |12|12|12|
+|READ|"Read" & Review|12| 2 hours | 10|11|12|
+|QUIZ|In Class Quiz|6| 5-10 minutes | 2|4|5|
+|MIDT|Midterm Assignment|8| 8 hours | --|1|3|
+|FINL|Final Project|3| 4 hours/part| 1|2|3|
+
+#### Weekly Assignments
+The LABS and READ assignments for each week are due that Friday at 11:59pm on Canvas every week. 
+* LABS - There are 12 labs and all grade bundles require completion of all 12 labs. They are designed to be completed in class. There is a make up lab day and any student may make up a lab that day for any reason, no excuse is necessary.
+* READ - The READ assignments are posted to Canvas a week before the due date and take less than two hours to complete. Late submissions are not accepted. Extenuating circumstances can be excused after discussion with Professor Alonzi during office hours. We suggest completion of these assignments well in advance of the deadline.
+
+
+### General Assignment Description
 1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
-2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include watching short videos. A short review of the key points is then submitted as the assignment deliverable.
-3. Case Study Extensions - During the semesters case studies will be presented. This assignment type involves going beyond the initial parameter of the case study and exploring some of the more advanced points.
-4. "Look ahead" - These assignments are designed to allow students to advance their mastery of topics further. The incorporate material from courses typically taken by 2nd and 3rd year students.
-5. Final Essay - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "define data science". The higher bundles require a more complex essay which includes a discussion of personal career paths in data science and ultimately discussing next steps and the future of data science.
+2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
+3. Midterm Assignment - Each module has two midterm assignments. One is a case study, where you’ll take a topic introduced briefly in class and explore it more deeply on your own. The other is a “look ahead,” where you’ll investigate a concept that’s typically covered in the 2nd or 3rd year of the Data Science major. You’ll have some choice in the topics—so pick the ones that interest you most.
+4. In Class Quiz - There will be 6 unannounced quizzes during lecture classes, each with fewer than 5 multiple-choice questions. They’ll cover material learned so far and serve as checkpoints to gauge your understanding and help us identify topics we may need to revisit together.
+5. Final Project - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". **ADD MORE DETAIL WHEN DECIDED**
+
+### Flexibility
+1. Labs: There is a make up lab day at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
+2. Resubmission: After grading, weekly assignments (LABS & READ) marked "does not meet spec, yet" can be revised and resubmitted **once** for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. **QUIZ, MIDT, and FINL assignments can not be revised.**
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
 
-* Email: Official communication from UVA is sent via the class email
-* Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas **including lab assignments**.
-* discord: The official-unoffical course chat channel **[Discord Invite Click](https://discord.gg/PGaPcMHp)** 
+* Email: Official communication from UVA is sent via UVA email
+* Canvas: The official Learning Management System for this course is Canvas, all assignments are managed through canvas (including lab assignments). Course announcements will also be sent through Canvas, so make sure your notifications are turned on, or you are checking Canvas regularly.
+* Personal Computer: We will using online tools, compiling documents, and doing some introductory coding in this class. Your laptop does not need any special hardware or software for our work.
 
-## Materials That Will Aid in Your Learning: 
-
-* A. [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
-* B. [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
-* C. [R for Data Science](https://r4ds.had.co.nz/)
-* D. [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-IPython-ebook/dp/B075X4LT6K)
-* E. [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
-
-## Schedule of Topics 
+## Schedule of Topics
 
 
-| Week 	| Date|Theme 	| Topics 	| Lab 	| "Reading" 	|
-|:---:	|:---:|:---:	|:---:	|:---:	|:---:	|
-| Week 1  | 8/22,24|Motivate the Field + Course Narrative	|  	   | 	 No Lab    | [5 THINGS I WISH I KNEW Before Starting Data Science](https://www.youtube.com/watch?v=B5emClQf_I4&feature=youtu.be)	      |
-| Week 2  | 8/29,31,9/1|Design  | Data Collection   | LABS-1: App Data [rubric](https://myuva-my.sharepoint.com/:b:/g/personal/lpa2a_virginia_edu/EbhizPx6z85DuqgHvVIv_SYB1YYeRYXhhJ_3rdy0pdTgvQ?e=olhyk8) | 	|
-| Week 3  |	9/5,7,8|Design   | Guest: Professor Forelle	|	LABS-2: Set! (Game Lab) | 	|
-| Week 4  |	9/12,14,15| Design  |	Guest: Ms. O'Brien from Capital One|  LABS-3: Make a map projection  | 	|
-| Week 5  | 9/19,21,22| Value |  Guest: Overview of Value I + Guest TBD|  LABS-4: Guess Who? (Game Lab)    |  | 
-| Week 6	 | 9/26,28,29| Value	 | Guest: Mona Sloane + Explainable AI | LABS-5: AI Fairness 360   |   |
-| Week 7  | 10/5,6 (no Tue)|Value   | Guest: Professor Cummings + Ethic Issues with Big Data| LABS-6: AI Interview| |
-| Week 8  | 10/10,12,13| Systems	|  Hardware and Software	| LABS-7: Device Data	  ||
-| Week 9 | 10/17,19,20| Systems 	| Guest: Professor Magee 	|	LABS-8: Battleship (Game Lab)  | |
-| Week 10 | 10/24,26,27| Systems| Guest: Ms. Friedel from Capital One 	| LABS-9: GPU Test Drive  |  |
-| Week 11 |	10/31,11/2,3|  Analytics  |	  | LABS-10: Mastermind (Game Lab) |	|
-| Week 12 | 11/9,10 (no Tue)| Analytics  |  	| LABS-11: Garbage In, Garbage Out |   |
-| Week 13 | 11/14,16,17| Analytics |   | LABS-12: Using kNN  |   |
-| Week 14 | 11/21 | Practice	| Gobble	| Gobble |   |
-| Week 15 | 11/28,30,12/1 | Practice	|  	|  Make Up Lab in Elson 180	|  	|
-| Week 16 | 12/5 | Last Day of Class | | | |
-| Examinations | None | | | | |
-
+| Week  |   Section    |              Dates               |          Lecture          |             Lab              |
+|:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
+|   1   |    Intro     | M X <br> W 8/27 <br> F 8/29      |                           | X               |
+|   2   |    Systems   | M 9/1 <br> W 9/3 <br> F 9/5      |                           | LABS-1:          |
+|   3   |    Systems   | M 9/8 <br> W 9/10 <br> F 9/12    |                           | LABS-2:          |
+|   4   |    Design    | M 9/15 <br> W 9/17 <br> F 9/19   |                           | LABS-3:       |
+|   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26   |                           | LABS-4:       |
+|   6   |    Analytics | M 9/29 <br> W 10/1 <br> F 10/3   |                           | LABS-5:    |
+|   7   |    Analytics | M 10/6 <br> W 10/8 <br> F 10/10  |                           | LABS-6:          |
+|   8   |    Value     | M **no class** <br> W 10/15 <br> F 10/17  |                  | LABS-7:   |
+|   9   |    Value     | M 10/20 <br> W 10/22 <br> F 10/24|                           | LABS-8:                      |
+|  10   |    Project   | M 10/27 <br> W 10/29 <br> F 10/31|                           | LABS-9:         |
+|  11   |    Project   | M 11/3 <br> W 11/5 <br> F 11/7   |                           | LABS-10:               |
+|  12   |    Project   | M 11/10 <br> W 11/12 <br> F 11/14|                           | LABS-11:        |
+|  13   |    Project   | M 11/17 <br> W 11/19 <br> F 11/21|                           | LABS-12:       |
+|  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class**   |         | **no lab**              |
+|  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5  |                            | Lab Makeup Day?        |
+|  16   |    Outro     | M 12/8 <br>   |                                  |       **no lab**                   |
 
 ### Additional Dates
-* 12/5 - Last day to submit assignments and guarantee comments
-* 12/12 - Last day to submit revised assignments
+* 9/5 - This is the first lab day and also the first READ assignment is due.
+* 12/5 - Lab makeup day
+* 12/8 - Final due date for all assignments 
 
-## A note about the "readings"
-Every week there will be a "reading assignment". It will focus on one piece of media, not just written words, videos, podcasts, etc are all within bounds. However, the content is not decided before the term. The readings are selected as the course progresses to align with the course and the evolving world we live in. They will be posted with the assignment via Canvas.
 
 ## Guest Speakers
 
-* MC Forelle: Assistant Professor of Engineering and Society
-* Carrie O'Brien: User Interface Designer at Capital One: Messaging, Web, and Human-Centered Design
-* Jess Reia: Assistant Professor, School of Data Science
-* Renee Cummings: Data Activist in Residence, School of Data Science 
-* Neal Magee: Director, Solutions & DevOps, UVA Research Computing
-* Miriam Friedel: Senior Director, Machine Learning Engineering at Capital One - Center for Machine Learning
-* Rafael Alvardo: Associate Professor, School of Data Science 
-* Steven Baek: Associate Professor School of Data Science
-* Sheng Li: Associate Professor School of Data Science
+* Systems - 
+* Design - 
+* Analytics -
+* Value - 
+* Project -
 
-## A few Policies that will Govern the Class
+## Course Bibliography
+Think Like a Data Scientist
+* Chance, Logic, and Intuition by Tijms
+* [The 4+1 Model of Data Science](https://arxiv.org/abs/2311.07631) by Alvarado
+* [https://arxiv.org/abs/2311.03292](Data Science from 1963 to 2012)
+* The Mathematical Theory of Communication by Shannon and Weaver
+* Academic Bibliography: (https://github.com/UVADS/DS1001/blob/main/Datalogy.bib)
 
-Grading Policies: This course uses the specifications grading system as explained in **Specifications Grading** By Linda Nilson. For details [see this page](grading.md).
+Design
+* The Design of Everyday Things by Norman
+* [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
+* [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
 
-University of Virginia Honor System: All work should be pledged in the spirit of the Honor System at the University of Virginia. The instructor will indicate which assignments and activities are to be done individually and which permit collaboration. The following pledge should be written out at the end of all quizzes, examinations, individual assignments, and papers:  “I pledge that I have neither given nor received help on this examination (quiz, assignment, etc.)”.  The pledge must be signed by the student. For more information, visit www.virginia.edu/honor.
+Value
+* << should >>
+* [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
+
+Systems
+* [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by Reis and Housley
+
+Analytics
+* [R for Data Science](https://r4ds.had.co.nz/)
+* [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
+* Probability: Basic Probabilty by Tijms
+* << ml >>
+
+  
+## A few policies that govern the class
+Attendance: 
+* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the read/lab assignments that week and midterm assignments for that module. **On Tuesdays READ assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab.** In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
+
+* Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
+
+Honor:
+* University of Virginia Honor System: All work should be pledged in the spirit of the Honor System at the University of Virginia. The instructor will indicate which assignments and activities are to be done individually and which permit collaboration. **The following pledge should be written out at the end of all quizzes, examinations, individual assignments, and papers:  “I pledge that I have neither given nor received help on this examination (quiz, assignment, etc.)”.  The pledge must be signed by the student.** For more information, visit www.virginia.edu/honor.
 
 
-Special Needs:  The University of Virginia accommodates students with disabilities. Any SCPS student with a disability who needs accommodation (e.g., in arrangements for seating, extended time for examinations, or note-taking, etc.), should contact the Student Disability Access Center (SDAC) and provide them with appropriate medical or psychological documentation of his/her condition. Once accommodations are approved, just follow up with me concerning any logistics and implementation of accommodations.  Please try to make accommodations for test-taking at least 14 business days in advance of the date of the test(s). Students with disabilities are encouraged to contact the SDAC: 434-243-5180/Voice, 434-465-6579/Video Phone, 434-243-5188/Fax. Further policies and statements are available at www.virginia.edu/studenthealth/sdac/sdac.html
+Special Needs:  
+* The University of Virginia accommodates students with disabilities. Any SCPS student with a disability who needs accommodation (e.g., in arrangements for seating, extended time for examinations, or note-taking, etc.), should contact the Student Disability Access Center (SDAC) and provide them with appropriate medical or psychological documentation of his/her condition. Once accommodations are approved, just follow up with me concerning any logistics and implementation of accommodations.  Please try to make accommodations for test-taking at least 14 business days in advance of the date of the test(s). Students with disabilities are encouraged to contact the SDAC: 434-243-5180/Voice, 434-465-6579/Video Phone, 434-243-5188/Fax. Further policies and statements are available at www.virginia.edu/studenthealth/sdac/sdac.html
 
-Technical Support Contacts
-
-    Login/Password: scpshelpdesk@virginia.edu
-    UVaCollab: collab-support@virginia.edu
-    BbCollaborate Support: http://www.tinyurl.com/uvabbc
-
+# NOTES 
+## ToDo
+- A Little Bit About the Course: revise with course updates once finalized
+- What you’ll learn along the way: revise course objectives with updates - consider making these more "skill" based rather than theoretical since that's how we're trending 
+- How You’ll Know You Are Learning (Assignments): repeditive - clean up
+- Bundles: revise as decisions are finalized
+- Schedule of Topics: add in content as decided
+- Guest Speakers: Add in speaker bios/links as decided
+## For Brian to review
+- Instructor Information: add office hours
+- Miscellaneous: Think Like a Data Scientist Branding (I think this works, its a matter of if you want to stick with the theme.)
+- General Assignment Description: review MIDT and QUIZ descriptions. Review Flexibility blurb
+- Course Bibliography
+- A few policies that govern the class: Honor pledge - if we keep this we should be enforcing; consider adding a GenAI section for explicit instruction
