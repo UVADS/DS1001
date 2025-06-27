@@ -106,22 +106,22 @@ There are several technological tools used in this class:
 |   1   |    Intro     | M X <br> W 8/27 <br> F 8/29      |                           | X               |
 |   2   |    Systems   | M 9/1 <br> W 9/3 <br> F 9/5      |                           | LABS-1:          |
 |   3   |    Systems   | M 9/8 <br> W 9/10 <br> F 9/12    |                           | LABS-2:          |
-|   4   |    Design    | M 9/15 <br> W 9/17 <br> F 9/19   |                           | LABS-3:       |
+|   4   |    Systems <br> (project)    | M 9/15 <br> W 9/17 <br> F 9/19   |                           | LABS-3:       |
 |   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26   |                           | LABS-4:       |
-|   6   |    Analytics | M 9/29 <br> W 10/1 <br> F 10/3   |                           | LABS-5:    |
-|   7   |    Analytics | M 10/6 <br> W 10/8 <br> F 10/10  |                           | LABS-6:          |
-|   8   |    Value     | M **no class** <br> W 10/15 <br> F 10/17  |                  | LABS-7:   |
-|   9   |    Value     | M 10/20 <br> W 10/22 <br> F 10/24|                           | LABS-8:                      |
-|  10   |    Project   | M 10/27 <br> W 10/29 <br> F 10/31|                           | LABS-9:         |
-|  11   |    Project   | M 11/3 <br> W 11/5 <br> F 11/7   |                           | LABS-10:               |
-|  12   |    Project   | M 11/10 <br> W 11/12 <br> F 11/14|                           | LABS-11:        |
-|  13   |    Project   | M 11/17 <br> W 11/19 <br> F 11/21|                           | LABS-12:       |
+|   6   |    Design | M 9/29 <br> W 10/1 <br> F 10/3   |                           | LABS-5:    |
+|   7   |    Design <br> (project) | M 10/6 <br> W 10/8 <br> F 10/10  |                           | LABS-6:          |
+|   8   |    Analytics     | M **no class** <br> W 10/15 <br> F 10/17  |                  | LABS-7:   |
+|   9   |    Analytics     | M 10/20 <br> W 10/22 <br> F 10/24|                           | LABS-8:                      |
+|  10   |    Analytics <br> (project)   | M 10/27 <br> W 10/29 <br> F 10/31|                           | LABS-9:         |
+|  11   |    Value   | M 11/3 <br> W 11/5 <br> F 11/7   |                           | LABS-10:               |
+|  12   |    Value   | M 11/10 <br> W 11/12 <br> F 11/14|                           | LABS-11:        |
+|  13   |    Value <br> (project)   | M 11/17 <br> W 11/19 <br> F 11/21|                           | LABS-12:       |
 |  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class**   |         | **no lab**              |
 |  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5  |                            | Lab Makeup Day?        |
 |  16   |    Outro     | M 12/8 <br>   |                                  |       **no lab**                   |
 
 ### Additional Dates
-* 9/5 - This is the first lab day and also the first READ assignment is due.
+* 9/5 - This is the first lab day and the first READ assignment is due.
 * 12/5 - Lab makeup day
 * 12/8 - Final due date for all assignments 
 
@@ -186,5 +186,5 @@ Special Needs:
 - Instructor Information: add office hours
 - Miscellaneous: Think Like a Data Scientist Branding (I think this works, its a matter of if you want to stick with the theme.)
 - General Assignment Description: review MIDT and QUIZ descriptions. Review Flexibility blurb
-- Course Bibliography
+- Course Bibliography (and LOs)
 - A few policies that govern the class: Honor pledge - if we keep this we should be enforcing; consider adding a GenAI section for explicit instruction
