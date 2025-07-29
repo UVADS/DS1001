@@ -29,29 +29,28 @@ This is a survey course about the emerging field of Data Science. Our goal is to
 
 In each of the areas we will specifically focus on:
 * Systems
-  * Theme: Scaling -- What scale is necessary?
-  * LO: Identify the hardware and software components of a computer and describe their function
-  * LO: Describe the different scales of computer operation
+  * **Students Will Be Able To** explain the components of a computer system and how they interact to support data science work.	 
+  * SWBAT compare hardware and software choices to choose the best tools for a problem. 
+  * SWBAT use an IDE (Integrated Development Environment) to solve simple problems. 
 
 * Design
-  * Theme: Problem Solving and Storytelling -- What's the goal? What do I leave in and what do I leave out?
-  * LO: Observe the world around you and record your observations in a systematic way to solve a problem (aka how to create a data set)
-  * LO: Demonstrate the principles of establishing a dataset (aka how to evaluate the quality of a dataset)
-  * LO: Reflect on a data set and transform it for efficient communication to humans (aka how to communicate a data set)
+  * SWBAT create and interpret data representations using models, databases, graphics, and visualizations. 
+  * SWBAT identify key experimental design choices that happen throughout the DS pipeline and how those choices impact the result. 
+  * SWBAT use data summary and visualization tools to understand and describe a problem. 
 
 * Analytics
-  * Theme: Analyzing -- Garbage in, Garbage out
-  * LO: Describe the ecosystem of data models 
-  * LO: Articulate a typical algorithm life cycle 
+  * SWBAT define and give examples of a Data Science model. 
+  * SWBAT describe the key types of Machine Learning and their uses. 
+  * SWBAT distinguish between target/feature variables and true/predicted values in a model. 
 
   * Value
-  * Theme: With great power comes great responsibility
-  * LO: Be able to reflect on and articulate the benefits and concerns of data-driven decisions
-  * LO: Describe scenarios that allow for human-centered data science
+  * SWBAT describe the 5 Data & Society subfields and their relevance to data science practice. 
+  * SWBAT analyze how responsibility for decisions is distributed across stages of the ML pipeline. 
+  * SWBAT identify common sources of bias and error in data and models across the ML pipeline. 
 
 
 ## How You’ll Know You Are Learning (Assignments)
-Every graded assignment in this class falls into one of 5 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment. They are graded using the specifications grading system based on **Specifications Grading** By Linda Nilson. We will spend time in class to help you understand this system, especially if it is new for you.
+Every graded assignment in this class falls into one of 4 categories outlined below. Each assignment has a rubric to indicate the purpose, task, and criteria for the assignment. They are graded using the specifications grading system based on **Specifications Grading** By Linda Nilson. We will spend time in class to help you understand this system, especially if it is new for you.
 
 This course uses the grading policy known as specifications grading. It has been demonstrated to provide much greater equity in the classroom and as a result improves achivement of learning objectives. However this system may be new to you. It does take some time to understand and we are ready to help you with any questions you may have. Please take advantage of office hours. You can read more about the [specifications grading policy here](https://teaching.virginia.edu/collections/specifications-grading).
 
@@ -70,8 +69,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |--|--|--|--|--|--|--|
 |LABS|Labs| 12* | In class |12|12|12|
 |READ|"Read" & Review|12| 2 hours | 10|11|12|
-|QUIZ|In Class Quiz|6| 5-10 minutes | 2|4|5|
-|MIDT|Midterm Assignment|8| 8 hours | --|1|3|
+|CASE|Case Study Assignment|8| 8 hours | --|1|3|
 |FINL|Final Project|3| 4 hours/part| 1|2|3|
 
 #### Weekly Assignments
@@ -80,16 +78,15 @@ The LABS and READ assignments for each week are due that Friday at 11:59pm on Ca
 * READ - The READ assignments are posted to Canvas a week before the due date and take less than two hours to complete. Late submissions are not accepted. Extenuating circumstances can be excused after discussion with Professor Alonzi during office hours. We suggest completion of these assignments well in advance of the deadline.
 
 
-### General Assignment Description
-1. Labs - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
-2. "Read" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
-3. Midterm Assignment - Each module has two midterm assignments. One is a case study, where you’ll take a topic introduced briefly in class and explore it more deeply on your own. The other is a “look ahead,” where you’ll investigate a concept that’s typically covered in the 2nd or 3rd year of the Data Science major. You’ll have some choice in the topics—so pick the ones that interest you most.
-4. In Class Quiz - There will be 6 unannounced quizzes during lecture classes, each with fewer than 5 multiple-choice questions. They’ll cover material learned so far and serve as checkpoints to gauge your understanding and help us identify topics we may need to revisit together.
-5. Final Project - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". **ADD MORE DETAIL WHEN DECIDED**
+### Assignment Descriptions
+1. LABS - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for all of this work to be completable within the class lab period.
+2. "READ" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
+3. CASE Study Assignment - Each module has two midterm assignments. One is a case study, where you’ll take a topic introduced briefly in class and explore it more deeply on your own. The other is a “look ahead,” where you’ll investigate a concept that’s typically covered in the 2nd or 3rd year of the Data Science major. You’ll have some choice in the topics—so pick the ones that interest you most.
+4. Final Project - This assignment is the students' opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". **ADD MORE DETAIL WHEN DECIDED**
 
 ### Flexibility
 1. Labs: There is a make up lab day at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
-2. Resubmission: After grading, weekly assignments (LABS & READ) marked "does not meet spec, yet" can be revised and resubmitted **once** for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. **QUIZ, MIDT, and FINL assignments can not be revised.**
+2. Resubmission: After grading, weekly assignments (LABS & READ) marked "does not meet spec, yet" can be revised and resubmitted **once** for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. **CASE, and FINL assignments can not be revised.**
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
@@ -128,11 +125,11 @@ There are several technological tools used in this class:
 
 ## Guest Speakers
 
-* Systems - 
+* Systems - [Professor Neal Magee](https://datascience.virginia.edu/people/neal-magee)
 * Design - 
 * Analytics -
-* Value - 
-* Project -
+* Value - [Professor Brent Kitchens](https://www.commerce.virginia.edu/faculty/bmk2a)
+* Additional - 
 
 ## Course Bibliography
 Think Like a Data Scientist
@@ -163,12 +160,12 @@ Analytics
   
 ## A few policies that govern the class
 Attendance: 
-* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the read/lab assignments that week and midterm assignments for that module. **On Tuesdays READ assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab.** In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
+* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the read/lab assignments that week and CASE Study assignments for that module. **On Tuesdays READ assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab.** In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
 
-* Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
+* Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final Friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
 
 Honor:
-* University of Virginia Honor System: All work should be pledged in the spirit of the Honor System at the University of Virginia. The instructor will indicate which assignments and activities are to be done individually and which permit collaboration. **The following pledge should be written out at the end of all quizzes, examinations, individual assignments, and papers:  “I pledge that I have neither given nor received help on this examination (quiz, assignment, etc.)”.  The pledge must be signed by the student.** For more information, visit www.virginia.edu/honor.
+* University of Virginia Honor System: All work should be pledged in the spirit of the Honor System at the University of Virginia. The instructor will indicate which assignments and activities are to be done individually and which permit collaboration. For more information, visit www.virginia.edu/honor.
 
 
 Special Needs:  
@@ -177,14 +174,12 @@ Special Needs:
 # NOTES 
 ## ToDo
 - A Little Bit About the Course: revise with course updates once finalized
-- What you’ll learn along the way: revise course objectives with updates - consider making these more "skill" based rather than theoretical since that's how we're trending 
 - How You’ll Know You Are Learning (Assignments): repeditive - clean up
 - Bundles: revise as decisions are finalized
 - Schedule of Topics: add in content as decided
 - Guest Speakers: Add in speaker bios/links as decided
 ## For Brian to review
 - Instructor Information: add office hours
-- Miscellaneous: Think Like a Data Scientist Branding (I think this works, its a matter of if you want to stick with the theme.)
 - General Assignment Description: review MIDT and QUIZ descriptions. Review Flexibility blurb
-- Course Bibliography (and LOs)
-- A few policies that govern the class: Honor pledge - if we keep this we should be enforcing; consider adding a GenAI section for explicit instruction
+- Course Bibliography
+- A few policies that govern the class: Honor pledge - consider adding a GenAI section for explicit instruction; Attendance - review bolded note on READ/LAB review during lecture
