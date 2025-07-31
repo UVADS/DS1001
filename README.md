@@ -2,21 +2,19 @@
 
 Coordinates:
 
-    * Lecture: Nau Hall 101, 14:00-15:15 Tu & Tr
-    * Lab: Data Science 206 or 306 @ 10:00, 11:00, or 12:00
+    * Lecture: Nau Hall 101, 2:00 - 3:15 M & W
+    * Lab: Data Science 206 or 306
       
 Instructor Information:
 
-    * Professor Peter Alonzi (lpa2a)
-    * Office Hours: 14:00-16:00 on Wednesdays in Data Science 344 (Modified times after 4/30)
-    * Cursor Club: 16:00-17:00 location TBD in Data Science based on attendance
+    * Professor Brian Wright (brianwright@virginia.edu)
+    * Office Hours: 2:00 - 4:00 on Tuesday in Data Science 434
 
 Miscellaneous:
 
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
-    * Year and Term: 2025 Spring
-    * Course Title: Think Like a Data Scientist (TLaDS)
+    * Year and Term: 2025 Fall
     * Level and Credit Type: Undergraduate, Grade (A-F)
 
 N.B. There is an associated lab class that must be enrolled simultaneously (1 hour Laboratory section, Friday @ 10,11,12).
@@ -103,22 +101,20 @@ There are several technological tools used in this class:
 
 | Week  |   Section    |              Dates               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:|:-------------------------:|:----------------------------:|
-|   1   |    Intro     | T 1/14 <br> R 1/16 <br> F 1/17   | Think Like a Data Scientist <br> What is Data? <br> NO LABS <br>   |              X               |
-|   2   |    Design    | T 1/21 <br> R 1/23 <br> F 1/24   | The Data Science Pipeline <br> Establishing Data <br> LABS-1 <br>   |         LABS-1: LUPI         |
-|   3   |    Design    | T 1/28 <br> R 1/30 <br> F 1/31   | Communicating with Data <br> **Guest Lecture** <br> LABS-2  |         LABS-2: SET          |
-|   4   |    Design    | T 2/4 <br> R 2/6 <br> F 2/7      | Data Communication <br> Google Maps Case Study <br> LABS-3       |     LABS-3: Projection!      |
-|   5   |    Value     | T 2/11 <br> R 2/13 <br> F 2/14   | Professor Wright <br> Professor Wright <br> LABS-4                          |     LABS-4: Guess Who!?      |
-|   6   |     Value    | T 2/18 <br> R 2/20 <br> F 2/21   | **Guest Lecture** <br> **Guest Lecture** <br> LABS-5                          |   LABS-5: Value Case Study   |
-|   7   |     Value    | T 2/25 <br> R 2/27 <br> F 2/28   |  Case Study (Professor Wright) <br> **Guest Lecture** <br> LABS-6    |         LABS-6: GIGO         |
-|   8   |   Systems    | T 3/4 <br> R 3/6 <br> F 3/7      | Hardware <br> Software <br> LABS-7                          | LABS-7: Hardware & Software  |
-|   9   |    **Spring Break**   | T X **Spring** <br> R X **Break** <br> F X **No Class**  |  |     X                |
-|  10   |    Systems   | T 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
-|  11   |   Systems    | T 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9      |    LABS-9: GPU               |
-|  12   |   Analytics  | T 4/1 <br> R 4/3 <br> F 4/4      |  Pattern Recognition <br> Probability <br> LABS-10                         |   LABS-10: Mastermind       |
-|  13   |   Analytics  | T 4/8 <br> R 4/10 <br> F 4/11    |  Code Examples [link](https://github.com/UVADS/DS1001/blob/3ed077ef6c2576ea1cfa018cb9afde88d5b9f9e5/code/2025-04-08-probability-examples.ipynb) <br> Decision Tree <br> LABS-11                         | LABS-11: Decision Tree         |
-|  14   |   Analytics  | T 4/15 <br> R 4/17 <br> F 4/18   |  **Guest Lecture** <br> k-NN/Case Study <br> LABS-12                         |   LABS-12: k-NN   |
-|  15   |     Outro    | T 4/22 <br> R 4/24 <br> F 4/25   |  Code Examples <br> Office Hours <br> LABS Makeup Day  |        Lab Makeup Day        |
-|  16   |     Outro    | T 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br>  <br>                         |        X                     |
+|   1   |    Intro     | W 8/27 <br> Wed 9/3 <br> F 9/5    | Intro to Data Science and the Class <br> What is Data? <br>   |              X               |
+|   2   |    Systems    | M 1/21 <br> W 1/23 <br> F 1/24   | The Data Science Pipeline <br> Establishing Data <br> LABS-1 <br>   |         LABS-1: LUPI         |
+|   3   |    Systems    | M 1/28 <br> W 1/30 <br> F 1/31   | Communicating with Data <br> **Guest Lecture** <br> LABS-2  |         LABS-2: SET          |
+|   4   |    Systems   | M  2/4 <br> W 2/6 <br> F 2/7      | Data Communication <br> Google Maps Case Study <br> LABS-3       |     LABS-3: Projection!      |
+|   5   |    Design     | M 2/11 <br> W 2/13 <br> F 2/14   | Professor Wright <br> Professor Wright <br> LABS-4                          |     LABS-4: Guess Who!?      |
+|   6   |    Design    | M 2/18 <br> W 2/20 <br> F 2/21   | **Guest Lecture** <br> **Guest Lecture** <br> LABS-5                          |   LABS-5: Value Case Study   |
+|   7   |    Design    | M 2/25 <br> W 2/27 <br> F 2/28   |  Case Study (Professor Wright) <br> **Guest Lecture** <br> LABS-6    |         LABS-6: GIGO         |
+|   8   |    Analytics   | M 3/18 <br> R 3/20 <br> F 3/21   | Data Structures <br> Algorithms <br> LABS-8                          |   LABS-8: Battleship         |
+|  9   |    Analytics    | M 3/25 <br> R 3/27 <br> F 3/28   | **Guest Lecture** <br> GPUs & NVIDIA Case Study <br> LABS-9      |    LABS-9: GPU               |
+|  10   |   Analytics  | M 4/1 <br> R 4/3 <br> F 4/4      |  Pattern Recognition <br> Probability <br> LABS-10                         |   LABS-10: Mastermind       |
+|  11   |   Value  | M 4/15 <br> R 4/17 <br> F 4/18   |  **Guest Lecture** <br> k-NN/Case Study <br> LABS-12                         |   LABS-12: k-NN   |
+|  12   |   Value    | M 4/22 <br> R 4/24 <br> F 4/25   |  Code Examples <br> Office Hours <br> LABS Makeup Day  |        Lab Makeup Day        |
+|  13   |   Project    | M 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br>  <br>                         |        X                     |
+|  14   |   Project    | M 4/29 <br> R X <br> F X         |  What is Data Science? & All assignments Due <br>  <br>                         |        X                     |
 
 ### Additional Dates
 * 1/24 - This is the first lab day and also the first READ assignment is due.
