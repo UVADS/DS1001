@@ -1,17 +1,16 @@
 # DS 1001: Think Like a Data Scientist (TLaDS)
 
 Logistics:
-
     * Lecture: Nau Hall 101, 2-3:15 pm Mon & Wed
     * Lab: Data Science 206 or 306 @ 12, 1, 2, or 3 pm
+
       
 Instructor Information:
-
     * Professor Brian Wright (brianwright@virginia.edu)
     * Office Hours: Tuesdays @ 2:00 - 4:00 pm, Data Science 434
 
-Miscellaneous:
 
+Miscellaneous:
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
     * Year and Term: 2025 Spring
@@ -116,6 +115,7 @@ There are several technological tools used in this class:
 |  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class** | TBA <br> TBA        | **no lab**              |
 |  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5                   | TBA <br> TBA                           | Lab Makeup Day?        |
 |  16   |    Outro     | M 12/8 <br>   |                                  | Course Summary                        | **no lab** |
+
 
 ### Additional Dates
 * 9/5 - This is the first lab day and the first READ assignment is due.
