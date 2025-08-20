@@ -141,21 +141,21 @@ Think Like a Data Scientist
 * The Mathematical Theory of Communication by Shannon and Weaver
 * Academic Bibliography: (https://github.com/UVADS/DS1001/blob/main/Datalogy.bib)
 
+Systems
+* [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by Reis and Housley
+
 Design
 * The Design of Everyday Things by Norman
 * [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
 * [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
 
-Value
-* [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
-
-Systems
-* [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by Reis and Housley
-
 Analytics
 * [R for Data Science](https://r4ds.had.co.nz/)
 * [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
 * Probability: Basic Probabilty by Tijms
+
+Value
+* [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
 
   
 ## A few policies that govern the class
