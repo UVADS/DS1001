@@ -1,16 +1,19 @@
 # DS 1001: Think Like a Data Scientist (TLaDS)
 
 Logistics:
+
     * Lecture: Nau Hall 101, 2-3:15 pm Mon & Wed
     * Lab: Data Science 206 or 306 @ 12, 1, 2, or 3 pm
 
       
 Instructor Information:
+
     * Professor Brian Wright (brianwright@virginia.edu)
     * Office Hours: Tuesdays @ 2:00 - 4:00 pm, Data Science 434
 
 
 Miscellaneous:
+
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
     * Year and Term: 2025 Spring
@@ -41,7 +44,7 @@ In each of the areas we will specifically focus on:
   * SWBAT describe the key types of Machine Learning and their uses. 
   * SWBAT distinguish between target/feature variables, identify true/predicted values, and interpret common evaluation metrics in a model.  
 
-  * Value
+* Value
   * SWBAT describe the 5 Data & Society subfields and their relevance to data science practice. 
   * SWBAT analyze how responsibility for decisions is distributed across stages of the ML pipeline. 
   * SWBAT identify common sources of bias and error in data and models across the ML pipeline. 
