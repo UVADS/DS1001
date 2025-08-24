@@ -123,7 +123,7 @@ There are several technological tools used in this class:
 ### Additional Dates
 * 9/5 - This is the first lab day and the first READ assignment is due.
 * 12/5 - Lab makeup day
-* 12/8 - Final due date for all assignments 
+* 12/9 - Final due date for all assignments 
 
 
 ## Guest Speakers
