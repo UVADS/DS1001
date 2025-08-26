@@ -106,7 +106,7 @@ There are several technological tools used in this class:
 |   2   |    Systems   | M 9/1 <br> W 9/3 <br> F 9/5                      | Software <br> Virtual Environments                         | LABS-1: Hardware & Software  |
 |   3   |    Systems   | M 9/8 <br> W 9/10 <br> F 9/12                    | Hardware <br> Karsten Siller Guest Lecture                         | LABS-2: GPU                  |
 |   4   |    Systems <br> (project)    | M 9/15 <br> W 9/17 <br> F 9/19   | GitHub <br> IDEs                         | LABS-3: Systems              |
-|   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26                   | DS Lifecycle <br> Nur *LAST NAME* Guest Lecture                          | LABS-4: LUPI                 |
+|   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26                   | DS Lifecycle <br> Nur Yildirim Guest Lecture                          | LABS-4: LUPI                 |
 |   6   |    Design | M 9/29 <br> W 10/1 <br> F 10/3                      | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: Projection |
 |   7   |    Design <br> (project) | M 10/6 <br> W 10/8 <br> F 10/10      | DS Lifecylce in Code <br> Using Data Viz    | LABS-6: Design               |
 |   8   |    Analytics     | M **no class** <br> W 10/15 <br> F 10/17     | **FALL BREAK** <br> What is ML? + Probability Video    | LABS-7: Probabilty  |
