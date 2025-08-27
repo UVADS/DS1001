@@ -170,6 +170,38 @@ Honor:
 GenAI:
 * Generative AI (GenAI) tools can be a helpful part of your workflow when used well. Think of them like a study partner: great for clarifying questions, polishing wording, or giving feedback. What they shouldn’t do is replace your own learning, so it is inappropriate to ask it assignment questions, copy large sections of output, or pass off GenAI ideas as your own. A good rule of thumb: if you wouldn’t do it with a friend, don’t do it with GenAI. When in doubt, check with a TA or instructor.
 
+Course Evaluations: 
+* Student feedback is critical to the school, the instructor, and future students. Students are expected to complete anonymous and confidential course evaluations in a timely manner for each course at the end of each term. 
 
-Special Needs:  
-* The University of Virginia accommodates students with disabilities. Any SCPS student with a disability who needs accommodation (e.g., in arrangements for seating, extended time for examinations, or note-taking, etc.), should contact the Student Disability Access Center (SDAC) and provide them with appropriate medical or psychological documentation of his/her condition. Once accommodations are approved, just follow up with me concerning any logistics and implementation of accommodations.  Please try to make accommodations for test-taking at least 14 business days in advance of the date of the test(s). Students with disabilities are encouraged to contact the SDAC: 434-243-5180/Voice, 434-465-6579/Video Phone, 434-243-5188/Fax. Further policies and statements are available at www.virginia.edu/studenthealth/sdac/sdac.html
+Discrimination/Harassment/Retaliation:
+* [UVA prohibits discrimination and harassment](https://uvapolicy.virginia.edu/policy/HRM-009) based on age, color, disability, family medical or genetic information, gender identity or expression, marital status, military status (which includes active duty service members, reserve service members, and dependents), national or ethnic origin, political affiliation, pregnancy (including childbirth and related conditions), race, religion, sex, sexual orientation, veteran status. [UVA policy](https://uvapolicy.virginia.edu/policy/HRM-010) also prohibits retaliation. All faculty and TAs are also responsible employees for disclosures or reports of potential discrimination, harassment, and retaliation. 
+
+Disability and Pregnancy Accommodations:
+* If you anticipate or experience any barriers to learning in this course, please discuss your concerns with me. If you have a disability, or think you may have a disability, contact the Student Disability Access Center (“SDAC”) to request reasonable accommodation(s) for this course through their [website](http://www.studenthealth.virginia.edu/SDAC). If you have accommodations through SDAC, send me your Faculty Notification Letter as soon as possible and meet with me so we can develop an implementation plan together.
+
+* Students may be entitled to reasonable accommodations for pregnancy, childbirth, or related medical issues.  Please contact [SDAC](http://www.studenthealth.virginia.edu/SDAC) for additional information. Pregnant and parenting students are encouraged to contact SDAC or EOCR to discuss plans and ensure ongoing access to their academic courses and program.  Information for pregnant and parenting students is also available on EOCR’s [Pregnancy and Parenting Resources webpage](https://eocr.virginia.edu/pregnancy-and-parenting/).
+
+Religious Academic Accommodations:
+* UVA also provides reasonable accommodations when a student’s sincerely held religious beliefs or observances conflict with academic requirements. Students who wish to request an academic accommodation for a religious observance should submit their request to me by email as far in advance as possible.
+
+* If you have questions or concerns about your request, you may contact EOCR at UVAEOCR@virginia.edu or (434) 924-3200 or visit their Religious Accommodations webpage for additional information. Please note that receiving an accommodation does not relieve you of your responsibility to complete any coursework you miss as a result of the accommodation.
+
+Reporting an Incident:
+* Just Report It (JRI) is the University's online system for reporting:
+   * Sexual and Gender-Based Harassment and Violence
+   * Discrimination, Harassment, and Retaliation
+   * Hazing
+   * Clery Act Compliance (by CSAs)
+   * Interference with Speech Rights
+   * Youth Protection
+   * Preventing & Addressing Threats or Acts of Violence
+
+* You may access Confidential Resources if you wish to discuss a concern or incident without reporting to the University. Information you share with Confidential Resources will not be disclosed to University officials or any other person except in extremely limited circumstances. For more information on reporting an incident, visit this [website](https://justreportit.virginia.edu/).
+
+Student Mental Health and Wellbeing:
+* The University of Virginia is committed to advancing the mental health and wellbeing of its students, while acknowledging that a variety of issues directly impacts students’ academic performance. If you or someone you know is feeling overwhelmed, depressed, and/or in need of support, contact the CAPS Care Managers at CAPSCareMgrs@virginia.edu.
+* For help finding a community therapist, visit the [Community Referrals](https://www.studenthealth.virginia.edu/mental-health/community-referrals) page through CAPS. 
+Care and Support Services (CASS) is a non-clinical resource available to all students providing emergency resources and support (withdrawing/returning to UVA, housing resources,  food insecurity, emergency funding, safety resources). The CASS team has a 24/7/365 phone line reserved for urgent non-clinical student needs that cannot wait until the next business day. 
+   * Monday-Friday, 8 a.m. to 5 p.m.: (434) 924-7133
+   * After Hours: University Police Department: (434) 924-7166, ask for CASS on Call
+
