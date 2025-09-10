@@ -10,6 +10,7 @@ Instructor Information:
 
     * Professor Brian Wright (brianwright@virginia.edu)
     * Office Hours: Tuesdays @ 2:00 - 4:00 pm, Data Science 434
+    * TA Office Hours: Amelia and Anna on Monday 12:30-1:30pm. Aidan and Carissa on Friday 10:30am-11:30am
 
 
 Miscellaneous:
