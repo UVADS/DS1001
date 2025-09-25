@@ -110,14 +110,14 @@ There are several technological tools used in this class:
 |   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26                   | DS Lifecycle <br> Nur Yildirim Guest Lecture                          | LABS-4: Projection                 |
 |   6   |    Design | M 9/29 <br> W 10/1 <br> F 10/3                      | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI |
 |   7   |    Design <br> (project) | M 10/6 <br> W 10/8 <br> F 10/10      | DS Lifecylce in Code <br> Using Data Viz    | LABS-6: Design               |
-|   8   |    Analytics     | M **no class** <br> W 10/15 <br> F 10/17     | **FALL BREAK** <br> What is ML? + Probability Video    | LABS-7: Probabilty  |
+|   8   |    Analytics     | M **no class** <br> W 10/15 <br> F 10/17     | **FALL BREAK** <br> What is ML? + Probability Video    | LABS-7: Random Variable Carnival  |
 |   9   |    Analytics     | M 10/20 <br> W 10/22 <br> F 10/24            | Unsupervised Learning <br> Supervised Learning    | LABS-8: kNN on a Board                     |
 |  10   |    Analytics <br> (project)   | M 10/27 <br> W 10/29 <br> F 10/31| Model development <br> Model evaluation                         | LABS-9: Analytics        |
-|  11   |    Value   | M 11/3 <br> W 11/5 <br> F 11/7                     | TBA <br> TBA                         | LABS-10: Case Study              |
+|  11   |    Value   | M 11/3 <br> W 11/5 <br> F 11/7                     | TBA <br> TBA                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts              |
 |  12   |    Value   | M 11/10 <br> W 11/12 <br> F 11/14                  | TBA <br> TBA                          | LABS-11: GIGO       |
 |  13   |    Value <br> (project)   | M 11/17 <br> W 11/19 <br> F 11/21   | TBA <br> TBA                          | LABS-12: Value      |
 |  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class** | TBA <br> TBA        | **no lab**              |
-|  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5                   | TBA <br> TBA                           | Lab Makeup Day?        |
+|  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5                   | TBA <br> TBA                           | Lab Makeup Day        |
 |  16   |    Outro     | M 12/8 <br>   |                                  | Course Summary                        | **no lab** |
 
 
