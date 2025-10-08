@@ -23,6 +23,7 @@ import seaborn as sns
 from sklearn.linear_model import LinearRegression # (pip install scikit-learn)
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
+import plotly.express as px
 # %% [markdown]
 # ## We are going to work through the Data Science Lifecyle exploring each step
 # ### Step 1 Define a question...we can also start with the data but today we are doing the question first
@@ -257,10 +258,9 @@ plt.show()
 # %%
 plt.figure(figsize=(8, 5))
 plt.scatter(df['weight'], df['mpg'], c='tab:blue', label='MPG vs Weight')
-plt.scatter(df['weight'], df['weight'], c='tab:orange', label='Weight')
 plt.xlabel('Weight')
 plt.ylabel('Value')
-plt.title('Scatter Plot: Weight vs MPG (blue) and Weight (orange)')
+plt.title('Scatter Plot: Weight vs MPG (blue)')
 plt.legend()
 plt.show()
 
@@ -355,7 +355,7 @@ print(coef_table)
 # %%
 import numpy as np
 
-import plotly.express as px
+
 
 fig_std = px.scatter_3d(df_normalized, x='weight', y='horsepower', z='mpg',
                         color='mpg', color_continuous_scale='Viridis',
