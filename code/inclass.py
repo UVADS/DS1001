@@ -40,7 +40,7 @@ print(df.head()) # shows the first 5 rows of the dataframe
  # shows a summary of the dataframe including data types and non-null counts
 
 # %%
-print(df.info())
+print(df.info()) # What do we notice here?
 
 # %%
 df.describe()
@@ -127,7 +127,11 @@ plt.show()
 # %%
 print(df.dtypes) # Are there other features that might need to be changed?
 
+# %% [markdown]
+# ### Changing data types
+
 # %%
+
 df['cylinders'] = df['cylinders'].astype('category')
 df['model_year'] = df['model_year'].astype('category')
 
@@ -170,6 +174,9 @@ plt.title('Histogram of MPG')
 plt.xlabel('Miles Per Gallon (mpg)')
 plt.ylabel('Frequency')
 plt.show()
+
+# %% [markdown]
+# ### What about missing data, did we have any?
 
 # %%
 # check for missing values
@@ -344,3 +351,19 @@ print(coef_table)
 # ```markdown
 # The regression coefficient for horsepower is approximately -0.03. This means that, holding all other features constant, each additional unit increase in horsepower is associated with a decrease of about 0.03 miles per gallon (mpg) in fuel efficiency.
 # ```
+
+# %%
+import numpy as np
+
+import plotly.express as px
+
+fig_std = px.scatter_3d(df_normalized, x='weight', y='horsepower', z='mpg',
+                        color='mpg', color_continuous_scale='Viridis',
+                        title='3D Scatter Plot of Normalized MPG, Weight, and Horsepower')
+fig_std.update_layout(scene=dict(
+    xaxis_title='Normalized Weight',
+    yaxis_title='Normalized Horsepower',
+    zaxis_title='Normalized MPG'
+))
+fig_std.update_layout(width=900, height=700)
+fig_std.show()
