@@ -265,7 +265,7 @@ plt.legend()
 plt.show()
 
 # %% [markdown]
-# #### Why doesn't this really work?
+# #### This looks great but we could also standardize the values for a more even comparison
 
 # %%
 from sklearn.preprocessing import MinMaxScaler
@@ -286,23 +286,25 @@ plt.show()
 
 # %%
 plt.figure(figsize=(8, 5))
-sns.scatterplot(x='weight', y='mpg', data=df, color='tab:blue', label='MPG vs Weight')
-sns.regplot(x='weight', y='mpg', data=df, scatter=False, color='red', label='Trend Line')
-plt.xlabel('Weight')
-plt.ylabel('Miles Per Gallon (mpg)')
-plt.title('Scatter Plot: Weight vs MPG with Trend Line')
+sns.scatterplot(x='weight', y='mpg', data=df_normalized, color='tab:blue', label='MPG vs Weight (normalized)')
+sns.regplot(x='weight', y='mpg', data=df_normalized, scatter=False, color='red', label='Trend Line (normalized)')
+plt.xlabel('Normalized Weight')
+plt.ylabel('Normalized Miles Per Gallon (mpg)')
+plt.title('Scatter Plot: Normalized Weight vs Normalized MPG with Trend Line')
 plt.legend()
 plt.show()
 
+
 # %%
 plt.figure(figsize=(8, 5))
-sns.scatterplot(x='horsepower', y='mpg', data=df, color='tab:blue', label='MPG vs Horsepower')
-sns.regplot(x='horsepower', y='mpg', data=df, scatter=False, color='red', label='Trend Line')
-plt.xlabel('Horsepower')
-plt.ylabel('Miles Per Gallon (mpg)')
-plt.title('Scatter Plot: Horsepower vs MPG with Trend Line')
+sns.scatterplot(x='horsepower', y='mpg', data=df_normalized, color='tab:blue', label='MPG vs Horsepower (normalized)')
+sns.regplot(x='horsepower', y='mpg', data=df_normalized, scatter=False, color='red', label='Trend Line (normalized)')
+plt.xlabel('Normalized Horsepower')
+plt.ylabel('Normalized Miles Per Gallon (mpg)')
+plt.title('Scatter Plot: Normalized Horsepower vs Normalized MPG with Trend Line')
 plt.legend()
 plt.show()
+
 
 # %% [markdown]
 # #### What about the out categorical feature number of cylinders? Do we think more cylinders worse MPG?
@@ -320,43 +322,45 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Select features: all columns except 'name' and 'origin' (object types)
-X = df.drop(columns=['name', 'origin', 'mpg'])
-# Convert categorical columns to dummy variables
-X = pd.get_dummies(X, drop_first=True)
-y = df['mpg']
 
-# Split data into train and test sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# Use the normalized dataset for regression analysis
+X_norm = df_normalized.drop(columns=['name', 'origin', 'mpg'])
+X_norm = pd.get_dummies(X_norm, drop_first=True)
+y_norm = df_normalized['mpg']
 
-# Build and fit the regression model
-reg = LinearRegression()
-reg.fit(X_train, y_train)
+X_train_norm, X_test_norm, y_train_norm, y_test_norm = train_test_split(X_norm, y_norm, test_size=0.2, random_state=42)
 
-# Predict and evaluate
-y_pred = reg.predict(X_test)
-mse = mean_squared_error(y_test, y_pred)
-r2 = r2_score(y_test, y_pred)
+reg_norm = LinearRegression()
+reg_norm.fit(X_train_norm, y_train_norm)
 
-print(f"Test MSE: {mse:.2f}")
-print(f"Test R^2: {r2:.2f}")
-coef_table = pd.DataFrame({
-    'Feature': X.columns,
-    'Coefficient': reg.coef_
+y_pred_norm = reg_norm.predict(X_test_norm)
+mse_norm = mean_squared_error(y_test_norm, y_pred_norm)
+r2_norm = r2_score(y_test_norm, y_pred_norm)
+
+print(f"Test MSE (normalized): {mse_norm:.4f}")
+print(f"Test R^2 (normalized): {r2_norm:.4f}")
+
+coef_table_norm = pd.DataFrame({
+    'Feature': X_norm.columns,
+    'Coefficient': reg_norm.coef_
 }).sort_values(by='Coefficient', key=abs, ascending=False)
 
-print(coef_table)
+print(coef_table_norm)
 
 # %% [markdown]
 # ```markdown
-# The regression coefficient for horsepower is approximately -0.03. This means that, holding all other features constant, each additional unit increase in horsepower is associated with a decrease of about 0.03 miles per gallon (mpg) in fuel efficiency.
+# The regression coefficient for weight is approximately -0.50. This means that, holding all other features constant, each additional unit increase in weight is associated with a decrease of about 0.5 miles per gallon (mpg) in fuel efficiency.
 # ```
 
+# %% [markdown]
+# In the above analysis, the "weight" variable was normalized using MinMaxScaler, so its unit is a scaled value between 0 and 1. 
+#
+# Originally, "weight" in the dataset represents the vehicle's weight in **pounds (lbs)**. After normalization, each value indicates the relative position between the minimum and maximum weights in the dataset, but the actual unit is **unitless** (normalized scale). You can think of this as the effect of change relative to the other variables but not in absolute terms. 
+#
+# Each coefficient in the regression output represents the estimated change in normalized MPG for a one-unit increase in the corresponding normalized feature, holding all other features constant. For example, the coefficient for "weight" is approximately -0.48, meaning that as the normalized weight increases by 1 (from minimum to maximum in the dataset), the normalized MPG is expected to decrease by about 0.48 units. Positive coefficients indicate features associated with higher MPG, while negative coefficients indicate features associated with lower MPG. Since all features are normalized, the coefficients are directly comparable in terms of their relative impact on MPG. 
+
 # %%
-import numpy as np
-
-
-
+# 3D Scatter plot of normalized weight, horsepower, and mpg
 fig_std = px.scatter_3d(df_normalized, x='weight', y='horsepower', z='mpg',
                         color='mpg', color_continuous_scale='Viridis',
                         title='3D Scatter Plot of Normalized MPG, Weight, and Horsepower')
