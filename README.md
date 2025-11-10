@@ -116,7 +116,7 @@ There are several technological tools used in this class:
 |   9   |    Analytics     | M 10/20 <br> W 10/22 <br> F 10/24            | Unsupervised Learning <br> Supervised Learning    | LABS-8: kNN on a Board                     |
 |  10   |    Analytics <br> (project)   | M 10/27 <br> W 10/29 <br> F 10/31| Model development <br> Model evaluation                         | LABS-9: Analytics        |
 |  11   |    Value   | M 11/3 <br> W 11/5 <br> F 11/7                     | TBA <br> TBA                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts              |
-|  12   |    Value   | M 11/10 <br> W 11/12 <br> F 11/14                  | TBA <br> TBA                          | LABS-11: GIGO       |
+|  12   |    Value   | M 11/10 <br> W 11/12 <br> F 11/14                  | ML Fairness <br> Guest Lecture: Prof Manny Moss  | LABS-11: GIGO       |
 |  13   |    Value <br> (project)   | M 11/17 <br> W 11/19 <br> F 11/21   | TBA <br> TBA                          | LABS-12: Value      |
 |  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class** | TBA <br> TBA        | **no lab**              |
 |  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5                   | TBA <br> TBA                           | Lab Makeup Day        |
