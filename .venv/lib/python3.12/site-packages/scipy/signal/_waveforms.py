@@ -55,7 +55,11 @@ def sawtooth(t, width=1):
     t, w = asarray(t), asarray(width)
     w = asarray(w + (t - t))
     t = asarray(t + (w - w))
-    y = zeros(t.shape, dtype="d")
+    if t.dtype.char in ['fFdD']:
+        ytype = t.dtype.char
+    else:
+        ytype = 'd'
+    y = zeros(t.shape, ytype)
 
     # width must be between 0 and 1 inclusive
     mask1 = (w > 1) | (w < 0)
@@ -133,7 +137,12 @@ def square(t, duty=0.5):
     t, w = asarray(t), asarray(duty)
     w = asarray(w + (t - t))
     t = asarray(t + (w - w))
-    y = zeros(t.shape, dtype="d")
+    if t.dtype.char in ['fFdD']:
+        ytype = t.dtype.char
+    else:
+        ytype = 'd'
+
+    y = zeros(t.shape, ytype)
 
     # width must be between 0 and 1 inclusive
     mask1 = (w > 1) | (w < 0)

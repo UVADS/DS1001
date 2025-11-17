@@ -18,7 +18,11 @@ __all__ = ['griddata', 'NearestNDInterpolator', 'LinearNDInterpolator',
 
 
 class NearestNDInterpolator(NDInterpolatorBase):
-    """Nearest-neighbor interpolator in N > 1 dimensions.
+    """NearestNDInterpolator(x, y).
+
+    Nearest-neighbor interpolator in N > 1 dimensions.
+
+    .. versionadded:: 0.9
 
     Methods
     -------
@@ -170,7 +174,7 @@ class NearestNDInterpolator(NDInterpolatorBase):
 def griddata(points, values, xi, method='linear', fill_value=np.nan,
              rescale=False):
     """
-    Convenience function for interpolating unstructured data in multiple dimensions.
+    Interpolate unstructured D-D data.
 
     Parameters
     ----------
@@ -324,6 +328,5 @@ def griddata(points, values, xi, method='linear', fill_value=np.nan,
                                         rescale=rescale)
         return ip(xi)
     else:
-        raise ValueError(
-            f"Unknown interpolation method {method!r} for {ndim} dimensional data"
-        )
+        raise ValueError("Unknown interpolation method %r for "
+                         "%d dimensional data" % (method, ndim))

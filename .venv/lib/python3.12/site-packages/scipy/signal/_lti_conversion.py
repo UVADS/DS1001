@@ -431,9 +431,8 @@ def cont2discrete(system, dt, method="zoh", alpha=None):
     >>> plt.show()
 
     """
-    if hasattr(system, 'to_discrete') and callable(system.to_discrete):
-        return system.to_discrete(dt=dt, method=method, alpha=alpha)
-
+    if len(system) == 1:
+        return system.to_discrete()
     if len(system) == 2:
         sysd = cont2discrete(tf2ss(system[0], system[1]), dt, method=method,
                              alpha=alpha)

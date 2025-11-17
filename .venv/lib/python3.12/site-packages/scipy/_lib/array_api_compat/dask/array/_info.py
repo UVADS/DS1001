@@ -7,51 +7,25 @@ https://data-apis.org/array-api/latest/API_specification/inspection.html for
 more details.
 
 """
-
-# pyright: reportPrivateUsage=false
-
-from __future__ import annotations
-
-from typing import Literal as L
-from typing import TypeAlias, overload
-
-from numpy import bool_ as bool
 from numpy import (
-    complex64,
-    complex128,
     dtype,
-    float32,
-    float64,
+    bool_ as bool,
+    intp,
     int8,
     int16,
     int32,
     int64,
-    intp,
     uint8,
     uint16,
     uint32,
     uint64,
+    float32,
+    float64,
+    complex64,
+    complex128,
 )
 
-from ...common._helpers import _DASK_DEVICE, _dask_device
-from ...common._typing import (
-    Capabilities,
-    DefaultDTypes,
-    DType,
-    DTypeKind,
-    DTypesAll,
-    DTypesAny,
-    DTypesBool,
-    DTypesComplex,
-    DTypesIntegral,
-    DTypesNumeric,
-    DTypesReal,
-    DTypesSigned,
-    DTypesUnsigned,
-)
-
-_Device: TypeAlias = L["cpu"] | _dask_device
-
+from ...common._helpers import _DASK_DEVICE
 
 class __array_namespace_info__:
     """
@@ -76,7 +50,7 @@ class __array_namespace_info__:
 
     Examples
     --------
-    >>> info = xp.__array_namespace_info__()
+    >>> info = np.__array_namespace_info__()
     >>> info.default_dtypes()
     {'real floating': dask.float64,
      'complex floating': dask.complex128,
@@ -85,31 +59,20 @@ class __array_namespace_info__:
 
     """
 
-    __module__ = "dask.array"
+    __module__ = 'dask.array'
 
-    def capabilities(self) -> Capabilities:
+    def capabilities(self):
         """
         Return a dictionary of array API library capabilities.
 
         The resulting dictionary has the following keys:
 
         - **"boolean indexing"**: boolean indicating whether an array library
-          supports boolean indexing.
-
-          Dask support boolean indexing as long as both the index
-          and the indexed arrays have known shapes.
-          Note however that the output .shape and .size properties
-          will contain a non-compliant math.nan instead of None.
+          supports boolean indexing. Always ``False`` for Dask.
 
         - **"data-dependent shapes"**: boolean indicating whether an array
-          library supports data-dependent output shapes.
-
-          Dask implements unique_values et.al.
-          Note however that the output .shape and .size properties
-          will contain a non-compliant math.nan instead of None.
-
-        - **"max dimensions"**: integer indicating the maximum number of
-          dimensions supported by the array library.
+          library supports data-dependent output shapes. Always ``False`` for
+          Dask.
 
         See
         https://data-apis.org/array-api/latest/API_specification/generated/array_api.info.capabilities.html
@@ -129,20 +92,20 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.capabilities()
         {'boolean indexing': True,
-         'data-dependent shapes': True,
-         'max dimensions': 64}
+         'data-dependent shapes': True}
 
         """
         return {
-            "boolean indexing": True,
-            "data-dependent shapes": True,
-            "max dimensions": 64,
+            "boolean indexing": False,
+            "data-dependent shapes": False,
+            # 'max rank' will be part of the 2024.12 standard
+            # "max rank": 64,
         }
 
-    def default_device(self) -> L["cpu"]:
+    def default_device(self):
         """
         The default device used for new Dask arrays.
 
@@ -157,19 +120,19 @@ class __array_namespace_info__:
 
         Returns
         -------
-        device : Device
+        device : str
             The default device used for new Dask arrays.
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.default_device()
         'cpu'
 
         """
         return "cpu"
 
-    def default_dtypes(self, /, *, device: _Device | None = None) -> DefaultDTypes:
+    def default_dtypes(self, *, device=None):
         """
         The default data types used for new Dask arrays.
 
@@ -200,7 +163,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.default_dtypes()
         {'real floating': dask.float64,
          'complex floating': dask.complex128,
@@ -210,8 +173,8 @@ class __array_namespace_info__:
         """
         if device not in ["cpu", _DASK_DEVICE, None]:
             raise ValueError(
-                f'Device not understood. Only "cpu" or _DASK_DEVICE is allowed, '
-                f"but received: {device!r}"
+                'Device not understood. Only "cpu" or _DASK_DEVICE is allowed, but received:'
+                f' {device}'
             )
         return {
             "real floating": dtype(float64),
@@ -220,41 +183,7 @@ class __array_namespace_info__:
             "indexing": dtype(intp),
         }
 
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: None = None
-    ) -> DTypesAll: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["bool"]
-    ) -> DTypesBool: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["signed integer"]
-    ) -> DTypesSigned: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["unsigned integer"]
-    ) -> DTypesUnsigned: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["integral"]
-    ) -> DTypesIntegral: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["real floating"]
-    ) -> DTypesReal: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["complex floating"]
-    ) -> DTypesComplex: ...
-    @overload
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: L["numeric"]
-    ) -> DTypesNumeric: ...
-    def dtypes(
-        self, /, *, device: _Device | None = None, kind: DTypeKind | None = None
-    ) -> DTypesAny:
+    def dtypes(self, *, device=None, kind=None):
         """
         The array API data types supported by Dask.
 
@@ -300,7 +229,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.dtypes(kind='signed integer')
         {'int8': dask.int8,
          'int16': dask.int16,
@@ -311,7 +240,7 @@ class __array_namespace_info__:
         if device not in ["cpu", _DASK_DEVICE, None]:
             raise ValueError(
                 'Device not understood. Only "cpu" or _DASK_DEVICE is allowed, but received:'
-                f" {device}"
+                f' {device}'
             )
         if kind is None:
             return {
@@ -381,14 +310,14 @@ class __array_namespace_info__:
                 "complex64": dtype(complex64),
                 "complex128": dtype(complex128),
             }
-        if isinstance(kind, tuple):  # type: ignore[reportUnnecessaryIsinstanceCall]
-            res: dict[str, DType] = {}
+        if isinstance(kind, tuple):
+            res = {}
             for k in kind:
                 res.update(self.dtypes(kind=k))
             return res
         raise ValueError(f"unsupported kind: {kind!r}")
 
-    def devices(self) -> list[_Device]:
+    def devices(self):
         """
         The devices supported by Dask.
 
@@ -396,7 +325,7 @@ class __array_namespace_info__:
 
         Returns
         -------
-        devices : list[Device]
+        devices : list of str
             The devices supported by Dask.
 
         See Also
@@ -408,7 +337,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.devices()
         ['cpu', DASK_DEVICE]
 

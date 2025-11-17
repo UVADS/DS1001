@@ -22,13 +22,14 @@ from scipy.sparse import issparse, eye_array, coo_array, csc_array
 import scipy.io
 from scipy.io.matlab import MatlabOpaque, MatlabFunction, MatlabObject
 import scipy.io.matlab._byteordercodes as boc
-from scipy.io.matlab._miobase import (matdims, MatWriteError, MatReadError,
-                                      matfile_version, MatWriteWarning)
+from scipy.io.matlab._miobase import (
+    matdims, MatWriteError, MatReadError, matfile_version)
 from scipy.io.matlab._mio import mat_reader_factory, loadmat, savemat, whosmat
 from scipy.io.matlab._mio5 import (
     MatFile5Writer, MatFile5Reader, varmats_from_mat, to_writeable,
     EmptyStructMarker)
 import scipy.io.matlab._mio5_params as mio5p
+from scipy._lib._util import VisibleDeprecationWarning
 
 
 test_data_path = pjoin(dirname(__file__), 'data')
@@ -269,7 +270,7 @@ def _check_level(label, expected, actual):
         if isinstance(expected, MatlabObject):
             assert_equal(expected.classname, actual.classname)
         for i, ev in enumerate(expected):
-            level_label = f"{label}, [{i}], "
+            level_label = "%s, [%d], " % (label, i)
             _check_level(level_label, ev, actual[i])
         return
     if ex_dtype.fields:  # probably recarray
@@ -712,14 +713,12 @@ def test_to_writeable():
     expected2 = np.array([(2, 1)], dtype=[('b', '|O8'), ('a', '|O8')])
     alternatives = (expected1, expected2)
     assert_any_equal(to_writeable({'a':1,'b':2}), alternatives)
-    # Fields with underscores discarded with a warning message.
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_any_equal(to_writeable({'a':1, 'b':2, '_c':3}), alternatives)
+    # Fields with underscores discarded
+    assert_any_equal(to_writeable({'a':1,'b':2, '_c':3}), alternatives)
     # Not-string fields discarded
     assert_any_equal(to_writeable({'a':1,'b':2, 100:3}), alternatives)
     # String fields that are valid Python identifiers discarded
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_any_equal(to_writeable({'a':1, 'b':2, '99':3}), alternatives)
+    assert_any_equal(to_writeable({'a':1,'b':2, '99':3}), alternatives)
     # Object with field names is equivalent
 
     class klass:
@@ -760,14 +759,10 @@ def test_to_writeable():
     assert_equal(res.shape, (1,))
     assert_equal(res.dtype.type, np.object_)
     # Only fields with illegal characters, falls back to EmptyStruct
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_(to_writeable({'1':1}) is EmptyStructMarker)
-
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_(to_writeable({'_a':1}) is EmptyStructMarker)
+    assert_(to_writeable({'1':1}) is EmptyStructMarker)
+    assert_(to_writeable({'_a':1}) is EmptyStructMarker)
     # Unless there are valid fields, in which case structured array
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_equal(to_writeable({'1':1, 'f': 2}),
+    assert_equal(to_writeable({'1':1, 'f': 2}),
                  np.array([(2,)], dtype=[('f', '|O8')]))
 
 
@@ -980,9 +975,7 @@ def test_func_read():
     assert isinstance(d['testfunc'], MatlabFunction)
     stream = BytesIO()
     wtr = MatFile5Writer(stream)
-    # This test mat file has `__header__` field.
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        assert_raises(MatWriteError, wtr.put_variables, d)
+    assert_raises(MatWriteError, wtr.put_variables, d)
 
 
 def test_mat_dtype():
@@ -1323,10 +1316,13 @@ def test_gh_17992(tmp_path):
     array_one = rng.random((5,3))
     array_two = rng.random((6,3))
     list_of_arrays = [array_one, array_two]
-    savemat(outfile,
-            {'data': list_of_arrays},
-            long_field_names=True,
-            do_compression=True)
+    # warning suppression only needed for NumPy < 1.24.0
+    with np.testing.suppress_warnings() as sup:
+        sup.filter(VisibleDeprecationWarning)
+        savemat(outfile,
+                {'data': list_of_arrays},
+                long_field_names=True,
+                do_compression=True)
     # round trip check
     new_dict = {}
     loadmat(outfile,
@@ -1363,30 +1359,6 @@ def test_large_m4():
 
 def test_gh_19223():
     from scipy.io.matlab import varmats_from_mat  # noqa: F401
-
-
-def test_invalid_field_name_warning():
-    names_vars = (
-        ('_1', mlarr(np.arange(10))),
-        ('mystr', mlarr('a string')))
-    check_mat_write_warning(names_vars)
-
-    names_vars = (('mymap', {"a": 1, "_b": 2}),)
-    check_mat_write_warning(names_vars)
-
-    names_vars = (('mymap', {"a": 1, "1a": 2}),)
-    check_mat_write_warning(names_vars)
-
-
-def check_mat_write_warning(names_vars):
-    class C:
-        def items(self):
-            return names_vars
-
-    stream = BytesIO()
-    with pytest.warns(MatWriteWarning, match='Starting field name with'):
-        savemat(stream, C())
-
 
 def test_corrupt_files():
     # Test we can detect truncated or corrupt (all zero) files.

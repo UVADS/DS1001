@@ -3,7 +3,6 @@ import operator
 import itertools
 import math
 import threading
-import copy
 
 import numpy as np
 from numpy.testing import suppress_warnings
@@ -671,7 +670,6 @@ class TestBSpline:
         b.c = c_mm
 
         xp_assert_close(b(xx), expected)
-
 
 class TestInsert:
 
@@ -2167,7 +2165,7 @@ class TestSmoothingSpline:
         # using an iterative algorithm for minimizing the GCV criteria. These
         # algorithms may vary, so the tolerance should be rather low.
         # Not checking dtypes as gcvspl.npz stores little endian arrays, which
-        # result in conflicting dtypes on big endian systems.
+        # result in conflicting dtypes on big endian systems. 
         xp_assert_close(y_compr, y_GCVSPL, atol=1e-4, rtol=1e-4, check_dtype=False)
 
     def test_non_regularized_case(self):
@@ -2376,11 +2374,6 @@ class TestNdBSpline:
         assert bspl2(xi).shape == (len(xi), )
         xp_assert_close(bspl2(xi),
                         target, atol=1e-14)
-
-        # test that a nan in -> nan out
-        xi = np.asarray(xi)
-        xi[0, 1] = np.nan
-        xp_assert_equal(np.isnan(bspl2(xi)), np.asarray([True, False, False]))
 
         # now check on a multidim xi
         rng = np.random.default_rng(12345)
@@ -2832,15 +2825,6 @@ class TestMakeND:
         values = (x**3)[:, None] * (y**2 + 2*y)[None, :]
         bspl = make_ndbspl((x, y), values, k=k, solver=ssl.spsolve)
         xp_assert_close(bspl(xi), values.ravel(), atol=1e-15)
-
-    def test_2D_nans(self):
-        x = np.arange(6)
-        y = np.arange(6) + 0.5
-        y[-1] = np.nan
-        values = x[:, None]**3 * (y**3 + 2*y)[None, :]
-
-        with assert_raises(ValueError):
-            make_ndbspl((x, y), values, k=1)
 
     def _get_sample_2d_data(self):
         # from test_rgi.py::TestIntepN
@@ -3533,20 +3517,6 @@ class TestMakeSplrep:
             xp_assert_close(np.r_[spl.c, [0]*(spl.k+1)],
                             tck[1], atol=5e-13)
 
-    def test_issue_22704(self):
-        # Reference - https://github.com/scipy/scipy/issues/22704
-        x = np.asarray([20.00, 153.81, 175.57, 202.47, 237.11,
-             253.61, 258.56, 273.40, 284.54, 293.61,
-             298.56, 301.86, 305.57, 307.22, 308.45,
-             310.10, 310.10, 310.50], dtype=np.float64)
-        y = np.asarray([53.00, 49.50, 48.60, 46.80, 43.20,
-             40.32, 39.60, 36.00, 32.40, 28.80,
-             25.20, 21.60, 18.00, 14.40, 10.80,
-             7.20, 3.60, 0.0], dtype=np.float64)
-        w = np.asarray([1.38723] * y.shape[0], dtype=np.float64)
-        with assert_raises(ValueError):
-            make_splrep(x, y, w=w, k=2, s=12)
-
     def test_shape(self):
         # make sure coefficients have the right shape (not extra dims)
         n, k = 10, 3
@@ -3686,69 +3656,3 @@ class TestMakeSplprep:
         assert spl(u).shape == (1, 8)
         xp_assert_close(spl(u), [x], atol=1e-15)
 
-
-class BatchSpline:
-    # BSpline-line class with reference batch behavior
-    def __init__(self, x, y, axis, *, spline, **kwargs):
-        y = np.moveaxis(y, axis, -1)
-        self._batch_shape = y.shape[:-1]
-        self._splines = [spline(x, yi, **kwargs) for yi in y.reshape(-1, y.shape[-1])]
-        self._axis = axis
-
-    def __call__(self, x):
-        y = [spline(x) for spline in self._splines]
-        y = np.reshape(y, self._batch_shape + x.shape)
-        return np.moveaxis(y, -1, self._axis) if x.shape else y
-
-    def integrate(self, a, b, extrapolate=None):
-        y = [spline.integrate(a, b, extrapolate) for spline in self._splines]
-        return np.reshape(y, self._batch_shape)
-
-    def derivative(self, nu):
-        res = copy.deepcopy(self)
-        res._splines = [spline.derivative(nu) for spline in res._splines]
-        return res
-
-    def antiderivative(self, nu):
-        res = copy.deepcopy(self)
-        res._splines = [spline.antiderivative(nu) for spline in res._splines]
-        return res
-
-
-class TestBatch:
-    @pytest.mark.parametrize('make_spline, kwargs',
-        [(make_interp_spline, {}),
-         (make_smoothing_spline, {}),
-         (make_smoothing_spline, {'lam': 1.0}),
-         (make_lsq_spline, {'method': "norm-eq"}),
-         (make_lsq_spline, {'method': "qr"}),
-         ])
-    @pytest.mark.parametrize('eval_shape', [(), (1,), (3,)])
-    @pytest.mark.parametrize('axis', [-1, 0, 1])
-    def test_batch(self, make_spline, kwargs, axis, eval_shape):
-        rng = np.random.default_rng(4329872134985134)
-        n = 10
-        shape = (2, 3, 4, n)
-        domain = (0, 10)
-
-        x = np.linspace(*domain, n)
-        y = np.moveaxis(rng.random(shape), -1, axis)
-
-        if make_spline == make_lsq_spline:
-            k = 3  # spline degree, if needed
-            t = (x[0],) * (k + 1) + (x[-1],) * (k + 1)  # valid knots, if needed
-            kwargs = kwargs | dict(t=t, k=k)
-
-        res = make_spline(x, y, axis=axis, **kwargs)
-        ref = BatchSpline(x, y, axis=axis, spline=make_spline, **kwargs)
-
-        x = rng.uniform(*domain, size=eval_shape)
-        np.testing.assert_allclose(res(x), ref(x))
-
-        res, ref = res.antiderivative(1), ref.antiderivative(1)
-        np.testing.assert_allclose(res(x), ref(x))
-
-        res, ref = res.derivative(2), ref.derivative(2)
-        np.testing.assert_allclose(res(x), ref(x))
-
-        np.testing.assert_allclose(res.integrate(*domain), ref.integrate(*domain))

@@ -4,13 +4,13 @@ import pytest
 
 import numpy as np
 from numpy.testing import assert_equal, assert_allclose
-from numpy.exceptions import ComplexWarning
 
 from scipy.sparse import (
         bsr_array, csc_array, dia_array, lil_array,
         coo_array, csr_array, dok_array,
     )
 from scipy.sparse._sputils import supported_dtypes, matrix
+from scipy._lib._util import ComplexWarning
 
 
 sup_complex = np.testing.suppress_warnings()
@@ -136,10 +136,10 @@ class TestCommon1D:
         dat = np.array([0, 1, 2])
         datsp = spcreator(dat)
 
-        with pytest.raises(ValueError, match='axis out of range'):
+        with pytest.raises(ValueError, match='axis must be None, -1 or 0'):
             datsp.sum(axis=1)
-        with pytest.raises(ValueError, match='axis out of range'):
-            datsp.sum(axis=(0, 3))
+        with pytest.raises(TypeError, match='Tuples are not accepted'):
+            datsp.sum(axis=(0, 1))
         with pytest.raises(TypeError, match='axis must be an integer'):
             datsp.sum(axis=1.5)
         with pytest.raises(ValueError, match='output parameter.*wrong.*dimension'):
@@ -176,11 +176,11 @@ class TestCommon1D:
         datsp = spcreator(dat)
         with pytest.raises(ValueError, match='axis out of range'):
             datsp.mean(axis=3)
-        with pytest.raises(ValueError, match='axis out of range'):
-            datsp.mean(axis=(0, 3))
+        with pytest.raises(TypeError, match='Tuples are not accepted'):
+            datsp.mean(axis=(0, 1))
         with pytest.raises(TypeError, match='axis must be an integer'):
             datsp.mean(axis=1.5)
-        with pytest.raises(ValueError, match='out.*not match shape'):
+        with pytest.raises(ValueError, match='output parameter.*wrong.*dimension'):
             datsp.mean(axis=1, out=out)
 
     def test_sum_dtype(self, spcreator):

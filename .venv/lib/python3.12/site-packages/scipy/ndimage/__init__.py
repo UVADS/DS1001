@@ -39,7 +39,6 @@ Filters
    sobel
    uniform_filter - Multidimensional uniform filter
    uniform_filter1d - 1-D uniform filter along the given axis
-   vectorized_filter
 
 Fourier filters
 ===============

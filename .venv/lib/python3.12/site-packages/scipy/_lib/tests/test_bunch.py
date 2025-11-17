@@ -127,13 +127,6 @@ class TestMakeTupleBunch:
         assert_equal(Foo.__module__, m)
         assert_equal(foo.__module__, m)
 
-    def test_passes_polars_checks(self):
-        # gh-22450
-        Square = _make_tuple_bunch('Square', ['width', 'height'])
-        assert hasattr(Square, '_replace')
-        assert hasattr(Square, '_field_defaults')
-
-
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     # Argument validation
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

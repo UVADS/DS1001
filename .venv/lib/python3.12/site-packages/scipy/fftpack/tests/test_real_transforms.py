@@ -11,8 +11,8 @@ from scipy.fftpack._realtransforms import (
 
 # Matlab reference data
 MDATA = np.load(join(dirname(__file__), 'test.npz'))
-X = [MDATA[f'x{i}'] for i in range(8)]
-Y = [MDATA[f'y{i}'] for i in range(8)]
+X = [MDATA['x%d' % i] for i in range(8)]
+Y = [MDATA['y%d' % i] for i in range(8)]
 
 # FFTW reference data: the data are organized as follows:
 #    * SIZES is an array containing all available sizes
@@ -33,7 +33,7 @@ def fftw_dct_ref(type, size, dt):
         data = FFTWDATA_SINGLE
     else:
         raise ValueError()
-    y = (data[f'dct_{type}_{size}']).astype(dt)
+    y = (data['dct_%d_%d' % (type, size)]).astype(dt)
     return x, y, dt
 
 
@@ -46,7 +46,7 @@ def fftw_dst_ref(type, size, dt):
         data = FFTWDATA_SINGLE
     else:
         raise ValueError()
-    y = (data[f'dst_{type}_{size}']).astype(dt)
+    y = (data['dst_%d_%d' % (type, size)]).astype(dt)
     return x, y, dt
 
 
@@ -208,7 +208,7 @@ class _TestDCTBase:
             # difference is due to fftw using a better algorithm w.r.t error
             # propagation compared to the ones from fftpack.
             assert_array_almost_equal(y / np.max(y), yr / np.max(y), decimal=self.dec,
-                    err_msg=f"Size {i} failed")
+                    err_msg="Size %d failed" % i)
 
     def test_axis(self):
         nt = 2
@@ -381,7 +381,8 @@ class _TestIDCTBase:
             # difference is due to fftw using a better algorithm w.r.t error
             # propagation compared to the ones from fftpack.
             assert_array_almost_equal(x / np.max(x), xr / np.max(x), decimal=self.dec,
-                    err_msg=f"Size {i} failed")
+                    err_msg="Size %d failed" % i)
+
 
 class TestIDCTIDouble(_TestIDCTBase):
     def setup_method(self):
@@ -486,7 +487,7 @@ class _TestDSTBase:
             # difference is due to fftw using a better algorithm w.r.t error
             # propagation compared to the ones from fftpack.
             assert_array_almost_equal(y / np.max(y), yr / np.max(y), decimal=self.dec,
-                    err_msg=f"Size {i} failed")
+                    err_msg="Size %d failed" % i)
 
 
 class _TestDSTIBase(_TestDSTBase):
@@ -620,7 +621,7 @@ class _TestIDSTBase:
             # difference is due to fftw using a better algorithm w.r.t error
             # propagation compared to the ones from fftpack.
             assert_array_almost_equal(x / np.max(x), xr / np.max(x), decimal=self.dec,
-                    err_msg=f"Size {i} failed")
+                    err_msg="Size %d failed" % i)
 
 
 class TestIDSTIDouble(_TestIDSTBase):

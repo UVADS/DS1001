@@ -57,11 +57,7 @@ def _get_residuals(x, y, t, k, w):
     _, _, c = _lsq_solve_qr(x, y, t, k, w)
     c = np.ascontiguousarray(c)
     spl = BSpline(t, c, k)
-    residuals = _compute_residuals(w2, spl(x), y)
-    fp = residuals.sum()
-    if np.isnan(fp):
-        raise ValueError(_iermesg[1])
-    return residuals, fp
+    return _compute_residuals(w2, spl(x), y)
 
 
 def _compute_residuals(w2, splx, y):
@@ -143,7 +139,7 @@ def _validate_inputs(x, y, w, k, s, xb, xe, parametric):
 
 
 def generate_knots(x, y, *, w=None, xb=None, xe=None, k=3, s=0, nest=None):
-    """Generate knot vectors until the Least SQuares (LSQ) criterion is satified.
+    """Replicate FITPACK's constructing the knot vector.
 
     Parameters
     ----------
@@ -262,7 +258,8 @@ def _generate_knots_impl(x, y, *, w=None, xb=None, xe=None, k=3, s=0, nest=None)
 
         # construct the LSQ spline with this set of knots
         fpold = fp
-        residuals, fp = _get_residuals(x, y, t, k, w=w)
+        residuals = _get_residuals(x, y, t, k, w=w)
+        fp = residuals.sum()
         fpms = fp - s
 
         # c  test whether the approximation sinf(x) is an acceptable solution.
@@ -303,7 +300,7 @@ def _generate_knots_impl(x, y, *, w=None, xb=None, xe=None, k=3, s=0, nest=None)
 
             # recompute if needed
             if j < nplus - 1:
-                residuals, _ = _get_residuals(x, y, t, k, w=w)
+                residuals = _get_residuals(x, y, t, k, w=w)
 
     # this should never be reached
     return
@@ -539,15 +536,11 @@ class Bunch:
         self.__dict__.update(**kwargs)
 
 
-_iermesg1 = """error. a theoretically impossible result was found during
+_iermesg = {
+2: """error. a theoretically impossible result was found during
 the iteration process for finding a smoothing spline with
 fp = s. probably causes : s too small.
-"""
-
-_iermesg = {
-1: _iermesg1 + """the weighted sum of squared residuals is becoming NaN
-""",
-2: _iermesg1 + """there is an approximation returned but the corresponding
+there is an approximation returned but the corresponding
 weighted sum of squared residuals does not satisfy the
 condition abs(fp-s)/s < tol.
 """,
@@ -666,7 +659,7 @@ def _make_splrep_impl(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=
         nest = max(m + k + 1, 2*k + 3)
     else:
         if nest < 2*(k + 1):
-            raise ValueError(f"`nest` too small: {nest = } < 2*(k+1) = {2*(k+1)}.")
+            raise ValueError(f"`nest` too small: {nest = } < 2*(k+1) = {2*(k+1)}.")    
         if t is not None:
             raise ValueError("Either supply `t` or `nest`.")
 
@@ -692,11 +685,13 @@ def _make_splrep_impl(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=
     # ### bespoke solver ####
     # initial conditions
     # f(p=inf) : LSQ spline with knots t   (XXX: reuse R, c)
-    _, fp = _get_residuals(x, y, t, k, w=w)
+    residuals = _get_residuals(x, y, t, k, w=w)
+    fp = residuals.sum()
     fpinf = fp - s
 
     # f(p=0): LSQ spline without internal knots
-    _, fp0 = _get_residuals(x, y, np.array([xb]*(k+1) + [xe]*(k+1)), k, w)
+    residuals = _get_residuals(x, y, np.array([xb]*(k+1) + [xe]*(k+1)), k, w)
+    fp0 = residuals.sum()
     fp0 = fp0 - s
 
     # solve
@@ -717,7 +712,7 @@ def _make_splrep_impl(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=
 
 
 def make_splrep(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=None):
-    r"""Create a smoothing B-spline function with bounded error, minimizing derivative jumps.
+    r"""Find the B-spline representation of a 1D function.
 
     Given the set of data points ``(x[i], y[i])``, determine a smooth spline
     approximation of degree ``k`` on the interval ``xb <= x <= xe``.
@@ -741,7 +736,7 @@ def make_splrep(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=None):
         especially with small `s` values.
     s : float, optional
         The smoothing condition. The amount of smoothness is determined by
-        satisfying the LSQ (least-squares) constraint::
+        satisfying the conditions::
 
             sum((w * (g(x)  - y))**2 ) <= s
 
@@ -834,7 +829,7 @@ def make_splrep(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=None):
     for a spline function :math:`g(x)` with a _fixed_ knot vector ``t``.
 
     .. versionadded:: 1.15.0
-    """  # noqa:E501
+    """
     if s == 0:
         if t is not None or w is not None or nest is not None:
             raise ValueError("s==0 is for interpolation only")
@@ -851,7 +846,7 @@ def make_splrep(x, y, *, w=None, xb=None, xe=None, k=3, s=0, t=None, nest=None):
 
 def make_splprep(x, *, w=None, u=None, ub=None, ue=None, k=3, s=0, t=None, nest=None):
     r"""
-    Create a smoothing parametric B-spline curve with bounded error, minimizing derivative jumps.
+    Find a smoothed B-spline representation of a parametric N-D curve.
 
     Given a list of N 1D arrays, `x`, which represent a curve in
     N-dimensional space parametrized by `u`, find a smooth approximating
@@ -970,7 +965,7 @@ def make_splprep(x, *, w=None, u=None, ub=None, ue=None, k=3, s=0, t=None, nest=
         20 (1982) 171-184.
     .. [2] P. Dierckx, "Curve and surface fitting with splines", Monographs on
         Numerical Analysis, Oxford University Press, 1993.
-    """  # noqa:E501
+    """
     x = np.stack(x, axis=1)
 
     # construct the default parametrization of the curve
@@ -994,3 +989,4 @@ def make_splprep(x, *, w=None, u=None, ub=None, ue=None, k=3, s=0, t=None, nest=
     spl1 = BSpline(spl.t, cc, spl.k, axis=1)
 
     return spl1, u
+

@@ -2,9 +2,7 @@
 
 """
 
-import platform
 import os
-import sys
 import zlib
 
 from io import BytesIO
@@ -17,7 +15,6 @@ import numpy as np
 
 from numpy.testing import assert_, assert_equal
 from pytest import raises as assert_raises
-import pytest
 
 from scipy.io.matlab._streams import (make_stream,
     GenericStream, ZlibInputStream,
@@ -197,9 +194,6 @@ class TestZlibInputStream:
         stream.seek(1024)
         assert_(stream.all_data_read())
 
-    @pytest.mark.skipif(
-            (platform.system() == 'Windows' and sys.version_info >= (3, 14)),
-            reason='gh-23185')
     def test_all_data_read_overlap(self):
         COMPRESSION_LEVEL = 6
 
@@ -216,9 +210,6 @@ class TestZlibInputStream:
         stream.seek(len(data))
         assert_(stream.all_data_read())
 
-    @pytest.mark.skipif(
-            (platform.system() == 'Windows' and sys.version_info >= (3, 14)),
-            reason='gh-23185')
     def test_all_data_read_bad_checksum(self):
         COMPRESSION_LEVEL = 6
 

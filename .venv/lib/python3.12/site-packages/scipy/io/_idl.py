@@ -217,7 +217,7 @@ def _read_data(f, dtype):
     elif dtype == 15:
         return _read_uint64(f)
     else:
-        raise Exception(f"Unknown IDL type: {dtype} - please report this")
+        raise Exception("Unknown IDL type: %i - please report this" % dtype)
 
 
 def _read_structure(f, array_desc, struct_desc):
@@ -238,7 +238,8 @@ def _read_structure(f, array_desc, struct_desc):
                 dtype.append(((col['name'].lower(), col['name']),
                                     DTYPE_DICT[col['typecode']]))
             else:
-                raise Exception(f"Variable type {col['typecode']} not implemented")
+                raise Exception("Variable type %i not implemented" %
+                                                            col['typecode'])
 
     structure = np.rec.recarray((nrows, ), dtype=dtype)
 
@@ -323,7 +324,7 @@ def _read_record(f):
     _skip_bytes(f, 4)
 
     if record['rectype'] not in RECTYPE_DICT:
-        raise Exception(f"Unknown RECTYPE: {record['rectype']}")
+        raise Exception("Unknown RECTYPE: %i" % record['rectype'])
 
     record['rectype'] = RECTYPE_DICT[record['rectype']]
 
@@ -481,7 +482,8 @@ def _read_arraydesc(f):
             arraydesc['dims'].append(_read_long(f))
 
     else:
-        raise Exception(f"Unknown ARRSTART: {arraydesc['arrstart']}")
+
+        raise Exception("Unknown ARRSTART: %i" % arraydesc['arrstart'])
 
     return arraydesc
 
@@ -900,7 +902,7 @@ def readsav(file_name, idict=None, python_dict=False,
 
         for rt in set(rectypes):
             if rt != 'END_MARKER':
-                print(f" - {rectypes.count(rt)} are of type {rt}")
+                print(" - %i are of type %s" % (rectypes.count(rt), rt))
         print("-"*50)
 
         if 'VARIABLE' in rectypes:

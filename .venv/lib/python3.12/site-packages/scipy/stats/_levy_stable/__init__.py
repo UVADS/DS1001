@@ -10,8 +10,8 @@ from scipy import integrate
 from scipy.integrate._quadrature import _builtincoeffs
 from scipy import interpolate
 from scipy.interpolate import RectBivariateSpline
-import scipy._lib.array_api_extra as xpx
 import scipy.special as sc
+from scipy._lib._util import _lazywhere
 from .._distn_infrastructure import rv_continuous, _ShapeInfo, rv_continuous_frozen
 from .._continuous_distns import uniform, expon, _norm_pdf, _norm_cdf
 from .levyst import Nolan
@@ -456,9 +456,13 @@ def _rvs_Z1(alpha, beta, size=None, random_state=None):
         return res3
 
     def alphanot1func(alpha, beta, TH, aTH, bTH, cosTH, tanTH, W):
-        return xpx.apply_where(
-            beta == 0, (alpha, beta, TH, aTH, bTH, cosTH, tanTH, W),
-            beta0func, otherwise)
+        res = _lazywhere(
+            beta == 0,
+            (alpha, beta, TH, aTH, bTH, cosTH, tanTH, W),
+            beta0func,
+            f2=otherwise,
+        )
+        return res
 
     alpha = np.broadcast_to(alpha, size)
     beta = np.broadcast_to(beta, size)
@@ -470,9 +474,13 @@ def _rvs_Z1(alpha, beta, size=None, random_state=None):
     bTH = beta * TH
     cosTH = np.cos(TH)
     tanTH = np.tan(TH)
-    return xpx.apply_where(
-        alpha == 1, (alpha, beta, TH, aTH, bTH, cosTH, tanTH, W),
-        alpha1func, alphanot1func)
+    res = _lazywhere(
+        alpha == 1,
+        (alpha, beta, TH, aTH, bTH, cosTH, tanTH, W),
+        alpha1func,
+        f2=alphanot1func,
+    )
+    return res
 
 
 def _fitstart_S0(data):

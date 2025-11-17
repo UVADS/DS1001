@@ -32,14 +32,14 @@
 # NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-from functools import wraps, partial
-import os.path
 import sys
-import sysconfig
-import warnings
+import os.path
+
+from functools import wraps, partial
 import weakref
 
 import numpy as np
+import warnings
 from numpy.linalg import norm
 from numpy.testing import (verbose, assert_,
                            assert_array_equal, assert_equal,
@@ -63,7 +63,6 @@ from scipy.spatial.distance import (braycurtis, canberra, chebyshev, cityblock,
                                     russellrao, seuclidean, sokalmichener,  # noqa: F401
                                     sokalsneath, sqeuclidean, yule)
 from scipy._lib._util import np_long, np_ulong
-from scipy.conftest import skip_xp_invalid_arg
 
 
 @pytest.fixture(params=_METRICS_NAMES, scope="session")
@@ -632,7 +631,6 @@ class TestCdist:
                     assert_allclose(y1, y2, rtol=eps, verbose=verbose > 2)
 
     @pytest.mark.thread_unsafe
-    @pytest.mark.skipif(sysconfig.get_platform() == 'win-arm64', reason="numpy#29442")
     def test_cdist_out(self, metric):
         # Test that out parameter works properly
         eps = 1e-15
@@ -1372,7 +1370,6 @@ class TestPdist:
         right_y = 0.01492537
         assert_allclose(pdist_y, right_y, atol=eps, verbose=verbose > 2)
 
-    @skip_xp_invalid_arg
     def test_pdist_custom_notdouble(self):
         # tests that when using a custom metric the data type is not altered
         class myclass:
@@ -2109,7 +2106,7 @@ def test_Xdist_deprecated_args(metric):
         pdist(X1, metric, 2.)
 
     for arg in ["p", "V", "VI"]:
-        kwargs = {arg: np.asarray(1.)}
+        kwargs = {arg: "foo"}
 
         if ((arg == "V" and metric == "seuclidean")
                 or (arg == "VI" and metric == "mahalanobis")
@@ -2230,18 +2227,6 @@ def test_immutable_input(metric):
     x.setflags(write=False)
     with maybe_deprecated(metric):
         getattr(scipy.spatial.distance, metric)(x, x, w=x)
-
-
-def test_gh_23109():
-    a = np.array([0, 0, 1, 1])
-    b = np.array([0, 1, 1, 0])
-    w = np.asarray([1.5, 1.2, 0.7, 1.3])
-    expected = yule(a, b, w=w)
-    assert_allclose(expected, 1.1954022988505748)
-    actual = cdist(np.atleast_2d(a),
-                   np.atleast_2d(b),
-                   metric='yule', w=w)
-    assert_allclose(actual, expected)
 
 
 class TestJaccard:

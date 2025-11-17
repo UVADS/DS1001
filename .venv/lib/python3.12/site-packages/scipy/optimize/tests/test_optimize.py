@@ -7,7 +7,6 @@ Authors:
 
 """
 import itertools
-import inspect
 import platform
 import threading
 import numpy as np
@@ -34,11 +33,10 @@ from scipy.optimize import rosen, rosen_der, rosen_hess
 
 from scipy.sparse import (coo_matrix, csc_matrix, csr_matrix, coo_array,
                           csr_array, csc_array)
-from scipy._lib._array_api_no_0d import xp_assert_equal
-from scipy._lib._array_api import make_xp_test_case
-from scipy._lib._util import MapWrapper
+from scipy.conftest import array_api_compatible
+from scipy._lib._array_api_no_0d import xp_assert_equal, array_namespace
 
-lazy_xp_modules = [optimize]
+skip_xp_backends = pytest.mark.skip_xp_backends
 
 
 def test_check_grad():
@@ -1126,7 +1124,7 @@ class TestOptimizeSimple(CheckOptimize):
 
     def test_minimize_l_bfgs_b(self):
         # Minimize with L-BFGS-B method
-        opts = {'maxiter': self.maxiter}
+        opts = {'disp': False, 'maxiter': self.maxiter}
         r = optimize.minimize(self.func, self.startparams,
                               method='L-BFGS-B', jac=self.grad,
                               options=opts)
@@ -1156,7 +1154,7 @@ class TestOptimizeSimple(CheckOptimize):
         # Check that the `ftol` parameter in l_bfgs_b works as expected
         v0 = None
         for tol in [1e-1, 1e-4, 1e-7, 1e-10]:
-            opts = {'maxiter': self.maxiter, 'ftol': tol}
+            opts = {'disp': False, 'maxiter': self.maxiter, 'ftol': tol}
             sol = optimize.minimize(self.func, self.startparams,
                                     method='L-BFGS-B', jac=self.grad,
                                     options=opts)
@@ -1173,7 +1171,7 @@ class TestOptimizeSimple(CheckOptimize):
         # check that the maxls is passed down to the Fortran routine
         sol = optimize.minimize(optimize.rosen, np.array([-1.2, 1.0]),
                                 method='L-BFGS-B', jac=optimize.rosen_der,
-                                options={'maxls': 1})
+                                options={'disp': False, 'maxls': 1})
         assert not sol.success
 
     def test_minimize_l_bfgs_b_maxfun_interruption(self):
@@ -1320,8 +1318,6 @@ class TestOptimizeSimple(CheckOptimize):
 
             if method == 'tnc':
                 kwargs['options'] = dict(maxfun=100)
-            elif method == 'cobyla':
-                kwargs['options'] = dict(maxiter=100)
             else:
                 kwargs['options'] = dict(maxiter=5)
 
@@ -1556,7 +1552,7 @@ class TestOptimizeSimple(CheckOptimize):
 
     @pytest.mark.parametrize('method', ['nelder-mead', 'powell', 'cg', 'bfgs',
                                         'newton-cg', 'l-bfgs-b', 'tnc',
-                                        'cobyqa', 'slsqp',
+                                        'cobyla', 'cobyqa', 'slsqp',
                                         'trust-constr', 'dogleg', 'trust-ncg',
                                         'trust-exact', 'trust-krylov'])
     def test_nan_values(self, method, num_parallel_threads):
@@ -1687,23 +1683,6 @@ class TestOptimizeSimple(CheckOptimize):
         if method == 'cobyqa':
             ref = optimize.minimize(**kwargs, options={'maxfev': maxiter})
             assert res.nfev == ref.nfev == maxiter
-        elif method == 'cobyla':
-            # COBYLA calls the callback once per iteration, not once per function
-            # evaluation, so this test is not applicable. However we can test
-            # the COBYLA status to verify that res stopped back on the callback
-            # and ref stopped based on the iteration limit.
-            # COBYLA requires at least n+2 function evaluations
-            maxiter = max(maxiter, len(kwargs['x0'])+2)
-            ref = optimize.minimize(**kwargs, options={'maxiter': maxiter})
-            assert res.status == 30
-            assert res.message == ("Return from COBYLA because the callback function "
-                                   "requested termination")
-            assert ref.status == 3
-            assert ref.message == ("Return from COBYLA because the objective function "
-                                   "has been evaluated MAXFUN times.")
-            # Return early because res/ref will be unequal for COBYLA for the reasons
-            # mentioned above.
-            return
         else:
             ref = optimize.minimize(**kwargs, options={'maxiter': maxiter})
             assert res.nit == ref.nit == maxiter
@@ -2474,29 +2453,33 @@ def test_powell_output():
         assert np.isscalar(res.fun)
 
 
+@array_api_compatible
 class TestRosen:
-    @make_xp_test_case(optimize.rosen)
     def test_rosen(self, xp):
         # integer input should be promoted to the default floating type
         x = xp.asarray([1, 1, 1])
         xp_assert_equal(optimize.rosen(x),
                         xp.asarray(0.))
 
-    @make_xp_test_case(optimize.rosen_der)
+    @skip_xp_backends('jax.numpy',
+                      reasons=["JAX arrays do not support item assignment"])
+    @pytest.mark.usefixtures("skip_xp_backends")
     def test_rosen_der(self, xp):
         x = xp.asarray([1, 1, 1, 1])
         xp_assert_equal(optimize.rosen_der(x),
                         xp.zeros_like(x, dtype=xp.asarray(1.).dtype))
 
-    @make_xp_test_case(optimize.rosen_hess, optimize.rosen_hess_prod)
+    @skip_xp_backends('jax.numpy',
+                      reasons=["JAX arrays do not support item assignment"])
+    @pytest.mark.usefixtures("skip_xp_backends")
     def test_hess_prod(self, xp):
         one = xp.asarray(1.)
-
+        xp_test = array_namespace(one)
         # Compare rosen_hess(x) times p with rosen_hess_prod(x,p). See gh-1775.
         x = xp.asarray([3, 4, 5])
         p = xp.asarray([2, 2, 2])
         hp = optimize.rosen_hess_prod(x, p)
-        p = xp.astype(p, one.dtype)
+        p = xp_test.astype(p, one.dtype)
         dothp = optimize.rosen_hess(x) @ p
         xp_assert_equal(hp, dothp)
 
@@ -2924,10 +2907,6 @@ def setup_test_equal_bounds():
     def callback(x, *args):
         check_x(x)
 
-    def callback2(intermediate_result):
-        assert isinstance(intermediate_result, OptimizeResult)
-        check_x(intermediate_result.x)
-
     def constraint1(x):
         check_x(x, check_values=False)
         return x[0:1] - 1
@@ -2978,7 +2957,7 @@ def setup_test_equal_bounds():
                    ([c1b, c2b], [c1b, c2b]))
 
     # test with and without callback function
-    callbacks = (None, callback, callback2)
+    callbacks = (None, callback)
 
     data = {"methods": methods, "kwds": kwds, "bound_types": bound_types,
             "constraints": constraints, "callbacks": callbacks,
@@ -3017,12 +2996,6 @@ def test_equal_bounds(method, kwds, bound_type, constraints, callback):
     test_constraints, reference_constraints = constraints
     if test_constraints and not method == 'SLSQP':
         pytest.skip('Only SLSQP supports nonlinear constraints')
-
-    if method in ['SLSQP', 'TNC'] and callable(callback):
-        sig = inspect.signature(callback)
-        if 'intermediate_result' in set(sig.parameters):
-            pytest.skip("SLSQP, TNC don't support intermediate_result")
-
     # reference constraints always have analytical jacobian
     # if test constraints are not the same, we'll need finite differences
     fd_needed = (test_constraints != reference_constraints)
@@ -3039,7 +3012,7 @@ def test_equal_bounds(method, kwds, bound_type, constraints, callback):
 
     # compare the output of a solution with FD vs that of an analytic grad
     assert res.success
-    assert_allclose(res.fun, expected.fun, rtol=2e-6)
+    assert_allclose(res.fun, expected.fun, rtol=1.5e-6)
     assert_allclose(res.x, expected.x, rtol=5e-4)
 
     if fd_needed or kwds['jac'] is False:
@@ -3167,15 +3140,6 @@ def test_bounds_with_list():
     )
 
 
-@pytest.mark.parametrize('method', (
-    'slsqp', 'cg', 'cobyqa', 'powell','nelder-mead', 'bfgs', 'l-bfgs-b',
-    'trust-constr'))
-def test_minimize_maxiter_noninteger(method):
-    # Regression test for gh-23430
-    x0 = np.array([1.3, 0.7, 0.8, 1.9, 1.2])
-    optimize.minimize(rosen, x0, method=method, options={'maxiter': 100.1})
-
-
 def test_x_overwritten_user_function():
     # if the user overwrites the x-array in the user function it's likely
     # that the minimizer stops working properly.
@@ -3272,8 +3236,8 @@ def test_gh12594():
                                          coo_array, csr_array, csc_array])
 def test_sparse_hessian(method, sparse_type):
     # gh-8792 reported an error for minimization with `newton_cg` when `hess`
-    # returns a sparse array. Check that results are the same whether `hess`
-    # returns a dense or sparse array for optimization methods that accept
+    # returns a sparse matrix. Check that results are the same whether `hess`
+    # returns a dense or sparse matrix for optimization methods that accept
     # sparse Hessian matrices.
 
     def sparse_rosen_hess(x):
@@ -3291,54 +3255,3 @@ def test_sparse_hessian(method, sparse_type):
     assert res_dense.nfev == res_sparse.nfev
     assert res_dense.njev == res_sparse.njev
     assert res_dense.nhev == res_sparse.nhev
-
-
-@pytest.mark.parametrize('workers', [None, 2])
-@pytest.mark.parametrize(
-    'method',
-    ['l-bfgs-b',
-     'bfgs',
-     'slsqp',
-     'trust-constr',
-     'Newton-CG',
-     'CG',
-     'tnc',
-     'trust-ncg',
-     'trust-krylov'])
-class TestWorkers:
-
-    def setup_method(self):
-        self.x0 = np.array([1.0, 2.0, 3.0])
-
-    def test_smoke(self, workers, method):
-        # checks parallelised optimization output is same as serial
-        workers = workers or map
-
-        kwds = {'jac': None, 'hess': None}
-        if method in ['Newton-CG', 'trust-ncg', 'trust-krylov']:
-            #  methods that require a callable jac
-            kwds['jac'] = rosen_der
-            kwds['hess'] = '2-point'
-
-        with MapWrapper(workers) as mf:
-            res = optimize.minimize(
-                rosen, self.x0, options={"workers":mf}, method=method, **kwds
-            )
-        res_default = optimize.minimize(
-            rosen, self.x0, method=method, **kwds
-        )
-        assert_equal(res.x, res_default.x)
-        assert_equal(res.nfev, res_default.nfev)
-
-    def test_equal_bounds(self, workers, method):
-        workers = workers or map
-        if method not in ['l-bfgs-b', 'slsqp', 'trust-constr', 'tnc']:
-            pytest.skip(f"{method} cannot use bounds")
-
-        bounds = Bounds([0, 2.0, 0.], [10., 2.0, 10.])
-        with MapWrapper(workers) as mf:
-            res = optimize.minimize(
-                rosen, self.x0, bounds=bounds, options={"workers": mf}, method=method
-            )
-        assert res.success
-        assert_allclose(res.x[1], 2.0)

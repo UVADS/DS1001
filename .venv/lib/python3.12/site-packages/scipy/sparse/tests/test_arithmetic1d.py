@@ -194,10 +194,7 @@ class TestArithmetic1D:
                     with pytest.raises(ValueError, match=matchme):
                         i.multiply(j)
                     continue
-                try:
-                    sp_mult = i.multiply(j)
-                except ValueError:
-                    continue
+                sp_mult = i.multiply(j)
                 assert_allclose(toarray(sp_mult), dense_mult)
 
     def test_elementwise_divide(self, spcreator, dat1d):
@@ -323,7 +320,7 @@ class TestArithmetic1D:
         assert_equal(asp.dot(asp), np.dot(a, a))
 
         # bad matrix products
-        with pytest.raises(ValueError, match='dimension mismatch|shapes.*not aligned'):
+        with pytest.raises(ValueError, match='dimension mismatch'):
             asp.dot(f)
 
         # elemente-wise multiplication

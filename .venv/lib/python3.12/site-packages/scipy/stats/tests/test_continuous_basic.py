@@ -121,21 +121,19 @@ def cases_test_cont_basic():
 
 @pytest.mark.parametrize('distname,arg', cases_test_cont_basic())
 @pytest.mark.parametrize('sn', [500])
-def test_cont_basic(distname, arg, sn, num_parallel_threads):
+def test_cont_basic(distname, arg, sn):
     try:
         distfn = getattr(stats, distname)
     except TypeError:
         distfn = distname
         distname = 'rv_histogram_instance'
 
-    rng = np.random.default_rng(7654565)
+    rng = np.random.RandomState(765456)
     rvs = distfn.rvs(size=sn, *arg, random_state=rng)
     m, v = distfn.stats(*arg)
 
     if distname not in {'laplace_asymmetric'}:
-        # TODO: multiple checks in this function are not robust, tweaking the
-        # seed above will make different distributions fail.
-        check_sample_meanvar_(m, v, rvs, rng)
+        check_sample_meanvar_(m, v, rvs)
     check_cdf_ppf(distfn, arg, distname)
     check_sf_isf(distfn, arg, distname)
     check_cdf_sf(distfn, arg, distname)
@@ -169,14 +167,13 @@ def test_cont_basic(distname, arg, sn, num_parallel_threads):
         arg = (3,)
 
     check_named_args(distfn, x, arg, locscale_defaults, meths)
-    if num_parallel_threads == 1:
-        check_random_state_property(distfn, arg)
+    check_random_state_property(distfn, arg)
 
-        if distname in ['rel_breitwigner'] and _IS_32BIT:
-            # gh18414
-            pytest.skip("fails on Linux 32-bit")
-        else:
-            check_pickling(distfn, arg)
+    if distname in ['rel_breitwigner'] and _IS_32BIT:
+        # gh18414
+        pytest.skip("fails on Linux 32-bit")
+    else:
+        check_pickling(distfn, arg)
     check_freezing(distfn, arg)
 
     # Entropy
@@ -284,7 +281,6 @@ def test_rvs_scalar(distname, arg):
     assert np.isscalar(distfn.rvs(*arg, size=None))
 
 
-@pytest.mark.parallel_threads(1)
 def test_levy_stable_random_state_property():
     # levy_stable only implements rvs(), so it is skipped in the
     # main loop in test_cont_basic(). Here we apply just the test
@@ -585,11 +581,11 @@ def test_method_of_moments():
     npt.assert_almost_equal(loc+scale, b, decimal=4)
 
 
-def check_sample_meanvar_(popmean, popvar, sample, rng):
+def check_sample_meanvar_(popmean, popvar, sample):
     if np.isfinite(popmean):
         check_sample_mean(sample, popmean)
     if np.isfinite(popvar):
-        check_sample_var(sample, popvar, rng)
+        check_sample_var(sample, popvar)
 
 
 def check_sample_mean(sample, popmean):
@@ -598,7 +594,7 @@ def check_sample_mean(sample, popmean):
     assert prob > 0.01
 
 
-def check_sample_var(sample, popvar, rng):
+def check_sample_var(sample, popvar):
     # check that population mean lies within the CI bootstrapped from the
     # sample. This used to be a chi-squared test for variance, but there were
     # too many false positives
@@ -606,7 +602,6 @@ def check_sample_var(sample, popvar, rng):
         (sample,),
         lambda x, axis: x.var(ddof=1, axis=axis),
         confidence_level=0.995,
-        rng=rng,
     )
     conf = res.confidence_interval
     low, high = conf.low, conf.high
@@ -991,7 +986,6 @@ def test_kappa4_array_gh13582():
     assert res2.shape == (4, 4, 3)
 
 
-@pytest.mark.parallel_threads(1)
 def test_frozen_attributes():
     # gh-14827 reported that all frozen distributions had both pmf and pdf
     # attributes; continuous should have pdf and discrete should have pmf.

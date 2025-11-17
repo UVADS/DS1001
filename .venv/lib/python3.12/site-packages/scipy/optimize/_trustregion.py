@@ -119,8 +119,7 @@ def _minimize_trust_region(fun, x0, args=(), jac=None, hess=None, hessp=None,
                            subproblem=None, initial_trust_radius=1.0,
                            max_trust_radius=1000.0, eta=0.15, gtol=1e-4,
                            maxiter=None, disp=False, return_all=False,
-                           callback=None, inexact=True, workers=None,
-                           **unknown_options):
+                           callback=None, inexact=True, **unknown_options):
     """
     Minimization of scalar function of one or more variables using a
     trust-region algorithm.
@@ -143,13 +142,6 @@ def _minimize_trust_region(fun, x0, args=(), jac=None, hess=None, hessp=None,
             Accuracy to solve subproblems. If True requires less nonlinear
             iterations, but more vector products. Only effective for method
             trust-krylov.
-        workers : int, map-like callable, optional
-            A map-like callable, such as `multiprocessing.Pool.map` for evaluating
-            any numerical differentiation in parallel.
-            This evaluation is carried out as ``workers(fun, iterable)``.
-            Only for 'trust-krylov', 'trust-ncg'.
-
-            .. versionadded:: 1.16.0
 
     This function is called by the `minimize` function.
     It is not supposed to be called directly.
@@ -180,13 +172,7 @@ def _minimize_trust_region(fun, x0, args=(), jac=None, hess=None, hessp=None,
 
     # A ScalarFunction representing the problem. This caches calls to fun, jac,
     # hess.
-    # the workers kwd only has an effect for trust-ncg, trust-krylov when
-    # estimating the Hessian with finite-differences. It's never used
-    # during calculation of jacobian, because callables are required for all
-    # methods.
-    sf = _prepare_scalar_function(
-        fun, x0, jac=jac, hess=hess, args=args, workers=workers
-    )
+    sf = _prepare_scalar_function(fun, x0, jac=jac, hess=hess, args=args)
     fun = sf.fun
     jac = sf.grad
     if callable(hess):
@@ -299,10 +285,10 @@ def _minimize_trust_region(fun, x0, args=(), jac=None, hess=None, hessp=None,
         else:
             warnings.warn(status_messages[warnflag], RuntimeWarning, stacklevel=3)
         print(f"         Current function value: {m.fun:f}")
-        print(f"         Iterations: {k:d}")
-        print(f"         Function evaluations: {sf.nfev:d}")
-        print(f"         Gradient evaluations: {sf.ngev:d}")
-        print(f"         Hessian evaluations: {sf.nhev + nhessp[0]:d}")
+        print("         Iterations: %d" % k)
+        print("         Function evaluations: %d" % sf.nfev)
+        print("         Gradient evaluations: %d" % sf.ngev)
+        print("         Hessian evaluations: %d" % (sf.nhev + nhessp[0]))
 
     result = OptimizeResult(x=x, success=(warnflag == 0), status=warnflag,
                             fun=m.fun, jac=m.jac, nfev=sf.nfev, njev=sf.ngev,

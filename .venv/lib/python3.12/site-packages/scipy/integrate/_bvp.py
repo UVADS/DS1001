@@ -402,9 +402,7 @@ def solve_newton(n, m, h, col_fun, bc, jac, y, p, B, bvp_tol, bc_tol):
     References
     ----------
     .. [1]  U. Ascher, R. Mattheij and R. Russell "Numerical Solution of
-       Boundary Value Problems for Ordinary Differential Equations",
-       Philidelphia, PA: Society for Industrial and Applied Mathematics,
-       1995.
+       Boundary Value Problems for Ordinary Differential Equations"
     """
     # We know that the solution residuals at the middle points of the mesh
     # are connected with collocation residuals  r_middle = 1.5 * col_res / h.
@@ -874,13 +872,9 @@ def solve_bvp(fun, bc, x, y, p=None, S=None, fun_jac=None, bc_jac=None,
            Control and the Maltab PSE", ACM Trans. Math. Softw., Vol. 27,
            Number 3, pp. 299-316, 2001.
     .. [2] L.F. Shampine, P. H. Muir and H. Xu, "A User-Friendly Fortran BVP
-           Solver", J. Numer. Anal., Ind. Appl. Math. (JNAIAM), Vol. 1, 
-           Number 2, pp. 201-217, 2006.
+           Solver".
     .. [3] U. Ascher, R. Mattheij and R. Russell "Numerical Solution of
-           Boundary Value Problems for Ordinary Differential Equations",
-           Philidelphia, PA: Society for Industrial and Applied Mathematics,
-           1995.
-           :doi:`10.1137/1.9781611971231`
+           Boundary Value Problems for Ordinary Differential Equations".
     .. [4] `Cauchy-Riemann equations
             <https://en.wikipedia.org/wiki/Cauchy-Riemann_equations>`_ on
             Wikipedia.

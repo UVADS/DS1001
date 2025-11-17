@@ -6,9 +6,14 @@ from scipy._lib.deprecation import _sub_module_deprecation
 
 
 __all__ = [  # noqa: F822
+    'csr_count_blocks',
     'csr_matrix',
+    'csr_tobsr',
+    'csr_tocsc',
+    'get_csr_submatrix',
     'isspmatrix_csr',
     'spmatrix',
+    'upcast',
 ]
 
 

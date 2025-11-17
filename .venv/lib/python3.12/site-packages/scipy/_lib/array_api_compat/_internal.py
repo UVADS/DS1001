@@ -2,16 +2,10 @@
 Internal helpers
 """
 
-from collections.abc import Callable
 from functools import wraps
 from inspect import signature
-from types import ModuleType
-from typing import TypeVar
 
-_T = TypeVar("_T")
-
-
-def get_xp(xp: ModuleType) -> Callable[[Callable[..., _T]], Callable[..., _T]]:
+def get_xp(xp):
     """
     Decorator to automatically replace xp with the corresponding array module.
 
@@ -28,14 +22,14 @@ def get_xp(xp: ModuleType) -> Callable[[Callable[..., _T]], Callable[..., _T]]:
 
     """
 
-    def inner(f: Callable[..., _T], /) -> Callable[..., _T]:
+    def inner(f):
         @wraps(f)
-        def wrapped_f(*args: object, **kwargs: object) -> object:
+        def wrapped_f(*args, **kwargs):
             return f(*args, xp=xp, **kwargs)
 
         sig = signature(f)
         new_sig = sig.replace(
-            parameters=[par for i, par in sig.parameters.items() if i != "xp"]
+            parameters=[sig.parameters[i] for i in sig.parameters if i != "xp"]
         )
 
         if wrapped_f.__doc__ is None:
@@ -46,14 +40,7 @@ See the corresponding documentation in NumPy/CuPy and/or the array API
 specification for more details.
 
 """
-        wrapped_f.__signature__ = new_sig  # pyright: ignore[reportAttributeAccessIssue]
-        return wrapped_f  # pyright: ignore[reportReturnType]
+        wrapped_f.__signature__ = new_sig
+        return wrapped_f
 
     return inner
-
-
-__all__ = ["get_xp"]
-
-
-def __dir__() -> list[str]:
-    return __all__

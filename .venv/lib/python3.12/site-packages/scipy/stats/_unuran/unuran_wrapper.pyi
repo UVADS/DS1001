@@ -1,6 +1,5 @@
 import numpy as np
-from typing import (overload, NamedTuple, Protocol)
-from collections.abc import Callable
+from typing import (overload, Callable, NamedTuple, Protocol)
 import numpy.typing as npt
 from scipy._lib._util import SeedType
 import scipy.stats as stats

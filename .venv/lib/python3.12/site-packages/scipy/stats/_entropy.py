@@ -8,8 +8,7 @@ import math
 import numpy as np
 from scipy import special
 from ._axis_nan_policy import _axis_nan_policy_factory, _broadcast_arrays
-from scipy._lib._array_api import array_namespace, xp_promote
-from scipy._lib import array_api_extra as xpx
+from scipy._lib._array_api import array_namespace, xp_moveaxis_to_end
 
 __all__ = ['entropy', 'differential_entropy']
 
@@ -20,7 +19,7 @@ __all__ = ['entropy', 'differential_entropy']
         2 if ("qk" in kwgs and kwgs["qk"] is not None)
         else 1
     ),
-    n_outputs=1, result_to_tuple=lambda x, _: (x,), paired=True,
+    n_outputs=1, result_to_tuple=lambda x: (x,), paired=True,
     too_small=-1  # entropy doesn't have too small inputs
 )
 def entropy(pk: np.typing.ArrayLike,
@@ -170,7 +169,7 @@ def _differential_entropy_is_too_small(samples, kwargs, axis=-1):
 
 
 @_axis_nan_policy_factory(
-    lambda x: x, n_outputs=1, result_to_tuple=lambda x, _: (x,),
+    lambda x: x, n_outputs=1, result_to_tuple=lambda x: (x,),
     too_small=_differential_entropy_is_too_small
 )
 def differential_entropy(
@@ -318,8 +317,10 @@ def differential_entropy(
 
     """
     xp = array_namespace(values)
-    values = xp_promote(values, force_floating=True, xp=xp)
-    values = xp.moveaxis(values, axis, -1)
+    values = xp.asarray(values)
+    if xp.isdtype(values.dtype, "integral"):  # type: ignore[union-attr]
+        values = xp.astype(values, xp.asarray(1.).dtype)
+    values = xp_moveaxis_to_end(values, axis, xp=xp)
     n = values.shape[-1]  # type: ignore[union-attr]
 
     if window_length is None:
@@ -402,9 +403,9 @@ def _ebrahimi_entropy(X, m, *, xp):
     differences = X[..., 2 * m:] - X[..., : -2 * m:]
 
     i = xp.arange(1, n+1, dtype=X.dtype)
-    ci = xp.where(i <= m, 1 + (i - 1)/m, 2.)
-    cond = i >= n - m + 1
-    ci = xpx.at(ci, cond).set(1 + (n - i[cond])/m)
+    ci = xp.ones_like(i)*2
+    ci[i <= m] = 1 + (i[i <= m] - 1)/m
+    ci[i >= n - m + 1] = 1 + (n - i[i >= n-m+1])/m
 
     logs = xp.log(n * differences / (ci * m))
     return xp.mean(logs, axis=-1)

@@ -56,8 +56,8 @@ class Rbf:
     """
     Rbf(*args, **kwargs)
 
-    Class for radial basis function interpolation of functions from
-    N-D scattered data to an M-D domain (legacy).
+    A class for radial basis function interpolation of functions from
+    N-D scattered data to an M-D domain.
 
     .. legacy:: class
 

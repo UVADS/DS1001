@@ -4,7 +4,6 @@ import os
 import warnings
 import tempfile
 from contextlib import contextmanager
-from typing import Literal
 
 import numpy as np
 import numpy.testing as npt
@@ -12,12 +11,8 @@ import pytest
 import hypothesis
 
 from scipy._lib._fpumode import get_fpu_mode
-from scipy._lib._array_api import (
-    SCIPY_ARRAY_API, SCIPY_DEVICE, array_namespace, default_xp,
-    is_cupy, is_dask, is_jax,
-)
 from scipy._lib._testutils import FPUModeChangeWarning
-from scipy._lib.array_api_extra.testing import patch_lazy_xp_functions
+from scipy._lib._array_api import SCIPY_ARRAY_API, SCIPY_DEVICE
 from scipy._lib import _pep440
 
 try:
@@ -34,31 +29,12 @@ except Exception:
 
 
 def pytest_configure(config):
-    """
-    Add pytest markers to avoid PytestUnknownMarkWarning
-
-    This needs to contain all markers that are SciPy-specific, as well as
-    dummy fallbacks for markers defined in optional test packages.
-
-    Note that we need both the registration here *and* in `pytest.ini`.
-    """
     config.addinivalue_line("markers",
         "slow: Tests that are very slow.")
     config.addinivalue_line("markers",
         "xslow: mark test as extremely slow (not run unless explicitly requested)")
     config.addinivalue_line("markers",
         "xfail_on_32bit: mark test as failing on 32-bit platforms")
-    config.addinivalue_line("markers",
-        "array_api_backends: test iterates on all array API backends")
-    config.addinivalue_line("markers",
-        ("skip_xp_backends(backends, reason=None, np_only=False, cpu_only=False, " +
-         "eager_only=False, exceptions=None): mark the desired skip configuration " +
-         "for the `skip_xp_backends` fixture"))
-    config.addinivalue_line("markers",
-        ("xfail_xp_backends(backends, reason=None, np_only=False, cpu_only=False, " +
-         "eager_only=False, exceptions=None): mark the desired xfail configuration " +
-         "for the `xfail_xp_backends` fixture"))
-
     try:
         import pytest_timeout  # noqa:F401
     except Exception:
@@ -71,7 +47,14 @@ def pytest_configure(config):
     except Exception:
         config.addinivalue_line(
             "markers", 'fail_slow: mark a test for a non-default timeout failure')
-
+    config.addinivalue_line("markers",
+        "skip_xp_backends(backends, reason=None, np_only=False, cpu_only=False, "
+        "exceptions=None): "
+        "mark the desired skip configuration for the `skip_xp_backends` fixture.")
+    config.addinivalue_line("markers",
+        "xfail_xp_backends(backends, reason=None, np_only=False, cpu_only=False, "
+        "exceptions=None): "
+        "mark the desired xfail configuration for the `xfail_xp_backends` fixture.")
     if not PARALLEL_RUN_AVAILABLE:
         config.addinivalue_line(
             'markers',
@@ -158,21 +141,17 @@ if not PARALLEL_RUN_AVAILABLE:
 
 
 # Array API backend handling
-xp_known_backends = {'numpy', 'array_api_strict', 'torch', 'cupy', 'jax.numpy',
-                     'dask.array'}
 xp_available_backends = {'numpy': np}
-xp_skip_cpu_only_backends = set()
-xp_skip_eager_only_backends = set()
 
-if SCIPY_ARRAY_API:
+if SCIPY_ARRAY_API and isinstance(SCIPY_ARRAY_API, str):
     # fill the dict of backends with available libraries
     try:
         import array_api_strict
         xp_available_backends.update({'array_api_strict': array_api_strict})
-        if _pep440.parse(array_api_strict.__version__) < _pep440.Version('2.3'):
-            raise ImportError("array-api-strict must be >= version 2.3")
+        if _pep440.parse(array_api_strict.__version__) < _pep440.Version('2.0'):
+            raise ImportError("array-api-strict must be >= version 2.0")
         array_api_strict.set_array_api_strict_flags(
-            api_version='2024.12'
+            api_version='2023.12'
         )
     except ImportError:
         pass
@@ -180,35 +159,14 @@ if SCIPY_ARRAY_API:
     try:
         import torch  # type: ignore[import-not-found]
         xp_available_backends.update({'torch': torch})
+        # can use `mps` or `cpu`
         torch.set_default_device(SCIPY_DEVICE)
-        if SCIPY_DEVICE != "cpu":
-            xp_skip_cpu_only_backends.add('torch')
-
-        # default to float64 unless explicitly requested
-        default = os.getenv('SCIPY_DEFAULT_DTYPE', default='float64')
-        if default == 'float64':
-            torch.set_default_dtype(torch.float64)
-        elif default != "float32":
-            raise ValueError(
-                "SCIPY_DEFAULT_DTYPE env var, if set, can only be either 'float64' "
-               f"or 'float32'. Got '{default}' instead."
-            )
     except ImportError:
         pass
 
     try:
         import cupy  # type: ignore[import-not-found]
-        # Note: cupy disregards SCIPY_DEVICE and always runs on cuda.
-        # It will fail to import if you don't have CUDA hardware and drivers.
         xp_available_backends.update({'cupy': cupy})
-        xp_skip_cpu_only_backends.add('cupy')
-
-        # this is annoying in CuPy 13.x
-        warnings.filterwarnings(
-            'ignore', 'cupyx.jit.rawkernel is experimental', category=FutureWarning
-        )
-        from cupyx.scipy import signal
-        del signal
     except ImportError:
         pass
 
@@ -217,35 +175,16 @@ if SCIPY_ARRAY_API:
         xp_available_backends.update({'jax.numpy': jax.numpy})
         jax.config.update("jax_enable_x64", True)
         jax.config.update("jax_default_device", jax.devices(SCIPY_DEVICE)[0])
-        if SCIPY_DEVICE != "cpu":
-            xp_skip_cpu_only_backends.add('jax.numpy')
-        # JAX can be eager or lazy (when wrapped in jax.jit). However it is
-        # recommended by upstream devs to assume it's always lazy.
-        xp_skip_eager_only_backends.add('jax.numpy')
-    except ImportError:
-        pass
-
-    try:
-        import dask.array as da
-        xp_available_backends.update({'dask.array': da})
-        # Dask can wrap around cupy. However, this is untested in scipy
-        # (and will almost surely not work as delegation will misbehave).
-
-        # Dask, strictly speaking, can be eager, in the sense that
-        # __array__, __bool__ etc. are implemented and do not raise.
-        # However, calling them triggers an extra computation of the whole graph
-        # until that point, which is highly destructive for performance.
-        xp_skip_eager_only_backends.add('dask.array')
     except ImportError:
         pass
 
     # by default, use all available backends
-    if (
-        isinstance(SCIPY_ARRAY_API, str)
-        and SCIPY_ARRAY_API.lower() not in ("1", "true", "all")
-    ):
+    if SCIPY_ARRAY_API.lower() not in ("1", "true"):
         SCIPY_ARRAY_API_ = json.loads(SCIPY_ARRAY_API)
-        if SCIPY_ARRAY_API_ != ['all']:
+
+        if 'all' in SCIPY_ARRAY_API_:
+            pass  # same as True
+        else:
             # only select a subset of backend by filtering out the dict
             try:
                 xp_available_backends = {
@@ -253,55 +192,13 @@ if SCIPY_ARRAY_API:
                     for backend in SCIPY_ARRAY_API_
                 }
             except KeyError:
-                msg = ("'--array-api-backend' must be in "
-                       f"{list(xp_available_backends)}; got {SCIPY_ARRAY_API_}")
+                msg = f"'--array-api-backend' must be in {xp_available_backends.keys()}"
                 raise ValueError(msg)
 
-assert not set(xp_available_backends) - xp_known_backends
-xp_skip_np_only_backends = set(xp_available_backends) - {"numpy"}
+if 'cupy' in xp_available_backends:
+    SCIPY_DEVICE = 'cuda'
 
-
-@pytest.fixture(params=[
-    pytest.param(v, id=k, marks=pytest.mark.array_api_backends)
-    for k, v in xp_available_backends.items()
-])
-def xp(request, monkeypatch):
-    """Run the test that uses this fixture on each available array API library.
-
-    You can select all and only the tests that use the `xp` fixture by
-    passing `-m array_api_backends` to pytest.
-
-    You can select where individual tests run through the `@skip_xp_backends`,
-    `@xfail_xp_backends`, and `@skip_xp_invalid_arg` pytest markers.
-
-    Please read: https://docs.scipy.org/doc/scipy/dev/api-dev/array_api.html#adding-tests
-    """
-    # Read all @pytest.marks.skip_xp_backends markers that decorate to the test,
-    # if any, and raise pytest.skip() if the current xp is in the list.
-    skip_or_xfail_xp_backends(request, "skip")
-    # Read all @pytest.marks.xfail_xp_backends markers that decorate the test,
-    # if any, and raise pytest.xfail() if the current xp is in the list.
-    skip_or_xfail_xp_backends(request, "xfail")
-
-    xp = request.param
-    # Potentially wrap namespace with array_api_compat
-    xp = array_namespace(xp.empty(0))
-
-    if SCIPY_ARRAY_API:
-        # If request.param==jax.numpy, wrap tested functions in jax.jit
-        patch_lazy_xp_functions(
-            xp=request.param, request=request, monkeypatch=monkeypatch
-        )
-
-        # Throughout all calls to assert_almost_equal, assert_array_almost_equal, and
-        # xp_assert_* functions, test that the array namespace is xp in both the
-        # expected and actual arrays. This is to detect the case where both arrays are
-        # erroneously just plain numpy while xp is something else.
-        with default_xp(xp):
-            yield xp
-    else:
-        yield xp
-
+array_api_compatible = pytest.mark.parametrize("xp", xp_available_backends.values())
 
 skip_xp_invalid_arg = pytest.mark.skipif(SCIPY_ARRAY_API,
     reason = ('Test involves masked arrays, object arrays, or other types '
@@ -309,164 +206,152 @@ skip_xp_invalid_arg = pytest.mark.skipif(SCIPY_ARRAY_API,
 
 
 def _backends_kwargs_from_request(request, skip_or_xfail):
-    """A helper for {skip,xfail}_xp_backends.
+    """A helper for {skip,xfail}_xp_backends"""
+    # do not allow multiple backends
+    args_ = request.keywords[f'{skip_or_xfail}_xp_backends'].args
+    if len(args_) > 1:
+        # np_only / cpu_only has args=(), otherwise it's ('numpy',)
+        # and we do not allow ('numpy', 'cupy')
+        raise ValueError(f"multiple backends: {args_}")
 
-    Return dict of {backend to skip/xfail: top reason to skip/xfail it}
-    """
     markers = list(request.node.iter_markers(f'{skip_or_xfail}_xp_backends'))
-    reasons = {backend: [] for backend in xp_known_backends}
-
+    backends = []
+    kwargs = {}
     for marker in markers:
-        invalid_kwargs = set(marker.kwargs) - {
-            "cpu_only", "np_only", "eager_only", "reason", "exceptions"}
-        if invalid_kwargs:
-            raise TypeError(f"Invalid kwargs: {invalid_kwargs}")
-
-        exceptions = set(marker.kwargs.get('exceptions', []))
-        invalid_exceptions = exceptions - xp_known_backends
-        if (invalid_exceptions := list(exceptions - xp_known_backends)):
-            raise ValueError(f"Unknown backend(s): {invalid_exceptions}; "
-                             f"must be a subset of {list(xp_known_backends)}")
-
-        if marker.kwargs.get('np_only', False):
-            reason = marker.kwargs.get("reason") or "do not run with non-NumPy backends"
-            for backend in xp_skip_np_only_backends - exceptions:
-                reasons[backend].append(reason)
-
-        elif marker.kwargs.get('cpu_only', False):
-            reason = marker.kwargs.get("reason") or (
-                "no array-agnostic implementation or delegation available "
-                "for this backend and device")
-            for backend in xp_skip_cpu_only_backends - exceptions:
-                reasons[backend].append(reason)
-
-        elif marker.kwargs.get('eager_only', False):
-            reason = marker.kwargs.get("reason") or (
-                "eager checks not executed on lazy backends")
-            for backend in xp_skip_eager_only_backends - exceptions:
-                reasons[backend].append(reason)
+        if marker.kwargs.get('np_only'):
+            kwargs['np_only'] = True
+            kwargs['exceptions'] = marker.kwargs.get('exceptions', [])
+        elif marker.kwargs.get('cpu_only'):
+            if not kwargs.get('np_only'):
+                # if np_only is given, it is certainly cpu only
+                kwargs['cpu_only'] = True
+                kwargs['exceptions'] = marker.kwargs.get('exceptions', [])
 
         # add backends, if any
-        if len(marker.args) == 1:
-            backend = marker.args[0]
-            if backend not in xp_known_backends:
-                raise ValueError(f"Unknown backend: {backend}; "
-                                 f"must be one of {list(xp_known_backends)}")
-            reason = marker.kwargs.get("reason") or (
-                f"do not run with array API backend: {backend}")
-            # reason overrides the ones from cpu_only, np_only, and eager_only.
-            # This is regardless of order of appearence of the markers.
-            reasons[backend].insert(0, reason)
+        if len(marker.args) > 0:
+            backend = marker.args[0]  # was a tuple, ('numpy',) etc
+            backends.append(backend)
+            kwargs.update(**{backend: marker.kwargs})
 
-            for kwarg in ("cpu_only", "np_only", "eager_only", "exceptions"):
-                if kwarg in marker.kwargs:
-                    raise ValueError(f"{kwarg} is mutually exclusive with {backend}")
-
-        elif len(marker.args) > 1:
-            raise ValueError(
-                f"Please specify only one backend per marker: {marker.args}"
-            )
-
-    return {backend: backend_reasons[0]
-            for backend, backend_reasons in reasons.items()
-            if backend_reasons}
-
-
-def skip_or_xfail_xp_backends(request: pytest.FixtureRequest,
-                              skip_or_xfail: Literal['skip', 'xfail']) -> None:
-    """
-    Helper of the `xp` fixture.
-    Skip or xfail based on the ``skip_xp_backends`` or ``xfail_xp_backends`` markers.
-
-    See the "Support for the array API standard" docs page for usage examples.
-
-    Usage
-    -----
-    ::
-        skip_xp_backends = pytest.mark.skip_xp_backends
-        xfail_xp_backends = pytest.mark.xfail_xp_backends
-        ...
-
-        @skip_xp_backends(backend, *, reason=None)
-        @skip_xp_backends(*, cpu_only=True, exceptions=(), reason=None)
-        @skip_xp_backends(*, eager_only=True, exceptions=(), reason=None)
-        @skip_xp_backends(*, np_only=True, exceptions=(), reason=None)
-
-        @xfail_xp_backends(backend, *, reason=None)
-        @xfail_xp_backends(*, cpu_only=True, exceptions=(), reason=None)
-        @xfail_xp_backends(*, eager_only=True, exceptions=(), reason=None)
-        @xfail_xp_backends(*, np_only=True, exceptions=(), reason=None)
-
-    Parameters
-    ----------
-    backend : str, optional
-        Backend to skip/xfail, e.g. ``"torch"``.
-        Mutually exclusive with ``cpu_only``, ``eager_only``, and ``np_only``.
-    cpu_only : bool, optional
-        When ``True``, the test is skipped/xfailed on non-CPU devices,
-        minus exceptions. Mutually exclusive with ``backend``.
-    eager_only : bool, optional
-        When ``True``, the test is skipped/xfailed for lazy backends, e.g. those
-        with major caveats when invoking ``__array__``, ``__bool__``, ``__float__``,
-        or ``__complex__``, minus exceptions. Mutually exclusive with ``backend``.
-    np_only : bool, optional
-        When ``True``, the test is skipped/xfailed for all backends other
-        than the default NumPy backend and the exceptions.
-        Mutually exclusive with ``backend``. Implies ``cpu_only`` and ``eager_only``.
-    reason : str, optional
-        A reason for the skip/xfail. If omitted, a default reason is used.
-    exceptions : list[str], optional
-        A list of exceptions for use with ``cpu_only``, ``eager_only``, or ``np_only``.
-        This should be provided when delegation is implemented for some,
-        but not all, non-CPU/non-NumPy backends.
-    """
-    if f"{skip_or_xfail}_xp_backends" not in request.keywords:
-        return
-
-    skip_xfail_reasons = _backends_kwargs_from_request(
-        request, skip_or_xfail=skip_or_xfail
-    )
-    xp = request.param
-    if xp.__name__ in skip_xfail_reasons:
-        reason = skip_xfail_reasons[xp.__name__]
-        assert reason  # Default reason applied above
-        skip_or_xfail = getattr(pytest, skip_or_xfail)
-        skip_or_xfail(reason=reason)
+    return backends, kwargs
 
 
 @pytest.fixture
-def devices(xp):
-    """Fixture that returns a list of all devices for the backend, plus None.
-    Used to test input->output device propagation.
+def skip_xp_backends(xp, request):
+    """skip_xp_backends(backend=None, reason=None, np_only=False, cpu_only=False, exceptions=None)
 
-    Usage
-    -----
-    from scipy._lib._array_api import xp_device
+    Skip a decorated test for the provided backend, or skip a category of backends.
 
-    def test_device(xp, devices):
-        for d in devices:
-            x = xp.asarray(..., device=d)
-            y = f(x)
-            assert xp_device(y) == xp_device(x)
+    See ``skip_or_xfail_backends`` docstring for details. Note that, contrary to
+    ``skip_or_xfail_backends``, the ``backend`` and ``reason`` arguments are optional
+    single strings: this function only skips a single backend at a time.
+    To skip multiple backends, provide multiple decorators.
+    """  # noqa: E501
+    if "skip_xp_backends" not in request.keywords:
+        return
+
+    backends, kwargs = _backends_kwargs_from_request(request, skip_or_xfail='skip')
+    skip_or_xfail_xp_backends(xp, backends, kwargs, skip_or_xfail='skip')
+
+
+@pytest.fixture
+def xfail_xp_backends(xp, request):
+    """xfail_xp_backends(backend=None, reason=None, np_only=False, cpu_only=False, exceptions=None)
+
+    xfail a decorated test for the provided backend, or xfail a category of backends.
+
+    See ``skip_or_xfail_backends`` docstring for details. Note that, contrary to
+    ``skip_or_xfail_backends``, the ``backend`` and ``reason`` arguments are optional
+    single strings: this function only xfails a single backend at a time.
+    To xfail multiple backends, provide multiple decorators.
+    """  # noqa: E501
+    if "xfail_xp_backends" not in request.keywords:
+        return
+    backends, kwargs = _backends_kwargs_from_request(request, skip_or_xfail='xfail')
+    skip_or_xfail_xp_backends(xp, backends, kwargs, skip_or_xfail='xfail')
+
+
+def skip_or_xfail_xp_backends(xp, backends, kwargs, skip_or_xfail='skip'):
     """
-    if is_cupy(xp):
-        # CuPy does not support devices other than the current one
-        # data-apis/array-api-compat#293
-        pytest.xfail(reason="data-apis/array-api-compat#293")
-    if is_dask(xp):
-        # Skip dummy DASK_DEVICE from array-api-compat, which does not propagate
-        return ["cpu", None]
-    if is_jax(xp):
-        # The .device attribute is not accessible inside jax.jit; the consequence
-        # (downstream of array-api-compat hacks) is that a non-default device in
-        # input is not guaranteed to propagate to the output even if the scipy code
-        # states `device=xp_device(arg)`` in all array creation functions.
-        # While this issue is specific to jax.jit, it would be unnecessarily
-        # verbose to skip the test for each jit-capable function and run it for
-        # those that only support eager mode.
-        pytest.xfail(reason="jax-ml/jax#26000")
+    Skip based on the ``skip_xp_backends`` or ``xfail_xp_backends`` marker.
 
-    return xp.__array_namespace_info__().devices() + [None]
+    See the "Support for the array API standard" docs page for usage examples.
+
+    Parameters
+    ----------
+    backends : tuple
+        Backends to skip/xfail, e.g. ``("array_api_strict", "torch")``.
+        These are overriden when ``np_only`` is ``True``, and are not
+        necessary to provide for non-CPU backends when ``cpu_only`` is ``True``.
+        For a custom reason to apply, you should pass a dict ``{'reason': '...'}``
+        to a keyword matching the name of the backend.
+    reason : str, optional
+        A reason for the skip/xfail in the case of ``np_only=True``.
+        If unprovided, a default reason is used. Note that it is not possible
+        to specify a custom reason with ``cpu_only``.
+    np_only : bool, optional
+        When ``True``, the test is skipped/xfailed for all backends other
+        than the default NumPy backend. There is no need to provide
+        any ``backends`` in this case. To specify a reason, pass a
+        value to ``reason``. Default: ``False``.
+    cpu_only : bool, optional
+        When ``True``, the test is skipped/xfailed on non-CPU devices.
+        There is no need to provide any ``backends`` in this case,
+        but any ``backends`` will also be skipped on the CPU.
+        Default: ``False``.
+    exceptions : list, optional
+        A list of exceptions for use with ``cpu_only`` or ``np_only``.
+        This should be provided when delegation is implemented for some,
+        but not all, non-CPU/non-NumPy backends.
+    skip_or_xfail : str
+        ``'skip'`` to skip, ``'xfail'`` to xfail.
+    """
+    skip_or_xfail = getattr(pytest, skip_or_xfail)
+    np_only = kwargs.get("np_only", False)
+    cpu_only = kwargs.get("cpu_only", False)
+    exceptions = kwargs.get("exceptions", [])
+
+    if reasons := kwargs.get("reasons"):
+        raise ValueError(f"provide a single `reason=` kwarg; got {reasons=} instead")
+
+    # input validation
+    if np_only and cpu_only:
+        # np_only is a stricter subset of cpu_only
+        cpu_only = False
+    if exceptions and not (cpu_only or np_only):
+        raise ValueError("`exceptions` is only valid alongside `cpu_only` or `np_only`")
+
+    if np_only:
+        reason = kwargs.get("reason", "do not run with non-NumPy backends.")
+        if not isinstance(reason, str) and len(reason) > 1:
+            raise ValueError("please provide a singleton `reason` "
+                             "when using `np_only`")
+        if xp.__name__ != 'numpy' and xp.__name__ not in exceptions:
+            skip_or_xfail(reason=reason)
+        return
+    if cpu_only:
+        reason = ("no array-agnostic implementation or delegation available "
+                  "for this backend and device")
+        exceptions = [] if exceptions is None else exceptions
+        if SCIPY_ARRAY_API and SCIPY_DEVICE != 'cpu':
+            if xp.__name__ == 'cupy' and 'cupy' not in exceptions:
+                skip_or_xfail(reason=reason)
+            elif xp.__name__ == 'torch' and 'torch' not in exceptions:
+                if 'cpu' not in xp.empty(0).device.type:
+                    skip_or_xfail(reason=reason)
+            elif xp.__name__ == 'jax.numpy' and 'jax.numpy' not in exceptions:
+                for d in xp.empty(0).devices():
+                    if 'cpu' not in d.device_kind:
+                        skip_or_xfail(reason=reason)
+
+    if backends is not None:
+        for i, backend in enumerate(backends):
+            if xp.__name__ == backend:
+                reason = kwargs[backend].get('reason')
+                if not reason:
+                    reason = f"do not run with array API backend: {backend}"
+
+                skip_or_xfail(reason=reason)
 
 
 # Following the approach of NumPy's conftest.py...
@@ -636,25 +521,12 @@ if HAVE_SCPDT:
         # equivalent to "pytest --ignore=path/to/file"
         "scipy/special/_precompute",
         "scipy/interpolate/_interpnd_info.py",
-        "scipy/interpolate/_rbfinterp_pythran.py",
-        "scipy/_build_utils/tempita.py",
         "scipy/_lib/array_api_compat",
         "scipy/_lib/highs",
         "scipy/_lib/unuran",
         "scipy/_lib/_gcutils.py",
         "scipy/_lib/doccer.py",
         "scipy/_lib/_uarray",
-        "scipy/linalg/_cython_signature_generator.py",
-        "scipy/linalg/_generate_pyx.py",
-        "scipy/linalg/_linalg_pythran.py",
-        "scipy/linalg/_matfuncs_sqrtm_triu.py",
-        "scipy/ndimage/utils/generate_label_testvectors.py",
-        "scipy/optimize/_group_columns.py",
-        "scipy/optimize/_max_len_seq_inner.py",
-        "scipy/signal/_max_len_seq_inner.py",
-        "scipy/sparse/_generate_sparsetools.py",
-        "scipy/special/_generate_pyx.py",
-        "scipy/stats/_stats_pythran.py",
     ]
 
     dt_config.pytest_extra_xfail = {
@@ -677,7 +549,4 @@ if HAVE_SCPDT:
     }
 
     dt_config.strict_check = True
-
-    # ignore Matplotlib's `ax.text`:
-    dt_config.stopwords.add('.text(')
 ############################################################################

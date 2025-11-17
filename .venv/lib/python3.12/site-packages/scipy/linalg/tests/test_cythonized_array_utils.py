@@ -19,6 +19,8 @@ def test_bandwidth_dtypes():
 def test_bandwidth_non2d_input():
     A = np.array([1, 2, 3])
     raises(ValueError, bandwidth, A)
+    A = np.array([[[1, 2, 3], [4, 5, 6]]])
+    raises(ValueError, bandwidth, A)
 
 
 @pytest.mark.parametrize('T', [x for x in np.typecodes['All']

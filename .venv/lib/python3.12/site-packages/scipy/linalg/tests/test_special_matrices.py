@@ -172,6 +172,9 @@ class TestBlockDiag:
         a = block_diag([2, 3], 4)
         assert_array_equal(a, [[2, 3, 0], [0, 0, 4]])
 
+    def test_bad_arg(self):
+        assert_raises(ValueError, block_diag, [[[1]]])
+
     def test_no_args(self):
         a = block_diag()
         assert_equal(a.ndim, 2)
@@ -501,7 +504,8 @@ def test_invpascal():
         # precision when n is greater than 18.  Instead we'll cast both to
         # object arrays, and then multiply.
         e = ip.astype(object).dot(p.astype(object))
-        assert_array_equal(e, eye(n), err_msg=f"n={n}  kind={kind!r} exact={exact!r}")
+        assert_array_equal(e, eye(n), err_msg="n=%d  kind=%r exact=%r" %
+                                              (n, kind, exact))
 
     kinds = ['symmetric', 'lower', 'upper']
 

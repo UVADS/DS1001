@@ -4,23 +4,18 @@ import operator
 import warnings
 
 import numpy as np
-from numpy import (atleast_1d, asarray,
-                   pi, absolute, sqrt, tan, log10,
+from numpy import (atleast_1d, poly, polyval, roots, real, asarray,
+                   resize, pi, absolute, sqrt, tan, log10,
                    arcsinh, sin, exp, cosh, arccosh, ceil, conjugate,
-                   sinh, concatenate, prod, array)
+                   zeros, sinh, append, concatenate, prod, ones, full, array,
+                   mintypecode)
 from numpy.polynomial.polynomial import polyval as npp_polyval
+from numpy.polynomial.polynomial import polyvalfromroots
 
 from scipy import special, optimize, fft as sp_fft
 from scipy.special import comb
 from scipy._lib._util import float_factorial
 from scipy.signal._arraytools import _validate_fs
-from scipy.signal import _polyutils as _pu
-
-import scipy._lib.array_api_extra as xpx
-from scipy._lib._array_api import (
-    array_namespace, xp_promote, xp_size, xp_default_dtype, is_jax, xp_float_to_complex,
-)
-from scipy._lib.array_api_compat import numpy as np_compat
 
 
 __all__ = ['findfreqs', 'freqs', 'freqz', 'tf2zpk', 'zpk2tf', 'normalize',
@@ -60,42 +55,6 @@ def _is_int_type(x):
         return True
 
 
-def _real_dtype_for_complex(dtyp, *, xp):
-    if xp.isdtype(dtyp, 'real floating'):
-        return dtyp
-    if dtyp == xp.complex64:
-        return xp.float32
-    elif dtyp == xp.complex128:
-        return xp.float64
-    else:
-        raise ValueError(f"Unknown dtype {dtyp}.")
-
-
-# https://github.com/numpy/numpy/blob/v2.2.0/numpy/_core/function_base.py#L195-L302
-def _logspace(start, stop, num=50, endpoint=True, base=10.0, dtype=None, *, xp):
-    if not isinstance(base, float | int) and xp.asarray(base).ndim > 0:
-        # If base is non-scalar, broadcast it with the others, since it
-        # may influence how axis is interpreted.
-        start, stop, base = map(xp.asarray, (start, stop, base))
-        ndmax = xp.broadcast_arrays(start, stop, base).ndim
-        start, stop, base = (
-            xpx.atleast_nd(a, ndim=ndmax)
-            for a in (start, stop, base)
-        )
-        base = xp.expand_dims(base)
-    try:
-        result_dt = xp.result_type(start, stop, base)
-    except ValueError:
-        # all of start, stop and base are python scalars
-        result_dt = xp_default_dtype(xp)
-    y = xp.linspace(start, stop, num=num, endpoint=endpoint, dtype=result_dt)
-
-    yp = xp.pow(base, y)
-    if dtype is None:
-        return yp
-    return xp.astype(yp, dtype, copy=False)
-
-
 def findfreqs(num, den, N, kind='ba'):
     """
     Find array of frequencies for computing the response of an analog filter.
@@ -131,42 +90,27 @@ def findfreqs(num, den, N, kind='ba'):
              3.16227766e-01,   1.00000000e+00,   3.16227766e+00,
              1.00000000e+01,   3.16227766e+01,   1.00000000e+02])
     """
-    xp = array_namespace(num, den)
-    num, den = map(xp.asarray, (num, den))
-
     if kind == 'ba':
-        ep = xpx.atleast_nd(_pu.polyroots(den, xp=xp), ndim=1, xp=xp)
-        tz = xpx.atleast_nd(_pu.polyroots(num, xp=xp), ndim=1, xp=xp)
+        ep = atleast_1d(roots(den)) + 0j
+        tz = atleast_1d(roots(num)) + 0j
     elif kind == 'zp':
-        ep = xpx.atleast_nd(den, ndim=1, xp=xp)
-        tz = xpx.atleast_nd(num, ndim=1, xp=xp)
+        ep = atleast_1d(den) + 0j
+        tz = atleast_1d(num) + 0j
     else:
         raise ValueError("input must be one of {'ba', 'zp'}")
 
-    ep = xp_float_to_complex(ep, xp=xp)
-    tz = xp_float_to_complex(tz, xp=xp)
+    if len(ep) == 0:
+        ep = atleast_1d(-1000) + 0j
 
-    if ep.shape[0] == 0:
-        ep = xp.asarray([-1000], dtype=ep.dtype)
+    ez = np.r_[ep[ep.imag >= 0], tz[(np.abs(tz) < 1e5) & (tz.imag >= 0)]]
 
-    ez = xp.concat((
-        ep[xp.imag(ep) >= 0],
-        tz[(xp.abs(tz) < 1e5) & (xp.imag(tz) >= 0)]
-    ))
+    integ = np.abs(ez) < 1e-10
+    hfreq = np.round(np.log10(np.max(3 * np.abs(ez.real + integ) +
+                                     1.5 * ez.imag)) + 0.5)
+    lfreq = np.round(np.log10(0.1 * np.min(np.abs((ez + integ).real) +
+                                           2 * ez.imag)) - 0.5)
 
-    integ = xp.astype(xp.abs(ez) < 1e-10, ez.dtype) # XXX True->1, False->0
-    hfreq = xp.round(
-        xp.log10(xp.max(3*xp.abs(xp.real(ez) + integ) + 1.5*xp.imag(ez))) + 0.5
-    )
-
-    # the fudge factor is for backwards compatibility: round(-1.5) can be -1 or -2
-    # depending on the the floating-point jitter in -1.5
-    fudge = 1e-14 if is_jax(xp) else 0
-    lfreq = xp.round(
-        xp.log10(0.1*xp.min(xp.abs(xp.real(ez + integ)) + 2*xp.imag(ez))) - 0.5 - fudge
-    )
-
-    w = _logspace(lfreq, hfreq, N, xp=xp)
+    w = np.logspace(lfreq, hfreq, N)
     return w
 
 
@@ -231,18 +175,16 @@ def freqs(b, a, worN=200, plot=None):
     >>> plt.show()
 
     """
-    xp = array_namespace(b, a, worN)
-
     if worN is None:
         # For backwards compatibility
         w = findfreqs(b, a, 200)
     elif _is_int_type(worN):
         w = findfreqs(b, a, worN)
     else:
-        w = xpx.atleast_nd(xp.asarray(worN), ndim=1, xp=xp)
+        w = atleast_1d(worN)
 
     s = 1j * w
-    h = _pu.polyval(b, s, xp=xp) / _pu.polyval(a, s, xp=xp)
+    h = polyval(b, s) / polyval(a, s)
     if plot is not None:
         plot(w, h)
 
@@ -309,13 +251,8 @@ def freqs_zpk(z, p, k, worN=200):
     >>> plt.show()
 
     """
-    xp = array_namespace(z, p)
-    z, p = map(xp.asarray, (z, p))
-
-    # NB: k is documented to be a scalar; for backwards compat we keep allowing it
-    # to be a size-1 array, but it does not influence the namespace calculation.
-    k = xp.asarray(k, dtype=xp_default_dtype(xp))
-    if xp_size(k) > 1:
+    k = np.asarray(k)
+    if k.size > 1:
         raise ValueError('k must be a single scalar gain')
 
     if worN is None:
@@ -326,10 +263,10 @@ def freqs_zpk(z, p, k, worN=200):
     else:
         w = worN
 
-    w = xpx.atleast_nd(xp.asarray(w), ndim=1, xp=xp)
+    w = atleast_1d(w)
     s = 1j * w
-    num = _pu.npp_polyvalfromroots(s, z, xp=xp)
-    den = _pu.npp_polyvalfromroots(s, p, xp=xp)
+    num = polyvalfromroots(s, z)
+    den = polyvalfromroots(s, p)
     h = k * num/den
     return w, h
 
@@ -493,16 +430,8 @@ def freqz(b, a=1, worN=512, whole=False, plot=None, fs=2*pi,
     (2, 1024)
 
     """
-    xp = array_namespace(b, a)
-
-    b, a = map(xp.asarray, (b, a))
-    if xp.isdtype(a.dtype, 'integral'):
-        a = xp.astype(a, xp_default_dtype(xp))
-    res_dtype = xp.result_type(b, a)
-    real_dtype = _real_dtype_for_complex(res_dtype, xp=xp)
-
-    b = xpx.atleast_nd(b, ndim=1, xp=xp)
-    a = xpx.atleast_nd(a, ndim=1, xp=xp)
+    b = atleast_1d(b)
+    a = atleast_1d(a)
 
     fs = _validate_fs(fs, allow_none=False)
 
@@ -520,51 +449,40 @@ def freqz(b, a=1, worN=512, whole=False, plot=None, fs=2*pi,
         lastpoint = 2 * pi if whole else pi
         # if include_nyquist is true and whole is false, w should
         # include end point
-        w = xp.linspace(0, lastpoint, N,
-                        endpoint=include_nyquist and not whole, dtype=real_dtype)
+        w = np.linspace(0, lastpoint, N,
+                        endpoint=include_nyquist and not whole)
         n_fft = N if whole else 2 * (N - 1) if include_nyquist else 2 * N
-        if (xp_size(a) == 1 and (b.ndim == 1 or (b.shape[-1] == 1))
+        if (a.size == 1 and (b.ndim == 1 or (b.shape[-1] == 1))
                 and n_fft >= b.shape[0]
                 and n_fft > 0):  # TODO: review threshold acc. to benchmark?
- 
-            if (xp.isdtype(b.dtype, "real floating") and
-                xp.isdtype(a.dtype, "real floating")
-            ):
+            if np.isrealobj(b) and np.isrealobj(a):
                 fft_func = sp_fft.rfft
             else:
                 fft_func = sp_fft.fft
-
-            h = fft_func(b, n=n_fft, axis=0)
-            h = h[:min(N, h.shape[0]), ...]
+            h = fft_func(b, n=n_fft, axis=0)[:N]
             h /= a
-
             if fft_func is sp_fft.rfft and whole:
                 # exclude DC and maybe Nyquist (no need to use axis_reverse
                 # here because we can build reversal with the truncation)
-                stop = None if n_fft % 2 == 1 else -1
-                h_flipped = xp.flip(h[1:stop, ...], axis=0)
-                h = xp.concat((h, xp.conj(h_flipped)))
+                stop = -1 if n_fft % 2 == 1 else -2
+                h_flip = slice(stop, 0, -1)
+                h = np.concatenate((h, h[h_flip].conj()))
             if b.ndim > 1:
                 # Last axis of h has length 1, so drop it.
                 h = h[..., 0]
                 # Move the first axis of h to the end.
-                h = xp.moveaxis(h, 0, -1)
+                h = np.moveaxis(h, 0, -1)
     else:
-        if isinstance(worN, complex):
-            # backwards compat
-            worN = worN.real
-        w = xpx.atleast_nd(xp.asarray(worN, dtype=res_dtype), ndim=1, xp=xp)
-        if xp.isdtype(w.dtype, 'integral'):
-            w = xp.astype(w, xp_default_dtype(xp))
+        w = atleast_1d(worN)
         del worN
-        w = 2 * pi * w / fs
+        w = 2*pi*w/fs
 
     if h is None:  # still need to compute using freqs w
-        zm1 = xp.exp(-1j * w)
-        h = (_pu.npp_polyval(zm1, b, tensor=False, xp=xp) /
-             _pu.npp_polyval(zm1, a, tensor=False, xp=xp))
+        zm1 = exp(-1j * w)
+        h = (npp_polyval(zm1, b, tensor=False) /
+             npp_polyval(zm1, a, tensor=False))
 
-    w = w * (fs / (2 * pi))
+    w = w*(fs/(2*pi))
 
     if plot is not None:
         plot(w, h)
@@ -655,13 +573,7 @@ def freqz_zpk(z, p, k, worN=512, whole=False, fs=2*pi):
     >>> plt.show()
 
     """
-    xp = array_namespace(z, p)
-    z, p = map(xp.asarray, (z, p))
-
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
-    res_dtype = xp.result_type(z, p)
-    res_dtype = xp.float64 if res_dtype in (xp.float64, xp.complex128) else xp.float32
+    z, p = map(atleast_1d, (z, p))
 
     fs = _validate_fs(fs, allow_none=False)
 
@@ -672,19 +584,15 @@ def freqz_zpk(z, p, k, worN=512, whole=False, fs=2*pi):
 
     if worN is None:
         # For backwards compatibility
-        w = xp.linspace(0, lastpoint, 512, endpoint=False, dtype=res_dtype)
+        w = np.linspace(0, lastpoint, 512, endpoint=False)
     elif _is_int_type(worN):
-        w = xp.linspace(0, lastpoint, worN, endpoint=False, dtype=res_dtype)
+        w = np.linspace(0, lastpoint, worN, endpoint=False)
     else:
-        w = xp.asarray(worN)
-        if xp.isdtype(w.dtype, 'integral'):
-            w = xp.astype(w, xp_default_dtype(xp))
-        w = xpx.atleast_nd(w, ndim=1, xp=xp)
-        w = 2 * pi * w / fs
+        w = atleast_1d(worN)
+        w = 2*pi*w/fs
 
-    zm1 = xp.exp(1j * w)
-    func = _pu.npp_polyvalfromroots
-    h = xp.asarray(k, dtype=res_dtype) * func(zm1, z, xp=xp) / func(zm1, p, xp=xp)
+    zm1 = exp(1j * w)
+    h = k * polyvalfromroots(zm1, z) / polyvalfromroots(zm1, p)
 
     w = w*(fs/(2*pi))
 
@@ -817,19 +725,15 @@ def group_delay(system, w=512, whole=False, fs=2*pi):
     return w, gd
 
 
-def _validate_sos(sos, xp=None):
+def _validate_sos(sos):
     """Helper to validate a SOS input"""
-    if xp is None:
-        xp = np    # backcompat, cf sosfilt, sosfiltfilt
-
-    sos = xp.asarray(sos)
-    sos = xpx.atleast_nd(sos, ndim=2, xp=xp)
+    sos = np.atleast_2d(sos)
     if sos.ndim != 2:
         raise ValueError('sos array must be 2D')
     n_sections, m = sos.shape
     if m != 6:
         raise ValueError('sos array must be shape (n_sections, 6)')
-    if not xp.all(sos[:, 3] == 1):
+    if not (sos[:, 3] == 1).all():
         raise ValueError('sos[:, 3] should be all ones')
     return sos, n_sections
 
@@ -883,14 +787,12 @@ def freqz_sos(sos, worN=512, whole=False, fs=2*pi):
 
     See Also
     --------
-    freqz, sosfilt, sosfreqz
+    freqz, sosfilt
 
     Notes
     -----
-    This function used to be called ``sosfreqz`` in older versions (≥ 0.19.0)
-    
-    .. versionadded:: 1.15.0
-        
+    .. versionadded:: 0.19.0
+
     Examples
     --------
     Design a 15th-order bandpass filter in SOS format.
@@ -948,16 +850,13 @@ def freqz_sos(sos, worN=512, whole=False, fs=2*pi):
     >>> plt.show()
 
     """
-    xp = array_namespace(sos)
-
     fs = _validate_fs(fs, allow_none=False)
 
-    sos, n_sections = _validate_sos(sos, xp)
+    sos, n_sections = _validate_sos(sos)
     if n_sections == 0:
         raise ValueError('Cannot compute frequencies with no sections')
     h = 1.
-    for j in range(sos.shape[0]):
-        row = sos[j, :]
+    for row in sos:
         w, rowh = freqz(row[:3], row[3:], worN=worN, whole=whole, fs=fs)
         h *= rowh
     return w, h
@@ -965,14 +864,11 @@ def freqz_sos(sos, worN=512, whole=False, fs=2*pi):
 
 def sosfreqz(*args, **kwargs):
     """
-    Compute the frequency response of a digital filter in SOS format (legacy).
+    Compute the frequency response of a digital filter in SOS format.
 
-   .. legacy:: function
-        
-        This function is an alias, provided for backward compatibility. 
-        New code should use the function :func:`scipy.signal.freqz_sos`.
-        This function became obsolete from version 1.15.0.
-        
+    .. warning:: This function is an alias, provided for backward
+                 compatibility. New code should use the function
+                 :func:`scipy.signal.freqz_sos`.
     """
     return freqz_sos(*args, **kwargs)
 
@@ -1226,15 +1122,13 @@ def tf2zpk(b, a):
         array([ -2.5+2.59807621j ,  -2.5-2.59807621j]),
         3.0)
     """
-    xp = array_namespace(b, a)
     b, a = normalize(b, a)
-
-    a, b = xp_promote(a, b, xp=xp, force_floating=True)
-
+    b = (b + 0.0) / a[0]
+    a = (a + 0.0) / a[0]
     k = b[0]
-    b = b / b[0]
-    z = _pu.polyroots(b, xp=xp)
-    p = _pu.polyroots(a, xp=xp)
+    b /= b[0]
+    z = roots(b)
+    p = roots(a)
     return z, p, k
 
 
@@ -1276,26 +1170,38 @@ def zpk2tf(z, p, k):
     >>> zpk2tf(z, p, k)
     (   array([  5., -40.,  60.]), array([ 1., -9.,  8.]))
     """
-    xp = array_namespace(z, p)
-    z, p, k = map(xp.asarray, (z, p, k))
-
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    k = xpx.atleast_nd(k, ndim=1, xp=xp)
-    if xp.isdtype(k.dtype, 'integral'):
-        k = xp.astype(k, xp_default_dtype(xp))
-
-    if z.ndim > 1:
-        temp = _pu.poly(z[0], xp=xp)
-        b = xp.empty((z.shape[0], z.shape[1] + 1), dtype=temp.dtype)
-        if k.shape[0] == 1:
+    z = atleast_1d(z)
+    k = atleast_1d(k)
+    if len(z.shape) > 1:
+        temp = poly(z[0])
+        b = np.empty((z.shape[0], z.shape[1] + 1), temp.dtype.char)
+        if len(k) == 1:
             k = [k[0]] * z.shape[0]
         for i in range(z.shape[0]):
-            b[i] = k[i] * _pu.poly(z[i], xp=xp)
+            b[i] = k[i] * poly(z[i])
     else:
-        b = k * _pu.poly(z, xp=xp)
+        b = k * poly(z)
+    a = atleast_1d(poly(p))
 
-    a = _pu.poly(p, xp=xp)
-    a = xpx.atleast_nd(xp.asarray(a), ndim=1, xp=xp)
+    # Use real output if possible. Copied from np.poly, since
+    # we can't depend on a specific version of numpy.
+    if issubclass(b.dtype.type, np.complexfloating):
+        # if complex roots are all complex conjugates, the roots are real.
+        roots = np.asarray(z, complex)
+        pos_roots = np.compress(roots.imag > 0, roots)
+        neg_roots = np.conjugate(np.compress(roots.imag < 0, roots))
+        if len(pos_roots) == len(neg_roots):
+            if np.all(np.sort_complex(neg_roots) == np.sort_complex(pos_roots)):
+                b = b.real.copy()
+
+    if issubclass(a.dtype.type, np.complexfloating):
+        # if complex roots are all complex conjugates, the roots are real.
+        roots = np.asarray(p, complex)
+        pos_roots = np.compress(roots.imag > 0, roots)
+        neg_roots = np.conjugate(np.compress(roots.imag < 0, roots))
+        if len(pos_roots) == len(neg_roots):
+            if np.all(np.sort_complex(neg_roots) == np.sort_complex(pos_roots)):
+                a = a.real.copy()
 
     return b, a
 
@@ -1391,20 +1297,17 @@ def sos2tf(sos):
     (   array([0.91256522, 0.91256522, 0.        ]),
         array([1.        , 0.82513043, 0.        ]))
     """
-    xp = array_namespace(sos)
-    sos = xp.asarray(sos)
-
+    sos = np.asarray(sos)
     result_type = sos.dtype
-    if xp.isdtype(result_type, 'integral'):
-        result_type = xp_default_dtype(xp)
+    if result_type.kind in 'bui':
+        result_type = np.float64
 
-    b = xp.asarray([1], dtype=result_type)
-    a = xp.asarray([1], dtype=result_type)
-
+    b = np.array([1], dtype=result_type)
+    a = np.array([1], dtype=result_type)
     n_sections = sos.shape[0]
     for section in range(n_sections):
-        b = _pu.polymul(b, sos[section, :3], xp=xp)
-        a = _pu.polymul(a, sos[section, 3:], xp=xp)
+        b = np.polymul(b, sos[section, :3])
+        a = np.polymul(a, sos[section, 3:])
     return b, a
 
 
@@ -1435,17 +1338,15 @@ def sos2zpk(sos):
 
     .. versionadded:: 0.16.0
     """
-    xp = array_namespace(sos)
-    sos = xp.asarray(sos)
-
+    sos = np.asarray(sos)
     n_sections = sos.shape[0]
-    z = xp.zeros(n_sections*2, dtype=xp.complex128)
-    p = xp.zeros(n_sections*2, dtype=xp.complex128)
+    z = np.zeros(n_sections*2, np.complex128)
+    p = np.zeros(n_sections*2, np.complex128)
     k = 1.
     for section in range(n_sections):
         zpk = tf2zpk(sos[section, :3], sos[section, 3:])
-        z = xpx.at(z, slice(2*section, 2*section + zpk[0].shape[0])).set(zpk[0])
-        p = xpx.at(p, slice(2*section, 2*section + zpk[1].shape[0])).set(zpk[1])
+        z[2*section:2*section+len(zpk[0])] = zpk[0]
+        p[2*section:2*section+len(zpk[1])] = zpk[1]
         k *= zpk[2]
     return z, p, k
 
@@ -1660,12 +1561,6 @@ def zpk2sos(z, p, k, pairing=None, *, analog=False):
     # 4. Further optimizations of the section ordering / pole-zero pairing.
     # See the wiki for other potential issues.
 
-    xp = array_namespace(z, p)
-
-    # convert to numpy, convert back on exit   XXX
-    z, p = map(np.asarray, (z, p))
-    k = np.asarray(k)
-
     if pairing is None:
         pairing = 'minimal' if analog else 'nearest'
 
@@ -1679,9 +1574,9 @@ def zpk2sos(z, p, k, pairing=None, *, analog=False):
 
     if len(z) == len(p) == 0:
         if not analog:
-            return xp.asarray(np.asarray([[k, 0., 0., 1., 0., 0.]]))
+            return np.array([[k, 0., 0., 1., 0., 0.]])
         else:
-            return xp.asarray(np.asarray([[0., 0., k, 0., 0., 1.]]))
+            return np.array([[0., 0., k, 0., 0., 1.]])
 
     if pairing != 'minimal':
         # ensure we have the same number of poles and zeros, and make copies
@@ -1792,10 +1687,10 @@ def zpk2sos(z, p, k, pairing=None, *, analog=False):
 
     # put gain in first sos
     sos[0][:3] *= k
-    return xp.asarray(sos)
+    return sos
 
 
-def _align_nums(nums, xp):
+def _align_nums(nums):
     """Aligns the shapes of multiple numerators.
 
     Given an array of numerator coefficient arrays [[a_1, a_2,...,
@@ -1820,19 +1715,19 @@ def _align_nums(nums, xp):
         # The statement can throw a ValueError if one
         # of the numerators is a single digit and another
         # is array-like e.g. if nums = [5, [1, 2, 3]]
-        nums = xp.asarray(nums)
+        nums = asarray(nums)
 
-        if not xp.isdtype(nums.dtype, "numeric"):
+        if not np.issubdtype(nums.dtype, np.number):
             raise ValueError("dtype of numerator is non-numeric")
 
         return nums
 
     except ValueError:
-        nums = [xpx.atleast_nd(xp.asarray(num), ndim=1) for num in nums]
-        max_width = max(xp_size(num) for num in nums)
+        nums = [np.atleast_1d(num) for num in nums]
+        max_width = max(num.size for num in nums)
 
         # pre-allocate
-        aligned_nums = xp.zeros((len(nums), max_width))
+        aligned_nums = np.zeros((len(nums), max_width))
 
         # Create numerators with padded zeros
         for index, num in enumerate(nums):
@@ -1897,37 +1792,29 @@ def normalize(b, a):
     Badly conditioned filter coefficients (numerator): the results may be meaningless
 
     """
-    try:
-        xp = array_namespace(b, a)
-    except TypeError:
-        # object arrays, test_ltisys.py::TestSS2TF::test_simo_round_trip
-        xp = np_compat
+    num, den = b, a
 
-    den = xp.asarray(a)
-    den = xpx.atleast_nd(den, ndim=1, xp=xp)
-
-    num = xp.asarray(b)
-    num = xpx.atleast_nd(_align_nums(num, xp), ndim=2, xp=xp)
+    den = np.atleast_1d(den)
+    num = np.atleast_2d(_align_nums(num))
 
     if den.ndim != 1:
         raise ValueError("Denominator polynomial must be rank-1 array.")
     if num.ndim > 2:
         raise ValueError("Numerator polynomial must be rank-1 or"
                          " rank-2 array.")
-    if xp.all(den == 0):
+    if np.all(den == 0):
         raise ValueError("Denominator must have at least on nonzero element.")
 
     # Trim leading zeros in denominator, leave at least one.
-    den = _pu._trim_zeros(den, 'f')
+    den = np.trim_zeros(den, 'f')
 
     # Normalize transfer function
     num, den = num / den[0], den / den[0]
 
     # Count numerator columns that are all zero
     leading_zeros = 0
-    for j in range(num.shape[-1]):
-        col = num[:, j]
-        if xp.all(xp.abs(col) <= 1e-14):
+    for col in num.T:
+        if np.allclose(col, 0, atol=1e-14):
             leading_zeros += 1
         else:
             break
@@ -2005,47 +1892,20 @@ def lp2lp(b, a, wo=1.0):
     >>> plt.legend()
 
     """
-    xp = array_namespace(a, b)
-    a, b = map(xp.asarray, (a, b))
-    a, b = xp_promote(a, b, force_floating=True, xp=xp)
-    a = xpx.atleast_nd(a, ndim=1, xp=xp)
-    b = xpx.atleast_nd(b, ndim=1, xp=xp)
-
+    a, b = map(atleast_1d, (a, b))
     try:
         wo = float(wo)
     except TypeError:
         wo = float(wo[0])
-    d = a.shape[0]
-    n = b.shape[0]
+    d = len(a)
+    n = len(b)
     M = max((d, n))
-    pwo = wo ** xp.arange(M - 1, -1, -1, dtype=xp.float64)
+    pwo = pow(wo, np.arange(M - 1, -1, -1))
     start1 = max((n - d, 0))
     start2 = max((d - n, 0))
     b = b * pwo[start1] / pwo[start2:]
     a = a * pwo[start1] / pwo[start1:]
     return normalize(b, a)
-
-
-def _resize(a, new_shape, xp):
-    # https://github.com/numpy/numpy/blob/v2.2.4/numpy/_core/fromnumeric.py#L1535
-    a = xp.reshape(a, (-1,))
-
-    new_size = 1
-    for dim_length in new_shape:
-        new_size *= dim_length
-        if dim_length < 0:
-            raise ValueError(
-                'all elements of `new_shape` must be non-negative'
-            )
-
-    if xp_size(a) == 0 or new_size == 0:
-        # First case must zero fill. The second would have repeats == 0.
-        return xp.zeros_like(a, shape=new_shape)
-
-    repeats = -(-new_size // xp_size(a))  # ceil division
-    a = xp.concat((a,) * repeats)[:new_size]
-
-    return xp.reshape(a, new_shape)
 
 
 def lp2hp(b, a, wo=1.0):
@@ -2106,33 +1966,27 @@ def lp2hp(b, a, wo=1.0):
     >>> plt.legend()
 
     """
-    xp = array_namespace(a, b)
-
-    a, b = map(xp.asarray, (a, b))
-    a, b = xp_promote(a, b, force_floating=True, xp=xp)
-    a = xpx.atleast_nd(a, ndim=1, xp=xp)
-    b = xpx.atleast_nd(b, ndim=1, xp=xp)
-
+    a, b = map(atleast_1d, (a, b))
     try:
         wo = float(wo)
     except TypeError:
         wo = float(wo[0])
-    d = a.shape[0]
-    n = b.shape[0]
+    d = len(a)
+    n = len(b)
     if wo != 1:
-        pwo = wo ** xp.arange(max((d, n)), dtype=b.dtype)
+        pwo = pow(wo, np.arange(max((d, n))))
     else:
-        pwo = xp.ones(max((d, n)), dtype=b.dtype)
+        pwo = np.ones(max((d, n)), b.dtype.char)
     if d >= n:
-        outa = xp.flip(a) * pwo
-        outb = _resize(b, (d,), xp=xp)
+        outa = a[::-1] * pwo
+        outb = resize(b, (d,))
         outb[n:] = 0.0
-        outb[:n] = xp.flip(b) * pwo[:n]
+        outb[:n] = b[::-1] * pwo[:n]
     else:
-        outb = xp.flip(b) * pwo
-        outa = _resize(a, (n,), xp=xp)
+        outb = b[::-1] * pwo
+        outa = resize(a, (n,))
         outa[d:] = 0.0
-        outa[:d] = xp.flip(a) * pwo[:d]
+        outa[:d] = a[::-1] * pwo[:d]
 
     return normalize(outb, outa)
 
@@ -2197,20 +2051,16 @@ def lp2bp(b, a, wo=1.0, bw=1.0):
     >>> plt.ylabel('Amplitude [dB]')
     >>> plt.legend()
     """
-    xp = array_namespace(a, b)
 
-    a, b = map(xp.asarray, (a, b))
-    a, b = xp_promote(a, b, force_floating=True, xp=xp)
-    a = xpx.atleast_nd(a, ndim=1, xp=xp)
-    b = xpx.atleast_nd(b, ndim=1, xp=xp)
-
-    D = a.shape[0] - 1
-    N = b.shape[0] - 1
+    a, b = map(atleast_1d, (a, b))
+    D = len(a) - 1
+    N = len(b) - 1
+    artype = mintypecode((a, b))
     ma = max([N, D])
     Np = N + ma
     Dp = D + ma
-    bprime = xp.empty(Np + 1, dtype=b.dtype)
-    aprime = xp.empty(Dp + 1, dtype=a.dtype)
+    bprime = np.empty(Np + 1, artype)
+    aprime = np.empty(Dp + 1, artype)
     wosq = wo * wo
     for j in range(Np + 1):
         val = 0.0
@@ -2289,20 +2139,15 @@ def lp2bs(b, a, wo=1.0, bw=1.0):
     >>> plt.ylabel('Amplitude [dB]')
     >>> plt.legend()
     """
-    xp = array_namespace(a, b)
-
-    a, b = map(xp.asarray, (a, b))
-    a, b = xp_promote(a, b, force_floating=True, xp=xp)
-    a = xpx.atleast_nd(a, ndim=1, xp=xp)
-    b = xpx.atleast_nd(b, ndim=1, xp=xp)
-
-    D = a.shape[0] - 1
-    N = b.shape[0] - 1
+    a, b = map(atleast_1d, (a, b))
+    D = len(a) - 1
+    N = len(b) - 1
+    artype = mintypecode((a, b))
     M = max([N, D])
     Np = M + M
     Dp = M + M
-    bprime = xp.empty(Np + 1, dtype=b.dtype)
-    aprime = xp.empty(Dp + 1, dtype=a.dtype)
+    bprime = np.empty(Np + 1, artype)
+    aprime = np.empty(Dp + 1, artype)
     wosq = wo * wo
     for j in range(Np + 1):
         val = 0.0
@@ -2325,141 +2170,88 @@ def lp2bs(b, a, wo=1.0, bw=1.0):
 
 
 def bilinear(b, a, fs=1.0):
-    r"""Calculate a digital IIR filter from an analog transfer function by utilizing
-    the bilinear transform.
+    r"""
+    Return a digital IIR filter from an analog one using a bilinear transform.
+
+    Transform a set of poles and zeros from the analog s-plane to the digital
+    z-plane using Tustin's method, which substitutes ``2*fs*(z-1) / (z+1)`` for
+    ``s``, maintaining the shape of the frequency response.
 
     Parameters
     ----------
     b : array_like
-        Coefficients of the numerator polynomial of the analog transfer function in
-        form of a complex- or real-valued 1d array.
+        Numerator of the analog filter transfer function.
     a : array_like
-        Coefficients of the denominator polynomial of the analog transfer function in
-        form of a complex- or real-valued 1d array.
+        Denominator of the analog filter transfer function.
     fs : float
-        Sample rate, as ordinary frequency (e.g., hertz). No pre-warping is
+        Sample rate, as ordinary frequency (e.g., hertz). No prewarping is
         done in this function.
 
     Returns
     -------
-    beta : ndarray
-        Coefficients of the numerator polynomial of the digital transfer function in
-        form of a complex- or real-valued 1d array.
-    alpha : ndarray
-        Coefficients of the denominator polynomial of the digital transfer function in
-        form of a complex- or real-valued 1d array.
-
-    Notes
-    -----
-    The parameters :math:`b = [b_0, \ldots, b_Q]` and :math:`a = [a_0, \ldots, a_P]`
-    are 1d arrays of length :math:`Q+1` and :math:`P+1`. They define the analog
-    transfer function
-
-    .. math::
-
-        H_a(s) = \frac{b_0 s^Q + b_1 s^{Q-1} + \cdots + b_Q}{
-                       a_0 s^P + a_1 s^{P-1} + \cdots + a_P}\ .
-
-    The bilinear transform [1]_ is applied by substituting
-
-    .. math::
-
-        s = \kappa \frac{z-1}{z+1}\ , \qquad \kappa := 2 f_s\ ,
-
-    into :math:`H_a(s)`, with :math:`f_s`  being the sampling rate.
-    This results in the digital transfer function in the :math:`z`-domain
-
-    .. math::
-
-        H_d(z) = \frac{b_0 \left(\kappa \frac{z-1}{z+1}\right)^Q +
-                       b_1 \left(\kappa \frac{z-1}{z+1}\right)^{Q-1} +
-                       \cdots + b_Q}{
-                       a_0 \left(\kappa \frac{z-1}{z+1}\right)^P +
-                       a_1 \left(\kappa \frac{z-1}{z+1}\right)^{P-1} +
-                       \cdots + a_P}\ .
-
-    This expression can be simplified by multiplying numerator and denominator by
-    :math:`(z+1)^N`, with :math:`N=\max(P, Q)`. This allows :math:`H_d(z)` to be
-    reformulated as
-
-    .. math::
-
-       & & \frac{b_0 \big(\kappa (z-1)\big)^Q     (z+1)^{N-Q} +
-                b_1 \big(\kappa (z-1)\big)^{Q-1} (z+1)^{N-Q+1} +
-                \cdots + b_Q(z+1)^N}{
-                a_0 \big(\kappa (z-1)\big)^P     (z+1)^{N-P} +
-                a_1 \big(\kappa (z-1)\big)^{P-1} (z+1)^{N-P+1} +
-                \cdots + a_P(z+1)^N}\\
-        &=:& \frac{\beta_0 + \beta_1  z^{-1} + \cdots + \beta_N  z^{-N}}{
-                 \alpha_0 + \alpha_1 z^{-1} + \cdots + \alpha_N z^{-N}}\ .
-
-
-    This is the equation implemented to perform the bilinear transform. Note that for
-    large :math:`f_s`, :math:`\kappa^Q` or :math:`\kappa^P` can cause a numeric
-    overflow for sufficiently large :math:`P` or :math:`Q`.
-
-    References
-    ----------
-    .. [1] "Bilinear Transform", Wikipedia,
-           https://en.wikipedia.org/wiki/Bilinear_transform
+    b : ndarray
+        Numerator of the transformed digital filter transfer function.
+    a : ndarray
+        Denominator of the transformed digital filter transfer function.
 
     See Also
     --------
-    lp2lp, lp2hp, lp2bp, lp2bs, bilinear_zpk
+    lp2lp, lp2hp, lp2bp, lp2bs
+    bilinear_zpk
 
     Examples
     --------
-    The following example shows the frequency response of an analog bandpass filter and
-    the corresponding digital filter derived by utilitzing the bilinear transform:
-
     >>> from scipy import signal
     >>> import matplotlib.pyplot as plt
     >>> import numpy as np
-    ...
-    >>> fs = 100  # sampling frequency
-    >>> om_c = 2 * np.pi * np.array([7, 13])  # corner frequencies
-    >>> bb_s, aa_s = signal.butter(4, om_c, btype='bandpass', analog=True, output='ba')
-    >>> bb_z, aa_z = signal.bilinear(bb_s, aa_s, fs)
-    ...
-    >>> w_z, H_z = signal.freqz(bb_z, aa_z)  # frequency response of digitial filter
-    >>> w_s, H_s = signal.freqs(bb_s, aa_s, worN=w_z*fs)  # analog filter response
-    ...
-    >>> f_z, f_s = w_z * fs / (2*np.pi), w_s / (2*np.pi)
-    >>> Hz_dB, Hs_dB = (20*np.log10(np.abs(H_).clip(1e-10)) for H_ in (H_z, H_s))
-    >>> fg0, ax0 = plt.subplots()
-    >>> ax0.set_title("Frequency Response of 4-th order Bandpass Filter")
-    >>> ax0.set(xlabel='Frequency $f$ in Hertz', ylabel='Magnitude in dB',
-    ...         xlim=[f_z[1], fs/2], ylim=[-200, 2])
-    >>> ax0.semilogx(f_z, Hz_dB, alpha=.5, label=r'$|H_z(e^{j 2 \pi f})|$')
-    >>> ax0.semilogx(f_s, Hs_dB, alpha=.5, label=r'$|H_s(j 2 \pi f)|$')
-    >>> ax0.legend()
-    >>> ax0.grid(which='both', axis='x')
-    >>> ax0.grid(which='major', axis='y')
-    >>> plt.show()
 
-    The difference in the higher frequencies shown in the plot is caused by an effect
-    called "frequency warping". [1]_ describes a method called "pre-warping" to
-    reduce those deviations.
+    >>> fs = 100
+    >>> bf = 2 * np.pi * np.array([7, 13])
+    >>> filts = signal.lti(*signal.butter(4, bf, btype='bandpass',
+    ...                                   analog=True))
+    >>> filtz = signal.lti(*signal.bilinear(filts.num, filts.den, fs))
+    >>> wz, hz = signal.freqz(filtz.num, filtz.den)
+    >>> ws, hs = signal.freqs(filts.num, filts.den, worN=fs*wz)
+
+    >>> plt.semilogx(wz*fs/(2*np.pi), 20*np.log10(np.abs(hz).clip(1e-15)),
+    ...              label=r'$|H_z(e^{j \omega})|$')
+    >>> plt.semilogx(wz*fs/(2*np.pi), 20*np.log10(np.abs(hs).clip(1e-15)),
+    ...              label=r'$|H(j \omega)|$')
+    >>> plt.legend()
+    >>> plt.xlabel('Frequency [Hz]')
+    >>> plt.ylabel('Amplitude [dB]')
+    >>> plt.grid(True)
     """
-    b, a = np.atleast_1d(b), np.atleast_1d(a)  # convert scalars, if needed
-    if not a.ndim == 1:
-        raise ValueError(f"Parameter a is not a 1d array since {a.shape=}")
-    if not b.ndim == 1:
-        raise ValueError(f"Parameter b is not a 1d array since {b.shape=}")
-    b, a = np.trim_zeros(b, 'f'), np.trim_zeros(a, 'f')  # remove leading zeros
     fs = _validate_fs(fs, allow_none=False)
+    a, b = map(atleast_1d, (a, b))
+    D = len(a) - 1
+    N = len(b) - 1
+    artype = float
+    M = max([N, D])
+    Np = M
+    Dp = M
+    bprime = np.empty(Np + 1, artype)
+    aprime = np.empty(Dp + 1, artype)
+    for j in range(Np + 1):
+        val = 0.0
+        for i in range(N + 1):
+            for k in range(i + 1):
+                for l in range(M - i + 1):
+                    if k + l == j:
+                        val += (comb(i, k) * comb(M - i, l) * b[N - i] *
+                                pow(2 * fs, i) * (-1) ** k)
+        bprime[j] = real(val)
+    for j in range(Dp + 1):
+        val = 0.0
+        for i in range(D + 1):
+            for k in range(i + 1):
+                for l in range(M - i + 1):
+                    if k + l == j:
+                        val += (comb(i, k) * comb(M - i, l) * a[D - i] *
+                                pow(2 * fs, i) * (-1) ** k)
+        aprime[j] = real(val)
 
-    # Splitting the factor fs*2 between numerator and denominator reduces the chance of
-    # numeric overflow for large fs and large N:
-    fac = np.sqrt(fs*2)
-    zp1 = np.polynomial.Polynomial((+1, 1)) / fac  # Polynomial (z + 1) / fac
-    zm1 = np.polynomial.Polynomial((-1, 1)) * fac  # Polynomial (z - 1) * fac
-    # Note that NumPy's Polynomial coefficient order is backward compared to a and b.
-
-    N = max(len(a), len(b)) - 1
-    numerator   = sum(b_ * zp1**(N-q) * zm1**q for q, b_ in enumerate(b[::-1]))
-    denominator = sum(a_ * zp1**(N-p) * zm1**p for p, a_ in enumerate(a[::-1]))
-    return normalize(numerator.coef[::-1], denominator.coef[::-1])
+    return normalize(bprime, aprime)
 
 
 def _validate_gpass_gstop(gpass, gstop):
@@ -2893,7 +2685,7 @@ def _relative_degree(z, p):
     """
     Return relative degree of transfer function from zeros and poles
     """
-    degree = p.shape[0] - z.shape[0]
+    degree = len(p) - len(z)
     if degree < 0:
         raise ValueError("Improper transfer function. "
                          "Must have at least as many poles as zeros.")
@@ -2963,11 +2755,8 @@ def bilinear_zpk(z, p, k, fs):
     >>> plt.ylabel('Amplitude [dB]')
     >>> plt.grid(True)
     """
-    xp = array_namespace(z, p)
-
-    z, p = map(xp.asarray, (z, p))
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
+    z = atleast_1d(z)
+    p = atleast_1d(p)
 
     fs = _validate_fs(fs, allow_none=False)
 
@@ -2980,10 +2769,10 @@ def bilinear_zpk(z, p, k, fs):
     p_z = (fs2 + p) / (fs2 - p)
 
     # Any zeros that were at infinity get moved to the Nyquist frequency
-    z_z = xp.concat((z_z, -xp.ones(degree)))
+    z_z = append(z_z, -ones(degree))
 
     # Compensate for gain change
-    k_z = k * xp.real(xp.prod(fs2 - z) / xp.prod(fs2 - p))
+    k_z = k * real(prod(fs2 - z) / prod(fs2 - p))
 
     return z_z, p_z, k_z
 
@@ -3043,12 +2832,8 @@ def lp2lp_zpk(z, p, k, wo=1.0):
     >>> lp2lp_zpk(z, p, k, wo)
     (   array([2.8, 0.8]), array([2. , 5.2]), 0.8)
     """
-    xp = array_namespace(z, p)
-
-    z, p = map(xp.asarray, (z, p))
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
-
+    z = atleast_1d(z)
+    p = atleast_1d(p)
     wo = float(wo)  # Avoid int wraparound
 
     degree = _relative_degree(z, p)
@@ -3124,13 +2909,8 @@ def lp2hp_zpk(z, p, k, wo=1.0):
         array([-0.6 , -0.15]),
         8.5)
     """
-    xp = array_namespace(z, p)
-
-    z, p = map(xp.asarray, (z, p))
-    # XXX: no xp_promote here since that breaks TestButter
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
-
+    z = atleast_1d(z)
+    p = atleast_1d(p)
     wo = float(wo)
 
     degree = _relative_degree(z, p)
@@ -3141,10 +2921,10 @@ def lp2hp_zpk(z, p, k, wo=1.0):
     p_hp = wo / p
 
     # If lowpass had zeros at infinity, inverting moves them to origin.
-    z_hp = xp.concat((z_hp, xp.zeros(degree)))
+    z_hp = append(z_hp, zeros(degree))
 
     # Cancel out gain change caused by inversion
-    k_hp = k * xp.real(xp.prod(-z) / xp.prod(-p))
+    k_hp = k * real(prod(-z) / prod(-p))
 
     return z_hp, p_hp, k_hp
 
@@ -3215,13 +2995,8 @@ def lp2bp_zpk(z, p, k, wo=1.0, bw=1.0):
         array([1.04996339e+02+0.j, -1.60167736e-03+0.j,  3.66108003e-03+0.j,
                -2.39998398e+02+0.j]), 0.8)
     """
-    xp = array_namespace(z, p)
-
-    z, p = map(xp.asarray, (z, p))
-    z, p = xp_promote(z, p, force_floating=True, xp=xp)
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
-
+    z = atleast_1d(z)
+    p = atleast_1d(p)
     wo = float(wo)
     bw = float(bw)
 
@@ -3232,17 +3007,17 @@ def lp2bp_zpk(z, p, k, wo=1.0, bw=1.0):
     p_lp = p * bw/2
 
     # Square root needs to produce complex result, not NaN
-    z_lp = xp.astype(z_lp, xp.complex128)
-    p_lp = xp.astype(p_lp, xp.complex128)
+    z_lp = z_lp.astype(complex)
+    p_lp = p_lp.astype(complex)
 
     # Duplicate poles and zeros and shift from baseband to +wo and -wo
-    z_bp = xp.concat((z_lp + xp.sqrt(z_lp**2 - wo**2),
-                      z_lp - xp.sqrt(z_lp**2 - wo**2)))
-    p_bp = xp.concat((p_lp + xp.sqrt(p_lp**2 - wo**2),
-                      p_lp - xp.sqrt(p_lp**2 - wo**2)))
+    z_bp = concatenate((z_lp + sqrt(z_lp**2 - wo**2),
+                        z_lp - sqrt(z_lp**2 - wo**2)))
+    p_bp = concatenate((p_lp + sqrt(p_lp**2 - wo**2),
+                        p_lp - sqrt(p_lp**2 - wo**2)))
 
     # Move degree zeros to origin, leaving degree zeros at infinity for BPF
-    z_bp = xp.concat((z_bp, xp.zeros(degree)))
+    z_bp = append(z_bp, zeros(degree))
 
     # Cancel out gain change from frequency scaling
     k_bp = k * bw**degree
@@ -3315,13 +3090,8 @@ def lp2bs_zpk(z, p, k, wo=1.0, bw=1.0):
         array([14.2681928 +0.j, -0.02506281+0.j,  0.01752149+0.j, -9.97493719+0.j]),
         -12.857142857142858)
     """
-    xp = array_namespace(z, p)
-
-    z, p = map(xp.asarray, (z, p))
-    z, p = xp_promote(z, p, force_floating=True, xp=xp)
-    z = xpx.atleast_nd(z, ndim=1, xp=xp)
-    p = xpx.atleast_nd(p, ndim=1, xp=xp)
-
+    z = atleast_1d(z)
+    p = atleast_1d(p)
     wo = float(wo)
     bw = float(bw)
 
@@ -3332,21 +3102,21 @@ def lp2bs_zpk(z, p, k, wo=1.0, bw=1.0):
     p_hp = (bw/2) / p
 
     # Square root needs to produce complex result, not NaN
-    z_hp = xp.astype(z_hp, xp.complex128)
-    p_hp = xp.astype(p_hp, xp.complex128)
+    z_hp = z_hp.astype(complex)
+    p_hp = p_hp.astype(complex)
 
     # Duplicate poles and zeros and shift from baseband to +wo and -wo
-    z_bs = xp.concat((z_hp + xp.sqrt(z_hp**2 - wo**2),
-                      z_hp - xp.sqrt(z_hp**2 - wo**2)))
-    p_bs = xp.concat((p_hp + xp.sqrt(p_hp**2 - wo**2),
-                      p_hp - xp.sqrt(p_hp**2 - wo**2)))
+    z_bs = concatenate((z_hp + sqrt(z_hp**2 - wo**2),
+                        z_hp - sqrt(z_hp**2 - wo**2)))
+    p_bs = concatenate((p_hp + sqrt(p_hp**2 - wo**2),
+                        p_hp - sqrt(p_hp**2 - wo**2)))
 
     # Move any zeros that were at infinity to the center of the stopband
-    z_bs = xp.concat((z_bs, xp.full(degree, +1j*wo)))
-    z_bs = xp.concat((z_bs, xp.full(degree, -1j*wo)))
+    z_bs = append(z_bs, full(degree, +1j*wo))
+    z_bs = append(z_bs, full(degree, -1j*wo))
 
     # Cancel out gain change caused by inversion
-    k_bs = k * xp.real(xp.prod(-z) / xp.prod(-p))
+    k_bs = k * real(prod(-z) / prod(-p))
 
     return z_bs, p_bs, k_bs
 

@@ -488,9 +488,7 @@ class CovViaPrecision(Covariance):
                 if self._cov_matrix is None else self._cov_matrix)
 
     def _colorize(self, x):
-        m = x.T.shape[0]
-        res = linalg.solve_triangular(self._chol_P.T, x.T.reshape(m, -1), lower=False)
-        return res.reshape(x.T.shape).T
+        return linalg.solve_triangular(self._chol_P.T, x.T, lower=False).T
 
 
 def _dot_diag(x, d):
@@ -551,9 +549,8 @@ class CovViaCholesky(Covariance):
         return self._factor @ self._factor.T
 
     def _whiten(self, x):
-        m = x.T.shape[0]
-        res = linalg.solve_triangular(self._factor, x.T.reshape(m, -1), lower=True)
-        return res.reshape(x.T.shape).T
+        res = linalg.solve_triangular(self._factor, x.T, lower=True).T
+        return res
 
     def _colorize(self, x):
         return x @ self._factor.T

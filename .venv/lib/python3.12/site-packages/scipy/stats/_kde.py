@@ -17,9 +17,13 @@
 #
 #-------------------------------------------------------------------------------
 
+# Standard library imports.
+import threading
+import warnings
+
 # SciPy imports.
 from scipy import linalg, special
-from scipy._lib._util import check_random_state, np_vecdot
+from scipy._lib._util import check_random_state
 
 from numpy import (asarray, atleast_2d, reshape, zeros, newaxis, exp, pi,
                    sqrt, ravel, power, atleast_1d, squeeze, sum, transpose,
@@ -27,10 +31,13 @@ from numpy import (asarray, atleast_2d, reshape, zeros, newaxis, exp, pi,
 import numpy as np
 
 # Local imports.
+from . import _mvn
 from ._stats import gaussian_kernel_estimate, gaussian_kernel_estimate_log
-from ._multivariate import multivariate_normal
+
 
 __all__ = ['gaussian_kde']
+
+MVN_LOCK = threading.Lock()
 
 
 class gaussian_kde:
@@ -49,9 +56,9 @@ class gaussian_kde:
         Datapoints to estimate from. In case of univariate data this is a 1-D
         array, otherwise a 2-D array with shape (# of dims, # of data).
     bw_method : str, scalar or callable, optional
-        The method used to calculate the bandwidth factor.  This can be
+        The method used to calculate the estimator bandwidth.  This can be
         'scott', 'silverman', a scalar constant or a callable.  If a scalar,
-        this will be used directly as `factor`.  If a callable, it should
+        this will be used directly as `kde.factor`.  If a callable, it should
         take a `gaussian_kde` instance as only parameter and return a scalar.
         If None (default), 'scott' is used.  See Notes for more details.
     weights : array_like, optional
@@ -71,11 +78,12 @@ class gaussian_kde:
 
         .. versionadded:: 1.2.0
     factor : float
-        The bandwidth factor obtained from `covariance_factor`.
+        The bandwidth factor, obtained from `kde.covariance_factor`. The square
+        of `kde.factor` multiplies the covariance matrix of the data in the kde
+        estimation.
     covariance : ndarray
-        The kernel covariance matrix; this is the data covariance matrix
-        multiplied by the square of the bandwidth factor, e.g.
-        ``np.cov(dataset) * factor**2``.
+        The covariance matrix of `dataset`, scaled by the calculated bandwidth
+        (`kde.factor`).
     inv_cov : ndarray
         The inverse of `covariance`.
 
@@ -111,18 +119,13 @@ class gaussian_kde:
         neff**(-1./(d+4)),
 
     with ``neff`` the effective number of datapoints.
-    Silverman's suggestion for *multivariate* data [2]_, implemented as
-    `silverman_factor`, is::
+    Silverman's Rule [2]_, implemented as `silverman_factor`, is::
 
         (n * (d + 2) / 4.)**(-1. / (d + 4)).
 
     or in the case of unequally weighted points::
 
         (neff * (d + 2) / 4.)**(-1. / (d + 4)).
-
-    Note that this is not the same as "Silverman's rule of thumb" [6]_, which
-    may be more robust in the univariate case; see documentation of the
-    ``set_bandwidth`` method for implementing a custom bandwidth rule.
 
     Good general descriptions of kernel density estimation can be found in [1]_
     and [2]_, the mathematics for this multi-dimensional implementation can be
@@ -154,8 +157,6 @@ class gaussian_kde:
            Analysis, Vol. 36, pp. 279-298, 2001.
     .. [5] Gray P. G., 1969, Journal of the Royal Statistical Society.
            Series A (General), 132, 272
-    .. [6] Kernel density estimation. *Wikipedia.*
-           https://en.wikipedia.org/wiki/Kernel_density_estimation
 
     Examples
     --------
@@ -194,16 +195,6 @@ class gaussian_kde:
     >>> ax.set_ylim([ymin, ymax])
     >>> plt.show()
 
-    Compare against manual KDE at a point:
-
-    >>> point = [1, 2]
-    >>> mean = values.T
-    >>> cov = kernel.factor**2 * np.cov(values)
-    >>> X = stats.multivariate_normal(cov=cov)
-    >>> res = kernel.pdf(point)
-    >>> ref = X.pdf(point - mean).sum() / len(mean)
-    >>> np.allclose(res, ref)
-    True
     """
     def __init__(self, dataset, bw_method=None, weights=None):
         self.dataset = atleast_2d(asarray(dataset))
@@ -219,7 +210,7 @@ class gaussian_kde:
                 raise ValueError("`weights` input should be one-dimensional.")
             if len(self._weights) != self.n:
                 raise ValueError("`weights` input should be of length n")
-            self._neff = 1/np_vecdot(self._weights, self._weights)
+            self._neff = 1/sum(self._weights**2)
 
         # This can be converted to a warning once gh-10205 is resolved
         if self.d > self.n:
@@ -333,8 +324,8 @@ class gaussian_kde:
         sqrt_det = np.prod(np.diagonal(sum_cov_chol[0]))
         norm_const = power(2 * pi, sum_cov.shape[0] / 2.0) * sqrt_det
 
-        energies = np_vecdot(diff, tdiff, axis=0) / 2.0
-        result = np_vecdot(exp(-energies), self.weights, axis=0) / norm_const
+        energies = sum(diff * tdiff, axis=0) / 2.0
+        result = sum(exp(-energies)*self.weights, axis=0) / norm_const
 
         return result
 
@@ -368,11 +359,12 @@ class gaussian_kde:
         normalized_low = ravel((low - self.dataset) / stdev)
         normalized_high = ravel((high - self.dataset) / stdev)
 
-        delta = special.ndtr(normalized_high) - special.ndtr(normalized_low)
-        value = np_vecdot(self.weights, delta)
+        value = np.sum(self.weights*(
+                        special.ndtr(normalized_high) -
+                        special.ndtr(normalized_low)))
         return value
 
-    def integrate_box(self, low_bounds, high_bounds, maxpts=None, *, rng=None):
+    def integrate_box(self, low_bounds, high_bounds, maxpts=None):
         """Computes the integral of a pdf over a rectangular interval.
 
         Parameters
@@ -383,11 +375,6 @@ class gaussian_kde:
             A 1-D array containing the upper bounds of integration.
         maxpts : int, optional
             The maximum number of points to use for integration.
-        rng : `numpy.random.Generator`, optional
-            Pseudorandom number generator state. When `rng` is None, a new
-            generator is created using entropy from the operating system. Types
-            other than `numpy.random.Generator` are passed to
-            `numpy.random.default_rng` to instantiate a ``Generator``.
 
         Returns
         -------
@@ -395,12 +382,20 @@ class gaussian_kde:
             The result of the integral.
 
         """
-        low, high = low_bounds - self.dataset.T, high_bounds - self.dataset.T
-        values = multivariate_normal.cdf(
-            high, lower_limit=low, cov=self.covariance, maxpts=maxpts,
-            rng=rng
-        )
-        return np_vecdot(values, self.weights, axis=-1)
+        if maxpts is not None:
+            extra_kwds = {'maxpts': maxpts}
+        else:
+            extra_kwds = {}
+
+        with MVN_LOCK:
+            value, inform = _mvn.mvnun_weighted(low_bounds, high_bounds,
+                                                self.dataset, self.weights,
+                                                self.covariance, **extra_kwds)
+        if inform:
+            msg = f'An integral in _mvn.mvnun requires more points than {self.d * 1000}'
+            warnings.warn(msg, stacklevel=2)
+
+        return value
 
     def integrate_kde(self, other):
         """
@@ -442,8 +437,8 @@ class gaussian_kde:
             diff = large.dataset - mean
             tdiff = linalg.cho_solve(sum_cov_chol, diff)
 
-            energies = np_vecdot(diff, tdiff, axis=0) / 2.0
-            result += np_vecdot(exp(-energies), large.weights, axis=0)*small.weights[i]
+            energies = sum(diff * tdiff, axis=0) / 2.0
+            result += sum(exp(-energies)*large.weights, axis=0)*small.weights[i]
 
         sqrt_det = np.prod(np.diagonal(sum_cov_chol[0]))
         norm_const = power(2 * pi, sum_cov.shape[0] / 2.0) * sqrt_det
@@ -509,13 +504,14 @@ class gaussian_kde:
 
     #  Default method to calculate bandwidth, can be overwritten by subclass
     covariance_factor = scotts_factor
-    covariance_factor.__doc__ = """Computes the bandwidth factor `factor`.
-        The default is `scotts_factor`.  A subclass can overwrite this
+    covariance_factor.__doc__ = """Computes the coefficient (`kde.factor`) that
+        multiplies the data covariance matrix to obtain the kernel covariance
+        matrix. The default is `scotts_factor`.  A subclass can overwrite this
         method to provide a different method, or set it through a call to
-        `set_bandwidth`."""
+        `kde.set_bandwidth`."""
 
     def set_bandwidth(self, bw_method=None):
-        """Compute the bandwidth factor with given method.
+        """Compute the estimator bandwidth with given method.
 
         The new bandwidth calculated after a call to `set_bandwidth` is used
         for subsequent evaluations of the estimated density.
@@ -523,12 +519,12 @@ class gaussian_kde:
         Parameters
         ----------
         bw_method : str, scalar or callable, optional
-            The method used to calculate the bandwidth factor.  This can be
+            The method used to calculate the estimator bandwidth.  This can be
             'scott', 'silverman', a scalar constant or a callable.  If a
-            scalar, this will be used directly as `factor`.  If a callable,
+            scalar, this will be used directly as `kde.factor`.  If a callable,
             it should take a `gaussian_kde` instance as only parameter and
             return a scalar.  If None (default), nothing happens; the current
-            `covariance_factor` method is kept.
+            `kde.covariance_factor` method is kept.
 
         Notes
         -----
@@ -705,7 +701,7 @@ class gaussian_kde:
         try:
             return self._neff
         except AttributeError:
-            self._neff = 1/np_vecdot(self.weights, self.weights)
+            self._neff = 1/sum(self.weights**2)
             return self._neff
 
 

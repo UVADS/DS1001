@@ -9,7 +9,6 @@ Functions
 
 """
 import io
-import os
 import sys
 import numpy as np
 import struct
@@ -26,47 +25,6 @@ __all__ = [
 
 class WavFileWarning(UserWarning):
     pass
-
-
-class SeekEmulatingReader:
-    """
-    Tracks stream position, provides tell(), and emulates only those
-    seeks that can be supported by reading forward. Other seeks raise
-    io.UnsupportedOperation. Note that this class implements only the
-    minimum necessary to keep wavfile.read() happy.
-    """
-    def __init__(self, reader):
-        self.reader = reader
-        self.pos = 0
-
-    def read(self, size=-1, /):
-        data = self.reader.read(size)
-        self.pos += len(data)
-        return data
-    
-    def seek(self, offset, whence=os.SEEK_SET, /):
-        match whence:
-            case os.SEEK_SET if offset >= self.pos:
-                self.read(offset - self.pos) # convert to relative
-            case os.SEEK_CUR if offset >= 0:
-                self.read(offset) # advance by offset
-            case os.SEEK_END if offset == 0:
-                self.read() # advance to end of stream
-            case _:
-                raise io.UnsupportedOperation("SeekEmulatingReader was asked to emulate"
-                                              " a seek operation it does not support.")
-        return self.pos
-    
-    def tell(self):
-        return self.pos
-    
-    def close(self):
-        self.reader.close()
-    
-    # np.fromfile expects to be able to call flush(), and _read_data_chunk
-    # expects to catch io.UnsupportedOperation if np.fromfile fails.
-    def flush(self):
-        raise io.UnsupportedOperation("SeekEmulatingReader can't flush.")
 
 
 class WAVE_FORMAT(IntEnum):
@@ -439,7 +397,7 @@ def _read_fmt_chunk(fid, is_big_endian):
 
 
 def _read_data_chunk(fid, format_tag, channels, bit_depth, is_big_endian, is_rf64,
-                     block_align, mmap=False, rf64_chunk_size=None):
+                     block_align, mmap=False):
     """
     Notes
     -----
@@ -473,8 +431,11 @@ def _read_data_chunk(fid, format_tag, channels, bit_depth, is_big_endian, is_rf6
     if not is_rf64:
         size = struct.unpack(fmt+'I', fid.read(4))[0]
     else:
+        pos = fid.tell()
         # chunk size is stored in global file header for RF64
-        size = rf64_chunk_size
+        fid.seek(28)
+        size = struct.unpack('<Q', fid.read(8))[0]
+        fid.seek(pos)
         # skip data chunk size as it is 0xFFFFFFF
         fid.read(4)
 
@@ -577,7 +538,6 @@ def _read_riff_chunk(fid):
     # Size of entire file
     if not is_rf64:
         file_size = struct.unpack(fmt, fid.read(4))[0] + 8
-        rf64_chunk_size = None
         str2 = fid.read(4)
     else:
         # Skip 0xFFFFFFFF (-1) bytes
@@ -588,15 +548,14 @@ def _read_riff_chunk(fid):
             raise ValueError("Invalid RF64 file: ds64 chunk not found.")
         ds64_size = struct.unpack("<I", fid.read(4))[0]
         file_size = struct.unpack(fmt, fid.read(8))[0] + 8
-        rf64_chunk_size = struct.unpack('<Q', fid.read(8))[0]
         # Ignore additional attributes of ds64 chunk like sample count, tables, etc.
         # and just skip to the next chunk
-        fid.seek(ds64_size - 16, 1)
+        fid.seek(ds64_size - 8, 1)
 
     if str2 != b'WAVE':
         raise ValueError(f"Not a WAV file. RIFF form type is {repr(str2)}.")
 
-    return file_size, is_big_endian, is_rf64, rf64_chunk_size
+    return file_size, is_big_endian, is_rf64
 
 
 def _handle_pad_byte(fid, size):
@@ -713,12 +672,9 @@ def read(filename, mmap=False):
         mmap = False
     else:
         fid = open(filename, 'rb')
-    
-    if not (was_seekable := fid.seekable()):
-        fid = SeekEmulatingReader(fid)
 
     try:
-        file_size, is_big_endian, is_rf64, rf64_chunk_size = _read_riff_chunk(fid)
+        file_size, is_big_endian, is_rf64 = _read_riff_chunk(fid)
         fmt_chunk_received = False
         data_chunk_received = False
         while fid.tell() < file_size:
@@ -757,8 +713,7 @@ def read(filename, mmap=False):
                 if not fmt_chunk_received:
                     raise ValueError("No fmt chunk before data")
                 data = _read_data_chunk(fid, format_tag, channels, bit_depth,
-                                        is_big_endian, is_rf64, block_align,
-                                        mmap, rf64_chunk_size)
+                                        is_big_endian, is_rf64, block_align, mmap)
             elif chunk_id == b'LIST':
                 # Someday this could be handled properly but for now skip it
                 _skip_unknown_chunk(fid, is_big_endian)
@@ -772,9 +727,7 @@ def read(filename, mmap=False):
     finally:
         if not hasattr(filename, 'read'):
             fid.close()
-        elif was_seekable:
-            # Rewind, if we are able, so that caller can do something
-            # else with the raw WAV stream.
+        else:
             fid.seek(0)
 
     return fs, data

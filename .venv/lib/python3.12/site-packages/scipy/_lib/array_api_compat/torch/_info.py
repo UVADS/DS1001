@@ -34,7 +34,7 @@ class __array_namespace_info__:
 
     Examples
     --------
-    >>> info = xp.__array_namespace_info__()
+    >>> info = np.__array_namespace_info__()
     >>> info.default_dtypes()
     {'real floating': numpy.float64,
      'complex floating': numpy.complex128,
@@ -76,17 +76,17 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.capabilities()
         {'boolean indexing': True,
-         'data-dependent shapes': True,
-         'max dimensions': 64}
+         'data-dependent shapes': True}
 
         """
         return {
             "boolean indexing": True,
             "data-dependent shapes": True,
-            "max dimensions": 64,
+            # 'max rank' will be part of the 2024.12 standard
+            # "max rank": 64,
         }
 
     def default_device(self):
@@ -102,24 +102,15 @@ class __array_namespace_info__:
 
         Returns
         -------
-        device : Device
+        device : str
             The default device used for new PyTorch arrays.
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.default_device()
-        device(type='cpu')
+        'cpu'
 
-        Notes
-        -----
-        This method returns the static default device when PyTorch is initialized.
-        However, the *current* device used by creation functions (``empty`` etc.)
-        can be changed at runtime.
-
-        See Also
-        --------
-        https://github.com/data-apis/array-api/issues/835
         """
         return torch.device("cpu")
 
@@ -129,9 +120,9 @@ class __array_namespace_info__:
 
         Parameters
         ----------
-        device : Device, optional
-            The device to get the default data types for.
-            Unused for PyTorch, as all devices use the same default dtypes.
+        device : str, optional
+            The device to get the default data types for. For PyTorch, only
+            ``'cpu'`` is allowed.
 
         Returns
         -------
@@ -148,7 +139,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.default_dtypes()
         {'real floating': torch.float32,
          'complex floating': torch.complex64,
@@ -259,9 +250,8 @@ class __array_namespace_info__:
 
         Parameters
         ----------
-        device : Device, optional
+        device : str, optional
             The device to get the data types for.
-            Unused for PyTorch, as all devices use the same dtypes.
         kind : str or tuple of str, optional
             The kind of data types to return. If ``None``, all data types are
             returned. If a string, only data types of that kind are returned.
@@ -297,7 +287,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.dtypes(kind='signed integer')
         {'int8': numpy.int8,
          'int16': numpy.int16,
@@ -320,7 +310,7 @@ class __array_namespace_info__:
 
         Returns
         -------
-        devices : list[Device]
+        devices : list of str
             The devices supported by PyTorch.
 
         See Also
@@ -332,7 +322,7 @@ class __array_namespace_info__:
 
         Examples
         --------
-        >>> info = xp.__array_namespace_info__()
+        >>> info = np.__array_namespace_info__()
         >>> info.devices()
         [device(type='cpu'), device(type='mps', index=0), device(type='meta')]
 
@@ -343,7 +333,6 @@ class __array_namespace_info__:
         # device:
         try:
             torch.device('notadevice')
-            raise AssertionError("unreachable")  # pragma: nocover
         except RuntimeError as e:
             # The error message is something like:
             # "Expected one of cpu, cuda, ipu, xpu, mkldnn, opengl, opencl, ideep, hip, ve, fpga, ort, xla, lazy, vulkan, mps, meta, hpu, mtia, privateuseone device type at start of device string: notadevice"

@@ -107,11 +107,10 @@ from .common import (
     CL_scaling_vector, compute_grad, compute_jac_scale, check_termination,
     update_tr_radius, scale_for_robust_loss_function, print_header_nonlinear,
     print_iteration_nonlinear)
-from scipy._lib._util import _call_callback_maybe_halt
 
 
 def trf(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev, x_scale,
-        loss_function, tr_solver, tr_options, verbose, callback=None):
+        loss_function, tr_solver, tr_options, verbose):
     # For efficiency, it makes sense to run the simplified version of the
     # algorithm when no bounds are imposed. We decided to write the two
     # separate functions. It violates the DRY principle, but the individual
@@ -119,11 +118,11 @@ def trf(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev, x_scale,
     if np.all(lb == -np.inf) and np.all(ub == np.inf):
         return trf_no_bounds(
             fun, jac, x0, f0, J0, ftol, xtol, gtol, max_nfev, x_scale,
-            loss_function, tr_solver, tr_options, verbose, callback=callback)
+            loss_function, tr_solver, tr_options, verbose)
     else:
         return trf_bounds(
             fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev, x_scale,
-            loss_function, tr_solver, tr_options, verbose, callback=callback)
+            loss_function, tr_solver, tr_options, verbose)
 
 
 def select_step(x, J_h, diag_h, g_h, p, p_h, d, Delta, lb, ub, theta):
@@ -204,8 +203,7 @@ def select_step(x, J_h, diag_h, g_h, p, p_h, d, Delta, lb, ub, theta):
 
 
 def trf_bounds(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev,
-               x_scale, loss_function, tr_solver, tr_options, verbose, 
-               callback=None):
+               x_scale, loss_function, tr_solver, tr_options, verbose):
     x = x0.copy()
 
     f = f0
@@ -373,7 +371,7 @@ def trf_bounds(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev,
 
             cost = cost_new
 
-            J = jac(x)
+            J = jac(x, f)
             njev += 1
 
             if loss_function is not None:
@@ -387,20 +385,8 @@ def trf_bounds(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev,
         else:
             step_norm = 0
             actual_reduction = 0
-            
-        iteration += 1
-            
-        # Call callback function and possibly stop optimization
-        if callback is not None:
-            intermediate_result = OptimizeResult(
-                x=x, fun=f_true, nit=iteration, nfev=nfev)
-            intermediate_result["cost"] = cost
 
-            if _call_callback_maybe_halt(
-                callback, intermediate_result
-            ):
-                termination_status = -2
-                break
+        iteration += 1
 
     if termination_status is None:
         termination_status = 0
@@ -413,8 +399,7 @@ def trf_bounds(fun, jac, x0, f0, J0, lb, ub, ftol, xtol, gtol, max_nfev,
 
 
 def trf_no_bounds(fun, jac, x0, f0, J0, ftol, xtol, gtol, max_nfev,
-                  x_scale, loss_function, tr_solver, tr_options, verbose, 
-                  callback=None):
+                  x_scale, loss_function, tr_solver, tr_options, verbose):
     x = x0.copy()
 
     f = f0
@@ -548,7 +533,7 @@ def trf_no_bounds(fun, jac, x0, f0, J0, ftol, xtol, gtol, max_nfev,
 
             cost = cost_new
 
-            J = jac(x)
+            J = jac(x, f)
             njev += 1
 
             if loss_function is not None:
@@ -564,18 +549,6 @@ def trf_no_bounds(fun, jac, x0, f0, J0, ftol, xtol, gtol, max_nfev,
             actual_reduction = 0
 
         iteration += 1
-        
-        # Call callback function and possibly stop optimization
-        if callback is not None:
-            intermediate_result = OptimizeResult(
-                x=x, fun=f_true, nit=iteration, nfev=nfev)
-            intermediate_result["cost"] = cost
-
-            if _call_callback_maybe_halt(
-                callback, intermediate_result
-            ):
-                termination_status = -2
-                break
 
     if termination_status is None:
         termination_status = 0

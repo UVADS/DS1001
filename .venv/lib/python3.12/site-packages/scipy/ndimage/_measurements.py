@@ -630,7 +630,6 @@ def _stats(input, labels=None, index=None, centered=False):
     if labels is None:
         return single_group(input)
 
-    labels = np.asarray(labels)
     # ensure input and labels match sizes
     input, labels = np.broadcast_arrays(input, labels)
 
@@ -945,7 +944,6 @@ def _select(input, labels=None, index=None, find_min=False, find_max=False,
     if labels is None:
         return single_group(input, positions)
 
-    labels = np.asarray(labels)
     # ensure input and labels match sizes
     input, labels = np.broadcast_arrays(input, labels)
 
@@ -1055,7 +1053,7 @@ def minimum(input, labels=None, index=None):
 
     Returns
     -------
-    output : a scalar or list of integers or floats based on input type.
+    minimum : float or list of floats
         List of minima of `input` over the regions determined by `labels` and
         whose index is in `index`. If `index` or `labels` are not specified, a
         float is returned: the minimal value of `input` if `labels` is None,
@@ -1118,7 +1116,7 @@ def maximum(input, labels=None, index=None):
 
     Returns
     -------
-    output : a scalar or list of integers or floats based on input type.
+    output : float or list of floats
         List of maxima of `input` over the regions determined by `labels` and
         whose index is in `index`. If `index` or `labels` are not specified, a
         float is returned: the maximal value of `input` if `labels` is None,

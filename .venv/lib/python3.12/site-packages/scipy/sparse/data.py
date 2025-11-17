@@ -5,7 +5,12 @@
 from scipy._lib.deprecation import _sub_module_deprecation
 
 
-__all__ : list[str] = []
+__all__ = [  # noqa: F822
+    'isscalarlike',
+    'name',
+    'npfunc',
+    'validateaxis',
+]
 
 
 def __dir__():

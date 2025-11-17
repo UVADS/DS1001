@@ -1,13 +1,10 @@
 """Frechet derivative of the matrix exponential."""
 import numpy as np
 import scipy.linalg
-from scipy._lib._util import _apply_over_batch
-
 
 __all__ = ['expm_frechet', 'expm_cond']
 
 
-@_apply_over_batch(('A', 2), ('E', 2))
 def expm_frechet(A, E, method=None, compute_expm=True, check_finite=True):
     """
     Frechet derivative of the matrix exponential of A in the direction E.
@@ -354,7 +351,6 @@ def expm_frechet_kronform(A, method=None, check_finite=True):
     return np.vstack(cols).T
 
 
-@_apply_over_batch(('A', 2))
 def expm_cond(A, check_finite=True):
     """
     Relative condition number of the matrix exponential in the Frobenius norm.

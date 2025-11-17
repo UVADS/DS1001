@@ -426,7 +426,6 @@ def test_random_ball_vectorized(kdtree_type):
     assert_(isinstance(r[0, 0], list))
 
 
-@pytest.mark.fail_slow(5)
 def test_query_ball_point_multithreading(kdtree_type):
     np.random.seed(0)
     n = 5000

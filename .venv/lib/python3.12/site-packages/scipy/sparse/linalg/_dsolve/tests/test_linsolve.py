@@ -3,7 +3,7 @@ import threading
 
 import numpy as np
 from numpy import array, finfo, arange, eye, all, unique, ones, dot
-from numpy.exceptions import ComplexWarning
+import numpy.random as random
 from numpy.testing import (
         assert_array_almost_equal, assert_almost_equal,
         assert_equal, assert_array_equal, assert_, assert_allclose,
@@ -22,6 +22,7 @@ from scipy.sparse.linalg._dsolve import (spsolve, use_solver, splu, spilu,
 import scipy.sparse
 
 from scipy._lib._testutils import check_free_memory
+from scipy._lib._util import ComplexWarning
 
 
 sup_sparse_efficiency = suppress_warnings()
@@ -60,6 +61,7 @@ class TestFactorized:
         d = arange(n) + 1
         self.n = n
         self.A = dia_array(((d, 2*d, d[::-1]), (-3, 0, 5)), shape=(n,n)).tocsc()
+        random.seed(1234)
 
     def _check_singular(self):
         A = csc_array((5,5), dtype='d')
@@ -69,8 +71,7 @@ class TestFactorized:
     def _check_non_singular(self):
         # Make a diagonal dominant, to make sure it is not singular
         n = 5
-        rng = np.random.default_rng(14332)
-        a = csc_array(rng.random((n, n)))
+        a = csc_array(random.rand(n, n))
         b = ones(n)
 
         expected = splu(a).solve(b)
@@ -112,11 +113,9 @@ class TestFactorized:
     def test_call_with_incorrectly_sized_matrix_without_umfpack(self):
         use_solver(useUmfpack=False)
         solve = factorized(self.A)
-
-        rng = np.random.default_rng(230498)
-        b = rng.random(4)
-        B = rng.random((4, 3))
-        BB = rng.random((self.n, 3, 9))
+        b = random.rand(4)
+        B = random.rand(4, 3)
+        BB = random.rand(self.n, 3, 9)
 
         with assert_raises(ValueError, match="is of incompatible size"):
             solve(b)
@@ -130,11 +129,9 @@ class TestFactorized:
     def test_call_with_incorrectly_sized_matrix_with_umfpack(self):
         use_solver(useUmfpack=True)
         solve = factorized(self.A)
-
-        rng = np.random.default_rng(643095823)
-        b = rng.random(4)
-        B = rng.random((4, 3))
-        BB = rng.random((self.n, 3, 9))
+        b = random.rand(4)
+        B = random.rand(4, 3)
+        BB = random.rand(self.n, 3, 9)
 
         # does not raise
         solve(b)
@@ -147,8 +144,7 @@ class TestFactorized:
     def test_call_with_cast_to_complex_without_umfpack(self):
         use_solver(useUmfpack=False)
         solve = factorized(self.A)
-        rng = np.random.default_rng(23454)
-        b = rng.random(4)
+        b = random.rand(4)
         for t in [np.complex64, np.complex128]:
             with assert_raises(TypeError, match="Cannot cast array data"):
                 solve(b.astype(t))
@@ -157,8 +153,7 @@ class TestFactorized:
     def test_call_with_cast_to_complex_with_umfpack(self):
         use_solver(useUmfpack=True)
         solve = factorized(self.A)
-        rng = np.random.default_rng(23454)
-        b = rng.random(4)
+        b = random.rand(4)
         for t in [np.complex64, np.complex128]:
             assert_warns(ComplexWarning, solve, b.astype(t))
 
@@ -251,8 +246,8 @@ class TestLinsolve:
                         [1., 0., 1.],
                         [0., 0., 1.]])
         As = csc_array(Adense)
-        rng = np.random.default_rng(1234)
-        x = rng.standard_normal(3)
+        random.seed(1234)
+        x = random.randn(3)
         b = As@x
         x2 = spsolve(As, b)
 
@@ -263,8 +258,8 @@ class TestLinsolve:
                         [1., 0., 1.],
                         [0., 0., 1.]])
         As = csc_array(Adense)
-        rng = np.random.default_rng(1234)
-        x = rng.standard_normal((3, 4))
+        random.seed(1234)
+        x = random.randn(3, 4)
         Bdense = As.dot(x)
         Bs = csc_array(Bdense)
         x2 = spsolve(As, Bs)
@@ -457,6 +452,7 @@ class TestSplu:
         d = arange(n) + 1
         self.n = n
         self.A = dia_array(((d, 2*d, d[::-1]), (-3, 0, 5)), shape=(n, n)).tocsc()
+        random.seed(1234)
 
     def _smoketest(self, spxlu, check, dtype, idx_dtype):
         if np.issubdtype(dtype, np.complexfloating):
@@ -469,7 +465,7 @@ class TestSplu:
         A.indptr = A.indptr.astype(idx_dtype, copy=False)
         lu = spxlu(A)
 
-        rng = np.random.RandomState(1234)
+        rng = random.RandomState(1234)
 
         # Input shapes
         for k in [None, 1, 2, self.n, self.n+2]:
@@ -556,7 +552,7 @@ class TestSplu:
     def test_splu_basic(self):
         # Test basic splu functionality.
         n = 30
-        rng = np.random.RandomState(12)
+        rng = random.RandomState(12)
         a = rng.rand(n, n)
         a[a < 0.95] = 0
         # First test with a singular matrix
@@ -576,8 +572,7 @@ class TestSplu:
     def test_splu_perm(self):
         # Test the permutation vectors exposed by splu.
         n = 30
-        rng = np.random.default_rng(1342354)
-        a = rng.random((n, n))
+        a = random.random((n, n))
         a[a < 0.95] = 0
         # Make a diagonal dominant, to make sure it is not singular
         a += 4*eye(n)
@@ -626,8 +621,7 @@ class TestSplu:
     def test_lu_refcount(self):
         # Test that we are keeping track of the reference count with splu.
         n = 30
-        rng = np.random.default_rng(1342354)
-        a = rng.random((n, n))
+        a = random.random((n, n))
         a[a < 0.95] = 0
         # Make a diagonal dominant, to make sure it is not singular
         a += 4*eye(n)
@@ -644,15 +638,14 @@ class TestSplu:
 
     def test_bad_inputs(self):
         A = self.A.tocsc()
-        rng = np.random.default_rng(235634)
 
         assert_raises(ValueError, splu, A[:,:4])
         assert_raises(ValueError, spilu, A[:,:4])
 
         for lu in [splu(A), spilu(A)]:
-            b = rng.random(42)
-            B = rng.random((42, 3))
-            BB = rng.random((self.n, 3, 9))
+            b = random.rand(42)
+            B = random.rand(42, 3)
+            BB = random.rand(self.n, 3, 9)
             assert_raises(ValueError, lu.solve, b)
             assert_raises(ValueError, lu.solve, B)
             assert_raises(ValueError, lu.solve, BB)
@@ -884,14 +877,14 @@ class TestSpsolveTriangular:
                 A = A.tocsr(copy=False)
             return A
 
-        rng = np.random.default_rng(1234)
+        np.random.seed(1234)
         A = random_triangle_matrix(n, lower=lower)
         if choice_of_b == "floats":
-            b = rng.random((n, m))
+            b = np.random.rand(n, m)
         elif choice_of_b == "ints":
-            b = rng.integers(-9, 9, (n, m))
+            b = np.random.randint(-9, 9, (n, m))
         elif choice_of_b == "complexints":
-            b = rng.integers(-9, 9, (n, m)) + rng.integers(-9, 9, (n, m)) * 1j
+            b = np.random.randint(-9, 9, (n, m)) + np.random.randint(-9, 9, (n, m)) * 1j
         else:
             raise ValueError(
                 "choice_of_b must be 'floats', 'ints', or 'complexints'.")

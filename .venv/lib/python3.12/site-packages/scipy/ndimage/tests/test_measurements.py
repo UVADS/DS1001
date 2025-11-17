@@ -5,7 +5,9 @@ import numpy as np
 from numpy.testing import suppress_warnings
 
 from scipy._lib._array_api import (
+    is_jax,
     is_torch,
+    array_namespace,
     xp_assert_equal,
     xp_assert_close,
     assert_array_almost_equal,
@@ -19,8 +21,10 @@ import scipy.ndimage as ndimage
 
 from . import types
 
+from scipy.conftest import array_api_compatible
 skip_xp_backends = pytest.mark.skip_xp_backends
-pytestmark = [skip_xp_backends(cpu_only=True, exceptions=['cupy', 'jax.numpy'])]
+pytestmark = [array_api_compatible, pytest.mark.usefixtures("skip_xp_backends"),
+              skip_xp_backends(cpu_only=True, exceptions=['cupy', 'jax.numpy'],)]
 
 IS_WINDOWS_AND_NP1 = os.name == 'nt' and np.__version__ < '2'
 
@@ -108,7 +112,6 @@ class Test_measurements_stats:
             xp_assert_equal(centers, np.asarray([0.5, 8.0]))
 
 
-@skip_xp_backends(np_only=True, reason='test internal numpy-only helpers')
 class Test_measurements_select:
     """ndimage._measurements._select() is a utility used by other functions."""
 
@@ -148,19 +151,20 @@ class Test_measurements_select:
 
 
 def test_label01(xp):
-    data = xp.ones(())
+    data = xp.ones([])
     out, n = ndimage.label(data)
     assert out == 1
     assert n == 1
 
 
 def test_label02(xp):
-    data = xp.zeros(())
+    data = xp.zeros([])
     out, n = ndimage.label(data)
     assert out == 0
     assert n == 0
 
 
+@pytest.mark.thread_unsafe  # due to Cython fused types, see cython#6506
 def test_label03(xp):
     data = xp.ones([1])
     out, n = ndimage.label(data)
@@ -338,8 +342,7 @@ def test_label13(xp):
         assert n == 1
 
 
-@skip_xp_backends(np_only=True, exceptions=["cupy"],
-                  reason='output=dtype is numpy-specific')
+@skip_xp_backends(np_only=True, reason='output=dtype is numpy-specific')
 def test_label_output_typed(xp):
     data = xp.ones([5])
     for t in types:
@@ -351,8 +354,7 @@ def test_label_output_typed(xp):
         assert n == 1
 
 
-@skip_xp_backends(np_only=True, exceptions=["cupy"],
-                  reason='output=dtype is numpy-specific')
+@skip_xp_backends(np_only=True, reason='output=dtype is numpy-specific')
 def test_label_output_dtype(xp):
     data = xp.ones([5])
     for t in types:
@@ -363,13 +365,17 @@ def test_label_output_dtype(xp):
         assert output.dtype == t
 
 
-@skip_xp_backends(np_only=True, reason="in-place output is numpy-specific")
 def test_label_output_wrong_size(xp):
+    if is_jax(xp):
+        pytest.xfail("JAX does not raise")
+
     data = xp.ones([5])
     for t in types:
         dtype = getattr(xp, t)
         output = xp.zeros([10], dtype=dtype)
-        assert_raises(ValueError, ndimage.label, data, output=output)
+        # TypeError is from non-numpy arrays as output
+        assert_raises((ValueError, TypeError),
+                      ndimage.label, data, output=output)
 
 
 def test_label_structuring_elements(xp):
@@ -394,7 +400,9 @@ def test_label_structuring_elements(xp):
             xp_assert_equal(ndimage.label(d, s)[0], results[r, :, :], check_dtype=False)
             r += 1
 
-@skip_xp_backends("cupy", reason="`cupyx.scipy.ndimage` does not have `find_objects`")
+@skip_xp_backends("cupy",
+                  reason="`cupyx.scipy.ndimage` does not have `find_objects`"
+)
 def test_ticket_742(xp):
     def SE(img, thresh=.7, size=4):
         mask = img > thresh
@@ -525,7 +533,11 @@ def test_value_indices01(xp):
     true_keys = [1, 2, 4]
     assert list(vi.keys()) == true_keys
 
-    truevi = {k: xp.nonzero(data == k) for k in true_keys}
+    nnz_kwd = {'as_tuple': True} if is_torch(xp) else {}
+
+    truevi = {}
+    for k in true_keys:
+        truevi[k] = xp.nonzero(data == k, **nnz_kwd)
 
     vi = ndimage.value_indices(data, ignore_value=0)
     assert vi.keys() == truevi.keys()
@@ -546,15 +558,17 @@ def test_value_indices02(xp):
 def test_value_indices03(xp):
     "Test different input array shapes, from 1-D to 4-D"
     for shape in [(36,), (18, 2), (3, 3, 4), (3, 3, 2, 2)]:
-        a = np.asarray((12*[1]+12*[2]+12*[3]), dtype=np.int32)
-        a = np.reshape(a, shape)
+        a = xp.asarray((12*[1]+12*[2]+12*[3]), dtype=xp.int32)
+        a = xp.reshape(a, shape)
 
-        trueKeys = np.unique(a)
-        a = xp.asarray(a)
+        nnz_kwd = {'as_tuple': True} if is_torch(xp) else {}
+
+        unique_values = array_namespace(a).unique_values
+        trueKeys = unique_values(a)
         vi = ndimage.value_indices(a)
         assert list(vi.keys()) == list(trueKeys)
         for k in [int(x) for x in trueKeys]:
-            trueNdx = xp.nonzero(a == k)
+            trueNdx = xp.nonzero(a == k, **nnz_kwd)
             assert len(vi[k]) == len(trueNdx)
             for vik, true_vik in zip(vi[k], trueNdx):
                 xp_assert_equal(vik, true_vik)
@@ -1125,6 +1139,9 @@ def test_maximum_position06(xp):
 
 def test_maximum_position07(xp):
     # Test float labels
+    if is_torch(xp):
+        pytest.xfail("output[1] is wrong on pytorch")
+
     labels = xp.asarray([1.0, 2.5, 0.0, 4.5])
     for type in types:
         dtype = getattr(xp, type)
@@ -1569,7 +1586,7 @@ class TestWatershedIft:
                     [1, 1]]
         assert_array_almost_equal(out, xp.asarray(expected))
 
-    @skip_xp_backends("cupy", reason="no watershed_ift on CuPy")
+    @skip_xp_backends("cupy", reason="no watershed_ift on CuPy"	)
     def test_watershed_ift09(self, xp):
         # Test large cost. See gh-19575
         data = xp.asarray([[xp.iinfo(xp.uint16).max, 0],

@@ -7,27 +7,23 @@ https://data-apis.org/array-api/latest/API_specification/inspection.html for
 more details.
 
 """
-from __future__ import annotations
-
-from numpy import bool_ as bool
 from numpy import (
-    complex64,
-    complex128,
     dtype,
-    float32,
-    float64,
+    bool_ as bool,
+    intp,
     int8,
     int16,
     int32,
     int64,
-    intp,
     uint8,
     uint16,
     uint32,
     uint64,
+    float32,
+    float64,
+    complex64,
+    complex128,
 )
-
-from ._typing import Device, DType
 
 
 class __array_namespace_info__:
@@ -98,14 +94,14 @@ class __array_namespace_info__:
         >>> info = np.__array_namespace_info__()
         >>> info.capabilities()
         {'boolean indexing': True,
-         'data-dependent shapes': True,
-         'max dimensions': 64}
+         'data-dependent shapes': True}
 
         """
         return {
             "boolean indexing": True,
             "data-dependent shapes": True,
-            "max dimensions": 64,
+            # 'max rank' will be part of the 2024.12 standard
+            # "max rank": 64,
         }
 
     def default_device(self):
@@ -123,7 +119,7 @@ class __array_namespace_info__:
 
         Returns
         -------
-        device : Device
+        device : str
             The default device used for new NumPy arrays.
 
         Examples
@@ -135,11 +131,7 @@ class __array_namespace_info__:
         """
         return "cpu"
 
-    def default_dtypes(
-        self,
-        *,
-        device: Device | None = None,
-    ) -> dict[str, dtype[intp | float64 | complex128]]:
+    def default_dtypes(self, *, device=None):
         """
         The default data types used for new NumPy arrays.
 
@@ -191,12 +183,7 @@ class __array_namespace_info__:
             "indexing": dtype(intp),
         }
 
-    def dtypes(
-        self,
-        *,
-        device: Device | None = None,
-        kind: str | tuple[str, ...] | None = None,
-    ) -> dict[str, DType]:
+    def dtypes(self, *, device=None, kind=None):
         """
         The array API data types supported by NumPy.
 
@@ -273,7 +260,7 @@ class __array_namespace_info__:
                 "complex128": dtype(complex128),
             }
         if kind == "bool":
-            return {"bool": dtype(bool)}
+            return {"bool": bool}
         if kind == "signed integer":
             return {
                 "int8": dtype(int8),
@@ -325,13 +312,13 @@ class __array_namespace_info__:
                 "complex128": dtype(complex128),
             }
         if isinstance(kind, tuple):
-            res: dict[str, DType] = {}
+            res = {}
             for k in kind:
                 res.update(self.dtypes(kind=k))
             return res
         raise ValueError(f"unsupported kind: {kind!r}")
 
-    def devices(self) -> list[Device]:
+    def devices(self):
         """
         The devices supported by NumPy.
 
@@ -339,7 +326,7 @@ class __array_namespace_info__:
 
         Returns
         -------
-        devices : list[Device]
+        devices : list of str
             The devices supported by NumPy.
 
         See Also
@@ -357,10 +344,3 @@ class __array_namespace_info__:
 
         """
         return ["cpu"]
-
-
-__all__ = ["__array_namespace_info__"]
-
-
-def __dir__() -> list[str]:
-    return __all__

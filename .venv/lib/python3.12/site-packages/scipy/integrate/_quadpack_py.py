@@ -211,9 +211,9 @@ def quad(func, a, b, args=(), full_output=0, epsabs=1.49e-8, epsrel=1.49e-8,
     For the 'cos' and 'sin' weighting, additional inputs and outputs are
     available.
 
-    For weighted integrals with finite integration limits, the integration
-    is performed using a Clenshaw-Curtis method, which uses Chebyshev moments.
-    For repeated calculations, these moments are saved in the output dictionary:
+    For finite integration limits, the integration is performed using a
+    Clenshaw-Curtis method which uses Chebyshev moments. For repeated
+    calculations, these moments are saved in the output dictionary:
 
     'momcom'
         The maximum level of Chebyshev moments that have been computed,
@@ -284,8 +284,7 @@ def quad(func, a, b, args=(), full_output=0, epsabs=1.49e-8, epsrel=1.49e-8,
         is an integrator based on globally adaptive interval
         subdivision in connection with extrapolation, which will
         eliminate the effects of integrand singularities of
-        several types. The integration is performed using a 21-point Gauss-Kronrod 
-        quadrature within each subinterval.
+        several types.
     qagie
         handles integration over infinite intervals. The infinite range is
         mapped onto a finite interval and subsequently the same strategy as
@@ -746,8 +745,7 @@ def dblquad(func, a, b, gfun, hfun, args=(), epsabs=1.49e-8, epsrel=1.49e-8):
         is an integrator based on globally adaptive interval
         subdivision in connection with extrapolation, which will
         eliminate the effects of integrand singularities of
-        several types. The integration is is performed using a 21-point Gauss-Kronrod 
-        quadrature within each subinterval.
+        several types.
     qagie
         handles integration over infinite intervals. The infinite range is
         mapped onto a finite interval and subsequently the same strategy as
@@ -879,8 +877,7 @@ def tplquad(func, a, b, gfun, hfun, qfun, rfun, args=(), epsabs=1.49e-8,
         is an integrator based on globally adaptive interval
         subdivision in connection with extrapolation, which will
         eliminate the effects of integrand singularities of
-        several types. The integration is is performed using a 21-point Gauss-Kronrod 
-        quadrature within each subinterval.
+        several types.
     qagie
         handles integration over infinite intervals. The infinite range is
         mapped onto a finite interval and subsequently the same strategy as
@@ -1069,8 +1066,7 @@ def nquad(func, ranges, args=None, opts=None, full_output=False):
         is an integrator based on globally adaptive interval
         subdivision in connection with extrapolation, which will
         eliminate the effects of integrand singularities of
-        several types. The integration is is performed using a 21-point Gauss-Kronrod 
-        quadrature within each subinterval.
+        several types.
     qagie
         handles integration over infinite intervals. The infinite range is
         mapped onto a finite interval and subsequently the same strategy as
