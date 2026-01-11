@@ -17,7 +17,7 @@ Miscellaneous:
 
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
-    * Year and Term: 2025 Spring
+    * Year and Term: 2026 Spring
     * Level and Credit Type: Undergraduate, Grade (A-F)
 
 N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 12, 1, 2, or 3 pm).
