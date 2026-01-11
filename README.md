@@ -9,8 +9,8 @@ Logistics:
 Instructor Information:
 
     * Professor Brian Wright (brianwright@virginia.edu)
-    * Office Hours: Tuesdays @ 2:00 - 4:00 pm, Data Science 434
-    * TA Office Hours: Amelia and Anna on Monday 12:30-1:30pm. Aidan and Carissa on Friday 10:30am-11:30am
+    * Office Hours: Tuesdays @ 10:00 - 12:00 am, Data Science 434
+    * TA Office Hours: TBD
 
 
 Miscellaneous:
@@ -72,7 +72,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |LABS|Labs| 12* | In class |12|12|12|
 |READ|"Read" & Review|12| 2 hours | 10|11|12|
 |CASE|Case Study Assignment|8| 8 hours | --|1|3*|
-|FINL|Final Project|1| 8 hours | 1|1|1|
+|FINL|Final Project|1| 8 hours | 0|1|1|
 
 #### Weekly Assignments
 The LABS and READ assignments for each week are due that Friday at 11:59pm on Canvas every week. 
@@ -105,35 +105,35 @@ There are several technological tools used in this class:
 
 | Week  |   Section    |              Dates                               |          Lecture          |             Lab              |
 |:-----:|:------------:|:--------------------------------:                |:-------------------------:|:----------------------------:|
-|   1   |    Intro     | M X <br> W 8/27 <br> F 8/29                      | What is Data Science?                        | X                            |
-|   2   |    Systems   | M 9/1 <br> W 9/3 <br> F 9/5                      | Software <br> Virtual Environments                         | LABS-1: Hardware & Software  |
-|   3   |    Systems   | M 9/8 <br> W 9/10 <br> F 9/12                    | Hardware <br> Karsten Siller Guest Lecture                         | LABS-2: GPU                  |
-|   4   |    Systems <br> (project)    | M 9/15 <br> W 9/17 <br> F 9/19   | GitHub <br> IDEs                         | LABS-3: Systems              |
-|   5   |    Design    | M 9/22 <br> W 9/24 <br> F 9/26                   | DS Lifecycle <br> Nur Yildirim Guest Lecture                          | LABS-4: Projection                 |
-|   6   |    Design | M 9/29 <br> W 10/1 <br> F 10/3                      | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI |
-|   7   |    Design <br> (project) | M 10/6 <br> W 10/8 <br> F 10/10      | DS Lifecylce in Code <br> Using Data Viz    | LABS-6: Design               |
-|   8   |    Analytics     | M **no class** <br> W 10/15 <br> F 10/17     | **FALL BREAK** <br> What is ML? + Probability Video    | LABS-7: Random Variable Carnival  |
-|   9   |    Analytics     | M 10/20 <br> W 10/22 <br> F 10/24            | Unsupervised Learning <br> Supervised Learning    | LABS-8: kNN on a Board                     |
-|  10   |    Analytics <br> (project)   | M 10/27 <br> W 10/29 <br> F 10/31| Model development <br> Model evaluation                         | LABS-9: Analytics        |
-|  11   |    Value   | M 11/3 <br> W 11/5 <br> F 11/7                     | TBA <br> TBA                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts              |
-|  12   |    Value   | M 11/10 <br> W 11/12 <br> F 11/14                  | ML Fairness <br> Guest Lecture: Prof Manny Moss  | LABS-11: GIGO       |
+|   1   |    Intro     | M X <br> W 1/14 <br> F                      | What is Data Science?                        | X                            |
+|   2   |    Systems   | M 1/19 <br> W 1/21 <br> F 1/23                       | Software <br> Virtual Environments                         | LABS-1: Hardware & Software  |
+|   3   |    Systems   | M  <br> W  <br> F                     | Hardware <br> Karsten Siller Guest Lecture                         | LABS-2: GPU                  |
+|   4   |    Systems <br> (project)    | M  <br> W  <br> F    | GitHub <br> IDEs                         | LABS-3: Systems              |
+|   5   |    Design    | M  <br> W  <br> F                    | DS Lifecycle <br> Nur Yildirim Guest Lecture                          | LABS-4: Projection                 |
+|   6   |    Design | M  <br> W  <br> F                      | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI |
+|   7   |    Design <br> (project) | M <br> W  <br> F       | DS Lifecylce in Code <br> Using Data Viz    | LABS-6: Design               |
+|   8   |    Analytics     | M W  <br> F      | <br> What is ML? + Probability Video    | LABS-7: Random Variable Carnival  |
+|   9   |    Analytics     | M  <br> W <br> F            | Unsupervised Learning <br> Supervised Learning    | LABS-8: kNN on a Board                     |
+|  10   |    Analytics <br> (project)   | M  <br> W  <br> F | Model development <br> Model evaluation                         | LABS-9: Analytics        |
+|  11   |    Value   | M  <br> W<br> F                      | TBA <br> TBA                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts              |
+|  12   |    Value   | M  <br> W  <br> F                   | ML Fairness <br> Guest Lecture: Prof Manny Moss  | LABS-11: GIGO       |
 |  13   |    Value <br> (project)   | M 11/17 <br> W 11/19 <br> F 11/21   | TBA <br> TBA                          | LABS-12: Value      |
-|  14   |    Project   | M 11/24 <br> W **no class**  <br> F **no class** | TBA <br> TBA        | **no lab**              |
-|  15   |    Project   | M 12/1 <br> W 12/3 <br> F 12/5                   | TBA <br> TBA                           | Lab Makeup Day        |
-|  16   |    Outro     | M 12/8 <br>   |                                  | Course Summary                        | **no lab** |
+|  14   |    Project   | M  <br> W   <br> F  | TBA <br> TBA        | **no lab**              |
+|  15   |    Project   | M  <br> W  <br> F                   | TBA <br> TBA                           | Lab Makeup Day        |
+|  16   |    Outro     | M  <br>   |                                  | Course Summary                        | **no lab** |
 
 
 ### Additional Dates
-* 9/5 - This is the first lab day and the first READ assignment is due.
-* 12/5 - Lab makeup day
-* 12/9 - Final due date for all assignments 
+* 1/14 - This is the first lab day and the first READ assignment is due.
+* 5/? - Lab makeup day
+* 5/? - Final due date for all assignments 
 
 
-## Guest Speakers
-* Systems - [Professor Karsten Siller](https://datascience.virginia.edu/people/karsten-siller)
-* Design - Carrie O'Brien: User Experience & Interface Designer at Capital One: Messaging, Web, and Human-Centered Design <br> [Professor Nur Yildirim](https://datascience.virginia.edu/people/nur-yildirim)
-* Analytics - N/A
-* Value - [Professor Brent Kitchens](https://www.commerce.virginia.edu/faculty/bmk2a)
+## Guest Speakers - TBD
+* Systems - 
+* Design - 
+* Analytics -
+* Value - 
 * Additional - TBD
 
 ## Course Bibliography
