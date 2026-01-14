@@ -72,7 +72,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |LABS|Labs| 12* | In class |12|12|12|
 |READ|"Read" & Review|12| 2 hours | 10|11|12|
 |CASE|Case Study Assignment|8| 8 hours | --|1|3*|
-|FINL|Final Project|1| 8 hours | 0|1|1|
+|FINL|Final Project|1| 8 hours | --|1|1|
 
 #### Weekly Assignments
 The LABS and READ assignments for each week are due that Friday at 11:59pm on Canvas every week. 
