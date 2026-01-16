@@ -103,24 +103,24 @@ There are several technological tools used in this class:
 *This is a tentative schedule, subject to change.*
 
 
-| Week  |   Section                   |              Dates              |          Lecture                                     |             Lab                                                  |
-|:-----:|:---------------------------:|:-------------------------------:|:----------------------------------------------------:|:----------------------------------------------------------------:|
-|   0   |    Intro                    | M X    <br/> W 1/14 <br/> F X     | What is Data Science?                                | X                                                                |
-|   1   |    Systems                  | M X    <br> W 1/21 <br> F 1/23  | Software <br> Virtual Environments                   | LABS-1: Hardware & Software                                      |
-|   2   |    Systems                  | M 1/26 <br> W 1/28 <br> F 1/30  | Hardware <br> Karsten Siller Guest Lecture           | LABS-2: GPU                                                      |
-|   3   |    Systems <br> (project)   | M 2/2  <br> W 2/4  <br> F 2/6   | GitHub <br> IDEs                                     | LABS-3: Systems                                                  |
-|   4   |    Design                   | M 2/9  <br> W 2/11 <br> F 2/13  | DS Lifecycle <br> Nur Yildirim Guest Lecture         | LABS-4: Projection                                               |
-|   5   |    Design                   | M 2/16 <br> W 2/18 <br> F 2/20  | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI                                                     |
-|   6   |    Design <br> (project)    | M 2/23 <br> W 2/25 <br> F 2/27  | DS Lifecylce in Code <br> Using Data Viz             | LABS-6: Design                                                   |
-|   X   |    Spring Break             | M X    <br> W X    <br> F X     | X                                                    | X                                                                |
-|   7   |    Analytics                | M 3/9  <br> W 3/11 <br> F 3/13  | What is ML? + Probability Video                      | LABS-7: Random Variable Carnival                                 |
-|   8   |    Analytics                | M 3/16 <br> W 3/18 <br> F 3/20  | Unsupervised Learning <br> Supervised Learning       | LABS-8: kNN on a Board                                           |
-|   9   |    Analytics <br> (project) | M 3/23 <br> W 3/25 <br> F 3/27  | Model development <br> Model evaluation              | LABS-9: Analytics                                                |
-|  10   |    Value                    | M 3/30 <br> W 4/1  <br> F 4/3   | TBA <br> TBA                                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts|
-|  11   |    Value                    | M 4/6  <br> W 4/8  <br> F 4/10  | ML Fairness <br> Guest Lecture: Prof Manny Moss      | LABS-11: GIGO                                                    |
-|  12   |    Value <br> (project)     | M 4/13 <br> W 4/15 <br> F 4/17  | TBA <br> TBA                                         | LABS-12: Value                                                   |
-|  13   |    FInal Project            | M 4/20 <br> W 4/22 <br> F 4/24  | TBA <br> TBA                                         | Lab Makeup Day                                                   |
-|  14   |    Outro                    | M 4/27                          | Course Summary                                       | X                                                                |
+| Week  |   Section                   |              Dates                       |          Lecture                                     |             Lab                                                  |
+|:-----:|:---------------------------:|:----------------------------------------:|:----------------------------------------------------:|:----------------------------------------------------------------:|
+|   0   |    Intro                    | M&nbsp;X <br> W&nbsp;1/14 <br> F&nbsp;X  | What is Data Science?                                | X                                                                |
+|   1   |    Systems                  | M X<br>W 1/21<br>F 1/23                  | Software <br> Virtual Environments                   | LABS-1: Hardware & Software                                      |
+|   2   |    Systems                  | M 1/26 <br> W 1/28 <br> F 1/30           | Hardware <br> Karsten Siller Guest Lecture           | LABS-2: GPU                                                      |
+|   3   |    Systems <br> (project)   | M 2/2  <br> W 2/4  <br> F 2/6            | GitHub <br> IDEs                                     | LABS-3: Systems                                                  |
+|   4   |    Design                   | M 2/9  <br> W 2/11 <br> F 2/13           | DS Lifecycle <br> Nur Yildirim Guest Lecture         | LABS-4: Projection                                               |
+|   5   |    Design                   | M 2/16 <br> W 2/18 <br> F 2/20           | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI                                                     |
+|   6   |    Design <br> (project)    | M 2/23 <br> W 2/25 <br> F 2/27           | DS Lifecylce in Code <br> Using Data Viz             | LABS-6: Design                                                   |
+|   X   |    Spring Break             | M X    <br> W X    <br> F X              | X                                                    | X                                                                |
+|   7   |    Analytics                | M 3/9  <br> W 3/11 <br> F 3/13           | What is ML? + Probability Video                      | LABS-7: Random Variable Carnival                                 |
+|   8   |    Analytics                | M 3/16 <br> W 3/18 <br> F 3/20           | Unsupervised Learning <br> Supervised Learning       | LABS-8: kNN on a Board                                           |
+|   9   |    Analytics <br> (project) | M 3/23 <br> W 3/25 <br> F 3/27           | Model development <br> Model evaluation              | LABS-9: Analytics                                                |
+|  10   |    Value                    | M 3/30 <br> W 4/1  <br> F 4/3            | TBA <br> TBA                                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts|
+|  11   |    Value                    | M 4/6  <br> W 4/8  <br> F 4/10           | ML Fairness <br> Guest Lecture: Prof Manny Moss      | LABS-11: GIGO                                                    |
+|  12   |    Value <br> (project)     | M 4/13 <br> W 4/15 <br> F 4/17           | TBA <br> TBA                                         | LABS-12: Value                                                   |
+|  13   |    FInal Project            | M 4/20 <br> W 4/22 <br> F 4/24           | TBA <br> TBA                                         | Lab Makeup Day                                                   |
+|  14   |    Outro                    | M 4/27                                   | Course Summary                                       | X                                                                |
 
 
 ### Additional Dates
