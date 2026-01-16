@@ -119,14 +119,14 @@ There are several technological tools used in this class:
 |  10   |    Value                    | M 3/30 <br> W 4/1  <br> F 4/3            | TBA <br> TBA                                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts|
 |  11   |    Value                    | M 4/6  <br> W 4/8  <br> F 4/10           | ML Fairness <br> Guest Lecture: Prof Manny Moss      | LABS-11: GIGO                                                    |
 |  12   |    Value <br> (project)     | M 4/13 <br> W 4/15 <br> F 4/17           | TBA <br> TBA                                         | LABS-12: Value                                                   |
-|  13   |    FInal Project            | M 4/20 <br> W 4/22 <br> F 4/24           | TBA <br> TBA                                         | Lab Makeup Day                                                   |
+|  13   |    Final Project            | M 4/20 <br> W 4/22 <br> F 4/24           | TBA <br> TBA                                         | Lab Makeup Day                                                   |
 |  14   |    Outro                    | M 4/27                                   | Course Summary                                       | X                                                                |
 
 
 ### Additional Dates
-* 1/14 - This is the first lab day and the first READ assignment is due.
-* 5/? - Lab makeup day
-* 5/? - Final due date for all assignments 
+* 1/23 - This is the first lab day and the first READ assignment is due.
+* 4/24 - Lab makeup day
+* 4/28 - Final due date for all assignments 
 
 
 ## Guest Speakers - TBD
