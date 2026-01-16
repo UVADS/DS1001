@@ -105,7 +105,7 @@ There are several technological tools used in this class:
 
 | Week  |   Section                   |              Dates              |          Lecture                                     |             Lab                                                  |
 |:-----:|:---------------------------:|:-------------------------------:|:----------------------------------------------------:|:----------------------------------------------------------------:|
-|   0   |    Intro                    | M X    <br> W 1/14 <br> F X     | What is Data Science?                                | X                                                                |
+|   0   |    Intro                    | M X    <br/> W 1/14 <br/> F X     | What is Data Science?                                | X                                                                |
 |   1   |    Systems                  | M X    <br> W 1/21 <br> F 1/23  | Software <br> Virtual Environments                   | LABS-1: Hardware & Software                                      |
 |   2   |    Systems                  | M 1/26 <br> W 1/28 <br> F 1/30  | Hardware <br> Karsten Siller Guest Lecture           | LABS-2: GPU                                                      |
 |   3   |    Systems <br> (project)   | M 2/2  <br> W 2/4  <br> F 2/6   | GitHub <br> IDEs                                     | LABS-3: Systems                                                  |
