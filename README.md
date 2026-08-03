@@ -2,25 +2,25 @@
 
 Logistics:
 
-    * Lecture: Nau Hall 101, 2-3:15 pm Mon & Wed
-    * Lab: Data Science 206 or 306 @ 12, 1, or 2
+    * Lecture: Nau Hall 101, 2-3:15 pm Tue & Thur
+    * Lab: Data Science 205 or 206 @ 1, 2, or 3
 
       
 Instructor Information:
 
     * Professor Brian Wright (brianwright@virginia.edu)
-    * Office Hours: Tuesdays @ 10:00 - 12:00 am, Data Science 434
-    * TA Office Hours on Discord: Wednesdays 1-2pm & Fridays 10:30-11:30am
+    * Office Hours: TBD
+    * TA Office Hours: TBD
 
 
 Miscellaneous:
 
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
-    * Year and Term: 2026 Spring
+    * Year and Term: 2026 Fall
     * Level and Credit Type: Undergraduate, Grade (A-F)
 
-N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 12, 1, 2, or 3 pm).
+N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 1, 2, or 3 pm).
 
 ## A Little Bit About the Course
 This course introduces students to a broad range of foundational topics and skills that form the data science pipeline. A central feature of the course is a guided, semester-long project that allows students to continuously apply what they learn in a practical context. Our guide will be the [Virginia Model of Data Science](https://arxiv.org/abs/2311.07631). Students will engage with the material through lectures, small group discussions, hands-on lab activities, and guest presentations by industry experts, all designed to support and enrich their understanding and skills. Throughout the semester, students will learn to think like data scientists - approaching problems methodically, making evidence-based decisions, and applying analytical techniques to uncover insights. Students will develop a variety of competencies, including setting up a computing environment, creating data visualizations, developing research questions, building models, and examining biases throughout the data science process. In the final weeks, students will repeat this process independently by designing and executing their own project, reinforcing their skills and deepening their understanding through self-directed practice. 
@@ -124,9 +124,9 @@ There are several technological tools used in this class:
 
 
 ### Additional Dates
-* 1/23 - This is the first lab day and the first READ assignment is due.
-* 4/24 - Lab makeup day
-* 4/28 - Final due date for all assignments 
+* 9/4 - This is the first lab day and the first READ assignment is due.
+* 12/4 - Lab makeup day
+* 12/8 - Final due date for all assignments 
 
 
 ## Guest Speakers - TBD
