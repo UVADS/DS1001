@@ -2,25 +2,25 @@
 
 Logistics:
 
-    * Lecture: Nau Hall 101, 2-3:15 pm Mon & Wed
-    * Lab: Data Science 206 or 306 @ 12, 1, or 2
+    * Lecture: Nau Hall 101, 2-3:15 pm Tue & Thur
+    * Lab: Data Science 205 or 206 @ 1, 2, or 3
 
       
 Instructor Information:
 
     * Professor Brian Wright (brianwright@virginia.edu)
-    * Office Hours: Tuesdays @ 10:00 - 12:00 am, Data Science 434
-    * TA Office Hours on Discord: Wednesdays 1-2pm & Fridays 10:30-11:30am
+    * Office Hours: Monday 2-4, SDS room 434
+    * TA Office Hours: TBD
 
 
 Miscellaneous:
 
     * SIS Title: Foundation of Data Science
     * Subject Area and Catalog Number: Data Science, DS 1001
-    * Year and Term: 2026 Spring
+    * Year and Term: 2026 Fall
     * Level and Credit Type: Undergraduate, Grade (A-F)
 
-N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 12, 1, 2, or 3 pm).
+N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 1, 2, or 3 pm).
 
 ## A Little Bit About the Course
 This course introduces students to a broad range of foundational topics and skills that form the data science pipeline. A central feature of the course is a guided, semester-long project that allows students to continuously apply what they learn in a practical context. Our guide will be the [Virginia Model of Data Science](https://arxiv.org/abs/2311.07631). Students will engage with the material through lectures, small group discussions, hands-on lab activities, and guest presentations by industry experts, all designed to support and enrich their understanding and skills. Throughout the semester, students will learn to think like data scientists - approaching problems methodically, making evidence-based decisions, and applying analytical techniques to uncover insights. Students will develop a variety of competencies, including setting up a computing environment, creating data visualizations, developing research questions, building models, and examining biases throughout the data science process. In the final weeks, students will repeat this process independently by designing and executing their own project, reinforcing their skills and deepening their understanding through self-directed practice. 
@@ -72,6 +72,7 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 |LABS|Labs| 12* | In class |12|12|12|
 |READ|"Read" & Review|12| 2 hours | 10|11|12|
 |CASE|Case Study Assignment|8| 8 hours | --|1|3*|
+|QUIZZES|In-Class|5|30 Minutes|3|4|5|
 |FINL|Final Project|1| 8 hours | --|1|1|
 
 #### Weekly Assignments
@@ -84,6 +85,7 @@ The LABS and READ assignments for each week are due that Friday at 11:59pm on Ca
 1. LABS - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for the majority of the work to be done during the class lab period, but some final details like formatting and reflection may need to be done outside of class time.
 2. "READ" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
 3. CASE Study Assignment - Each module has two case study assignments. These assignments are designed to dive deeper into material covered in class or to explore material not covered in class. They will require using external resources and some significant self-directed research. You’ll have some choice in the topics - so pick the ones that interest you most.
+4.  Quizzes - You'll need to meet spec on all 5 quizzes to get an A in the course. Passing is getting a 80% or above and you can retake only one quiz. These are not designed to be difficult and are based on course lectures. So coming to class and paying attention is all that is needed. 
    
      **For the A bundle you can do 4 cases but no more to work to get 3 above spec, for the B bundle you can do 2**
 5. Final Project - This assignment is the your opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". This will reflect the project work done throughout the semester.
@@ -103,30 +105,30 @@ There are several technological tools used in this class:
 *This is a tentative schedule, subject to change.*
 
 
-| Week  |   Section                   |              Dates                       |          Lecture                                     |             Lab                                                  |
-|:-----:|:---------------------------:|:----------------------------------------:|:----------------------------------------------------:|:----------------------------------------------------------------:|
-|   0   |    Intro                    | M&nbsp;X <br> W&nbsp;1/14 <br> F&nbsp;X  | What is Data Science?                                | X                                                                |
-|   1   |    Systems                  | M X<br>W 1/21<br>F 1/23                  | Software <br> Virtual Environments                   | LABS-1: Hardware & Software                                      |
-|   2   |    Systems                  | M 1/26 <br> W 1/28 <br> F 1/30           | Hardware <br> Karsten Siller Guest Lecture           | LABS-2: GPU                                                      |
-|   3   |    Systems <br> (project)   | M 2/2  <br> W 2/4  <br> F 2/6            | GitHub <br> IDEs                                     | LABS-3: Systems                                                  |
-|   4   |    Design                   | M 2/9  <br> W 2/11 <br> F 2/13           | DS Lifecycle <br> Nur Yildirim Guest Lecture         | LABS-4: Projection                                               |
-|   5   |    Design                   | M 2/16 <br> W 2/18 <br> F 2/20           | Carrie O'Brien Guest lecture <br> Data storytelling  | LABS-5: LUPI                                                     |
-|   6   |    Design <br> (project)    | M 2/23 <br> W 2/25 <br> F 2/27           | DS Lifecylce in Code <br> Using Data Viz             | LABS-6: Design                                                   |
-|   X   |    Spring Break             | M X    <br> W X    <br> F X              | X                                                    | X                                                                |
-|   7   |    Analytics                | M 3/9  <br> W 3/11 <br> F 3/13           | What is ML? + Probability Video                      | LABS-7: Random Variable Carnival                                 |
-|   8   |    Analytics                | M 3/16 <br> W 3/18 <br> F 3/20           | Unsupervised Learning <br> Supervised Learning       | LABS-8: kNN on a Board                                           |
-|   9   |    Analytics <br> (project) | M 3/23 <br> W 3/25 <br> F 3/27           | Model development <br> Model evaluation              | LABS-9: Analytics                                                |
-|  10   |    Value                    | M 3/30 <br> W 4/1  <br> F 4/3            | TBA <br> TBA                                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts|
-|  11   |    Value                    | M 4/6  <br> W 4/8  <br> F 4/10           | ML Fairness <br> Guest Lecture: Prof Manny Moss      | LABS-11: GIGO                                                    |
-|  12   |    Value <br> (project)     | M 4/13 <br> W 4/15 <br> F 4/17           | TBA <br> TBA                                         | LABS-12: Value                                                   |
-|  13   |    Final Project            | M 4/20 <br> W 4/22 <br> F 4/24           | TBA <br> TBA                                         | Lab Makeup Day                                                   |
-|  14   |    Outro                    | M 4/27                                   | Course Summary                                       | X                                                                |
-
+| Week |         Section          |                    Dates                     |                           Lecture                            |                             Lab                              |
+| :--: | :----------------------: | :------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
+|  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                Using Claude for Data Science                 |
+|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-1: Hardware & Software                  |
+|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Hardware <br> Software                     |                         LABS-2: GPU                          |
+|  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-3: Systems                        |
+|  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |         DS Lifecycle <br> Nur Yildirim Guest Lecture         |                      LABS-4: Projection                      |
+|  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                    <br> Data storytelling                    |                         LABS-5: LUPI                         |
+|  7   |  Design <br> (project)   |     T 10/13 <br> Th 10/15 <br> F 10/16      |           DS Lifecycle in Code <br> Using Data Viz           |                        LABS-6: Design                        |
+|  8   |        Analytics         |     T 10/20 <br> Th 10/22 <br> F 10/23      |               What is ML? + Probability Video                |               LABS-7: Random Variable Carnival               |
+|  9   |        Analytics         |     T 10/27 <br> Th 10/29 <br> F 10/30      |        Unsupervised Learning <br> Supervised Learning        |                    LABS-8: kNN on a Board                    |
+|  10  | Analytics <br> (project) |      T 11/3 <br> Th 11/5 <br> F 11/6        |           Model development <br> Model evaluation            |                      LABS-9: Analytics                       |
+|  11  |          Value           |     T 11/10 <br> Th 11/12 <br> F 11/13      |                         TBA <br> TBA                         | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts |
+|  12  |          Value           |     T 11/17 <br> Th 11/19 <br> F 11/20      |       ML Fairness <br> Guest Lecture: Prof Manny Moss        |                        LABS-11: GIGO                         |
+|  X   |    Thanksgiving Break    |         T X <br> Th X <br> F X              |                              X                               |                              X                               |
+|  13  |   Value <br> (project)   |      T 12/1 <br> Th 12/3 <br> F 12/4        |                         TBA <br> TBA                         |                        LABS-12: Value                        |
+|  14  |      Final Project       |      T 12/8 <br> Th 12/10 <br> F 12/11      |                         TBA <br> TBA                         |                        Lab Makeup Day                        |
+|  15  |          Outro           |                   T 12/15                    |                        Course Summary                        |                              X                               |
 
 ### Additional Dates
-* 1/23 - This is the first lab day and the first READ assignment is due.
-* 4/24 - Lab makeup day
-* 4/28 - Final due date for all assignments 
+* 9/4 - This is the first lab day and the first READ assignment is due.
+* 12/4 - Lab makeup day
+* 12/8 - Final due date for all assignments 
 
 
 ## Guest Speakers - TBD
