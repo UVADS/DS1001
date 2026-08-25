@@ -87,9 +87,10 @@ The LABS and READ assignments for each week are due that Friday at 11:59pm on Ca
 1. LABS - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for the majority of the work to be done during the class lab period, but some final details like formatting and reflection may need to be done outside of class time.
 2. "READ" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
 3. CASE Study Assignment - Each module has two case study assignments. These assignments are designed to dive deeper into material covered in class or to explore material not covered in class. They will require using external resources and some significant self-directed research. You’ll have some choice in the topics - so pick the ones that interest you most.
-     **For the A bundle you can do 4 cases but no more to work to get 3 above spec, for the B bundle you can do 2**
+**For the A bundle you can do 4 cases but no more to work to get 3 above spec, for the B bundle you can do 2**
 4.  QUIZ - Each module (+ a 5th applied section) has a quiz based on lecture material. The quiz will be done in class during lecture. The quizzes focus on the central concepts and examples discussed in class, so regular attendance and engagement with the lectures will prepare students well. "Meeting spec" is defined as scoring >= 80%. You may retake 1 QUIZ for the semester. If you miss a QUIZ, you may make it up the following Friday with documentation for the absence. Reach out to one of the IAs to schedule.
 5. "FINL" Final Project - This assignment is the your opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". This will reflect the project work done throughout the semester.
+
 
 ### Flexibility
 1. Labs: There is a make up lab day at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
