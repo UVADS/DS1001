@@ -110,7 +110,7 @@ There are several technological tools used in this class:
 | Week |         Section          |                    Dates                     |                           Lecture                            |                             Lab                              |
 | :--: | :----------------------: | :------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
-|  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
+|  1   |       AI Overview        |       T 9/1  <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
 |  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
 |  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-3: GPU                          |
 |  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-4: Systems                        |
@@ -151,14 +151,13 @@ Systems
 * [Fundamentals of Data Engineering](https://www.oreilly.com/library/view/fundamentals-of-data/9781098108298/) by Reis and Housley
 
 Design
-* The Design of Everyday Things by Norman
 * [How charts lie : getting smarter about visual information](https://www.amazon.com/How-Charts-Lie-Getting-Information/dp/1324001569)
 * [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
 
 Analytics
 * [R for Data Science](https://r4ds.had.co.nz/)
 * [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
-* Probability: Basic Probabilty by Tijms
+* [Grinstead and Snell’s Introduction to Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 
 Value
 * [Weapons of Math Destruction](https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815)
@@ -166,7 +165,7 @@ Value
   
 ## A few policies that govern the class
 Attendance: 
-* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the READ/LABS assignments that week and CASE Study assignments for that module. On Tuesdays READ & LABS assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab. In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
+* Lecture: Every student is responsible for the material covered in lecture. Attendance during lecture is expected and the material is integrated with the READ/LABS assignments that week and CASE Study assignments for that module. On Tuesdays READ & LABS assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab. In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
 
 * Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final Friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
 
