@@ -110,25 +110,24 @@ There are several technological tools used in this class:
 | Week |         Section          |                    Dates                     |                           Lecture                            |                             Lab                              |
 | :--: | :----------------------: | :------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
-|  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                Using Claude for Data Science                 |
-|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-1: Hardware & Software                  |
-|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-2: GPU                          |
-|  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-3: Systems                        |
-|  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                                                               |                      LABS-4: Projection                      |
-|  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                                                               |                         LABS-5: LUPI                         |
-|  7   |  Design <br> (project)   |     T 10/13 <br> Th 10/15 <br> F 10/16      |                                                                |                        LABS-6: Design                        |
-|  8   |        Analytics         |     T 10/20 <br> Th 10/22 <br> F 10/23      |                                                                |               LABS-7: Random Variable Carnival               |
-|  9   |        Analytics         |     T 10/27 <br> Th 10/29 <br> F 10/30      |                                                                |                    LABS-8: kNN on a Board                    |
-|  10  | Analytics <br> (project) |      T 11/3 <br> Th 11/5 <br> F 11/6        |                                                                 |                      LABS-9: Analytics                       |
-|  11  |          Value           |     T 11/10 <br> Th 11/12 <br> F 11/13      |                                                              | LABS-10: Evaluating the Implementation of ML: Decisions & Impacts |
-|  12  |          Value           |     T 11/17 <br> Th 11/19 <br> F 11/20      |                                                               |                        LABS-11: GIGO                         |
-|  X   |    Thanksgiving Break    |         T 11/24 <br> Th X <br> F X          |                                                             |                              X                               |
-|  13  |   Value <br> (project)   |      T 12/1 <br> Th 12/3 <br> F 12/4        |                                                                 |                        LABS-12: Value                        |
-|  14  |      Final Project       |      T 12/8 <br> Th 12/10 <br> F 12/11      |                                                                 |                        Lab Makeup Day                        |
-|  15  |          Outro           |                   T 12/15                   |                        Course Summary                        |                              X                               |
+|  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
+|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
+|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-3: GPU                          |
+|  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-4: Systems                        |
+|  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                                                               |                      LABS-5: Projection                      |
+|  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                                                               |                         LABS-6: LUPI                         |
+|  7   |  Design <br> (project)   |     T 10/13 <br> Th 10/15 <br> F 10/16      |                                                                |                        LABS-7: Design                        |
+|  8   |        Analytics         |     T 10/20 <br> Th 10/22 <br> F 10/23      |                                                                |               LABS-8: Random Variable Carnival               |
+|  9   |        Analytics         |     T 10/27 <br> Th 10/29 <br> F 10/30      |                                                                |                    LABS-9: kNN on a Board                    |
+|  10  | Analytics <br> (project) |      T 11/3 <br> Th 11/5 <br> F 11/6        |                                                                 |                      LABS-10: Analytics                       |
+|  11  |          Value           |     T 11/10 <br> Th 11/12 <br> F 11/13      |                                                              |                         LABS-11: GIGO                         |
+|  12  |          Value           |     T 11/17 <br> Th 11/19 <br> F 11/20      |                                                               |                        LABS-12: Value                         |
+|  13  |    Thanksgiving Break    |         T 11/24 <br> Th X <br> F X          |                                                             |                              X                               |
+|  13  |   Value <br> (project)   |      T 12/1 <br> Th 12/3 <br> F 12/4        |                                                                 |                        Lab Makeup Day                        |
+|  14  |      Final Project       |      T 12/8 <br> Th X <br> F X              |                                                                 |                                 X               |
 
 ### Additional Dates
-* 9/4 - This is the first lab day and the first READ assignment is due.
+* 9/4 - This is the first lab day and the first READ & LABS assignments are due.
 * 12/4 - Lab makeup day
 * 12/8 - Final due date for all assignments 
 
