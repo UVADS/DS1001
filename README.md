@@ -26,29 +26,29 @@ N.B. There is an associated lab class that must be enrolled simultaneously (50 m
 This course introduces students to a broad range of foundational topics and skills that form the data science pipeline. A central feature of the course is a guided, semester-long project that allows students to continuously apply what they learn in a practical context. Our guide will be the [Virginia Model of Data Science](https://arxiv.org/abs/2311.07631). Students will engage with the material through lectures, small group discussions, hands-on lab activities, and guest presentations by industry experts, all designed to support and enrich their understanding and skills. Throughout the semester, students will learn to think like data scientists - approaching problems methodically, making evidence-based decisions, and applying analytical techniques to uncover insights. Students will develop a variety of competencies, including setting up a computing environment, creating data visualizations, developing research questions, building models, and examining biases throughout the data science process. In the final weeks, students will repeat this process independently by designing and executing their own project, reinforcing their skills and deepening their understanding through self-directed practice. 
 
 ## What you’ll learn along the way
-* Prime Learning Objective: You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally approaching a problem as a data scientist in your final project.
-* Secondary Objective: Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
+* **Prime Learning Objective:** You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally approaching a problem as a data scientist in your final project.
+* **Secondary Objective:** Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
 
 In each of the areas we will specifically focus on:
 * Systems
   * **Students Will Be Able To** explain the components of a computer system and how they interact to support data science work.	 
-  * SWBAT compare hardware and software choices to choose the best tools for a problem. 
-  * SWBAT use an IDE (Integrated Development Environment) to solve simple problems. 
+  * **SWBAT** compare hardware and software choices to choose the best tools for a problem. 
+  * **SWBAT** use an IDE (Integrated Development Environment) to solve simple problems. 
 
 * Design
-  * SWBAT create and interpret data representations using models, databases, graphics, and visualizations. 
-  * SWBAT identify key experimental design choices that happen throughout the DS pipeline and how those choices impact the result. 
-  * SWBAT use data summary and visualization tools to understand and describe a problem. 
+  * **SWBAT** create and interpret data representations using models, databases, graphics, and visualizations. 
+  * **SWBAT** identify key experimental design choices that happen throughout the DS pipeline and how those choices impact the result. 
+  * **SWBAT** use data summary and visualization tools to understand and describe a problem. 
 
 * Analytics
-  * SWBAT define and give examples of a Data Science model. 
-  * SWBAT describe the key types of Machine Learning and their uses. 
-  * SWBAT distinguish between target/feature variables, identify true/predicted values, and interpret common evaluation metrics in a model.  
+  * **SWBAT** define and give examples of a Data Science model. 
+  * **SWBAT** describe the key types of Machine Learning and their uses. 
+  * **SWBAT** distinguish between target/feature variables, identify true/predicted values, and interpret common evaluation metrics in a model.  
 
 * Value
-  * SWBAT describe the 5 Data & Society subfields and their relevance to data science practice. 
-  * SWBAT analyze how responsibility for decisions is distributed across stages of the ML pipeline. 
-  * SWBAT identify common sources of bias and error in data and models across the ML pipeline. 
+  * **SWBAT** describe the 5 Data & Society subfields and their relevance to data science practice. 
+  * **SWBAT** analyze how responsibility for decisions is distributed across stages of the ML pipeline. 
+  * **SWBAT** identify common sources of bias and error in data and models across the ML pipeline. 
 
 
 ## How You’ll Know You Are Learning (Assignments)
@@ -69,11 +69,13 @@ The following table summarizes the assignmenmts required to "meet spec" to earn 
 
 |Code|Assignment Type|#|Avg. Time|C|B|A|
 |--|--|--|--|--|--|--|
-|LABS|Labs| 12* | In class |12|12|12|
+|LABS|Labs| 12 | In class |12|12|12|
 |READ|"Read" & Review|12| 2 hours | 10|11|12|
-|CASE|Case Study Assignment|8| 8 hours | --|1|3*|
-|QUIZZES|In-Class|5|30 Minutes|3|4|5|
+|CASE|Case Study Assignment|8| 8 hours | --|1|3|
+|QUIZ*|In-Class|5|30 Minutes|3|4|5|
 |FINL|Final Project|1| 8 hours | --|1|1|
+
+*Meeting spec on a QUIZ is defined as scoring 80% or higher.
 
 #### Weekly Assignments
 The LABS and READ assignments for each week are due that Friday at 11:59pm on Canvas every week. 
@@ -85,16 +87,14 @@ The LABS and READ assignments for each week are due that Friday at 11:59pm on Ca
 1. LABS - there is a lab section for this course and every student is expected to enroll and complete the lab assignments. The definition of "lab" is loose as the assignments performed in the lab sections vary. The goal is for the majority of the work to be done during the class lab period, but some final details like formatting and reflection may need to be done outside of class time.
 2. "READ" and Review - every week supplemental material will be posted to enhance the in class activities. This is not just reading but can also include other forms of media. The deliverable for this assignment is a short review and reflection.
 3. CASE Study Assignment - Each module has two case study assignments. These assignments are designed to dive deeper into material covered in class or to explore material not covered in class. They will require using external resources and some significant self-directed research. You’ll have some choice in the topics - so pick the ones that interest you most.
-
 **For the A bundle you can do 4 cases but no more to work to get 3 above spec, for the B bundle you can do 2**
+4.  QUIZ - Each module (+ a 5th applied section) has a quiz based on lecture material. The quiz will be done in class during lecture. The quizzes focus on the central concepts and examples discussed in class, so regular attendance and engagement with the lectures will prepare students well. "Meeting spec" is defined as scoring >= 80%. You may retake 1 QUIZ for the semester. If you miss a QUIZ, you may make it up the following Friday with documentation for the absence. Reach out to one of the IAs to schedule.
+5. "FINL" Final Project - This assignment is the your opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". This will reflect the project work done throughout the semester.
 
-5.  Quizzes - You'll need to meet spec on all 5 quizzes to get an A in the course. Passing is getting a 80% or above and you can retake only one quiz. These are not designed to be difficult and are based on course lectures. So coming to class and paying attention is all that is needed. 
-   
-6. Final Project - This assignment is the your opportunity to synthesize the semester and show mastery of the primary learning objective "thinking like a data scientist". This will reflect the project work done throughout the semester.
 
 ### Flexibility
 1. Labs: There is a make up lab day at the end of the term where students can complete a lab they were unable to complete. No excuse is necessary.
-2. Resubmission: After grading, weekly assignments (LABS & READ) marked "does not meet spec, yet" can be revised and resubmitted **once** for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. **CASE and FINL assignments can not be revised.**
+2. Resubmission: After grading, weekly assignments (LABS & READ) marked "does not meet spec, yet" can be revised and resubmitted **once** for full credit. For some submissions that are far off the mark an office hour visit may be necessary before resubmission is granted. **CASE and FINL assignments can not be revised. You are permitted one QUIZ retake per semester.**
 
 ## Tech Stack (Course Delivery Tools)
 There are several technological tools used in this class:
@@ -112,7 +112,7 @@ There are several technological tools used in this class:
 |  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
 |  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                Using Claude for Data Science                 |
 |  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-1: Hardware & Software                  |
-|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Hardware <br> Software                     |                         LABS-2: GPU                          |
+|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software                     |                         LABS-2: GPU                          |
 |  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-3: Systems                        |
 |  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |         DS Lifecycle <br> Nur Yildirim Guest Lecture         |                      LABS-4: Projection                      |
 |  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                    <br> Data storytelling                    |                         LABS-5: LUPI                         |
@@ -134,7 +134,7 @@ There are several technological tools used in this class:
 
 
 ## Guest Speakers - TBD
-* Systems - 
+* Systems - [Neal Magee](https://datascience.virginia.edu/people/neal-magee)
 * Design - 
 * Analytics -
 * Value - 
@@ -167,7 +167,7 @@ Value
   
 ## A few policies that govern the class
 Attendance: 
-* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the READ/LABS assignments that week and CASE Study assignments for that module. On Mondays READ & LABS assignments will be reviewed. On Wednesdays we will preview Friday's lab to show the connection between lecture and lab. In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
+* Lecture: Every student is responsible for the material covered in lecture. Attendence during lecture is expected and the material is integrated with the READ/LABS assignments that week and CASE Study assignments for that module. On Tuesdays READ & LABS assignments will be reviewed. On Thursdays we will preview Friday's lab to show the connection between lecture and lab. In the event of a missed class we strongly advise reviewing the material before the next lab period (a friend's notes, office hours, etc.).
 
 * Lab assignments can only be completed in class on Friday (there is often special equipment and the need for a partner). There is a lab makeup day on the final Friday of classes during the normal lab times. No excuse is needed for a missed lab, you are already granted permission to make it up on makeup day.
 
