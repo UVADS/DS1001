@@ -111,7 +111,7 @@ There are several technological tools used in this class:
 |  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
 |  1   |       AI Overview        |       T 9/1 X <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                Using Claude for Data Science                 |
 |  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-1: Hardware & Software                  |
-|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Hardware <br> Software                     |                         LABS-2: GPU                          |
+|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software                     |                         LABS-2: GPU                          |
 |  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-3: Systems                        |
 |  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |         DS Lifecycle <br> Nur Yildirim Guest Lecture         |                      LABS-4: Projection                      |
 |  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                    <br> Data storytelling                    |                         LABS-5: LUPI                         |
@@ -133,7 +133,7 @@ There are several technological tools used in this class:
 
 
 ## Guest Speakers - TBD
-* Systems - 
+* Systems - [Neal Magee](https://datascience.virginia.edu/people/neal-magee)
 * Design - 
 * Analytics -
 * Value - 
