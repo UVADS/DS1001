@@ -114,14 +114,14 @@ There are several technological tools used in this class:
 |  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
 |  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-3: GPU                          |
 |  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-4: Systems                        |
-|  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                                                               |                      LABS-5: Projection                      |
+|  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                       Carrie O'Brien Guest Lecture           |                      LABS-5: Projection                      |
 |  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                                                               |                         LABS-6: LUPI                         |
 |  7   |  Design <br> (project)   |     T 10/13 <br> Th 10/15 <br> F 10/16      |                                                                |                        LABS-7: Design                        |
 |  8   |        Analytics         |     T 10/20 <br> Th 10/22 <br> F 10/23      |                                                                |               LABS-8: Random Variable Carnival               |
 |  9   |        Analytics         |     T 10/27 <br> Th 10/29 <br> F 10/30      |                                                                |                    LABS-9: kNN on a Board                    |
 |  10  | Analytics <br> (project) |      T 11/3 <br> Th 11/5 <br> F 11/6        |                                                                 |                      LABS-10: Analytics                       |
 |  11  |          Value           |     T 11/10 <br> Th 11/12 <br> F 11/13      |                                                              |                         LABS-11: GIGO                         |
-|  12  |          Value           |     T 11/17 <br> Th 11/19 <br> F 11/20      |                                                               |                        LABS-12: Value                         |
+|  12  |          Value           |     T 11/17 <br> Th 11/19 <br> F 11/20      |        David Danks Guest Lecture                              |                        LABS-12: Value                         |
 |  13  |    Thanksgiving Break    |         T 11/24 <br> Th X <br> F X          |                                                             |                              X                               |
 |  13  |   Value <br> (project)   |      T 12/1 <br> Th 12/3 <br> F 12/4        |                                                                 |                        Lab Makeup Day                        |
 |  14  |      Final Project       |      T 12/8 <br> Th X <br> F X              |                                                                 |                                 X               |
@@ -134,9 +134,9 @@ There are several technological tools used in this class:
 
 ## Guest Speakers - TBD
 * Systems - [Neal Magee](https://datascience.virginia.edu/people/neal-magee)
-* Design - 
+* Design - Carrie O'Brien: User Experience & Interface Designer at Capital One: Messaging, Web, and Human-Centered Design
 * Analytics -
-* Value - 
+* Value - [David Danks](https://datascience.virginia.edu/people/david-danks)
 * Additional - TBD
 
 ## Course Bibliography
