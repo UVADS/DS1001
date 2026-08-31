@@ -10,7 +10,7 @@ Instructor Information:
 
     * Professor Brian Wright (brianwright@virginia.edu)
     * Office Hours: Monday 2-4, SDS room 434
-    * TA Office Hours: TBD
+    * TA Office Hours: Monday 10:30-11:30 AM - [ZOOM](https://virginia.zoom.us/j/93088894871?pwd=ma9KJt6ckxmaEgHmFOS42DGGVAbQgi.1); Friday 12-1 PM - [ZOOM](https://virginia.zoom.us/j/93088894871?pwd=ma9KJt6ckxmaEgHmFOS42DGGVAbQgi.1)/SDS 2nd floor
 
 
 Miscellaneous:
