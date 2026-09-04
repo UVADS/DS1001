@@ -24,13 +24,18 @@ Miscellaneous:
 N.B. There is an associated lab class that must be enrolled simultaneously (50 minute Laboratory section, Friday @ 1, 2, or 3 pm).
 
 ## A Little Bit About the Course
-This course introduces students to a broad range of foundational topics and skills that form the data science pipeline. A central feature of the course is a guided, semester-long project that allows students to continuously apply what they learn in a practical context. Our guide will be the [Virginia Model of Data Science](https://arxiv.org/abs/2311.07631). Students will engage with the material through lectures, small group discussions, hands-on lab activities, and guest presentations by industry experts, all designed to support and enrich their understanding and skills. Throughout the semester, students will learn to think like data scientists - approaching problems methodically, making evidence-based decisions, and applying analytical techniques to uncover insights. Students will develop a variety of competencies, including setting up a computing environment, creating data visualizations, developing research questions, building models, and examining biases throughout the data science process. In the final weeks, students will repeat this process independently by designing and executing their own project, reinforcing their skills and deepening their understanding through self-directed practice. 
+This course introduces students to a broad range of foundational topics and skills that form the data science pipeline to include the adoption of generative-AI tools. A central feature of the course is a guided, semester-long project that allows students to continuously apply what they learn in a practical context. Our guide will be the [Virginia Model of Data Science](https://arxiv.org/abs/2311.07631). Students will engage with the material through lectures, small group discussions, hands-on lab activities, and guest presentations by industry experts, all designed to support and enrich their understanding and skills. Throughout the semester, students will learn to think like data scientists - approaching problems methodically, making evidence-based decisions, and applying analytical and often generative AI techniques to uncover insights. Students will develop a variety of competencies, including foundational understanding of large language models, setting up a computing environment, creating data visualizations, developing research questions, building models, and examining biases throughout the data science process. In the final weeks, students will repeat this process independently by designing and executing their own project, reinforcing their skills and deepening their understanding through self-directed practice. 
 
 ## What you’ll learn along the way
-* **Prime Learning Objective:** You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields, and finally approaching a problem as a data scientist in your final project.
+* **Prime Learning Objective:** You will be able to Think Like a Data Scientist (TLaDS). This starts with being able to define Data Science and explain it to friends and family, grows to being able to describe the field of Data Science and its emerging sub-fields (including AI/Generative AI), and finally approaching a problem as a data scientist in your final project.
 * **Secondary Objective:** Identify how you see yourself in the field of Data Science. (Ranging from "I love it and want a career" to "I hate it, never again", our goal is for you to understand the mindset of Data Science and figure out if it is a path you want to follow).
 
 In each of the areas we will specifically focus on:
+* Foundations of Generative AI/Large Language Models
+  * **Students Will Be Able To** explain the core components of a Large Language Model
+  * **SWBAT** explain the general history of AI development and the current state of the field of Generative AI
+  * **SWABT** to explain and use Generative AI tools/methods theses will include, for example, harnesses, skills, connectors and prompt design.
+  * 
 * Systems
   * **Students Will Be Able To** explain the components of a computer system and how they interact to support data science work.	 
   * **SWBAT** compare hardware and software choices to choose the best tools for a problem. 
@@ -110,9 +115,9 @@ There are several technological tools used in this class:
 
 | Week |         Section          |                    Dates                     |                           Lecture                            |                             Lab                              |
 | :--: | :----------------------: | :------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-|  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science and How is it Related to AI       |                              X                               |
-|  1   |       AI Overview        |       T 9/1  <br> Th 9/3 <br> F 9/4        | History of LLMs <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
-|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Software and Working Directory (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
+|  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science <br> Overview of LLMs and AI Tools      |                              X                               |
+|  1   |       AI Overview        |       T 9/1  <br> Th 9/3 <br> F 9/4        | Overview of Claude Tools <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
+|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Your Engine: The Working Directory <br> (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
 |  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-3: GPU                          |
 |  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-4: Systems                        |
 |  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                       Carrie O'Brien Guest Lecture           |                      LABS-5: Projection                      |
@@ -156,7 +161,6 @@ Design
 * [Observe, Collect, Draw! by Lupi and Posavec](https://www.amazon.com/Observe-Collect-Draw-Visual-Journal/dp/1616897147)
 
 Analytics
-* [R for Data Science](https://r4ds.had.co.nz/)
 * [Python for Data Analysis](https://www.amazon.com/Python-Data-Analysis-Wrangling-Jupyter/dp/109810403X/ref=sr_1_1?sr=8-1)
 * [Grinstead and Snell’s Introduction to Probability](https://math.dartmouth.edu/~prob/prob/prob.pdf)
 
