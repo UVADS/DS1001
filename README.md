@@ -35,7 +35,7 @@ In each of the areas we will specifically focus on:
   * **Students Will Be Able To** explain the core components of a Large Language Model
   * **SWBAT** explain the general history of AI development and the current state of the field of Generative AI
   * **SWABT** to explain and use Generative AI tools/methods theses will include, for example, harnesses, skills, connectors and prompt design.
-  * 
+     
 * Systems
   * **Students Will Be Able To** explain the components of a computer system and how they interact to support data science work.	 
   * **SWBAT** compare hardware and software choices to choose the best tools for a problem. 
