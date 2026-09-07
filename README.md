@@ -117,9 +117,9 @@ There are several technological tools used in this class:
 | :--: | :----------------------: | :------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
 |  0   |          Intro           | T&nbsp;8/25 <br> Th&nbsp;8/27 <br> F&nbsp;X  |       What is Data Science <br> Overview of LLMs and AI Tools      |                              X                               |
 |  1   |       AI Overview        |       T 9/1  <br> Th 9/3 <br> F 9/4        | Overview of Claude Tools <br> Panel: AI and Data Science in the Workplace |                LABS-1: Using Claude for Data Science      |
-|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Your Engine: The Working Directory <br> (Virtual Environments)    |                 LABS-2: Hardware & Software                  |
-|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> Software    |                         LABS-3: GPU                          |
-|  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs                        |                       LABS-4: Systems                        |
+|  2   |         Systems          |       T 9/8 <br> Th 9/10 <br> F 9/11        |     Your Engine: The Working Directory <br> Hardware/Software    |   LABS-2: Hardware & Software                  |
+|  3   |         Systems          |      T 9/15 <br> Th 9/17 <br> F 9/18        |                   Neal Magee Guest Lecture <br> GPUs/Quiz    |                         LABS-3: GPU                          |
+|  4   |    Systems (project)     |      T 9/22 <br> Th 9/24 <br> F 9/25        |                      GitHub <br> IDEs/VE/UV        |     LABS-4: Systems                        |
 |  5   |          Design          |      T 9/29 <br> Th 10/1 <br> F 10/2        |                       Carrie O'Brien Guest Lecture           |                      LABS-5: Projection                      |
 |  6   |          Design          |      T 10/6 <br> Th 10/8 <br> F 10/9        |                                                               |                         LABS-6: LUPI                         |
 |  7   |  Design <br> (project)   |     T 10/13 <br> Th 10/15 <br> F 10/16      |                                                                |                        LABS-7: Design                        |
