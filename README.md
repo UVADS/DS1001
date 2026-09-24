@@ -1,6 +1,6 @@
 # DS 1001: Think Like a Data Scientist (TLaDS)
 
-Logistics:
+Logistic:
 
     * Lecture: Nau Hall 101, 2-3:15 pm Tue & Thur
     * Lab: Data Science 205 or 206 @ 1, 2, or 3
